@@ -41,7 +41,7 @@ try {
        
 
         <p>Dear $registrant_name,</p>
-        <p>We sincerely appreciate your registration for the upcoming The 55th Progressive Liberal Party Convention , scheduled to take place from November 9th-10th 2023 at Atlantis.</p>
+        <p>We sincerely appreciate your registration for the upcoming The 55th Progressive Liberal Party Convention , scheduled to take place from November 9th-10th 2023 at The Baha Mar Resort.</p>
         <p>Please be informed that your registration is currently pending approval. Our team is meticulously reviewing all submissions to ensure a seamless and high-quality experience for all participants. An email will be sent to you as soon as your registration is approved. This communication will include your final confirmation details and further instructions for your participation in the conference.</p>
 
         <p><strong>Here are the details of your registration:</strong><br>
