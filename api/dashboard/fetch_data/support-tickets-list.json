@@ -1,0 +1,24 @@
+[
+    {
+        "id": "1",
+        "priority": "High",
+        "last_name": "Seymour",
+        "first_name": "Tajh",
+        "middle_name": "Jimel",
+        "create_date": "2022-01-02",
+        "due_date": "2022-01-05",
+        "priority": "High",
+        "status": "Inprogress"
+    },
+    
+]
+
+<th class="sort" data-sort="id">ID</th>
+<th class="sort" data-sort="priority">Priority</th>
+<th class="sort" data-sort="last_name">Last Name</th>
+<th class="sort" data-sort="first_name">First Name</th>
+<th class="sort" data-sort="middle_name">Middle Name</th>
+<th class="sort" data-sort="nib_number">NIB Number</th>
+<th class="sort" data-sort="gender">Gender</th>
+<th class="sort" data-sort="dob">Date of Birth</th>
+<th class="sort" data-sort="status">Queue Status</th>

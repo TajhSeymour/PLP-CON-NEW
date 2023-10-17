@@ -1,0 +1,103 @@
+<div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0">
+        <div class="modal-header p-3 bg-soft-info">
+            <h5 class="modal-title" id="exampleModalLabel">ADD NEW REGISTRANT</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+        </div>
+        <form id="notes-form" action="https://conference.gov.bs/api/dashboard/insert/insert_notes.php" method="post" enctype="multipart/form-data" class="tablelist-form" autocomplete="off">
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="row g-3">
+                        <div class="col-lg-6">
+
+                        <textarea id="notes"></textarea>
+
+                        </div>
+                    </div>
+               
+            </div>
+            <div class="modal-footer">
+                <div class="hstack gap-2 justify-content-end">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success" id="add-btn">Submit Registration</button>
+                    <!-- <button type="button" class="btn btn-success" id="edit-btn">Update</button> -->
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- Include the combined JavaScript code for form submission and SweetAlert -->
+<script>
+  // Get the reference to the form element
+  const notesForm = document.getElementById('notes-form');
+  const modalContainer = document.getElementById('createNotesModel');
+
+  // Function to close the modal
+  function closeModal() {
+    // Reset the form fields to clear any previous data
+    notesForm.reset();
+
+    // Manually close the modal by removing the 'show' class
+    modalContainer.classList.remove('show');
+
+    // Clear the backdrop class to hide the backdrop
+    document.body.classList.remove('modal-open');
+  }
+
+  // Add an event listener to the form's submit event
+  notesForm.addEventListener('submit', async function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    try {
+      // Handle the form submission using AJAX or any other logic you need
+      // Here, you can use AJAX to submit the form data to the server without a full page reload
+      const response = await fetch(notesForm.action, {
+        method: 'POST',
+        body: new FormData(notesForm)
+      });
+
+      const data = await response.json();
+
+      // Show a SweetAlert message based on the response status
+      if (data.status === 'success') {
+        // Show a success message using SweetAlert
+        await Swal.fire({
+          icon: 'success',
+          title: 'Success',
+          text: 'Record added successfully!',
+          confirmButtonColor: '#28a745'
+        }).then(() => {
+          // Close the modal after successful registration
+          closeModal();
+
+          // Reload the page after successful submission
+          window.location.reload();
+        });
+      } else if (data.status === 'error') {
+        // Show an error message using SweetAlert
+        await Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Failed to add record to the database.',
+          confirmButtonColor: '#dc3545'
+        });
+      }
+    } catch (error) {
+      // Handle any errors that occurred during form submission
+      console.error('Error:', error);
+      // Show an error message using SweetAlert for unexpected errors
+      await Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'An unexpected error occurred. Please try again later.',
+        confirmButtonColor: '#dc3545'
+      });
+    }
+  });
+</script>
+
+
+      

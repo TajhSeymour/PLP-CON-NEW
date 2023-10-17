@@ -1,0 +1,822 @@
+<div class="container-fluid p-0 fullheight">
+    <div class="row g-0 fullheight">
+        <div class="col-12">
+            <!-- Notify Content Start -->
+            <div class="notify__content">
+                <!-- Notify Content Block Title Start  
+                <div class="content-block margin-bottom-s">
+                    <p class="popup__title light transition-el transition-el-1">Delegate Registration</p>
+                </div>-->
+                <!--   Notify Content Block Title End -->
+                <!-- Notify Content Block Form Start -->
+                <div class="content-block grid-block">
+                    <div class="form-container">
+
+                        <!-- Main Multi-Step Form -->
+                        <form class="form form-light notify-form" id="notify-form" enctype="multipart/form-data">
+
+                            <!-- Step 1 -->
+                            <div class="step step-1">
+                                <h3>Step 1: Personal Information</h3>
+                                <div class="row">
+                                    <!-- First column -->
+                                    <div class="col-md-4">
+                                        <!-- Other input fields for Step 1 -->
+                                        <label class="text-lable" for="first_name">Nombre/First Name *</label>
+                                        <input type="text" class="form-control2" name="input_first_name"
+                                            id="input_first_name" required>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <!-- Other input fields for Step 1 -->
+                                        <label class="text-lable" for="middle_name">Segundo Nombre/Middle Name</label>
+                                        <input type="text" class="form-control2" name="input_middle_name"
+                                            id="input_middle_name" required>
+                                    </div>
+
+                                    <!-- Third column -->
+                                    <div class="col-md-4">
+                                        <label for="last_name" class="text-lable">Apellido/Last Name *</label>
+                                        <input type="text" class="form-control2" name="input_last_name"
+                                            id="input_last_name" required>
+                                    </div>
+                                    <!-- Fourth column -->
+                                    <div class="col-md-4">
+                                        <label class="text-lable" for="gender">Gender: *</label>
+                                        <select class="form-control" required id="input_gender" name="input_gender">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+                                    <!-- Fifth column -->
+                                    <div class="col-md-4">
+                                        <label class="text-lable" for="dob">Date of Birth *</label>
+                                        <input required type="date" id="input_dob" value="2000-09-01" name="input_dob">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="text-lable" for="country_name">Member Country *</label>
+                                        <select class="form-control" id="input_country" name="input_country" required>
+                                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                            <option value="Argentina">Argentina</option>
+                                            <option value="The Bahamas">The Bahamas</option>
+                                            <option value="Barbados">Barbados</option>
+                                            <option value="Belize">Belize</option>
+                                            <option value="Bolivia">Bolivia</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="Chile">Chile</option>
+                                            <option value="Colombia">Colombia</option>
+                                            <option value="Costa Rica">Costa Rica</option>
+                                            <option value="Cuba">Cuba</option>
+                                            <option value="Dominica">Dominica</option>
+                                            <option value="Dominican Republic">Dominican Republic</option>
+                                            <option value="Ecuador">Ecuador</option>
+                                            <option value="El Salvador">El Salvador</option>
+                                            <option value="Grenada">Grenada</option>
+                                            <option value="Guatemala">Guatemala</option>
+                                            <option value="Guyana">Guyana</option>
+                                            <option value="Haiti">Haiti</option>
+                                            <option value="Honduras">Honduras</option>
+                                            <option value="Jamaica">Jamaica</option>
+                                            <option value="Mexico">Mexico</option>
+                                            <option value="Nicaragua">Nicaragua</option>
+                                            <option value="Panama">Panama</option>
+                                            <option value="Paraguay">Paraguay</option>
+                                            <option value="Peru">Peru</option>
+                                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                            <option value="Saint Lucia">Saint Lucia</option>
+                                            <option value="Saint Vincent and the Grenadines">Saint Vincent and the
+                                                Grenadines</option>
+                                            <option value="Suriname">Suriname</option>
+                                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                            <option value="United States">United States</option>
+                                            <option value="Uruguay">Uruguay</option>
+                                            <option value="Venezuela">Venezuela</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="text-lable" for="Nationality">Nationality *</label>
+                                        <select class="form-control" name="input_nationality" required>
+                                            <option value="American">American</option>
+                                            <option value="Antiguan and Barbudan">Antiguan and Barbudan</option>
+                                            <option value="Argentine">Argentine</option>
+                                            <option value="Bahamian">Bahamian</option>
+                                            <option value="Barbadian">Barbadian</option>
+                                            <option value="Belizean">Belizean</option>
+                                            <option value="Bolivian">Bolivian</option>
+                                            <option value="Brazilian">Brazilian</option>
+                                            <option value="Canadian">Canadian</option>
+                                            <option value="Chilean">Chilean</option>
+                                            <option value="Colombian">Colombian</option>
+                                            <option value="Costa Rican">Costa Rican</option>
+                                            <option value="Cuban">Cuban</option>
+                                            <option value="Dominican">Dominican</option>
+                                            <option value="Ecuadorian">Ecuadorian</option>
+                                            <option value="Salvadoran">Salvadoran</option>
+                                            <option value="Grenadian">Grenadian</option>
+                                            <option value="Guatemalan">Guatemalan</option>
+                                            <option value="Guyanese">Guyanese</option>
+                                            <option value="Haitian">Haitian</option>
+                                            <option value="Honduran">Honduran</option>
+                                            <option value="Jamaican">Jamaican</option>
+                                            <option value="Mexican">Mexican</option>
+                                            <option value="Nicaraguan">Nicaraguan</option>
+                                            <option value="Panamanian">Panamanian</option>
+                                            <option value="Paraguayan">Paraguayan</option>
+                                            <option value="Peruvian">Peruvian</option>
+                                            <option value="Kittitian and Nevisian">Kittitian and Nevisian</option>
+                                            <option value="Saint Lucian">Saint Lucian</option>
+                                            <option value="Vincentian">Vincentian</option>
+                                            <option value="Surinamese">Surinamese</option>
+                                            <option value="Trinidadian or Tobagonian">Trinidadian or Tobagonian</option>
+                                            <option value="Uruguayan">Uruguayan</option>
+                                            <option value="Venezuelan">Venezuelan</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div id="arrival-section">
+                                    <h3>STEP 2: Arrival, Hotel & Departure Information</h3>
+                                    <div class="row">
+                                        <!-- First column -->
+                                        <div class="col-md-4">
+                                            <label class="text-lable" for="Arrival_Date">Arrival Date & Time *</label>
+                                            <input required type="datetime-local" id="input_arrival_date_time"
+                                                name="input_arrival_date_time" value="2023-09-01T19:30"
+                                                min="2023-08-01T00:00" max="2023-10-31T00:00" />
+                                        </div>
+                                        <!-- Second column -->
+                                        <div class="col-md-4">
+                                            <label class="text-lable" for="Airline"> Arrival Airline *</label>
+                                            <select class="form-control" name="input_arrival_airline" required>
+                                                <option value="" disabled selected>Select Airline*</option>
+                                            </select>
+                                        </div>
+                                        <!-- First column -->
+                                        <div class="col-md-4">
+                                            <label for="input_flight_number" class="text-lable"> Arrival Flight Number
+                                                *</label>
+                                            <input type="text" class="form-control2" name="input_arrival_flight_number"
+                                                id="input_arrival_flight_number" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-md-8">
+                                            <label class="text-lable" for="hotel_name">Hotel *</label>
+                                            <select class="form-control" name="input_hotel" required>
+                                                <option value="" disabled selected>Select Hotel*</option>
+                                            </select>
+                                        </div>
+                                        <!-- Second column -->
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="text-lable" for="Departure_date">Departure Date & Time
+                                                *</label>
+                                            <input required type="datetime-local" id="input_departure_date_time"
+                                                name="input_departure_date_time" value="2023-09-01T19:30"
+                                                min="2023-08-01T00:00" max="2023-10-31T00:00" />
+                                        </div>
+                                        <!-- First column -->
+                                        <div class="col-md-4">
+                                            <label class="text-lable" for="Airline"> Departure Airline *</label>
+                                            <select class="form-control" name="input_departure_airline" required>
+                                                <option value="" disabled selected>Select Airline*</option>
+                                            </select>
+                                        </div>
+                                        <!-- Second column -->
+                                        <div class="col-md-4">
+                                            <label for="input_departure_flight_number" class="text-lable">Departure
+                                                Flight Number *</label>
+                                            <input type="text" class="form-control2"
+                                                name="input_departure_flight_number" id="input_departure_flight_number"
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="step step-2">
+                                <h3>Step 3: Organization Information</h3>
+                                <div class="row">
+                                    <!-- First column -->
+                                    <div class="col-md-4">
+                                        <!-- Other input fields for Step 1 -->
+                                        <label class="text-lable" for="organization">Organization *</label>
+                                        <input type="text" class="form-control2" name="input_organization"
+                                            id="input_organization" required>
+                                    </div>
+                                    <!-- First column -->
+                                    <div class="col-md-4">
+                                        <!-- Other input fields for Step 1 -->
+                                        <label class="text-lable" for="occupation">Occupation *</label>
+                                        <input type="text" class="form-control2" name="input_occupation"
+                                            id="input_occupation" required>
+                                    </div>
+
+
+
+                                    <!-- Second column -->
+
+                                    <div class="col-md-4">
+                                        <!-- Other input fields for Step 1 -->
+                                        <label class="text-lable" for="passport_type">Passport Type *</label>
+                                        <select class="form-control" required id="input_passport_type"
+                                            name="input_passport_type">
+                                            <option value="Diplomat">Diplomático/Diplomat</option>
+                                            <option value="Official">Oficial/Official</option>
+                                            <option value="Regular">Regular</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Third column -->
+                                    <div class="col-md-4">
+                                        <label for="passport_number" class="text-lable">Passport Number *</label>
+                                        <input type="text" class="form-control2" name="input_passport"
+                                            id="input_passport" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="Title" class="text-lable">Registrant Role/Title/Designation
+                                            *</label>
+                                        <select class="form-control" name="input_job_title" required>
+                                            <option value="" disabled selected>Select Registrant Role*</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-lable" for="upload_invite">Upload Accreditation Letter (pdf only)</label>
+                                        <input type="file" accept=".pdf" id="input_invite_letter"
+                                            name="input_invite_letter" required>
+                              
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="step step-3">
+                                <h3>Step 4: Contact Information</h3>
+                                <div class="row">
+                                    <!-- First column -->
+
+                                    <div class="col-md-4">
+                                        <!-- Other input fields for Step 1 -->
+                                        <label class="text-lable" for="first_name">Mobile Number</label>
+                                        <input type="text" class="form-control2" name="input_mobile"
+                                            id="input_mobile">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <!-- Other input fields for Step 1 -->
+                                        <label class="text-lable" for="first_name">Telephone Number</label>
+                                        <input type="text" class="form-control2" name="input_telephone"
+                                            id="input_telephone">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <!-- Other input fields for Step 1 -->
+                                        <label class="text-lable" for="first_name">Fax Number</label>
+                                        <input type="text" class="form-control2" name="input_fax"
+                                            id="input_fax">
+                                    </div>
+
+                                    <!-- Third column -->
+                                    <div class="col-md-4">
+                                        <label for="email_address" class="text-lable">Email Address *</label>
+                                        <input type="email" class="form-control2" name="input_email" id="input_email"
+                                            required oninput="validateEmail()">
+                                        <span id="emailError" style="color: red;"></span>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="emergency_contact_name" class="text-lable">Emergency Contact
+                                            Name *
+                                        </label>
+                                        <input type="text" class="form-control2" name="input_emergency_name"
+                                            id="input_emergency_name" required>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="emergency_contact_number" class="text-lable">Emergency Contact
+                                            Telephone *</label>
+                                        <input type="tel" class="form-control2" name="input_emergency_tel"
+                                            id="input_emergency_tel" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step step-4">
+                                <h3>Step 5: Food, Emergency & Medical Information</h3>
+                                <div class="row">
+                                    <!-- First column -->
+                                    <div class="col-md-6">
+                                        <label class="text-lable" for="Food_restrictions">Food Restrictions:
+                                            *</label>
+                                        <select class="form-control" required id="input_food_restrictions"
+                                            name="input_food_restrictions">
+                                            <option value="none">None</option>
+                                            <option value="vegan">Vegan</option>
+                                            <option value="glutenFree">Gluten-Free</option>
+                                            <option value="lactoseFree">Lactose-Free</option>
+                                            <option value="nutFree">Nut-Free</option>
+                                            <option value="shellfishFree">Shellfish-Free</option>
+                                            <option value="kosher">Kosher</option>
+                                            <option value="halal">Halal</option>
+                                            <option value="lowSodium">Low Sodium</option>
+                                            <option value="lowCarb">Low Carb</option>
+                                            <option value="paleo">Paleo</option>
+                                            <option value="keto">Keto</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-lable" for="allergies">Food Allergies *</label>
+                                        <select class="form-control" required id="input_food_allergies"
+                                            name="input_food_allergies">
+                                            <option value="none">None</option>
+                                            <option value="peanuts">Peanuts</option>
+                                            <option value="treeNuts">Tree Nuts</option>
+                                            <option value="eggs">Eggs</option>
+                                            <option value="milk">Milk</option>
+                                            <option value="wheat">Wheat</option>
+                                            <option value="soy">Soy</option>
+                                            <option value="fish">Fish</option>
+                                            <option value="shellfish">Shellfish</option>
+                                            <option value="mustard">Mustard</option>
+                                            <option value="sesameSeeds">Sesame Seeds</option>
+                                            <option value="sulfites">Sulfites</option>
+                                            <option value="celery">Celery</option>
+                                            <option value="lupin">Lupin</option>
+                                            <option value="mollusks">Mollusks</option>
+                                            <option value="corn">Corn</option>
+                                            <option value="chicken">Chicken</option>
+                                            <option value="beef">Beef</option>
+                                            <option value="pork">Pork</option>
+                                            <option value="sugar">Sugar</option>
+                                            <option value="berries">Berries</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-lable" for="input_special_requirements">Requerimientos
+                                            Especiales / Special Requirements</label>
+                                        <input type="text" class="form-control2" id="input_special_requirements"
+                                            name="input_special_requirements">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-lable" for="input_other_requirements">Other Relevant
+                                            Information</label>
+                                        <input type="text" class="form-control2" id="input_other_requirements"
+                                            name="input_other_requirements">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step step-5">
+                                <h3>Step 6: Organization Information / Badge Upload</h3>
+                                <br>
+                                <br>
+                                <div class="row">
+                                    <!-- First column -->
+                                    <div class="col-md-6">
+                                        <label class="text-lable" for="conference_photo">Upload Photo ID *</label>
+                                        <input type="file" accept=".jpg, .jpeg, .png" id="input_badge_photo"
+                                            name="input_badge_photo" required>
+                                        <label class="text-lable" for="upload_invite1">Accepts .jpg, .jpeg, .png</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-lable" for="conference_photo2">Preview</label>
+                                        <img src="" alt="Badge Photo Preview" id="badge_photo_preview"
+                                            style="max-width: 150px; max-height: 110px; display: none;">
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <br>
+                                    
+
+                                </div>
+                            </div>
+                            <br>
+                                    <br>
+                                    <br>
+                            <div class="step-navigation">
+                                <input type="button" class="next-btn button-caption button button-solid-light" id="next"
+                                    value="NEXT >>>">
+                                <input type="button" class="prev-btn button-caption button button-solid-light" id="prev"
+                                    value="<<< PREVIOUS">
+                                <input type="submit"
+                                    class="btn-submit button-caption button button-solid-light transition-el transition-el-5"
+                                    value="Submit Registration">
+
+                                <input type="button"
+                                    class="btn-submit button-caption button button-solid-light transition-el transition-el-5"
+                                    value="GO BACK TO HOME">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                const steps = document.querySelectorAll('.step');
+                const prevBtn = document.querySelector('.prev-btn');
+                const nextBtn = document.querySelector('.next-btn');
+                const submitBtn = document.querySelector('.btn-submit');
+
+                let currentStep = 0;
+
+                function showStep(stepIndex) {
+                    steps.forEach((step, index) => {
+                        step.style.display = index === stepIndex ? 'block' : 'none';
+                    });
+                }
+
+                function isStepValid() {
+                    const currentStepInputs = steps[currentStep].querySelectorAll('input[required], select[required]');
+                    for (const input of currentStepInputs) {
+                        if (!input.value.trim()) {
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+
+                function goToNextStep() {
+                    if (currentStep < steps.length - 1) {
+                        if (isStepValid()) {
+                            currentStep++;
+                            showStep(currentStep);
+                            togglePreviousButton();
+                            toggleSubmitButton();
+                        } else {
+                            alert('Please fill out all required fields before proceeding.');
+                        }
+                    }
+                }
+
+                function goToPrevStep() {
+                    if (currentStep > 0) {
+                        currentStep--;
+                        showStep(currentStep);
+                        togglePreviousButton();
+                        toggleSubmitButton();
+                    }
+                }
+
+                function togglePreviousButton() {
+                    prevBtn.style.display = currentStep === 0 ? 'none' : 'block';
+                }
+
+                function toggleSubmitButton() {
+                    nextBtn.style.display = currentStep === steps.length - 1 ? 'none' : 'block';
+                    submitBtn.style.display = currentStep === steps.length - 1 ? 'block' : 'none';
+                }
+
+                nextBtn.addEventListener('click', goToNextStep);
+                prevBtn.addEventListener('click', goToPrevStep);
+
+                document.getElementById('notify-form').addEventListener('submit', (event) => {
+                    event.preventDefault();
+
+                    if (currentStep === steps.length - 1 && isStepValid()) {
+                        alert('Form submitted successfully!');
+                        // Perform your form submission logic here (e.g., AJAX request)
+                    } else {
+                        alert('Please complete all steps before submitting the form.');
+                    }
+                });
+
+                // Show the first step initially and hide the "Previous" button
+                showStep(currentStep);
+                togglePreviousButton();
+                toggleSubmitButton();
+
+            </script>
+
+
+            <script>
+                const inputCountry = document.getElementById('input_country');
+                const arrivalSection = document.getElementById('arrival-section');
+                const inputNationality = document.querySelector('[name="input_nationality"]');
+                const inputArrivalFlightNumber = document.querySelector('[name="input_arrival_flight_number"]');
+                const inputDepartureFlightNumber = document.querySelector('[name="input_departure_flight_number"]');
+
+                // Function to handle the country selection
+                function handleCountrySelection() {
+                    if (inputCountry.value === 'The Bahamas') {
+                        arrivalSection.style.display = 'none';
+                        inputNationality.value = 'Bahamian';
+                        inputArrivalFlightNumber.value = 'LOCAL RESIDENT';
+                        inputDepartureFlightNumber.value = 'LOCAL RESIDENT';
+                        // Remove the 'required' attribute from the hidden inputs
+                        inputArrivalFlightNumber.removeAttribute('required');
+                        inputDepartureFlightNumber.removeAttribute('required');
+                    } else {
+                        arrivalSection.style.display = 'block';
+                        inputNationality.value = ''; // Reset the value to allow user input
+                        inputArrivalFlightNumber.value = ''; // Reset the value to allow user input
+                        inputDepartureFlightNumber.value = ''; // Reset the value to allow user input
+                        // Add the 'required' attribute back to the inputs
+                        inputArrivalFlightNumber.setAttribute('required', 'required');
+                        inputDepartureFlightNumber.setAttribute('required', 'required');
+                    }
+                }
+
+                // Add an event listener to the inputCountry element
+                inputCountry.addEventListener('change', handleCountrySelection);
+
+                // Call the function initially to handle the initial state
+                handleCountrySelection();
+            </script>
+
+
+
+
+            <script>
+                // Function to fetch assignments and populate the select box
+                function populateFormFields() {
+                    $.ajax({
+                        url: 'api/fetch_data/get_form_data.php',
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function (response) {
+                            // Populating the assignments
+                            var assignmentSelectBox = $('select[name="input_job_title"]');
+                            var assignmentOptions = '';
+
+                            response.assignments.forEach(function (assignment) {
+                                assignmentOptions += '<option value="' + assignment + '">' + assignment + '</option>';
+                            });
+
+                            assignmentSelectBox.html(assignmentOptions);
+
+                            // Populating the arrival airlines and departing airlines
+                            var arrivalAirlineSelectBox = $('select[name="input_arrival_airline"]');
+                            var departingAirlineSelectBox = $('select[name="input_departure_airline"]');
+                            var arrivalAirlineOptions = '';
+                            var departingAirlineOptions = '';
+
+                            response.arrivalAirline.forEach(function (arrivalAirline) {
+                                arrivalAirlineOptions += '<option value="' + arrivalAirline + '">' + arrivalAirline + '</option>';
+                                departingAirlineOptions += '<option value="' + arrivalAirline + '">' + arrivalAirline + '</option>';
+                            });
+
+                            arrivalAirlineSelectBox.html(arrivalAirlineOptions);
+                            departingAirlineSelectBox.html(departingAirlineOptions);
+
+                            // Populating the Hotel
+                            var hotelSelectBox = $('select[name="input_hotel"]');
+                            var hotelOptions = '';
+
+                            response.hotelNames.forEach(function (hotelNames) {
+                                hotelOptions += '<option value="' + hotelNames + '">' + hotelNames + '</option>';
+                            });
+
+                            hotelSelectBox.html(hotelOptions);
+
+                        },
+                        error: function () {
+                            alert('Error occurred while fetching data. Please try again later.');
+                        }
+                    });
+                }
+
+                // Call the function to populate the form fields when the window has finished loading
+                $(document).ready(function () {
+                    populateFormFields();
+                });
+            </script>
+
+            <script>
+                // On form submit
+                document.getElementById('notify-form').addEventListener('submit', (event) => {
+                    event.preventDefault(); // Prevent actual form submission for this example
+
+                    // Additional validation (if needed) before form submission
+                    if (currentStep === steps.length - 1 && isStepValid()) {
+                        // Form is valid, submit the data using AJAX
+                        const formData = new FormData(event.target);
+
+                        $.ajax({
+                            url: 'api/insert/add_record.php',
+                            type: 'POST',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            dataType: 'json', // Expect JSON response
+                            success: function (response) {
+                                // Check the response status
+                                if (response.status === 'success') {
+                                    // Display success alert
+                                    alert('Success! ' + response.message);
+                                    // Redirect to the home page after successful form submission
+                                    window.location.href = 'index.php?message=You are now registered!';
+                                } else {
+                                    // Display error alert
+                                    alert('Error! ' + response.message);
+                                }
+                            },
+                            error: function () {
+                                // Display error alert for AJAX error
+                                alert('Error occurred while submitting the form.');
+                            },
+                        });
+                    } else {
+                        // Form is not fully filled, show an alert or handle the error accordingly
+                        alert('Please complete all steps before submitting the form.');
+                    }
+                });
+
+                // Show the first step initially and hide the "Previous" button
+                showStep(currentStep);
+                togglePreviousButton();
+                toggleSubmitButton(); // Call to hide the "Submit" button initially
+            </script>
+
+            <script>
+                // Badge Photo preview
+                const badgePhotoInput = document.getElementById('input_badge_photo');
+                const badgePhotoPreview = document.getElementById('badge_photo_preview');
+
+                badgePhotoInput.addEventListener('change', function () {
+                    const file = this.files[0];
+                    if (file) {
+                        if (/\.(jpe?g|png)$/i.test(file.name) && file.size <= 5 * 1024 * 1024) {
+                            const reader = new FileReader();
+                            reader.addEventListener('load', function () {
+                                badgePhotoPreview.src = reader.result;
+                                badgePhotoPreview.style.display = 'block';
+                            });
+                            reader.readAsDataURL(file);
+                        } else {
+                            alert('Please select a PNG or JPG image not exceeding 5MB in size.');
+                            this.value = ''; // Reset the file input to allow re-selection
+                            badgePhotoPreview.src = '';
+                            badgePhotoPreview.style.display = 'none';
+                        }
+                    }
+                });
+
+                // Gov-ID preview
+                const govIdInput = document.getElementById('gov_id');
+                const govIdPreview = document.getElementById('gov_id_preview');
+
+                govIdInput.addEventListener('change', function () {
+                    const file = this.files[0];
+                    if (file) {
+                        if (/\.(jpe?g|png)$/i.test(file.name) && file.size <= 5 * 1024 * 1024) {
+                            const reader = new FileReader();
+                            reader.addEventListener('load', function () {
+                                govIdPreview.src = reader.result;
+                                govIdPreview.style.display = 'block';
+                            });
+                            reader.readAsDataURL(file);
+                        } else {
+                            alert('Please select a PNG or JPG image not exceeding 5MB in size.');
+                            this.value = ''; // Reset the file input to allow re-selection
+                            govIdPreview.src = '';
+                            govIdPreview.style.display = 'none';
+                        }
+                    }
+                });
+            </script>
+
+            <script>
+                function validateEmail() {
+                    const emailInput = document.getElementById('input_email');
+                    const emailError = document.getElementById('emailError');
+
+                    // Regular expression for email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    if (!emailRegex.test(emailInput.value)) {
+                        emailError.textContent = 'Please enter a valid email address.';
+                        document.getElementById('next').disabled = true; // Disable the "Next" button
+                    } else {
+                        emailError.textContent = '';
+                        document.getElementById('next').disabled = false; // Enable the "Next" button
+                    }
+                }
+            </script>
+
+
+            <style>
+                .form-control2 {
+                    display: block;
+                    width: 100%;
+                    padding: .375rem .75rem;
+                    /* font-size: 1rem; */
+                    font-weight: 400;
+                    line-height: 1.5;
+                    color: #212529;
+                    /* background-color: #fff; */
+                    background-clip: padding-box;
+                    /* border: 1px solid #ced4da; */
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    border-radius: .25rem;
+                    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                }
+
+                form select {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    margin: 0;
+                    padding: 0;
+                    background-color: transparent;
+                    padding: 1.4rem 0.3rem;
+                    font: normal 500 1.6rem/1.7 "Montserrat", sans-serif;
+                    -webkit-transition: border-bottom 0.3s;
+                    -o-transition: border-bottom 0.3s;
+                    -moz-transition: border-bottom 0.3s;
+                    transition: border-bottom 0.3s;
+                    margin: 0 0 2.4rem 0;
+                    color: #313637;
+                    border-bottom: 1px solid #313637;
+                    background-color: transparent;
+                }
+
+                form select:focus {
+                    border-bottom: 1px solid #5a5e5f;
+                }
+
+                .form-light select {
+                    color: #fff;
+                    border-bottom: 1px solid #b3b3b3;
+                }
+
+                .form-light select:focus {
+                    border-bottom: 1px solid #fff;
+                }
+
+                /* Adjustments for longer text */
+                form select option {
+                    padding: 0.3rem 0.5rem;
+                    line-height: 1.4;
+
+                }
+
+                .home-button {
+                    color: #fff;
+
+                }
+
+                .text-lable {
+                    color: #fff
+                }
+
+                .step h3 {
+                    color: white;
+                    /* Change this to your desired color for h1 */
+                }
+
+
+                .step-form {
+                    display: none;
+                }
+
+                .step-form.active {
+                    display: block;
+                }
+
+                .button-class {
+                    color: black;
+                }
+
+                select.form-control option {
+                    color: black;
+                }
+
+                input[type="date"]::-webkit-calendar-picker-indicator {
+                    cursor: pointer;
+
+                    margin-right: 2px;
+                    opacity: 0.6;
+                    filter: invert(0.8);
+                }
+
+                input[type="date"]::-webkit-calendar-picker-indicator:hover {
+                    opacity: 1
+                }
+
+                /* Target the datetime-local input's calendar icon */
+                input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+                    filter: invert(100%);
+                    /* Invert the colors to make the icon white */
+                }
+
+                /* Optional: Style the input field itself */
+                input[type="datetime-local"] {
+                    padding: 8px;
+
+                    border-radius: 4px;
+                }
+
+                .step-4,
+                .step-5 {
+                    display: none;
+                }
+            </style>
