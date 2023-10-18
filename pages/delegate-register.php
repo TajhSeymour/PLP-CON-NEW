@@ -127,7 +127,7 @@
                         <option value="YES">Yes, I possess a PLP ID Card</option>
                         <option value="LOST">Yes, I'm a registered member, but I've misplaced my PLP ID Card</option>
                         <option value="NO">No, I'm a new member / Never issued a PLP ID Card</option>
-                        <option value="NOD">No, I'm registring as a Observer Delegate</option>
+                        <!--- <option value="NOD">No, I'm registring as a Observer Delegate</option> --->
                     </select>
 
 
