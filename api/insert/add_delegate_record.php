@@ -177,38 +177,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
    );
 
-   $full_name = $first_name . ' ' . $last_name;
-        $registrant_email = $email;
-        $registrant_id = $random_id;
-    
-        global $registrant_name;
-        global $registrant_email;
-        global $registrant_id;
-
-        $registrant_name = trim($full_name);
-        $registrant_email = trim($registrant_email);
-        $registrant_id = trim($registrant_id);
-
-        ob_start(); // Start buffering here: this will prevent sending the output to the browser which causes the headers to be sent prematurely
-        require 'send_delegate_applicant_email.php';
-        ob_end_clean(); // End buffering here
-
    if ($stmt->execute()) {
-           echo json_encode(['status' => 'success', 'message' => 'You have successfully registered for the Conference!']);
+
+    /* This code block is preparing the necessary data to send an email to the delegate applicant. */
+       $full_name = $first_name . ' ' . $last_name;
+       $registrant_email = $email;
+       $registrant_id = $random_id;
+   
+       global $registrant_name;
+       global $registrant_email;
+       global $registrant_id;
+
+       $registrant_name = trim($full_name);
+       $registrant_email = trim($registrant_email);
+       $registrant_id = trim($registrant_id);
+
+       ob_start(); // Start buffering here: this will prevent sending the output to the browser which causes the headers to be sent prematurely
+       require 'send_delegate_applicant_email.php';
+       ob_end_clean(); // End buffering here
+
+       echo json_encode(['status' => 'success', 'message' => 'You have successfully registered for the Conference!']);
    } else {
-       echo json_encode(['status' => 'error', 'message' => 'Failed to add record to the database.', 'sql_error' => mysqli_error($connection)]);
+       echo json_encode(['status' => 'error', 'message' => 'Failed to add record to the database.']);
    }
 
    $stmt->close();
    $connection->close();
 
 } else {
-
-   echo json_encode(['status' => 'error', 'message' => 'Invalid request method.', 'sql_error' => mysqli_error($connection)]);
+   echo json_encode(['status' => 'error', 'message' => 'Invalid request method.']);
 }
-  
 }
-
-   
 
 ?>
