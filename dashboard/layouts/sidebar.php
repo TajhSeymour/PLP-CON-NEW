@@ -5,19 +5,19 @@
         <!-- Dark Logo-->
         <a href="index.php" class="logo logo-dark">
             <span class="logo-sm">
-                <img src="assets/images/logos/coat-of-arms.png" alt="" height="75">
+                <img src="assets/images/logos/plp-hands-gold.png" alt="" height="75">
             </span>
             <span class="logo-lg">
-                <img src="assets/images/logos/coat-of-arms.png" alt="" height="200">
+                <img src="assets/images/logos/plp-hands-gold.png" alt="" height="200">
             </span>
         </a>
         <!-- Light Logo-->
         <a href="index.php" class="logo logo-light">
             <span class="logo-sm">
-                <img src="assets/images/logos/coat-of-arms.png" alt="" height="75">
+                <img src="assets/images/logos/plp-hands-gold.png" alt="" height="75">
             </span>
             <span class="logo-lg">
-                <img src="assets/images/logos/coat-of-arms.png" alt="" height="200">
+                <img src="assets/images/logos/plp-hands-gold.png" alt="" height="200">
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
