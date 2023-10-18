@@ -7,8 +7,8 @@ require 'vendor/autoload.php';
 
 try {
     $mail = new PHPMailer(TRUE);
-    //$mail->SMTPDebug = 3;
-    // $mail->Debugoutput = 'error_log';
+    $mail->SMTPDebug = 3;
+     $mail->Debugoutput = 'error_log';
     $mail->isSMTP();
     $mail->CharSet = 'UTF-8';
     $mail->Encoding = 'base64'; // Use base64 encoding
