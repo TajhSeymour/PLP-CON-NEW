@@ -13,7 +13,7 @@ try {
     $mail->CharSet = 'UTF-8';
     $mail->Encoding = 'base64'; // Use base64 encoding
     $mail->ContentType = 'text/html; charset=UTF-8';
-    $mail->Host = 'mail.plpconvention.org';
+    $mail->Host = 'webmail.plpconvention.org';
     $mail->SMTPAuth = true;
     $mail->Port = 465;
     $mail->Username = 'noreply@plpconvention.org';
