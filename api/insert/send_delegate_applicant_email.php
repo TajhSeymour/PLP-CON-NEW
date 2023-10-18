@@ -13,8 +13,8 @@ try {
     $mail->CharSet = 'UTF-8';
     $mail->Encoding = 'base64'; // Use base64 encoding
     $mail->ContentType = 'text/html; charset=UTF-8';
-    $mail->Host = 'plpconvention.org';
-    $mail->SMTPAuth = true;
+    $mail->Host = 'webmail.plpconvention.org';
+    $mail->SMTPAuth = false;
     $mail->Port = 465;
     $mail->Username = 'noreply@plpconvention.org';
     $mail->Password = '$Welcome2023';
