@@ -436,10 +436,10 @@
                     <div class="row">
 
                         <div class="col-md-3">
-                            <label class="form-control" for="travel_question">Are you traveling to the
+                            <label class="form-control" for="travel_new_del_question">Are you traveling to the
                                 convention?</label>
-                            <select class="form-control" required id="input_travel_question"
-                                name="input_travel_question">
+                            <select class="form-control" required id="input_new_del_travel_question"
+                                name="input_new_del_travel_question">
                                 <option value="No" selected> No</option>
                                 <option value="Yes">Yes</option>
                             </select>
@@ -447,8 +447,8 @@
                         <div class="col-md-8">
                             <label class="form-control" for="travel_question">Do you require ground transportation
                                 assistance?</label>
-                            <select class="form-control" required id="input_ground_transportation_question"
-                                name="input_ground_transportation_question">
+                            <select class="form-control" required id="input_new_del_ground_transportation_question"
+                                name="input_new_del_ground_transportation_question">
                                 <option value="Yes-Airport">Yes, I require transportation assistance from the Airport
                                 </option>
                                 <option value="Yes-Constituency">Yes, I require transportation assistance from
@@ -746,13 +746,13 @@
             <input type="button" class="prev-btn button-caption button button-solid-light-grey" id="prev"
                 value="<<< PREVIOUS">
 
-            <input type="submit" id="submit-button"
+            <input type="submit" id="submit-button-new"
                 class="btn-submit button-caption button button-solid-light transition-el  transition-el-5"
                 value="SUBMIT REGISTRATION">
 
             <input type="button"
                 class="btn-gohome button-caption button button-solid-light-grey transition-el transition-el-5"
-                value="GO BACK TO HOME" id="go-back-button" onclick="goToHomePage()">
+                value="GO BACK TO HOME" id="go-back-button-new" onclick="goToHomePage()">
         </div>
     </form>
 </div>
@@ -1280,7 +1280,7 @@ if (nominationQuestionInput && hiddenInput) {
     document.getElementById('notify-form').addEventListener('submit', async (event) => {
         event.preventDefault();
 
-        const submitButton = document.getElementById('submit-button');
+        const submitButton = document.getElementById('submit-button-new');
         const disabledFields = document.querySelectorAll('[disabled]');
         const formData = new FormData(event.target);
         submitButton.disabled = true;
