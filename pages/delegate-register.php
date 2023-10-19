@@ -656,12 +656,12 @@
                             <!-- First column -->
                             <div class="col-md-8">
                                 <label class="form-control" for="">
-                                    <h5 class="blue-text">1. Should Marital Rape Be Criminalized?</h5>
+                                    <h5 class="blue-text">1. Should Marital Rape Be Criminalized ? *</h5>
                                 </label>
                             </div>
                             <!-- Second column -->
                             <div class="col-md-2">
-                                <select class="form-control" name="input_survey_question_1">
+                                <select class="form-control" name="input_survey_question_1" required>
                                     <option value="">SELECT OPTION</option>
                                     <option value="0">NO</option>
                                     <option value="1">YES</option>
@@ -673,12 +673,12 @@
                             <!-- First column -->
                             <div class="col-md-8">
                                 <label class="form-control" for="">
-                                    <h5 class="blue-text">2. Should Marijuana be Legal in The Bahamas for Recreational Purposes?</h5>
+                                    <h5 class="blue-text">2. Should Marijuana be Legal in The Bahamas for Recreational Purposes ? *</h5>
                                 </label>
                             </div>
                             <!-- Second column -->
                             <div class="col-md-2">
-                                <select class="form-control" name="input_survey_question_2">
+                                <select class="form-control" name="input_survey_question_2" required>
                                     <option value="">SELECT OPTION</option>
                                     <option value="0">NO</option>
                                     <option value="1">YES</option>
@@ -690,12 +690,12 @@
                             <!-- First column -->
                             <div class="col-md-8">
                                 <label class="form-control" for="">
-                                    <h5 class="blue-text">3. Should Marijuana be Legal in The Bahamas for Medicinal Purposes?</h5>
+                                    <h5 class="blue-text">3. Should Marijuana be Legal in The Bahamas for Medicinal Purposes ? *</h5>
                                 </label>
                             </div>
                             <!-- Second column -->
                             <div class="col-md-2">
-                                <select class="form-control" name="input_survey_question_3">
+                                <select class="form-control" name="input_survey_question_3" required>
                                     <option value="">SELECT OPTION</option>
                                     <option value="0">NO</option>
                                     <option value="1">YES</option>
@@ -707,12 +707,12 @@
                             <!-- First column -->
                             <div class="col-md-8">
                                 <label class="form-control" for="">
-                                    <h5 class="blue-text">4. Score the government’s performance from (Poor) 1 - 10 (Outstanding) ?</h5>
+                                    <h5 class="blue-text">4. Score the government’s performance from (Poor) 1 - 10 (Outstanding) ? *</h5>
                                 </label>
                             </div>
                             <!-- Second column -->
                             <div class="col-md-2">
-                                <select class="form-control" name="input_survey_question_4">
+                                <select class="form-control" name="input_survey_question_4" required>
                                     <option value="">SELECT OPTION</option>
                                     <option value="1">1 - Poor</option>
                                     <option value="2">2 - Very Poor</option>
