@@ -79,8 +79,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $vote_delegate_question = "0";
         }
 
-
-
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             // Validate "input_vote_del_badge_question" value
             $badge_reprint = strip_tags($_POST["input_vote_del_badge_question"]); // Sanitize the input

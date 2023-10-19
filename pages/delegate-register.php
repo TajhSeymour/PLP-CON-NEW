@@ -1009,7 +1009,7 @@ if (nominationQuestionInput && hiddenInput) {
     dropdownBadgeQuestion.addEventListener("change", function () {
         var selectedValue = dropdownBadgeQuestion.value;
 
-        if (selectedValue === "No") {
+        if (selectedValue === "0") {
             inputBadgeUpload.disabled = true;
             inputBadgeUpload.removeAttribute("required");
             inputBadgeUpload.value = "";
