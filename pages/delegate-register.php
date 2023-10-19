@@ -404,8 +404,8 @@
                                 delegate?</label>
                             <select class="form-control" required id="input_vote_del_question"
                                 name="input_vote_del_question" required>
-                                <option value="No" selected> Observer Delegate</option>
-                                <option value="Yes"> Voting Delegate</option>
+                                <option value="0" selected> Observer Delegate</option>
+                                <option value="1"> Voting Delegate</option>
                             </select>
                             <strong>Voting Delegates include elected branch delegates, current/former national party
                                 officers, and parliamentary members who have voting eligibility at the
@@ -437,7 +437,7 @@
 
 
                         <div class="col-md-4">
-                            <label class="form-control" for="travel_question">Would you like a badge reprint?</label>
+                            <label class="form-control" for="travel_question">Would you like a badge reprint/replacement?</label>
                             <br>
 
                             <select class="form-control" required id="input_vote_del_badge_question"
@@ -707,12 +707,30 @@
                             <!-- First column -->
                             <div class="col-md-8">
                                 <label class="form-control" for="">
-                                    <h5 class="blue-text">4. Score the government’s performance from 1 - 10 ? *</h5>
+                                    <h5 class="blue-text">4. Should The Bahamas be a Republic ? *</h5>
                                 </label>
                             </div>
                             <!-- Second column -->
                             <div class="col-md-2">
                                 <select class="form-control" name="input_survey_question_4" required>
+                                    <option value="">SELECT OPTION</option>
+                                    <option value="0">NO</option>
+                                    <option value="1">YES</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <!-- First column -->
+                            <div class="col-md-8">
+                                <label class="form-control" for="">
+                                    <h5 class="blue-text">5. Score the government’s performance from 1 - 10 ? *</h5>
+                                </label>
+                            </div>
+                            <!-- Second column -->
+                            <div class="col-md-2">
+                                <select class="form-control" name="input_survey_question_5" required>
                                     <option value="">SELECT OPTION</option>
                                     <option value="1">1 - Poor</option>
                                     <option value="2">2 - Very Poor</option>
@@ -941,7 +959,7 @@
         dropdownDelQuestion.addEventListener("change", function () {
             var selectedValue = dropdownDelQuestion.value;
 
-            if (selectedValue === "No") {
+            if (selectedValue === "0") {
                 inputDelNominationQuestion.disabled = true;
                 inputDelNominationQuestion.removeAttribute("required");
                 inputDelNominationQuestion.value = "";
@@ -1028,7 +1046,7 @@
                         timeout: 3000
                     }).show();
 
-                    document.getElementById('input_vote_del_question').value = "No";
+                    document.getElementById('input_vote_del_question').value = "0";
                     document.getElementById('input_vote_del_nomination_question').value = "";
                     document.getElementById('input_branch_id_code').value = "";
                     document.getElementById('input_branch_id_code').disabled = true;
