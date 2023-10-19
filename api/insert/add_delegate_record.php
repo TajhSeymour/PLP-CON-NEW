@@ -170,7 +170,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $emergency_contact_number,
             $branch_of_delegate,
             $vote_delegate_question,
-            $badge_replacement,
+            $badge_reprint,
             $ground_transportation_request,
             $arrival_date_time,
             $arrival_airline_name,
