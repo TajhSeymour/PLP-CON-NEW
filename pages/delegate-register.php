@@ -655,7 +655,7 @@
                         <div class="row">
                             <!-- First column -->
                             <div class="col-md-6">
-                                <label class="form-control" for="Airline">
+                                <label class="form-control blue-text" for="Airline">
                                     <h5>1. Should Marital Rape Be Criminalized?</h5>
                                 </label>
                             </div>
@@ -1475,6 +1475,10 @@
 
 
 <style>
+
+.blue-text {
+    color: blue;
+  }
     .form-control {
         display: block;
         width: 100%;
