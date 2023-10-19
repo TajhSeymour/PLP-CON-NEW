@@ -654,13 +654,13 @@
                         <h3>Step6: CONVENTION SURVEY QUESTIONS</h3>
                         <div class="row">
                             <!-- First column -->
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <label class="form-control" for="Airline">
-                                    <h4>Should Marital Rape Be Criminalized?</h4>
+                                    <h4>1. Should Marital Rape Be Criminalized?</h4>
                                 </label>
                             </div>
                             <!-- Second column -->
-                            <div class="col-md-1">
+                            <div class="col-md-3">
                                 <select class="form-control" name="input_survey_question_1">
                                     <option value="">SELECT OPTION</option>
                                     <option value="0">NO</option>
@@ -668,6 +668,7 @@
                                 </select>
                             </div>
                         </div>
+                        
 
                         <h3>Step 7: CONVENTION PAYMENT INSTRUCTIONS</h3>
                         <strong>Please keep your receipt/s for proof of payment.</strong>
