@@ -400,12 +400,12 @@
                     <h3>Step 5A: CONVENTION REGISTRATION</h3>
                     <div class="row">
                         <div class="col-md-4">
-                            <label class="form-control" for="travel_question">Are you a convention voting
+                            <label class="form-control" for="travel_question">Are you voting or observer
                                 delegate?</label>
                             <select class="form-control" required id="input_vote_del_question"
                                 name="input_vote_del_question" required>
-                                <option value="No" selected> No</option>
-                                <option value="Yes">Yes</option>
+                                <option value="No" selected> Observer Delegate</option>
+                                <option value="Yes"> Voting Delegate</option>
                             </select>
                             <strong>Voting Delegates include elected branch delegates, current/former national party
                                 officers, and parliamentary members who have voting eligibility at the
