@@ -126,7 +126,7 @@
                         <option value="" disabled selected>Select an Option</option>
                         <option value="YES">Yes, I possess a PLP ID Card</option>
                         <option value="LOST">Yes, I'm a registered member, but I've misplaced my PLP ID Card</option>
-                           <!--- <option value="NO">No, I'm a new member / Never issued a PLP ID Card</option>
+                        <!--- <option value="NO">No, I'm a new member / Never issued a PLP ID Card</option>
                      <option value="NOD">No, I'm registring as a Observer Delegate</option> --->
                     </select>
 
@@ -169,7 +169,7 @@
                 </div>
 
                 <div id="have-id-section-info-false" style="display: none;">
-               <h3>Please contact the HQ for account assistance.</h3>
+                    <h3>Please contact the HQ for account assistance.</h3>
 
 
                 </div>
@@ -223,7 +223,7 @@
                                 <option value="DIRECT MEMBER">Direct Member</option>
                                 <option value="LIFETIME">Lifetime Member</option>
                                 <option value="STALWART COUNCILLOR">Stalwart Councillor</option>
-                                
+
                             </select>
 
 
@@ -512,7 +512,14 @@
                                 <div class="col-md-4">
                                     <label class="form-control" for="Airline"> Arrival Airline</label>
                                     <select class="form-control" name="input_arrival_airline">
-                                        <option value="" disabled selected>Select Airline*</option>
+                                    <option value="">SELECT AIRLINE</option>
+                                        <option value="BAHAMAS AIR">BAHAMAS AIR</option>
+                                        <option value="FLAMINGO AIR">FLAMINGO AIR</option>
+                                        <option value="LEAIR">LEAIR</option>
+                                        <option value="Pineapple Air">Pineapple Air</option>
+                                       <option value="Southern Air">Southern Air</option>
+                                        <option value="WESTERN AIR">WESTERN AIR</option>
+                                        <option value="OTHER">OTHER</option>
                                     </select>
                                 </div>
                                 <!-- First column -->
@@ -533,7 +540,65 @@
                                 <br>
                                 <div class="col-md-8">
                                     <select class="form-control" name="input_hotel">
-                                        <option value="">Select Hotel</option>
+                                        <option value="">SELECT HOTEL</option>
+                                        <option value="A STONE'S THROW AWAY">A STONE'S THROW AWAY</option>
+                                        <option value="ALBANY RESORT">ALBANY RESORT</option>
+                                        <option value="ARAWAK INN">ARAWAK INN</option>
+                                        <option value="ATLANTIS BEACH & CORAL TOWERS">ATLANTIS BEACH & CORAL TOWERS</option>
+                                        <option value="ATLANTIS ROYAL TOWERS">ATLANTIS ROYAL TOWERS</option>
+                                        <option value="BAYVIEW SUITES PARADISE ISLAND">BAYVIEW SUITES PARADISE ISLAND</option>
+                                        <option value="BREEZES BAHAMAS RESORT & SPA">BREEZES BAHAMAS RESORT & SPA</option>
+                                        <option value="BRITISH COLONIAL HOTEL">BRITISH COLONIAL HOTEL</option>
+                                        <option value="CASUARINAS OF CABLE BEACH">CASUARINAS OF CABLE BEACH</option>
+                                        <option value="CLUB LAND">CLUB LAND</option>
+                                        <option value="COLONY CLUB INN & SUITES">COLONY CLUB INN & SUITES</option>
+                                        <option value="COMFORT SUITES PARADISE ISLAND">COMFORT SUITES PARADISE ISLAND</option>
+                                        <option value="COMPASS POINT BEACH RESORT">COMPASS POINT BEACH RESORT</option>
+                                        <option value="CORAL HARBOUR BEACH HOUSE & VILLAS">CORAL HARBOUR BEACH HOUSE & VILLAS</option>
+                                        <option value="COURTYARD MARRIOT">COURTYARD MARRIOT</option>
+                                        <option value="DEANA SMITH GUEST HOUSE">DEANA SMITH GUEST HOUSE</option>
+                                        <option value="DORAN'S HOTEL & CAFÉ">DORAN'S HOTEL & CAFÉ</option>
+                                        <option value="EL GRECO HOTEL">EL GRECO HOTEL</option>
+                                        <option value="GLOWELL MOTEL VILLAS RESORT">GLOWELL MOTEL VILLAS RESORT</option>
+                                        <option value="GRAND HYATT BAHA MAR">GRAND HYATT BAHA MAR</option>
+                                        <option value="GRAYCLIFF HOTEL">GRAYCLIFF HOTEL</option>
+                                        <option value="HARBORSIDE RESORT AT ATLANTIS">HARBORSIDE RESORT AT ATLANTIS</option>
+                                        <option value="HIBISCUS INN GUEST HOUSE">HIBISCUS INN GUEST HOUSE</option>
+                                        <option value="HOLIDAY INN EXPRESS & SUITES">HOLIDAY INN EXPRESS & SUITES</option>
+                                        <option value="KENTUCKY SPRINGS MOTEL">KENTUCKY SPRINGS MOTEL</option>
+                                        <option value="LANDSHARK HOTEL & DIVE RESORT">LANDSHARK HOTEL & DIVE RESORT</option>
+                                        <option value="LYFORD CAY CLUB (PRIVATE CLUB)">LYFORD CAY CLUB (PRIVATE CLUB)</option>
+                                        <option value="MARGARITAVILLE BEACH RESORT">MARGARITAVILLE BEACH RESORT</option>  
+                                        <option value="MARLEY RESORT & SPA">MARLEY RESORT & SPA</option>
+                                        <option value="MELIA NASSAU BEACH RESORT">MELIA NASSAU BEACH RESORT</option>
+                                        <option value="MORRIS MOTEL">MORRIS MOTEL</option>
+                                        <option value="NASSAU HARBOUR CLUB AND MARINA">NASSAU HARBOUR CLUB AND MARINA</option>
+                                        <option value="OCEAN WEST BOUTIQUE HOTEL">OCEAN WEST BOUTIQUE HOTEL</option>
+                                        <option value="ORANGE HILL BEACH INN">ORANGE HILL BEACH INN</option>
+                                        <option value="PARADISE HARBOUR CLUB & MARINA">PARADISE HARBOUR CLUB & MARINA</option>
+                                        <option value="PARADISE ISLAND BEACH CLUB">PARADISE ISLAND BEACH CLUB</option> 
+                                         <option value="RIU PALACE PARADISE ISLAND">RIU PALACE PARADISE ISLAND</option>
+                                        <option value="ROSEWOOD BAHA MAR">ROSEWOOD BAHA MAR</option>
+                                        <option value="SANDALS ROYAL BAHAMIAN SPA RESORT">SANDALS ROYAL BAHAMIAN SPA RESORT</option>
+                                        <option value="SANDYPORT BEACH RESORT">SANDYPORT BEACH RESORT</option>
+                                        <option value="SIR CHARLES HOTEL">SIR CHARLES HOTEL</option>
+                                        <option value="SIVANANDA ASHRAM YOGA RETREAT">SIVANANDA ASHRAM YOGA RETREAT</option>
+                                        <option value="SLS BAHA MAR">SLS BAHA MAR</option>
+                                        <option value="SMITH'S MOTEL NO. 1">SMITH'S MOTEL NO. 1</option>
+                                        <option value="SMITH'S MOTEL NO. 2">SMITH'S MOTEL NO. 2</option>
+                                        <option value="SUN FUN RESORTS">SUN FUN RESORTS</option>
+                                        <option value="SUNRISE BEACH CLUB & VILLAS">SUNRISE BEACH CLUB & VILLAS</option>
+                                        <option value="SUNSHINE PARADISE SUITES">SUNSHINE PARADISE SUITES</option>
+                                        <option value="THE COVE">THE COVE</option>
+                                        <option value="THE ISLAND HOUSE NASSAU">THE ISLAND HOUSE NASSAU</option>
+                                        <option value="THE OCEAN CLUB, A FOUR SEASONS RESORT">THE OCEAN CLUB, A FOUR SEASONS RESORT</option>
+                                        <option value="THE ORCHARD GARDEN HOTEL">THE ORCHARD GARDEN HOTEL</option>
+                                      <option value="THE REEF">THE REEF</option>
+                                        <option value="TOWNE HOTEL">TOWNE HOTEL</option>
+                                        <option value="WARWICK PARADISE ISLAND">WARWICK PARADISE ISLAND</option>
+                                        <option value="WESTWIND CLUB ASSOC. LTD.">WESTWIND CLUB ASSOC. LTD.</option>
+                                        <option value="WESTWIND II CLUB">WESTWIND II CLUB</option>
+                                        
                                     </select>
                                 </div>
                                 <!-- Second column -->
@@ -551,8 +616,16 @@
                                 <div class="col-md-4">
                                     <label class="form-control" for="Airline"> Departure Airline </label>
                                     <select class="form-control" name="input_departure_airline">
-                                        <option value="">Select Airline</option>
+                                    <option value="">SELECT AIRLINE</option>
+                                        <option value="BAHAMAS AIR">BAHAMAS AIR</option>
+                                        <option value="FLAMINGO AIR">FLAMINGO AIR</option>
+                                        <option value="LEAIR">LEAIR</option>
+                                        <option value="Pineapple Air">Pineapple Air</option>
+                                       <option value="Southern Air">Southern Air</option>
+                                        <option value="WESTERN AIR">WESTERN AIR</option>
+                                        <option value="OTHER">OTHER</option>
                                     </select>
+
                                 </div>
                                 <!-- Second column -->
                                 <div class="col-md-4">
@@ -564,7 +637,24 @@
                             </div>
                         </div>
 
-                        <h3>Step 6: CONVENTION PAYMENT INSTRUCTIONS</h3>
+                        <h3>Step6: CONVENTION SURVEY QUESTIONS</h3>
+                        <div class="row">
+                        <!-- First column -->
+                        <div class="col-md-4">
+                            <label class="form-control" for="Airline"> Should Marital Rape Be Criminalized? </label>
+                             </div>
+                        <!-- Second column -->
+                        <div class="col-md-4">
+                        <select class="form-control" name="input_survey_question_1">
+                                    <option value="">SELECT OPTION</option>
+                                        <option value="0">NO</option>
+                                        <option value="1">YES</option>
+                                        </select>
+
+                        </div>
+</div>
+
+                        <h3>Step 7: CONVENTION PAYMENT INSTRUCTIONS</h3>
                         <strong>Please keep your receipt/s for proof of payment.</strong>
                         <div class="row">
                             <div class="col-md-4">
@@ -656,14 +746,16 @@
                 <div id="have-id-section-no" style="display: none;">This is the section for new members.</div>
 
                 <div id="have-id-section-lost" style="display: none;">
-                
-                <h3> 
-Manual registration is required. Kindly visit our headquarters or the registration desk with a valid photo ID to complete the process.</h3></div>
+
+                    <h3>
+                        Manual registration is required. Kindly visit our headquarters or the registration desk with a
+                        valid photo ID to complete the process.</h3>
+                </div>
 
 
                 <!-- SECTION FOR OBSERVER DELEGATES ONLY-->
                 <div id="have-id-section-nob" style="display: none;">
-                    
+
 
 
 
@@ -684,23 +776,26 @@ Manual registration is required. Kindly visit our headquarters or the registrati
             </div>
 
 
-       
-</div>
-<br>
-<br>
-<br>
-<div class="step-navigation">
-    <input type="button" class="next-btn button-caption button button-solid-light-grey" id="next" value="NEXT >>>">
-    <input type="button" class="prev-btn button-caption button button-solid-light-grey" id="prev" value="<<< PREVIOUS">
 
-    <input type="submit" id="submit-button"
-        class="btn-submit button-caption button button-solid-light transition-el  transition-el-5"
-        value="SUBMIT REGISTRATION">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="step-navigation">
+            <input type="button" class="next-btn button-caption button button-solid-light-grey" id="next"
+                value="NEXT >>>">
+            <input type="button" class="prev-btn button-caption button button-solid-light-grey" id="prev"
+                value="<<< PREVIOUS">
 
-    <input type="button" class="btn-gohome button-caption button button-solid-light-grey transition-el transition-el-5"
-        value="GO BACK TO HOME" id="go-back-button" onclick="goToHomePage()">
-</div>
-</form>
+            <input type="submit" id="submit-button"
+                class="btn-submit button-caption button button-solid-light transition-el  transition-el-5"
+                value="SUBMIT REGISTRATION">
+
+            <input type="button"
+                class="btn-gohome button-caption button button-solid-light-grey transition-el transition-el-5"
+                value="GO BACK TO HOME" id="go-back-button" onclick="goToHomePage()">
+        </div>
+    </form>
 </div>
 
 <script>
@@ -1236,40 +1331,40 @@ Manual registration is required. Kindly visit our headquarters or the registrati
 </script>
 
 <script>
-var dropdownIDQuestion = document.getElementById("input_del_id_question");
-var dropdownBadgeQuestion = document.getElementById("input_vote_del_badge_question");
-var inputTotalCost = document.getElementById("input_total_cost");
-var dropdownDelQuestion = document.getElementById("input_vote_del_question");
+    var dropdownIDQuestion = document.getElementById("input_del_id_question");
+    var dropdownBadgeQuestion = document.getElementById("input_vote_del_badge_question");
+    var inputTotalCost = document.getElementById("input_total_cost");
+    var dropdownDelQuestion = document.getElementById("input_vote_del_question");
 
-// Add event listeners to handle changes in the dropdowns
-dropdownIDQuestion.addEventListener("change", updateTotalCost);
-dropdownBadgeQuestion.addEventListener("change", updateTotalCost);
-dropdownDelQuestion.addEventListener("change", updateTotalCost);
+    // Add event listeners to handle changes in the dropdowns
+    dropdownIDQuestion.addEventListener("change", updateTotalCost);
+    dropdownBadgeQuestion.addEventListener("change", updateTotalCost);
+    dropdownDelQuestion.addEventListener("change", updateTotalCost);
 
-function updateTotalCost() {
-    var idQuestionValue = dropdownIDQuestion.value;
-    var delQuestion = dropdownDelQuestion.value;
-    var badgeQuestionValue = dropdownBadgeQuestion.value;
+    function updateTotalCost() {
+        var idQuestionValue = dropdownIDQuestion.value;
+        var delQuestion = dropdownDelQuestion.value;
+        var badgeQuestionValue = dropdownBadgeQuestion.value;
 
 
-    var baseCost = 25.00;
+        var baseCost = 25.00;
 
-    // Check if delQuestionValue is "Yes" and update the base cost accordingly
-    if (delQuestion === "Yes") {
-        baseCost = 50.00;
+        // Check if delQuestionValue is "Yes" and update the base cost accordingly
+        if (delQuestion === "Yes") {
+            baseCost = 50.00;
+        }
+
+        // Check if badgeQuestionValue is "1" and add $5 to the base cost
+        if (badgeQuestionValue === "1") {
+            baseCost += 5.00;
+        }
+
+        // Update the total cost in the input field
+        inputTotalCost.value = "$" + baseCost.toFixed(2);
     }
 
-    // Check if badgeQuestionValue is "1" and add $5 to the base cost
-    if (badgeQuestionValue === "1") {
-        baseCost += 5.00;
-    }
-
-    // Update the total cost in the input field
-    inputTotalCost.value = "$" + baseCost.toFixed(2);
-}
-
-// Initialize the total cost when the page loads
-updateTotalCost();
+    // Initialize the total cost when the page loads
+    updateTotalCost();
 
 
 </script>
@@ -1318,7 +1413,7 @@ updateTotalCost();
                     dataType: 'json',
                     success: function (response) {
                         if (response.status === "success") {
-                           // alert('Success! ' + response.message);
+                            // alert('Success! ' + response.message);
                             window.location.href = 'index.php?message=You are now registered!';
                         } else {
                             alert('Error! ' + response.message);
