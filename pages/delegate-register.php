@@ -130,7 +130,7 @@
                      <option value="NOD">No, I'm registring as a Observer Delegate</option> --->
                     </select>
                     <label class="form-control" for="plp_selection">
-                    <h5 class="blue-text">Please note: All Stalwarts must register at the PLP HQ or Registration Desk.
+                    <h5 class="blue-text">Please Note: All Stalwart Councillors must register at the PLP HQ or Conference Registration Desk.
                            </h5>
                     </label>
 
