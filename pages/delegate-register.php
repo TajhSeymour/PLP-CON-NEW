@@ -654,8 +654,8 @@
                         <h3>Step6: CONVENTION SURVEY QUESTIONS</h3>
                         <div class="row">
                             <!-- First column -->
-                            <div class="col-md-6">
-                                <label class="form-control" for="Airline">
+                            <div class="col-md-8">
+                                <label class="form-control" for="">
                                     <h5 class="blue-text">1. Should Marital Rape Be Criminalized?</h5>
                                 </label>
                             </div>
@@ -668,6 +668,66 @@
                                 </select>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <!-- First column -->
+                            <div class="col-md-8">
+                                <label class="form-control" for="">
+                                    <h5 class="blue-text">2. Should Marijuana be Legal in The Bahamas for Recreational Purposes?</h5>
+                                </label>
+                            </div>
+                            <!-- Second column -->
+                            <div class="col-md-2">
+                                <select class="form-control" name="input_survey_question_2">
+                                    <option value="">SELECT OPTION</option>
+                                    <option value="0">NO</option>
+                                    <option value="1">YES</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- First column -->
+                            <div class="col-md-8">
+                                <label class="form-control" for="">
+                                    <h5 class="blue-text">3. Should Marijuana be Legal in The Bahamas for Medicinal Purposes?</h5>
+                                </label>
+                            </div>
+                            <!-- Second column -->
+                            <div class="col-md-2">
+                                <select class="form-control" name="input_survey_question_3">
+                                    <option value="">SELECT OPTION</option>
+                                    <option value="0">NO</option>
+                                    <option value="1">YES</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- First column -->
+                            <div class="col-md-8">
+                                <label class="form-control" for="">
+                                    <h5 class="blue-text">4. Score the government’s performance from (Poor) 1 - 10 (Outstanding) ?</h5>
+                                </label>
+                            </div>
+                            <!-- Second column -->
+                            <div class="col-md-6">
+                                <select class="form-control" name="input_survey_question_4">
+                                    <option value="">SELECT OPTION</option>
+                                    <option value="1">1 - Poor</option>
+                                    <option value="2">2 - Very Poor</option>
+                                    <option value="3">3 - Bad</option>
+                                    <option value="4">4 - Below Average</option>
+                                    <option value="5">5 - Average</option>
+                                    <option value="6">6 - Above Average</option>
+                                    <option value="7">7 - Good</option>
+                                    <option value="8">8 - Very Good</option>
+                                    <option value="9">9- Excellent</option>
+                                    <option value="10">10 - Outstanding</option>
+                                </select>
+                            </div>
+                        </div>
+         
 
 
                         <h3>Step 7: CONVENTION PAYMENT INSTRUCTIONS</h3>
