@@ -413,8 +413,8 @@
                         </div>
                         <div class="col-md-4">
                             <label class="form-control" for="travel_question">Enter Branch Code: *</label>
-                            <input type="text" class="form-control" disabled id="input_branch_id_code"
-                                name="input_branch_id_code">
+                            <input type="text" class="form-control"  id="input_branch_id_code"
+                               required  name="input_branch_id_code">
                             <strong>Please enter the unique branch code then press "VERIFY CODE" to proceed to the next
                                 step.</strong>
                         </div>
