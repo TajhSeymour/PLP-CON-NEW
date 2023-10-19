@@ -418,12 +418,12 @@
                                 <br>
                                 <label class="form-control" for="conference_photo">Upload New Badge Photo ID (JPG IMAGES
                                     ONLY)*</label>
-                                <input class="form-control" type="file" accept=".jpg" id="input_badge_photo"
-                                    name="input_badge_photo" disabled>
+                                <input class="form-control" type="file" accept=".jpg" id="input_new_del_badge_photo"
+                                    name="input_new_del_badge_photo" disabled>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-control" for="conference_photo2">Preview</label>
-                                <img src="" alt="Badge Photo Preview" id="badge_photo_preview"
+                                <img src="https://plpconvention.org/idbadge/unknown.jpg" alt="Badge Photo Preview" id="new_del_badge_photo_preview"
                                     style="max-width: 150px; max-height: 110px; display: none;">
                                 <br>
                             </div>
@@ -866,7 +866,7 @@ if (nominationQuestionInput && hiddenInput) {
 
 <script>
     var dropdownBadgeQuestion = document.getElementById("input_vote_del_badge_question");
-    var inputBadgeUpload = document.getElementById("input_badge_photo");
+    var inputBadgeUpload = document.getElementById("input_new_del_badge_photo");
 
     // Add an event listener to handle changes in the dropdown
     dropdownBadgeQuestion.addEventListener("change", function () {
@@ -1145,8 +1145,8 @@ if (nominationQuestionInput && hiddenInput) {
 
 <script>
     // Badge Photo preview
-    const badgePhotoInput = document.getElementById('input_badge_photo');
-    const badgePhotoPreview = document.getElementById('badge_photo_preview');
+    const badgePhotoInput = document.getElementById('input_new_del_badge_photo');
+    const badgePhotoPreview = document.getElementById('new_del_badge_photo_preview');
 
     badgePhotoInput.addEventListener('change', function () {
         const file = this.files[0];
