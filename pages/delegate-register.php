@@ -458,8 +458,8 @@
                                 <br>
                                 <label class="form-control" for="conference_photo">Upload New Badge Photo ID (JPG IMAGES
                                     ONLY)*</label>
-                                <input class="form-control" type="file" accept=".jpg" id="input_badge_photo2"
-                                    name="input_badge_photo2" >
+                                <input class="form-control" type="file" accept=".jpg" id="input_badge_photo"
+                                    name="input_badge_photo" disabled>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-control" for="conference_photo2">Preview</label>
