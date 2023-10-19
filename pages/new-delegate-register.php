@@ -124,7 +124,7 @@
                             *</label></strong>
                     <select class="form-control" required id="input_del_id_question" name="input_del_id_question">
                         <option value="" disabled selected>Select an Option</option>
-                        <option value="YES">No, I'm a new member / Never issued a PLP ID Card/option>
+                        <option value="YES">No, I'm a new member / Never issued a PLP ID Card</option>
                         <option value="LOST">Yes, I'm a registered member, but I've misplaced my PLP ID Card</option>
                         <!--- <option value="NO">No, I'm a new member / Never issued a PLP ID Card</option>
                      <option value="NOD">No, I'm registring as a Observer Delegate</option> --->
@@ -151,25 +151,25 @@
                         <div class="col-md-4">
                             <label class="form-control" for="input_first_name">First Name *</label>
                             <input type="text" class="form-control" id="input_new_del_first_name"
-                                name="input_del_first_name" >
+                                name="input_new_del_first_name" >
 
 
                         </div>
                         <div class="col-md-3">
                             <label class="form-control" for="input_middle_name">Middle Name</label>
                             <input type="text" class="form-control" id="input_new_del_middle_name" 
-                                name="input_del_middle_name" >
+                                name="input_new_del_middle_name" >
 
                         </div>
                         <div class="col-md-4">
                             <label class="form-control" for="input_last_name">Last Name *</label>
-                            <input type="text" class="form-control" id="input_new_del_last_name" name="input_del_last_name"
+                            <input type="text" class="form-control" id="input_new_del_last_name" name="input_new_del_last_name"
                                 >
 
                         </div>
                         <div class="col-md-4">
                             <label class="form-control" for="gender">Gender: *</label>
-                            <select class="form-control" required id="input_del_gender" name="input_del_gender">
+                            <select class="form-control" required id="input_new_del_gender" name="input_new_del_gender">
                                 <option value="" disabled selected>Select Gender</option>
                                 <option value="MALE">MALE</option>
                                 <option value="FEMALE">FEMALE</option>
@@ -178,8 +178,8 @@
 
                         <div class="col-md-4">
                             <label class="form-control" for="gender">Membership Type</label>
-                            <select class="form-control"  id="input_del_membership_type"
-                                name="input_del_membership_type">
+                            <select class="form-control"  id="input_new_del_membership_type"
+                                name="input_new_del_membership_type">
                                 <option value="" disabled selected>Select Membership Type</option>
                                 <option value="BRANCH MEMBER">Constituency Branch Member</option>
                                 <option value="DIRECT MEMBER">Direct Member</option>
@@ -192,16 +192,16 @@
                         <!-- Fifth column -->
                         <div class="col-md-4">
                             <label class="form-control" for="dob">Date of Birth *</label>
-                            <input required type="date" id="input_del_dob" value="2000-12-31" name="input_del_dob"
+                            <input required type="date" id="input_new_del_dob" value="2000-12-31" name="input_new_del_dob"
                                 min="1920-01-01" max="2010-12-31">
                         </div>
                         <div class="col-md-4">
                             <label class="form-control" for="Nationality">NIB Number *</label>
-                            <input type="number" class="form-control" required id="input_del_nib" name="input_del_nib">
+                            <input type="number" class="form-control" required id="input_new_del_nib" name="input_new_del_nib">
                         </div>
                         <div class="col-md-4">
                             <label class="form-control" for="country_name">Your Constituency *</label>
-                            <select class="form-control" id="input_del_constituency" name="input_del_constituency"
+                            <select class="form-control" id="input_new_del_constituency" name="input_new_del_constituency"
                                 required>
                                 <option value="" disabled selected>Select your constituency</option>
                                 <option value="BAINS & GRANTS TOWN">Bains & Grants Town</option>
@@ -248,8 +248,8 @@
                         </div>
                         <div class="col-md-4">
                             <label class="form-control" for="Nationality">Affiliated Branch Membership *</label>
-                            <select class="form-control" id="input_del_affiliated_branch" required
-                                name="input_del_affiliated_branch">
+                            <select class="form-control" id="input_new_del_affiliated_branch" required
+                                name="input_new_del_affiliated_branch">
                                 <option value="None" disabled selected> N/A
                                 </option>
                                 <option value="PYL">PYL</option>
@@ -307,36 +307,36 @@
                     <div class="row">
 
                         <div class="col-md-4">
-                            <label class="form-control" for="input_del_email">Email Address *</label>
-                            <input type="email" class="form-control" id="input_del_email" name="input_del_email"
+                            <label class="form-control" for="input_new_del_email">Email Address *</label>
+                            <input type="email" class="form-control" id="input_new_del_email" name="input_new_del_email"
                                 required>
                         </div>
                         <div class="col-md-4">
                             <label class="form-control" for="input_del_mobile">Mobile Number</label>
-                            <input class="form-control" type="text" id="input_del_mobile" name="input_del_mobile"
+                            <input class="form-control" type="text" id="input_new_del_mobile" name="input_new_del_mobile"
                                 placeholder="Enter Your Mobile Number"
-                                oninput="formatPhoneNumber('input_del_mobile'); validatePhoneNumber('input_del_mobile')">
+                                oninput="formatPhoneNumber('input_new_del_mobile'); validatePhoneNumber('input_new_del_mobile')">
                             <div id="input_del_mobile-validation"></div>
                         </div>
                         <div class="col-md-4">
                             <label class="form-control" for="input_del_telephone">Telephone Number (Other)</label>
-                            <input class="form-control" type="text" id="input_del_telephone" name="input_del_telephone"
+                            <input class="form-control" type="text" id="input_new_del_telephone" name="input_new_del_telephone"
                                 placeholder="Enter Your Telephone Number"
-                                oninput="formatPhoneNumber('input_del_telephone'); validatePhoneNumber('input_del_telephone')">
+                                oninput="formatPhoneNumber('input_new_del_telephone'); validatePhoneNumber('input_new_del_telephone')">
                             <div id="input_del_telephone-validation"></div>
                         </div>
 
                         <div class="col-md-4">
                             <label class="form-control" for="input_del_emergency_name">Emergency Contact Name</label>
-                            <input type="text" class="form-control" id="input_del_emergency_name"
-                                name="input_del_emergency_name">
+                            <input type="text" class="form-control" id="input_new_del_emergency_name"
+                                name="input_new_del_emergency_name">
 
                         </div>
 
                         <div class="col-md-4">
                             <label class="form-control" for="gender">Contact Relationship</label>
-                            <select class="form-control" id="input_del_emergency_relationship"
-                                name="input_del_emergency_relationship">
+                            <select class="form-control" id="input_new_del_emergency_relationship"
+                                name="input_new_del_emergency_relationship">
                                 <option value="" disabled selected>Select Relationship</option>
                                 <option value="Parent">Parent</option>
                                 <option value="Grand Parent">Grand Parent</option>
@@ -351,10 +351,10 @@
                         <!-- Fifth column -->
                         <div class="col-md-4">
                             <label class="form-control" for="input_del_emergency_telephone">Emergency Telephone</label>
-                            <input class="form-control" type="text" id="input_del_emergency_telephone"
-                                name="input_del_emergency_telephone" placeholder="Enter Emergency Telephone Number"
-                                oninput="formatPhoneNumber('input_del_emergency_telephone'); validatePhoneNumber('input_del_emergency_telephone')">
-                            <div id="input_del_emergency_telephone-validation"></div>
+                            <input class="form-control" type="text" id="input_new_del_emergency_telephone"
+                                name="input_new_del_emergency_telephone" placeholder="Enter Emergency Telephone Number"
+                                oninput="formatPhoneNumber('input_new_del_emergency_telephone'); validatePhoneNumber('input_new_del_emergency_telephone')">
+                            <div id="input_new_del_emergency_telephone-validation"></div>
 
                         </div>
                     </div>
@@ -363,8 +363,8 @@
                         <div class="col-md-4">
                             <label class="form-control" for="travel_question">Are you voting or observer
                                 delegate?</label>
-                            <select class="form-control" required id="input_vote_del_question"
-                                name="input_vote_del_question" required>
+                            <select class="form-control" required id="input_vote_new_del_question"
+                                name="input_vote_new_del_question" required>
                                 <option value="0" selected>Observer Delegate</option>
                                 <option value="1">Voting Delegate</option>
                             </select>
@@ -374,23 +374,23 @@
                         </div>
                         <div class="col-md-4">
                             <label class="form-control" for="travel_question">Enter Branch Code: *</label>
-                            <input type="text" class="form-control"  id="input_branch_id_code"
-                               required  name="input_branch_id_code">
+                            <input type="text" class="form-control"  id="input_new_del_branch_id_code"
+                               required  name="input_new_del_branch_id_code">
                             <strong>Please enter the unique branch code then press "VERIFY CODE" to proceed to the next
                                 step.</strong>
                         </div>
 
                         <div class="col-md-4">
                             <br>
-                            <button width="100%" type="button" id="verify-plp-branch-code" name="verify-plp-branch-code"
+                            <button width="100%" type="button" id="verify-plp-branch-code-new" name="verify-plp-branch-code-new"
                                 class="button-caption button button-solid-light transition-el transition-el-5">VERIFY
                                 CODE</button>
                             <br>
                         </div>
                         <div class="col-md-6">
                             <label class="form-control" for="travel_question">Delegate Branch </label>
-                            <input type="text" class="form-control" id="input_vote_del_nomination_question"
-                                name="input_vote_del_nomination_question" disabled>
+                            <input type="text" class="form-control" id="input_vote_new_del_nomination_question"
+                                name="input_vote_new_del_nomination_question" disabled>
                             <strong>Please be aware that your delegate status will undergo verification by The
                                 Convention Committee before payment is processed. </strong>
                                 
@@ -402,8 +402,8 @@
                             <label class="form-control" for="travel_question">Would you like a badge reprint/replacement?</label>
                             <br>
 
-                            <select class="form-control" required id="input_vote_del_badge_question"
-                                name="input_vote_del_badge_question">
+                            <select class="form-control" required id="input_vote_new_del_badge_question"
+                                name="input_vote_new_del_badge_question">
                                 <option value="" disabled selected> Please select</option>
                                 <option value="0" selected> No</option>
                                 <option value="1">Yes</option>
@@ -466,14 +466,14 @@
                                 <!-- First column -->
                                 <div class="col-md-4">
                                     <label class="form-control" for="Arrival_Date">Arrival Date & Time</label>
-                                    <input type="datetime-local" id="input_arrival_date_time"
-                                        name="input_arrival_date_time" value="2023-09-01T19:30" min="2023-08-01T00:00"
+                                    <input type="datetime-local" id="input_new_del_arrival_date_time"
+                                        name="input_new_del_arrival_date_time" value="2023-09-01T19:30" min="2023-08-01T00:00"
                                         max="2023-10-31T00:00" />
                                 </div>
                                 <!-- Second column -->
                                 <div class="col-md-4">
                                     <label class="form-control" for="Airline"> Arrival Airline</label>
-                                    <select class="form-control" name="input_arrival_airline">
+                                    <select class="form-control" name="input_new_del_arrival_airline">
                                         <option value="">SELECT AIRLINE</option>
                                         <option value="BAHAMAS AIR">BAHAMAS AIR</option>
                                         <option value="FLAMINGO AIR">FLAMINGO AIR</option>
@@ -488,8 +488,8 @@
                                 <div class="col-md-4">
                                     <label class="form-control" for="input_flight_number"> Arrival Flight Number
                                     </label>
-                                    <input type="text" class="form-control" name="input_arrival_flight_number"
-                                        id="input_arrival_flight_number">
+                                    <input type="text" class="form-control" name="input_new_del_arrival_flight_number"
+                                        id="input_new_del_arrival_flight_number">
                                 </div>
                             </div>
 
@@ -501,7 +501,7 @@
                                         style="color: blue; font-weight: bold;">Click here</a> for more information.</p>
                                 <br>
                                 <div class="col-md-8">
-                                    <select class="form-control" name="input_hotel">
+                                    <select class="form-control" name="input_new_del_hotel">
                                         <option value="">SELECT HOTEL</option>
                                         <option value="A STONE'S THROW AWAY">A STONE'S THROW AWAY</option>
                                         <option value="ALBANY RESORT">ALBANY RESORT</option>
@@ -584,14 +584,14 @@
                                 <div class="col-md-4">
                                     <label class="form-control" for="Departure_date">Departure Date & Time
                                     </label>
-                                    <input type="datetime-local" id="input_departure_date_time"
-                                        name="input_departure_date_time" value="2023-09-01T19:30" min="2023-08-01T00:00"
+                                    <input type="datetime-local" id="input_new_del_departure_date_time"
+                                        name="input_new_del_departure_date_time" value="2023-09-01T19:30" min="2023-08-01T00:00"
                                         max="2023-10-31T00:00" />
                                 </div>
                                 <!-- First column -->
                                 <div class="col-md-4">
                                     <label class="form-control" for="Airline"> Departure Airline </label>
-                                    <select class="form-control" name="input_departure_airline">
+                                    <select class="form-control" name="input_new_del_departure_airline">
                                         <option value="">SELECT AIRLINE</option>
                                         <option value="BAHAMAS AIR">BAHAMAS AIR</option>
                                         <option value="FLAMINGO AIR">FLAMINGO AIR</option>
@@ -607,116 +607,19 @@
                                 <div class="col-md-4">
                                     <label class="form-control" for="input_departure_flight_number">Departure
                                         Flight Number </label>
-                                    <input type="text" class="form-control" name="input_departure_flight_number"
-                                        id="input_departure_flight_number">
+                                    <input type="text" class="form-control" name="input_new_del_departure_flight_number"
+                                        id="input_new_del_departure_flight_number">
                                 </div>
                             </div>
                         </div>
 
-                        <h3>Step6: CONVENTION SURVEY QUESTIONS</h3>
-                        <div class="row">
-                            <!-- First column -->
-                            <div class="col-md-8">
-                                <label class="form-control" for="">
-                                    <h5 class="blue-text">1. Should Marital Rape Be Criminalized ? *</h5>
-                                </label>
-                            </div>
-                            <!-- Second column -->
-                            <div class="col-md-2">
-                                <select class="form-control" name="input_survey_question_1" required>
-                                    <option value="">SELECT OPTION</option>
-                                    <option value="0">NO</option>
-                                    <option value="1">YES</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <!-- First column -->
-                            <div class="col-md-8">
-                                <label class="form-control" for="">
-                                    <h5 class="blue-text">2. Should Marijuana be Legal in The Bahamas for Recreational Purposes ? *</h5>
-                                </label>
-                            </div>
-                            <!-- Second column -->
-                            <div class="col-md-2">
-                                <select class="form-control" name="input_survey_question_2" required>
-                                    <option value="">SELECT OPTION</option>
-                                    <option value="0">NO</option>
-                                    <option value="1">YES</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <!-- First column -->
-                            <div class="col-md-8">
-                                <label class="form-control" for="">
-                                    <h5 class="blue-text">3. Should Marijuana be Legal in The Bahamas for Medicinal Purposes ? *</h5>
-                                </label>
-                            </div>
-                            <!-- Second column -->
-                            <div class="col-md-2">
-                                <select class="form-control" name="input_survey_question_3" required>
-                                    <option value="">SELECT OPTION</option>
-                                    <option value="0">NO</option>
-                                    <option value="1">YES</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <!-- First column -->
-                            <div class="col-md-8">
-                                <label class="form-control" for="">
-                                    <h5 class="blue-text">4. Should The Bahamas be a Republic ? *</h5>
-                                </label>
-                            </div>
-                            <!-- Second column -->
-                            <div class="col-md-2">
-                                <select class="form-control" name="input_survey_question_4" required>
-                                    <option value="">SELECT OPTION</option>
-                                    <option value="0">NO</option>
-                                    <option value="1">YES</option>
-                                </select>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <!-- First column -->
-                            <div class="col-md-8">
-                                <label class="form-control" for="">
-                                    <h5 class="blue-text">5. Score the government’s performance from 1 - 10 ? *</h5>
-                                </label>
-                            </div>
-                            <!-- Second column -->
-                            <div class="col-md-2">
-                                <select class="form-control" name="input_survey_question_5" required>
-                                    <option value="">SELECT OPTION</option>
-                                    <option value="1">1 - Poor</option>
-                                    <option value="2">2 - Very Poor</option>
-                                    <option value="3">3 - Bad</option>
-                                    <option value="4">4 - Below Average</option>
-                                    <option value="5">5 - Average</option>
-                                    <option value="6">6 - Above Average</option>
-                                    <option value="7">7 - Good</option>
-                                    <option value="8">8 - Very Good</option>
-                                    <option value="9">9- Excellent</option>
-                                    <option value="10">10 - Outstanding</option>
-                                </select>
-                            </div>
-                        </div>
-         
-
-
-                        <h3>Step 7: CONVENTION PAYMENT INSTRUCTIONS</h3>
+                        <h3>Step 6: CONVENTION PAYMENT INSTRUCTIONS</h3>
                         <strong>Please keep your receipt/s for proof of payment.</strong>
                         <div class="row">
                             <div class="col-md-4">
                                 <label class="form-control" for="travel_question">Preferred Payment Method *</label>
-                                <select class="form-control" required id="input_pay_method_question"
-                                    name="input_pay_method_question" onchange="showPaymentInstructions()">
+                                <select class="form-control" required id="input_new_del_pay_method_question"
+                                    name="input_new_del_pay_method_question" onchange="showPaymentInstructions()">
                                     <option value="" selected>Select Method</option>
                                     <option value="Cash">CASH (PLP HQ)</option>
                                     <option value="Bank">BANK WIRE TRANSFER</option>
@@ -730,8 +633,8 @@
                                 <br>
                                 <div class="col-md-4">
                                     <label class="form-control" for="travel_question">Bank Name</label>
-                                    <select class="form-control" id="input_bank_name_question" disabled
-                                        name="input_bank_name_question">
+                                    <select class="form-control" id="input_new_del_bank_name_question" disabled
+                                        name="input_new_del_bank_name_question">
 
                                         <option value="Bank of The Bahamas">Bank of The Bahamas</option>
                                         <option value="Commonwealth Bank">Commonwealth Bank</option>
@@ -743,45 +646,45 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-control" for="travel_question">Account Name</label>
-                                    <input type="text" class="form-control" name="input_bank_account_name" disabled
-                                        id="input_bank_account_name" value="Progressive Liberal">
+                                    <input type="text" class="form-control" name="input_new_del_bank_account_name" disabled
+                                        id="input_new_del_bank_account_name" value="Progressive Liberal">
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-control" for="travel_question">Account Number</label>
-                                    <input type="text" class="form-control" name="input_bank_account_number" disabled
-                                        id="input_bank_account_number" value="1260642">
+                                    <input type="text" class="form-control" name="input_new_del_bank_account_number" disabled
+                                        id="input_new_del_bank_account_number" value="1260642">
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-control" for="travel_question">Bank ABA Number</label>
-                                    <input type="text" class="form-control" name="input_ABA_Number" disabled
-                                        id="input_ABA_Number" value="290670101">
+                                    <input type="text" class="form-control" name="input_new_del_ABA_Number" disabled
+                                        id="input_new_del_ABA_Number" value="290670101">
                                 </div>
 
                                 <div class="col-md-4">
                                     <label class="form-control" for="travel_question">Branch Location & Number</label>
-                                    <input type="text" class="form-control" name="input_branch_location" disabled
-                                        id="input_ABA_Number" value="JFK - 29067 | Nassau, Bahamas">
+                                    <input type="text" class="form-control" name="input_new_del_branch_location" disabled
+                                        id="input_new_del_ABA_Number" value="JFK - 29067 | Nassau, Bahamas">
                                 </div>
                             </div>
                         </div>
                         <div id="payment-instructions-cash" style="display: none;">
                             <div class="col-md-8">
                                 <label class="form-control" for="travel_question">Instructions</label>
-                                <textarea class="form-control" name="input_cash_instructions" readonly
-                                    id="input_cash_instructions">Please make your payment at the PLP HQ and remember to retain your receipt. A registration clerk will be available to assist with processing your registration package.</textarea>
+                                <textarea class="form-control" name="input_new_del_cash_instructions" readonly
+                                    id="input_new_del_cash_instructions">Please make your payment at the PLP HQ and remember to retain your receipt. A registration clerk will be available to assist with processing your registration package.</textarea>
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <label class="form-control" for="travel_question">Total Cost</label>
-                            <input type="text" class="form-control" name="input_total_cost" disabled
-                                id="input_total_cost">
+                            <input type="text" class="form-control" name="input_new_del_total_cost" disabled
+                                id="input_new_del_total_cost">
                         </div>
 
                     </div>
                     <div class="row">
                         <div class="col-md-1">
-                            <input type="checkbox" id="declaration" name="declaration" required>
+                            <input type="checkbox" id="new_del_declaration" name="new_del_declaration" required>
                         </div>
                         <div class="col-md-10">
                             <label class="form-control" for="declaration"><strong>By checking this box, I confirm that
@@ -983,7 +886,7 @@ if (nominationQuestionInput && hiddenInput) {
 </script>
 
 <script>
-    document.getElementById('verify-plp-branch-code').addEventListener('click', verifyPLPBranchInfo);
+    document.getElementById('verify-plp-branch-code-new').addEventListener('click', verifyPLPBranchInfo);
 
     function verifyPLPBranchInfo() {
         // Get the input values
