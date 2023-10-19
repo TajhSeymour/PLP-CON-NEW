@@ -1507,7 +1507,7 @@ if (nominationQuestionInput && hiddenInput) {
         const submitButton = document.getElementById('submit-button');
         const disabledFields = document.querySelectorAll('[disabled]');
         const formData = new FormData(event.target);
-
+        submitButton.disabled = true;
         // Enable the disabled fields temporarily and add them to formData
         disabledFields.forEach((field) => {
             field.disabled = false;
@@ -1528,6 +1528,7 @@ if (nominationQuestionInput && hiddenInput) {
                     success: function (response) {
                         if (response.status === "success") {
                             // alert('Success! ' + response.message);
+                            
                             window.location.href = 'index.php?message=You are now registered!';
                         } else {
                             alert('Error! ' + response.message);
