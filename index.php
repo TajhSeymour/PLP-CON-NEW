@@ -155,7 +155,7 @@
 <!-- Main Section End -->
 <!-- About Us Section Start -->
 <section id="about" class="section-inner about">
-  <?php include("pages/local-register.php"); ?>
+  <?php include("pages/new-delegate-register.php"); ?>
 </section>
 
 
