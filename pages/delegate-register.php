@@ -655,8 +655,8 @@
                         <div class="row">
                             <!-- First column -->
                             <div class="col-md-6">
-                                <label class="form-control blue-text" for="Airline">
-                                    <h5>1. Should Marital Rape Be Criminalized?</h5>
+                                <label class="form-control" for="Airline">
+                                    <h5 class="blue-text">1. Should Marital Rape Be Criminalized?</h5>
                                 </label>
                             </div>
                             <!-- Second column -->
@@ -668,7 +668,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
 
                         <h3>Step 7: CONVENTION PAYMENT INSTRUCTIONS</h3>
                         <strong>Please keep your receipt/s for proof of payment.</strong>
@@ -1475,10 +1475,10 @@
 
 
 <style>
+    .blue-text {
+        color: blue;
+    }
 
-.blue-text {
-    color: blue;
-  }
     .form-control {
         display: block;
         width: 100%;
