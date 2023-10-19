@@ -432,8 +432,9 @@
                                 name="input_vote_del_nomination_question" disabled>
                             <strong>Please be aware that your delegate status will undergo verification by The
                                 Convention Committee before payment is processed. </strong>
+                                
                                 <input type="text" class="form-control" id="input_vote_del_nomination_question_hidden"
-                                name="input_vote_del_nomination_question" disabled>
+                                name="input_vote_del_nomination_question_hidden" style="display: none;" >
                         </div>
 
 
@@ -949,6 +950,25 @@
 </script>
 
 <script>
+
+    // Get references to the input elements
+var nominationQuestionInput = document.getElementById("input_vote_del_nomination_question");
+var hiddenInput = document.getElementById("input_vote_del_nomination_question_hidden");
+
+// Check if both input elements exist
+if (nominationQuestionInput && hiddenInput) {
+  // Function to update the visible input when the hidden input changes
+  function updateVisibleInput() {
+    nominationQuestionInput.value = hiddenInput.value;
+  }
+
+  // Add an event listener to the hidden input to detect changes
+  hiddenInput.addEventListener("change", updateVisibleInput);
+
+  // Call the update function initially to ensure the initial value is copied
+  updateVisibleInput();
+}
+
    // document.addEventListener("DOMContentLoaded", function () {
       //  var dropdownDelQuestion = document.getElementById("input_vote_del_question");
       //  var inputDelNominationQuestion = document.getElementById("input_vote_del_nomination_question");
