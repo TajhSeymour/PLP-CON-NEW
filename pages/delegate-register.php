@@ -404,8 +404,8 @@
                                 delegate?</label>
                             <select class="form-control" required id="input_vote_del_question"
                                 name="input_vote_del_question" required>
-                                <option value="0" selected> Observer Delegate</option>
-                                <option value="1"> Voting Delegate</option>
+                                <option value="0" selected>Observer Delegate</option>
+                                <option value="1">Voting Delegate</option>
                             </select>
                             <strong>Voting Delegates include elected branch delegates, current/former national party
                                 officers, and parliamentary members who have voting eligibility at the
@@ -432,7 +432,8 @@
                                 name="input_vote_del_nomination_question" disabled>
                             <strong>Please be aware that your delegate status will undergo verification by The
                                 Convention Committee before payment is processed. </strong>
-
+                                <input type="text" class="form-control" id="input_vote_del_nomination_question_hidden"
+                                name="input_vote_del_nomination_question" disabled>
                         </div>
 
 
@@ -948,35 +949,35 @@
 </script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var dropdownDelQuestion = document.getElementById("input_vote_del_question");
-        var inputDelNominationQuestion = document.getElementById("input_vote_del_nomination_question");
-        var inputBranchCode = document.getElementById("input_branch_id_code");
+   // document.addEventListener("DOMContentLoaded", function () {
+      //  var dropdownDelQuestion = document.getElementById("input_vote_del_question");
+      //  var inputDelNominationQuestion = document.getElementById("input_vote_del_nomination_question");
+     //   var inputBranchCode = document.getElementById("input_branch_id_code");
         //var buttonVerify = document.getElementById("verify-plp-branch-code");
 
 
         // Add an event listener to handle changes in the dropdown
-        dropdownDelQuestion.addEventListener("change", function () {
-            var selectedValue = dropdownDelQuestion.value;
+       // dropdownDelQuestion.addEventListener("change", function () {
+       //     var selectedValue = dropdownDelQuestion.value;
 
-            if (selectedValue === "0") {
-                inputDelNominationQuestion.disabled = true;
-                inputDelNominationQuestion.removeAttribute("required");
-                inputDelNominationQuestion.value = "";
-                inputBranchCode.disabled = true;
-                inputBranchCode.removeAttribute("required");
-                inputBranchCode.value = "";
+       //     if (selectedValue === "0") {
+       //         inputDelNominationQuestion.disabled = true;
+       //         inputDelNominationQuestion.removeAttribute("required");
+       //         inputDelNominationQuestion.value = "";
+       //         inputBranchCode.disabled = true;
+       //         inputBranchCode.removeAttribute("required");
+       //         inputBranchCode.value = "";
 
 
-            } else {
+           // } else {
                 //inputDelNominationQuestion.disabled = false;
-                inputBranchCode.disabled = false;
+           //     inputBranchCode.disabled = false;
                 //buttonVerify.disabled = false;
-                inputBranchCode.setAttribute("required", "required");
-                inputDelNominationQuestion.setAttribute("required", "required");
-            }
-        });
-    });
+          //      inputBranchCode.setAttribute("required", "required");
+               // inputDelNominationQuestion.setAttribute("required", "required");
+          //  }
+       // });
+    //});
 
 </script>
 
@@ -1049,7 +1050,7 @@
                     document.getElementById('input_vote_del_question').value = "0";
                     document.getElementById('input_vote_del_nomination_question').value = "";
                     document.getElementById('input_branch_id_code').value = "";
-                    document.getElementById('input_branch_id_code').disabled = true;
+                   // document.getElementById('input_branch_id_code').disabled = true;
 
                 }
             })
