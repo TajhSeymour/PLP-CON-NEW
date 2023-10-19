@@ -433,8 +433,7 @@
                             <strong>Please be aware that your delegate status will undergo verification by The
                                 Convention Committee before payment is processed. </strong>
                                 
-                                <input type="text" class="form-control" id="input_vote_del_nomination_question_hidden"
-                                name="input_vote_del_nomination_question_hidden" style="display: none;" >
+            
                         </div>
 
 

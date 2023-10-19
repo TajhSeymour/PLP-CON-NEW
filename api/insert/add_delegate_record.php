@@ -71,10 +71,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         //STEP 5A: CONVENTION REGISTRATION
         if ($_POST["input_vote_del_question"] === "1") {
-            $input_vote_del_nomination_question = isset($_POST['input_vote_del_nomination_question_hidden']) ? $_POST['input_vote_del_nomination_question_hidden'] : null;
+            $input_vote_del_nomination_question = isset($_POST['input_vote_del_nomination_question']) ? $_POST['input_vote_del_nomination_question'] : null;
             $vote_delegate_question = "1";
         } else {
-            $input_vote_del_nomination_question = isset($_POST['input_vote_del_nomination_question_hidden']) ? $_POST['input_vote_del_nomination_question_hidden'] : null;
+            $input_vote_del_nomination_question = isset($_POST['input_vote_del_nomination_question']) ? $_POST['input_vote_del_nomination_question'] : null;
             //$branch_of_delegate = NULL;
             $vote_delegate_question = "0";
         }
