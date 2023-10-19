@@ -707,7 +707,7 @@
                             <!-- First column -->
                             <div class="col-md-8">
                                 <label class="form-control" for="">
-                                    <h5 class="blue-text">4. Score the government’s performance from (Poor) 1 - 10 (Outstanding) ? *</h5>
+                                    <h5 class="blue-text">4. Score the government’s performance from 1 - 10 ? *</h5>
                                 </label>
                             </div>
                             <!-- Second column -->
