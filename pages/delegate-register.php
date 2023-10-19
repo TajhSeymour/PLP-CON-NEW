@@ -126,8 +126,8 @@
                         <option value="" disabled selected>Select an Option</option>
                         <option value="YES">Yes, I possess a PLP ID Card</option>
                         <option value="LOST">Yes, I'm a registered member, but I've misplaced my PLP ID Card</option>
-                        <option value="NO">No, I'm a new member / Never issued a PLP ID Card</option>
-                        <!--- <option value="NOD">No, I'm registring as a Observer Delegate</option> --->
+                           <!--- <option value="NO">No, I'm a new member / Never issued a PLP ID Card</option>
+                     <option value="NOD">No, I'm registring as a Observer Delegate</option> --->
                     </select>
 
 
@@ -222,6 +222,8 @@
                                 <option value="BRANCH MEMBER">Branch Member</option>
                                 <option value="DIRECT MEMBER">Direct Member</option>
                                 <option value="LIFETIME">Lifetime Member</option>
+                                <option value="STALWART COUNCILLOR">Stalwart Councillor</option>
+                                
                             </select>
 
 
@@ -1247,11 +1249,11 @@ function updateTotalCost() {
     var badgeQuestionValue = dropdownBadgeQuestion.value;
 
 
-    var baseCost = 50.00;
+    var baseCost = 25.00;
 
     // Check if delQuestionValue is "Yes" and update the base cost accordingly
     if (delQuestion === "Yes") {
-        baseCost = 120.00;
+        baseCost = 50.00;
     }
 
     // Check if badgeQuestionValue is "1" and add $5 to the base cost
