@@ -7,7 +7,7 @@
     <br>
 
     <!-- Main Multi-Step Form -->
-    <form class="form form-dark notify-form" action="send_media_applicant_email.php" id="notify-form"
+    <form class="form form-dark notify-form" action="" id="notify-form"
         enctype="multipart/form-data">
         <!-- <h3 class="text-center my-3">Conference Registration Form</h3>-->
         <br>
