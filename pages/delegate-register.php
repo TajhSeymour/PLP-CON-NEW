@@ -655,8 +655,11 @@
 
                 <div id="have-id-section-no" style="display: none;">This is the section for new members.</div>
 
-                <div id="have-id-section-lost" style="display: none;">This is the section for registered members who
-                    lost their ID.</div>
+                <div id="have-id-section-lost" style="display: none;">
+                
+                <h3> 
+Manual registration is required. Kindly visit our headquarters or the registration desk with a valid photo ID to complete the process.</h3></div>
+
 
                 <!-- SECTION FOR OBSERVER DELEGATES ONLY-->
                 <div id="have-id-section-nob" style="display: none;">
