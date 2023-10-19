@@ -113,14 +113,14 @@
 <!-- Add some space here -->
             <a href="#" class="button button-solid-light transition-el transition-el-5 inner-trigger"
               id="works-trigger">
-              <span class="button-caption"><center>EXISTING MEMBERS <br> & DELEGATE REGISTRATION (CHECK-IN)</center></span>
+              <span class="button-caption"><center>PLP ID CARD HOLDERS<br> REGISTRATION (CHECK-IN)</center></span>
               </a>
 
 <!-- Add some space here -->
 
               <a href="#" class="button button-solid-light transition-el transition-el-5 inner-trigger"
                 id="about-trigger">
-                <span class="button-caption"><center>OBSERVER DELEGATE <br> REGISTRATION</center></span>
+                <span class="button-caption"><center>NON PLP CARD <br> REGISTRATION</center></span>
                 </a>
 
 <!-- Add some space here -->
