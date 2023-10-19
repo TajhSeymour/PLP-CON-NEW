@@ -711,7 +711,7 @@
                                 </label>
                             </div>
                             <!-- Second column -->
-                            <div class="col-md-4">
+                            <div class="col-md-2">
                                 <select class="form-control" name="input_survey_question_4">
                                     <option value="">SELECT OPTION</option>
                                     <option value="1">1 - Poor</option>
