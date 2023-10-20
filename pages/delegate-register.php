@@ -14,7 +14,7 @@
 
         <!-- Step 1 -->
 
-        <div class="step step-1">
+        <div class="stepUpdate step-1">
             <center>
                 <h3>Information Sharing </h3>
             </center>
