@@ -955,7 +955,7 @@ if (nominationQuestionInput && hiddenInput) {
 
 <script>
     const inputTravelQuestionNew = document.getElementById('input_travel_question');
-    const arrivalSection = document.getElementById('arrival-section');
+    const arrivalSectionNew = document.getElementById('arrival-section');
     //const inputNationality = document.querySelector('[name="input_nationality"]');
     const inputArrivalFlightNumber = document.querySelector('[name="input_arrival_flight_number"]');
     const inputDepartureFlightNumber = document.querySelector('[name="input_departure_flight_number"]');
@@ -967,7 +967,7 @@ if (nominationQuestionInput && hiddenInput) {
     // Function to handle the country selection
     function handleTravelQuestionSelection() {
         if (input_travel_question.value === 'No') {
-            arrivalSection.style.display = 'none';
+            arrivalSectionNew.style.display = 'none';
             //inputNationality.value = 'Bahamian';
             inputArrivalFlightNumber.value = '';
             inputDepartureFlightNumber.value = '';
@@ -985,7 +985,7 @@ if (nominationQuestionInput && hiddenInput) {
             inputArrivalDateTime.removeAttribute('required');
             inputDepartureDateTime.removeAttribute('required');
         } else {
-            arrivalSection.style.display = 'block';
+            arrivalSectionNew.style.display = 'block';
             //inputNationality.value = ''; // Reset the value to allow user input
             inputArrivalFlightNumber.value = ''; // Reset the value to allow user input
             inputDepartureFlightNumber.value = ''; // Reset the value to allow user input
@@ -1178,7 +1178,7 @@ if (nominationQuestionInput && hiddenInput) {
 
     // Gov-ID preview
     const govIdInputNew = document.getElementById('gov_id');
-    const govIdPreview = document.getElementById('gov_id_preview');
+    const govIdPreviewNew = document.getElementById('gov_id_preview');
 
     govIdInputNew.addEventListener('change', function () {
         const file = this.files[0];
@@ -1188,15 +1188,15 @@ if (nominationQuestionInput && hiddenInput) {
             if (/\.(jpe?g|png)$/i.test(file.name) && file.size <= 5 * 1024 * 1024) {
                 const reader = new FileReader();
                 reader.addEventListener('load', function () {
-                    govIdPreview.src = reader.result;
-                    govIdPreview.style.display = 'block';
+                    govIdPreviewNew.src = reader.result;
+                    govIdPreviewNew.style.display = 'block';
                 });
                 reader.readAsDataURL(file);
             } else {
                 alert('Please select a PNG or JPG image not exceeding 5MB in size.');
                 this.value = ''; // Reset the file input to allow re-selection
-                govIdPreview.src = '';
-                govIdPreview.style.display = 'none';
+                govIdPreviewNew.src = '';
+                govIdPreviewNew.style.display = 'none';
             }
         }
     });
