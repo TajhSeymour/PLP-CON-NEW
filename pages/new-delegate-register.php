@@ -404,12 +404,11 @@
 
                             <select class="form-control" required id="input_vote_new_del_badge_question"
                                 name="input_vote_new_del_badge_question">
-                                <option value="" disabled selected> Please select</option>
-                                <option value="0" selected> No</option>
-                                <option value="1">Yes</option>
+                                <option value="1" disabled selected> Yes</option>
+                               <!-- <option value="0" selected> No</option>
+                                <option value="1">Yes</option> -->
                             </select>
-                            <strong>Please be aware that badge reprint will be an additonal $5.00 to your conventions
-                                dues. </strong>
+                            <strong>Please Note: New applicants badges are free. </strong>
                         </div>
                         <div class="row">
                             <!-- First column -->
@@ -1246,7 +1245,7 @@ if (nominationQuestionInput && hiddenInput) {
 
         // Check if badgeQuestionValue is "1" and add $5 to the base cost
         if (badgeQuestionValue === "1") {
-            baseCost += 5.00;
+            baseCost += 0.00;
         }
 
         // Update the total cost in the input field
