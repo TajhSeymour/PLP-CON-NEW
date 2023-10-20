@@ -880,13 +880,13 @@
         <br>
         <br>
         <div class="step-navigation">
-            <input type="button" class="next-btn button-caption button button-solid-light-grey" id="next"
+            <input type="button" class="next-btnUpdate button-caption button button-solid-light-grey" id="nextUpdate"
                 value="NEXT >>>">
-            <input type="button" class="prev-btn button-caption button button-solid-light-grey" id="prev"
+            <input type="button" class="prev-btnUpdate button-caption button button-solid-light-grey" id="prevUpdate"
                 value="<<< PREVIOUS">
 
-            <input type="submit" id="submit-button"
-                class="btn-submit button-caption button button-solid-light transition-el  transition-el-5"
+            <input type="submit" id="submit-buttonUpdate"
+                class="btn-submitUpdate button-caption button button-solid-light transition-el  transition-el-5"
                 value="SUBMIT REGISTRATION">
 
             <input type="button"
@@ -1265,9 +1265,9 @@ if (nominationQuestionInput && hiddenInput) {
 
 <script>
     const stepsUpdate = document.querySelectorAll('.stepUpdate');
-    const prevBtnUpdate = document.querySelector('.prev-btn');
-    const nextBtnUpdate = document.querySelector('.next-btn');
-    const submitBtnUpdate = document.querySelector('.btn-submit');
+    const prevBtnUpdate = document.querySelector('.prev-btnUpdate');
+    const nextBtnUpdate = document.querySelector('.next-btnUpdate');
+    const submitBtnUpdate = document.querySelector('.btn-submitUpdate');
 
     let currentStepUpdate = 0;
 
