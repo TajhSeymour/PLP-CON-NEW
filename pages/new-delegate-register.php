@@ -619,7 +619,7 @@
                             <div class="col-md-4">
                                 <label class="form-control" for="travel_question">Preferred Payment Method *</label>
                                 <select class="form-control" required id="input_new_del_pay_method_question"
-                                    name="input_new_del_pay_method_question" onchange="showPaymentInstructions()">
+                                    name="input_new_del_pay_method_question" onchange="showPaymentInstructionsNew()">
                                     <option value="" selected>Select Method</option>
                                     <option value="Cash">CASH (PLP HQ)</option>
                                     <option value="Bank">BANK WIRE TRANSFER</option>
@@ -627,7 +627,7 @@
                             </div>
                         </div>
 
-                        <div id="payment-instructions-bank" style="display: none;">
+                        <div id="payment-instructions-bank-new" style="display: none;">
                             <div class="row">
                                 <br>
                                 <br>
@@ -667,7 +667,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="payment-instructions-cash" style="display: none;">
+                        <div id="payment-instructions-cash-new" style="display: none;">
                             <div class="col-md-8">
                                 <label class="form-control" for="travel_question">Instructions</label>
                                 <textarea class="form-control" name="input_new_del_cash_instructions" readonly
@@ -1260,17 +1260,17 @@ if (nominationQuestionInput && hiddenInput) {
 </script>
 
 <script>
-    function showPaymentInstructions() {
-        var selectedPaymentMethod = document.getElementById("input_new_del_pay_method_question").value;
-        var cashInstructions = document.getElementById("payment-instructions-cash");
-        var bankInstructions = document.getElementById("payment-instructions-bank");
+    function showPaymentInstructionsNew() {
+        var selectedPaymentMethodNew = document.getElementById("input_new_del_pay_method_question").value;
+        var cashInstructionsNew = document.getElementById("payment-instructions-cash-new");
+        var bankInstructionsNew = document.getElementById("payment-instructions-bank-new");
 
-        if (selectedPaymentMethod === "Cash") {
-            cashInstructions.style.display = "block";
-            bankInstructions.style.display = "none";
-        } else if (selectedPaymentMethod === "Bank") {
-            cashInstructions.style.display = "none";
-            bankInstructions.style.display = "block";
+        if (selectedPaymentMethodNew === "Cash") {
+            cashInstructionsNew.style.display = "block";
+            bankInstructionsNew.style.display = "none";
+        } else if (selectedPaymentMethodNew === "Bank") {
+            cashInstructionsNew.style.display = "none";
+            bankInstructionsNew.style.display = "block";
         }
     }
 </script>
