@@ -1265,9 +1265,9 @@ if (nominationQuestionInput && hiddenInput) {
 
 <script>
     const stepsUpdate = document.querySelectorAll('.step');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const submitBtn = document.querySelector('.btn-submit');
+    const prevBtnUpdate = document.querySelector('.prev-btn');
+    const nextBtnUpdate = document.querySelector('.next-btn');
+    const submitBtnUpdate = document.querySelector('.btn-submit');
 
     let currentStep = 0;
 
@@ -1322,16 +1322,16 @@ if (nominationQuestionInput && hiddenInput) {
     }
 
     function togglePreviousButton() {
-        prevBtn.style.display = currentStep === 0 ? 'none' : 'block';
+        prevBtnUpdate.style.display = currentStep === 0 ? 'none' : 'block';
     }
 
     function toggleSubmitButton() {
-        nextBtn.style.display = currentStep === stepsUpdate.length - 1 ? 'none' : 'block';
-        submitBtn.style.display = currentStep === stepsUpdate.length - 1 ? 'block' : 'none';
+        nextBtnUpdate.style.display = currentStep === stepsUpdate.length - 1 ? 'none' : 'block';
+        submitBtnUpdate.style.display = currentStep === stepsUpdate.length - 1 ? 'block' : 'none';
     }
 
-    nextBtn.addEventListener('click', goToNextStep);
-    prevBtn.addEventListener('click', goToPrevStep);
+    nextBtnUpdate.addEventListener('click', goToNextStep);
+    prevBtnUpdate.addEventListener('click', goToPrevStep);
 
     document.getElementById('notify-form').addEventListener('submit', (event) => {
         event.preventDefault();
