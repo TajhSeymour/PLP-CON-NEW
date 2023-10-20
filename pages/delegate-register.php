@@ -104,7 +104,7 @@
 
 
 
-        <div class="step step-2">
+        <div class="stepUpdate step-2">
             <br>
             <br>
             <h3>Step 1: REGISTRATION CLASSIFICATION </h3>
@@ -1264,7 +1264,7 @@ if (nominationQuestionInput && hiddenInput) {
 
 
 <script>
-    const stepsUpdate = document.querySelectorAll('.step');
+    const stepsUpdate = document.querySelectorAll('.stepUpdate');
     const prevBtnUpdate = document.querySelector('.prev-btn');
     const nextBtnUpdate = document.querySelector('.next-btn');
     const submitBtnUpdate = document.querySelector('.btn-submit');
