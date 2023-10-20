@@ -316,7 +316,7 @@
                             <input class="form-control" type="text" id="input_new_del_mobile" name="input_new_del_mobile"
                                 placeholder="Enter Your Mobile Number"
                                 oninput="formatPhoneNumber('input_new_del_mobile'); validatePhoneNumber('input_new_del_mobile')">
-                            <div id="input_del_mobile-validation"></div>
+                            <div id="input_new_del_mobile-validation"></div>
                         </div>
                         <div class="col-md-4">
                             <label class="form-control" for="input_del_telephone">Telephone Number (Other)</label>
@@ -865,21 +865,21 @@ if (nominationQuestionInput && hiddenInput) {
 </script>
 
 <script>
-    var dropdownBadgeQuestionNew = document.getElementById("input_vote_del_badge_question");
-    var inputBadgeUpload = document.getElementById("input_new_del_badge_photo");
+    var dropdownBadgeQuestionNew = document.getElementById("input_vote_new_del_badge_question");
+    var inputBadgeUploadNew = document.getElementById("input_new_del_badge_photo");
 
     // Add an event listener to handle changes in the dropdown
     dropdownBadgeQuestionNew.addEventListener("change", function () {
         var selectedValue = dropdownBadgeQuestionNew.value;
 
         if (selectedValue === "0") {
-            inputBadgeUpload.disabled = true;
-            inputBadgeUpload.removeAttribute("required");
-            inputBadgeUpload.value = "";
+            inputBadgeUploadNew.disabled = true;
+            inputBadgeUploadNew.removeAttribute("required");
+            inputBadgeUploadNew.value = "";
 
         } else {
-            inputBadgeUpload.disabled = false;
-            inputBadgeUpload.setAttribute("required", "required");
+            inputBadgeUploadNew.disabled = false;
+            inputBadgeUploadNew.setAttribute("required", "required");
         }
     });
 
@@ -954,7 +954,7 @@ if (nominationQuestionInput && hiddenInput) {
 
 
 <script>
-    const inputTravelQuestionNew = document.getElementById('input_travel_question');
+    const inputTravelQuestionNew = document.getElementById('input_new_del_travel_question');
     const arrivalSectionNew = document.getElementById('arrival-section');
     //const inputNationality = document.querySelector('[name="input_nationality"]');
     const inputArrivalFlightNumberNew = document.querySelector('[name="input_new_del_arrival_flight_number"]');
@@ -966,7 +966,7 @@ if (nominationQuestionInput && hiddenInput) {
     const inputDepartureDateTimeNew = document.querySelector('[name="input_new_del_departure_date_time"]');
     // Function to handle the country selection
     function handleTravelQuestionSelection() {
-        if (input_travel_question.value === 'No') {
+        if (input_new_del_travel_question.value === 'No') {
             arrivalSectionNew.style.display = 'none';
             //inputNationality.value = 'Bahamian';
             inputArrivalFlightNumberNew.value = '';
@@ -1261,7 +1261,7 @@ if (nominationQuestionInput && hiddenInput) {
 
 <script>
     function showPaymentInstructions() {
-        var selectedPaymentMethod = document.getElementById("input_pay_method_question").value;
+        var selectedPaymentMethod = document.getElementById("input_new_del_pay_method_question").value;
         var cashInstructions = document.getElementById("payment-instructions-cash");
         var bankInstructions = document.getElementById("payment-instructions-bank");
 
