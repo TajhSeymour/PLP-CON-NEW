@@ -10,7 +10,7 @@ $result = $connection->query($sql);
 // Fetch the data from the stored procedure
 if ($result && $result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $total_users_count = $row['total_users_count'];
+    $total_checked_in_users_count = $row['total_checked_in_users_count'];
     $total_media_press_count = $row['total_media_press_count'];
     $total_local_count = $row['total_local_count'];
     $pending_users_count = $row['pending_queue_users_count'];

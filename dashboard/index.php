@@ -47,7 +47,8 @@
                                     <div>
                                         <p class="fw-medium text-muted mb-0">TOTAL CHECKED-IN DELEGATES</p>
                                         <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
-                                                data-target="<?php echo $total_checked_in_users_count; ?>">0</span> </h2>
+                                                data-target="<?php echo $total_checked_in_users_count; ?>">0</span>
+                                        </h2>
 
                                     </div>
                                     <div>
@@ -105,13 +106,37 @@
                         </div> <!-- end card-->
                     </div>
                     <!--end col-->
-                           <!--end col-->
-                           <div class="col-xxl-3 col-sm-6">
+
+                    <div class="col-xxl-3 col-sm-6">
                         <div class="card card-animate">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <div>
                                         <p class="fw-medium text-muted mb-0">TOTAL OBSERVER DELEGATES</p>
+                                        <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
+                                                data-target="<?php echo $total_media_press_count; ?>">0</span> </h2>
+
+                                    </div>
+                                    <div>
+                                        <div class="avatar-sm flex-shrink-0">
+                                            <span class="avatar-title bg-soft-info text-info rounded-circle fs-4">
+                                                <i class=" ri-team-fill"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end card body -->
+                        </div> <!-- end card-->
+                    </div>
+
+                    <!--end col-->
+
+                    <div class="col-xxl-3 col-sm-6">
+                        <div class="card card-animate">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="fw-medium text-muted mb-0">TOTAL DELEGATES TRAVELLING</p>
                                         <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
                                                 data-target="<?php echo $total_media_press_count; ?>">0</span> </h2>
 
@@ -133,7 +158,7 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <div>
-                                        <p class="fw-medium text-muted mb-0">PENDING LOCAL SECURITY CHECKS</p>
+                                        <p class="fw-medium text-muted mb-0">PENDING CONVENTION FEE PAYMENT</p>
                                         <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
                                                 data-target="<?php echo $pending_users_count; ?>">0</span></h2>
 
@@ -406,7 +431,7 @@
                                                     <th>Nationality</th>
                                                     <th>Country</th>
                                                     <th>Passport Type</th>
-                                                    
+
                                                     <th>Mobile</th>
                                                     <th>Email</th>
                                                     <th>Job Title</th>
@@ -423,7 +448,7 @@
                                                     <th>Nationality</th>
                                                     <th>Country</th>
                                                     <th>Passport Type</th>
-                                                    
+
                                                     <th>Mobile</th>
                                                     <th>Email</th>
                                                     <th>Job Title</th>
@@ -498,7 +523,7 @@
                                                     <th>ID</th>
                                                     <th>First Name</th>
                                                     <th>Middle Name</th>
-                                                    <th>Last Name</th>                                                   
+                                                    <th>Last Name</th>
                                                     <th>Priority</th>
 
                                                 </tr>
@@ -576,7 +601,7 @@ App js -->
             }
 
             if (badgeClass !== "") {
-                var priorityColumnIndex = $("#all-registrants thead th").filter(function() {
+                var priorityColumnIndex = $("#all-registrants thead th").filter(function () {
                     return $(this).text() === "Priority";
                 }).index();
 
