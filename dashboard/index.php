@@ -2,7 +2,7 @@
 <?php include 'layouts/head-main.php'; ?>
 
 <head>
-    <title>DTU - Conference Admin & Dashboard</title>
+    <title>PLP Convention Administration Panel</title>
     <?php include 'layouts/title-meta.php'; ?>
     <?php include 'layouts/head-css.php'; ?>
 </head>
@@ -45,7 +45,7 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <div>
-                                        <p class="fw-medium text-muted mb-0">TOTAL DELEGATE REGISTRANTS</p>
+                                        <p class="fw-medium text-muted mb-0">TOTAL REGISTER DELEGATES</p>
                                         <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
                                                 data-target="<?php echo $total_users_count; ?>">0</span> </h2>
 

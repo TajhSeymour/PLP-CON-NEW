@@ -91,7 +91,7 @@
 
             <div class="row">
                 <div class="col-md-1">
-                    <input type="checkbox" id="declaration-2" name="declaration" required>
+                    <input type="checkbox" id="declaration-2-1" name="declaration" required>
                 </div>
                 <div class="col-md-10">
                     <label class="form-control" for="declaration"><strong>I hereby confirm that I have reviewed and
@@ -823,7 +823,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-1">
-                            <input type="checkbox" id="declaration" name="declaration" required>
+                            <input type="checkbox" id="declaration-3-1" name="declaration" required>
                         </div>
                         <div class="col-md-10">
                             <label class="form-control" for="declaration"><strong>By checking this box, I confirm that
