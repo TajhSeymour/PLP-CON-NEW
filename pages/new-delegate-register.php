@@ -1145,17 +1145,17 @@ if (nominationQuestionInput && hiddenInput) {
 
 <script>
     // Badge Photo preview
-    const badgePhotoInput = document.getElementById('input_new_del_badge_photo');
-    const badgePhotoPreview = document.getElementById('new_del_badge_photo_preview');
+    const badgePhotoInputNew = document.getElementById('input_new_del_badge_photo');
+    const badgePhotoPreviewNew = document.getElementById('new_del_badge_photo_preview');
 
-    badgePhotoInput.addEventListener('change', function () {
+    badgePhotoInputNew.addEventListener('change', function () {
         const file = this.files[0];
         if (file) {
             if (/\.(jpg|jpeg|png|gif)$/i.test(file.name) && file.size <= 10 * 1024 * 1024) {
                 const reader = new FileReader();
                 reader.addEventListener('load', function () {
-                    badgePhotoPreview.src = reader.result;
-                    badgePhotoPreview.style.display = 'block';
+                    badgePhotoPreviewNew.src = reader.result;
+                    badgePhotoPreviewNew.style.display = 'block';
                 });
                 reader.readAsDataURL(file);
             } else {
@@ -1167,8 +1167,8 @@ if (nominationQuestionInput && hiddenInput) {
                 }).show();
                 // alert('Please select an image (JPEG, PNG, GIF) not exceeding 10MB in size.');
                 this.value = ''; // Reset the file input to allow re-selection
-                badgePhotoPreview.src = '';
-                badgePhotoPreview.style.display = 'none';
+                badgePhotoPreviewNew.src = '';
+                badgePhotoPreviewNew.style.display = 'none';
             }
 
 
