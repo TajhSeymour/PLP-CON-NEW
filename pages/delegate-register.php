@@ -137,7 +137,7 @@
                 </div>
 
 
-                <div id="have-id-section" style="display: none;">
+                <div id="have-id-section-update" style="display: none;">
                     <br>
                     <br>
                     <br>
@@ -171,13 +171,13 @@
                     </div>
                 </div>
 
-                <div id="have-id-section-info-false" style="display: none;">
+                <div id="have-id-section-info-false-update" style="display: none;">
                     <h3>Please contact the HQ for account assistance.</h3>
 
 
                 </div>
 
-                <div id="have-id-section-info">
+                <div id="have-id-section-info-update">
                     <br>
                     <br>
                     <br>
@@ -501,7 +501,7 @@
 
                             </select>
                         </div>
-                        <div id="arrival-section" style="display: none;">
+                        <div id="arrival-section-update" style="display: none;">
                             <h3>STEP 5B: Tentative Arrival, Hotel & Departure Information (OPTIONAL)</h3>
 
                             <div class="row">
@@ -841,9 +841,9 @@
 
                 </div>
 
-                <div id="have-id-section-no" style="display: none;">This is the section for new members.</div>
+                <div id="have-id-section-no-update" style="display: none;">This is the section for new members.</div>
 
-                <div id="have-id-section-lost" style="display: none;">
+                <div id="have-id-section-lost-update" style="display: none;">
 
                     <h3>
                         Manual registration is required. Kindly visit our headquarters or the registration desk with a
@@ -852,7 +852,7 @@
 
 
                 <!-- SECTION FOR OBSERVER DELEGATES ONLY-->
-                <div id="have-id-section-nob" style="display: none;">
+                <div id="have-id-section-nob-update" style="display: none;">
 
 
 
@@ -899,10 +899,10 @@
 <script>
     // Hide the div with id "have-id-section-info" when the page loads
     window.addEventListener('load', function () {
-        document.getElementById('have-id-section').style.display = 'none';
-        document.getElementById('have-id-section-info').style.display = 'none';
-        document.getElementById('have-id-section-info-false').style.display = 'none';
-        document.getElementById('arrival-section').style.display = 'none';
+        document.getElementById('have-id-section-update').style.display = 'none';
+        document.getElementById('have-id-section-info-update').style.display = 'none';
+        document.getElementById('have-id-section-info-false-update').style.display = 'none';
+        document.getElementById('arrival-section-update').style.display = 'none';
         //document.getElementById('submit-button').style.display = 'none';
 
     });
@@ -918,33 +918,33 @@
         var selectedValue = dropdownIDQuestion.value;
 
         // Hide all sections
-        document.getElementById("have-id-section").style.display = "none";
-        document.getElementById("have-id-section-no").style.display = "none";
-        document.getElementById("have-id-section-lost").style.display = "none";
-        document.getElementById("have-id-section-nob").style.display = "none";
+        document.getElementById("have-id-section-update").style.display = "none";
+        document.getElementById("have-id-section-no-update").style.display = "none";
+        document.getElementById("have-id-section-lost-update").style.display = "none";
+        document.getElementById("have-id-section-nob-update").style.display = "none";
 
         // Show the appropriate section based on the selected value
         if (selectedValue === "YES") {
-            document.getElementById("have-id-section").style.display = "block";
-            document.getElementById("have-id-section-no").style.display = "none";
-            document.getElementById("have-id-section-lost").style.display = "none";
-            document.getElementById("have-id-section-nob").style.display = "none";
+            document.getElementById("have-id-section-update").style.display = "block";
+            document.getElementById("have-id-section-no-update").style.display = "none";
+            document.getElementById("have-id-section-lost-update").style.display = "none";
+            document.getElementById("have-id-section-nob-update").style.display = "none";
         } else if (selectedValue === "NO") {
-            document.getElementById("have-id-section-no").style.display = "block";
-            document.getElementById("have-id-section").style.display = "none";
-            document.getElementById("have-id-section-lost").style.display = "none";
-            document.getElementById("have-id-section-nob").style.display = "none";
+            document.getElementById("have-id-section-no-update").style.display = "block";
+            document.getElementById("have-id-section-update").style.display = "none";
+            document.getElementById("have-id-section-lost-update").style.display = "none";
+            document.getElementById("have-id-section-nob-update").style.display = "none";
         } else if (selectedValue === "LOST") {
-            document.getElementById("have-id-section-lost").style.display = "block";
-            document.getElementById("have-id-section-no").style.display = "none";
-            document.getElementById("have-id-section").style.display = "none";
-            document.getElementById("have-id-section-nob").style.display = "none";
+            document.getElementById("have-id-section-lost-update").style.display = "block";
+            document.getElementById("have-id-section-no-update").style.display = "none";
+            document.getElementById("have-id-section-update").style.display = "none";
+            document.getElementById("have-id-section-nob-update").style.display = "none";
         }
         else {
-            document.getElementById("have-id-section-nob").style.display = "block";
-            document.getElementById("have-id-section-no").style.display = "none";
-            document.getElementById("have-id-section-lost").style.display = "none";
-            document.getElementById("have-id-section").style.display = "none";
+            document.getElementById("have-id-section-nob-update").style.display = "block";
+            document.getElementById("have-id-section-no-update").style.display = "none";
+            document.getElementById("have-id-section-lost-update").style.display = "none";
+            document.getElementById("have-id-section-update").style.display = "none";
         }
         document.getElementById('input_del_id_question').disabled = true;//recheck this logic
     });
@@ -1143,9 +1143,9 @@ if (nominationQuestionInput && hiddenInput) {
                     document.getElementById('id-image').src = imageUrl;
 
                     // Show the div when verification is successful
-                    document.getElementById('have-id-section-info').style.display = 'block';
+                    document.getElementById('have-id-section-info-update').style.display = 'block';
                     // Hide the div for failed verification (if shown)
-                    document.getElementById('have-id-section-info-false').style.display = 'none';
+                    document.getElementById('have-id-section-info-false-update').style.display = 'none';
 
                     // Show a success notification using Noty
                     new Noty({
@@ -1162,9 +1162,9 @@ if (nominationQuestionInput && hiddenInput) {
                     }).show();
 
                     // Show the div for failed verification
-                    document.getElementById('have-id-section-info-false').style.display = 'block';
+                    document.getElementById('have-id-section-info-false-update').style.display = 'block';
                     // Hide the div for successful verification (if shown)
-                    document.getElementById('have-id-section-info').style.display = 'none';
+                    document.getElementById('have-id-section-info-update').style.display = 'none';
                 }
             })
             .catch(error => {
@@ -1182,7 +1182,7 @@ if (nominationQuestionInput && hiddenInput) {
 
 <script>
     const inputTravelQuestion = document.getElementById('input_travel_question');
-    const arrivalSection = document.getElementById('arrival-section');
+    const arrivalSection = document.getElementById('arrival-section-update');
     //const inputNationality = document.querySelector('[name="input_nationality"]');
     const inputArrivalFlightNumber = document.querySelector('[name="input_arrival_flight_number"]');
     const inputDepartureFlightNumber = document.querySelector('[name="input_departure_flight_number"]');
