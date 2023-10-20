@@ -14,7 +14,7 @@
 
         <!-- Step 1 -->
 
-        <div class="step step-1">
+        <div class="stepUpdate step-1">
             <center>
                 <h3>Information Sharing </h3>
             </center>
@@ -1264,7 +1264,7 @@ if (nominationQuestionInput && hiddenInput) {
 
 
 <script>
-    const steps = document.querySelectorAll('.step');
+    const steps = document.querySelectorAll('.stepUpdate');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
     const submitBtn = document.querySelector('.btn-submit');
