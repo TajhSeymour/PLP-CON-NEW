@@ -122,7 +122,7 @@
                     <br>
                     <label class="form-control" for="plp_selection"><strong>Have you been issued a PLP ID Card?
                             *</label></strong>
-                    <select class="form-control" required id="input_del_id_question" name="input_del_id_question">
+                    <select class="form-control" required id="input_new_del_id_question" name="input_new_del_id_question">
                         <option value="" disabled selected>Select an Option</option>
                         <option value="YES">No, I'm a new member / Never issued a PLP ID Card</option>
                         <option value="LOST">Yes, I'm a registered member, but I've misplaced my PLP ID Card</option>
@@ -772,11 +772,11 @@
 
 <script>
     // Get the dropdown element
-    var dropdownIDQuestion = document.getElementById("input_del_id_question");
+    var dropdownIDQuestionNew = document.getElementById("input_new_del_id_question");
 
     // Add an event listener to handle changes in the dropdown
-    dropdownIDQuestion.addEventListener("change", function () {
-        var selectedValue = dropdownIDQuestion.value;
+    dropdownIDQuestionNew.addEventListener("change", function () {
+        var selectedValue = dropdownIDQuestionNew.value;
 
         // Hide all sections
         document.getElementById("have-id-section").style.display = "none";
@@ -807,7 +807,7 @@
             document.getElementById("have-id-section-lost").style.display = "none";
             document.getElementById("have-id-section").style.display = "none";
         }
-       // document.getElementById('input_del_id_question').disabled = true;//recheck this logic
+       // document.getElementById('input_new_del_id_question').disabled = true;//recheck this logic
     });
 
 </script>
@@ -815,8 +815,8 @@
 <script>
 
     // Get references to the input elements
-var nominationQuestionInput = document.getElementById("input_vote_del_nomination_question");
-var hiddenInput = document.getElementById("input_vote_del_nomination_question_hidden");
+var nominationQuestionInput = document.getElementById("input_vote_new_del_nomination_question");
+var hiddenInput = document.getElementById("input_vote_new_del_nomination_question_hidden");
 
 // Check if both input elements exist
 if (nominationQuestionInput && hiddenInput) {
@@ -833,15 +833,15 @@ if (nominationQuestionInput && hiddenInput) {
 }
 
    // document.addEventListener("DOMContentLoaded", function () {
-      //  var dropdownDelQuestion = document.getElementById("input_vote_del_question");
-      //  var inputDelNominationQuestion = document.getElementById("input_vote_del_nomination_question");
-     //   var inputBranchCode = document.getElementById("input_branch_id_code");
+      //  var dropdownDelQuestionNew = document.getElementById("input_vote_new_del_nomination_question");
+      //  var inputDelNominationQuestion = document.getElementById("input_vote_new_del_nomination_question");
+     //   var inputBranchCode = document.getElementById("input_new_del_branch_id_code");
         //var buttonVerify = document.getElementById("verify-plp-branch-code");
 
 
         // Add an event listener to handle changes in the dropdown
-       // dropdownDelQuestion.addEventListener("change", function () {
-       //     var selectedValue = dropdownDelQuestion.value;
+       // dropdownDelQuestionNew.addEventListener("change", function () {
+       //     var selectedValue = dropdownDelQuestionNew.value;
 
        //     if (selectedValue === "0") {
        //         inputDelNominationQuestion.disabled = true;
@@ -865,12 +865,12 @@ if (nominationQuestionInput && hiddenInput) {
 </script>
 
 <script>
-    var dropdownBadgeQuestion = document.getElementById("input_vote_del_badge_question");
+    var dropdownBadgeQuestionNew = document.getElementById("input_vote_del_badge_question");
     var inputBadgeUpload = document.getElementById("input_new_del_badge_photo");
 
     // Add an event listener to handle changes in the dropdown
-    dropdownBadgeQuestion.addEventListener("change", function () {
-        var selectedValue = dropdownBadgeQuestion.value;
+    dropdownBadgeQuestionNew.addEventListener("change", function () {
+        var selectedValue = dropdownBadgeQuestionNew.value;
 
         if (selectedValue === "0") {
             inputBadgeUpload.disabled = true;
@@ -890,7 +890,7 @@ if (nominationQuestionInput && hiddenInput) {
 
     function verifyPLPBranchInfo() {
         // Get the input values
-        const branchCode = document.getElementById('input_branch_id_code').value;
+        const branchCode = document.getElementById('input_new_del_branch_id_code').value;
 
         // Check if the input values are empty
         if (branchCode.trim() === '') {
@@ -900,7 +900,7 @@ if (nominationQuestionInput && hiddenInput) {
 
         // Create a FormData object with the POST data
         const formData = new FormData();
-        formData.append('input_branch_id_code', branchCode);
+        formData.append('input_new_del_branch_id_code', branchCode);
 
 
         // Make an AJAX request to the PHP API using the Fetch API
@@ -917,10 +917,10 @@ if (nominationQuestionInput && hiddenInput) {
                         timeout: 3000 // Optional: Set the alert to automatically close after 3 seconds
                     }).show();
                     // Disable the input fields
-                    document.getElementById('input_branch_id_code').disabled = true;
+                    document.getElementById('input_new_del_branch_id_code').disabled = true;
 
                     // Update the form fields with the retrieved data
-                    document.getElementById('input_vote_del_nomination_question').value = response.data.name;
+                    document.getElementById('input_vote_new_del_nomination_question').value = response.data.name;
 
                 } else {
                     // Code verification failed
@@ -930,10 +930,10 @@ if (nominationQuestionInput && hiddenInput) {
                         timeout: 3000
                     }).show();
 
-                    document.getElementById('input_vote_del_question').value = "0";
-                    document.getElementById('input_vote_del_nomination_question').value = "";
-                    document.getElementById('input_branch_id_code').value = "";
-                   // document.getElementById('input_branch_id_code').disabled = true;
+                    document.getElementById('input_vote_new_del_nomination_question').value = "0";
+                    document.getElementById('input_vote_new_del_nomination_question').value = "";
+                    document.getElementById('input_new_del_branch_id_code').value = "";
+                   // document.getElementById('input_new_del_branch_id_code').disabled = true;
 
                 }
             })
@@ -1221,20 +1221,20 @@ if (nominationQuestionInput && hiddenInput) {
 </script>
 
 <script>
-    var dropdownIDQuestion = document.getElementById("input_del_id_question");
-    var dropdownBadgeQuestion = document.getElementById("input_vote_del_badge_question");
-    var inputTotalCost = document.getElementById("input_total_cost");
-    var dropdownDelQuestion = document.getElementById("input_vote_del_question");
+    var dropdownIDQuestionNew = document.getElementById("input_new_del_id_question");
+    var dropdownBadgeQuestionNew = document.getElementById("input_vote_new_del_badge_question");
+    var inputTotalCostNew = document.getElementById("input_new_del_total_cost");
+    var dropdownDelQuestionNew = document.getElementById("input_vote_new_del_nomination_question");
 
     // Add event listeners to handle changes in the dropdowns
-    dropdownIDQuestion.addEventListener("change", updateTotalCost);
-    dropdownBadgeQuestion.addEventListener("change", updateTotalCost);
-    dropdownDelQuestion.addEventListener("change", updateTotalCost);
+    dropdownIDQuestionNew.addEventListener("change", updateTotalCost);
+    dropdownBadgeQuestionNew.addEventListener("change", updateTotalCost);
+    dropdownDelQuestionNew.addEventListener("change", updateTotalCost);
 
     function updateTotalCost() {
-        var idQuestionValue = dropdownIDQuestion.value;
-        var delQuestion = dropdownDelQuestion.value;
-        var badgeQuestionValue = dropdownBadgeQuestion.value;
+        var idQuestionValue = dropdownIDQuestionNew.value;
+        var delQuestion = dropdownDelQuestionNew.value;
+        var badgeQuestionValue = dropdownBadgeQuestionNew.value;
 
 
         var baseCost = 25.00;
@@ -1250,7 +1250,7 @@ if (nominationQuestionInput && hiddenInput) {
         }
 
         // Update the total cost in the input field
-        inputTotalCost.value = "$" + baseCost.toFixed(2);
+        inputTotalCostNew.value = "$" + baseCost.toFixed(2);
     }
 
     // Initialize the total cost when the page loads
