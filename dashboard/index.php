@@ -45,9 +45,9 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <div>
-                                        <p class="fw-medium text-muted mb-0">TOTAL REGISTER DELEGATES</p>
+                                        <p class="fw-medium text-muted mb-0">TOTAL CHECKED-IN DELEGATES</p>
                                         <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
-                                                data-target="<?php echo $total_users_count; ?>">0</span> </h2>
+                                                data-target="<?php echo $total_checked_in_users_count; ?>">0</span> </h2>
 
                                     </div>
                                     <div>
@@ -67,7 +67,7 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <div>
-                                        <p class="fw-medium text-muted mb-0">TOTAL LOCAL REGISTRANTS</p>
+                                        <p class="fw-medium text-muted mb-0">TOTAL STALWART COUNCILLORS</p>
                                         <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
                                                 data-target="<?php echo $total_local_count; ?>">0</span> </h2>
                                     </div>
@@ -88,7 +88,30 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <div>
-                                        <p class="fw-medium text-muted mb-0">TOTAL MEDIA REGISTRANTS</p>
+                                        <p class="fw-medium text-muted mb-0">TOTAL VOTING DELEGATES</p>
+                                        <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
+                                                data-target="<?php echo $total_media_press_count; ?>">0</span> </h2>
+
+                                    </div>
+                                    <div>
+                                        <div class="avatar-sm flex-shrink-0">
+                                            <span class="avatar-title bg-soft-info text-info rounded-circle fs-4">
+                                                <i class=" ri-team-fill"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end card body -->
+                        </div> <!-- end card-->
+                    </div>
+                    <!--end col-->
+                           <!--end col-->
+                           <div class="col-xxl-3 col-sm-6">
+                        <div class="card card-animate">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="fw-medium text-muted mb-0">TOTAL OBSERVER DELEGATES</p>
                                         <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
                                                 data-target="<?php echo $total_media_press_count; ?>">0</span> </h2>
 

@@ -119,6 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $departure_airline_flight_number = NULL;
             $departure_date_time = NULL;
             $hotel_name = NULL;
+            $travelling = "0";
 
         } else {
             $arrival_date_time = validate_input($_POST["input_arrival_date_time"]);
@@ -128,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $departure_airline_flight_number = isset($_POST["input_departure_flight_number"]) ? validate_input($_POST["input_departure_flight_number"]) : NULL;
             $departure_date_time = validate_input($_POST["input_departure_date_time"]);
             $hotel_name = isset($_POST["input_hotel"]) ? validate_input($_POST["input_hotel"]) : NULL;
-
+            $travelling = "1";
         }
 
         //STEP 6: CONVENTION SURVEY QUESTION
@@ -147,9 +148,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         //10 CALLS PER LINE
-        $stmt = $connection->prepare("CALL UPDATE_MEMBER_PROFILE_V2(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $stmt = $connection->prepare("CALL UPDATE_MEMBER_PROFILE_V2(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $stmt->bind_param(
-            "sssssssssssssssssssssssssssssssssss",
+            "ssssssssssssssssssssssssssssssssssss",
 
             $random_id,
             $del_id_question,
@@ -171,6 +172,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $branch_of_delegate,
             $vote_delegate_question,
             $badge_reprint,
+            $travelling,
             $ground_transportation_request,
             $arrival_date_time,
             $arrival_airline_name,
