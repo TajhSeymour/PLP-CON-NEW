@@ -338,14 +338,14 @@
                             <select class="form-control" id="input_new_del_emergency_relationship"
                                 name="input_new_del_emergency_relationship">
                                 <option value="" disabled selected>Select Relationship</option>
-                                <option value="Parent">Parent</option>
-                                <option value="Grand Parent">Grand Parent</option>
-                                <option value="Siblings">Sibling</option>
-                                <option value="Aunt">Aunt</option>
-                                <option value="Uncle">Uncle</option>
-                                <option value="Cousin">Cousin</option>
-                                <option value="Friend">Friend</option>
-                                <option value="Other">Other</option>
+                                <option value="PARENT">Parent</option>
+                                <option value="GRAND PARENT">Grand Parent</option>
+                                <option value="SIBLING">Sibling</option>
+                                <option value="AUNT">Aunt</option>
+                                <option value="UNCLE">Uncle</option>
+                                <option value="COUSIN">Cousin</option>
+                                <option value="FRIEND">Friend</option>
+                                <option value="OTHER">Other</option>
                             </select>
                         </div>
                         <!-- Fifth column -->
@@ -404,7 +404,7 @@
 
                             <select class="form-control" required id="input_vote_new_del_badge_question"
                                 name="input_vote_new_del_badge_question">
-                                <option value="1" disabled selected> Yes</option>
+                                <option value="1" disabled selected>Yes</option>
                                <!-- <option value="0" selected> No</option>
                                 <option value="1">Yes</option> -->
                             </select>

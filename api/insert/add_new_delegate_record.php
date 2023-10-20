@@ -50,15 +50,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($input_del_id_question === "YES") {
         $random_id = generate_random_id();
         //STEP 3: GENERAL INFORMATION
-        $input_del_first_name = isset($_POST['input_new_del_first_name']) ? $_POST['input_new_del_first_name'] : null;
-        $input_del_middle_name = isset($_POST['input_new_del_middle_name']) ? $_POST['input_new_del_middle_name'] : null;
-        $input_del_last_name = isset($_POST['input_new_del_last_name']) ? $_POST['input_new_del_last_name'] : null;
+        $$input_del_first_name = isset($_POST['input_new_del_first_name']) ? strtoupper($_POST['input_new_del_first_name']) : null;
+        $input_del_middle_name = isset($_POST['input_new_del_middle_name']) ? strtoupper($_POST['input_new_del_middle_name']) : null;
+        $input_del_last_name = isset($_POST['input_new_del_last_name']) ? strtoupper($_POST['input_new_del_last_name']) : null;        
         $gender = isset($_POST['input_new_del_gender']) ? $_POST['input_new_del_gender'] : null;
         $membership_type = isset($_POST['input_new_del_membership_type']) ? $_POST['input_new_del_membership_type'] : null;
         $dob = validate_input($_POST["input_new_del_dob"]);
         $nib_number = validate_input($_POST["input_new_del_nib"]);
-        $consituency = validate_input($_POST["input_new_del_constituency"]);
-        $affiliated_branch = validate_input($_POST["input_new_del_affiliated_branch"]);
+        $constituency = isset($_POST['input_new_del_constituency']) ? htmlspecialchars_decode($_POST['input_new_del_constituency']) : null;
+        $affiliated_branch = isset($_POST['input_new_del_affiliated_branch']) ? htmlspecialchars_decode($_POST['input_new_del_affiliated_branch']) : null;
+       
 
         //STEP 4: CONTACT INFORMATION
 
@@ -127,8 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $departure_airline_name = isset($_POST["input_new_del_departure_airline"]) ? validate_input($_POST["input_new_del_departure_airline"]) : NULL;
             $departure_airline_flight_number = isset($_POST["input_new_del_departure_flight_number"]) ? validate_input($_POST["input_new_del_departure_flight_number"]) : NULL;
             $departure_date_time = validate_input($_POST["input_new_del_departure_date_time"]);
-            $hotel_name = isset($_POST["input_new_del_hotel"]) ? validate_input($_POST["input_new_del_hotel"]) : NULL;
-
+            $hotel_name = isset($_POST['input_new_del_hotel']) ? htmlspecialchars_decode($_POST['input_new_del_hotel']) : null;
         }
 
         //STEP 6: CONVENTION SURVEY QUESTION
@@ -145,7 +145,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $total_cost = isset($_POST['input_new_del_total_cost']) ? $_POST['input_new_del_total_cost'] : null;
 
 
-
         //10 CALLS PER LINE
         $stmt = $connection->prepare("CALL INSERT_MEMBER_PROFILE_V2(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $stmt->bind_param(
@@ -153,13 +152,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $random_id,
             $del_id_question,
-            $first_name,
-            $middle_name,
-            $last_name,
+            $input_del_first_name,
+            $input_del_middle_name,
+            $input_del_last_name,
             $gender,
             $dob,
             $nib_number,
-            $consituency,
+            $constituency,
             $affiliated_branch,
             $membership_type,
             $email,
