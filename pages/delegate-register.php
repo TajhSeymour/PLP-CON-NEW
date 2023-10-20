@@ -14,7 +14,7 @@
 
         <!-- Step 1 -->
 
-        <div class="stepUpdate step-1">
+        <div class="step step-1">
             <center>
                 <h3>Information Sharing </h3>
             </center>
@@ -1264,7 +1264,7 @@ if (nominationQuestionInput && hiddenInput) {
 
 
 <script>
-    const steps = document.querySelectorAll('.stepUpdate');
+    const stepsUpdate = document.querySelectorAll('.step');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
     const submitBtn = document.querySelector('.btn-submit');
@@ -1272,13 +1272,13 @@ if (nominationQuestionInput && hiddenInput) {
     let currentStep = 0;
 
     function showStep(stepIndex) {
-        steps.forEach((step, index) => {
+        stepsUpdate.forEach((step, index) => {
             step.style.display = index === stepIndex ? 'block' : 'none';
         });
     }
 
     function isStepValid() {
-        const currentStepInputs = steps[currentStep].querySelectorAll('input[required], select[required], input[type="checkbox"][required]');
+        const currentStepInputs = stepsUpdate[currentStep].querySelectorAll('input[required], select[required], input[type="checkbox"][required]');
         for (const input of currentStepInputs) {
             if (input.type === 'checkbox') {
                 if (!input.checked) {
@@ -1294,7 +1294,7 @@ if (nominationQuestionInput && hiddenInput) {
     }
 
     function goToNextStep() {
-        if (currentStep < steps.length - 1) {
+        if (currentStep < stepsUpdate.length - 1) {
             if (isStepValid()) {
                 currentStep++;
                 showStep(currentStep);
@@ -1326,8 +1326,8 @@ if (nominationQuestionInput && hiddenInput) {
     }
 
     function toggleSubmitButton() {
-        nextBtn.style.display = currentStep === steps.length - 1 ? 'none' : 'block';
-        submitBtn.style.display = currentStep === steps.length - 1 ? 'block' : 'none';
+        nextBtn.style.display = currentStep === stepsUpdate.length - 1 ? 'none' : 'block';
+        submitBtn.style.display = currentStep === stepsUpdate.length - 1 ? 'block' : 'none';
     }
 
     nextBtn.addEventListener('click', goToNextStep);
@@ -1336,7 +1336,7 @@ if (nominationQuestionInput && hiddenInput) {
     document.getElementById('notify-form').addEventListener('submit', (event) => {
         event.preventDefault();
 
-        if (currentStep === steps.length - 1 && isStepValid()) {
+        if (currentStep === stepsUpdate.length - 1 && isStepValid()) {
             // Display a success notification using Noty at the top center
             //new Noty({
             //    type: 'success',
@@ -1520,7 +1520,7 @@ if (nominationQuestionInput && hiddenInput) {
         try {
             // Additional validation (if needed)
             // Make sure currentStep, steps, isStepValid are defined elsewhere
-            if (currentStep === steps.length - 1 && isStepValid()) {
+            if (currentStep === stepsUpdate.length - 1 && isStepValid()) {
                 $.ajax({
                     url: 'api/insert/add_delegate_record.php',
                     type: 'POST',
