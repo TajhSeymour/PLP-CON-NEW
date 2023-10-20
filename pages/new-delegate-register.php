@@ -7,7 +7,7 @@
     <br>
 
     <!-- Main Multi-Step Form -->
-    <form class="form form-dark notify-form" action="" id="notify-form"
+    <form class="form form-dark notify-form" action="" id="notify-form-new"
         enctype="multipart/form-data">
         <!-- <h3 class="text-center my-3">Conference Registration Form</h3>-->
         <br>
@@ -323,7 +323,7 @@
                             <input class="form-control" type="text" id="input_new_del_telephone" name="input_new_del_telephone"
                                 placeholder="Enter Your Telephone Number"
                                 oninput="formatPhoneNumber('input_new_del_telephone'); validatePhoneNumber('input_new_del_telephone')">
-                            <div id="input_del_telephone-validation"></div>
+                            <div id="input_new_del_telephone-validation"></div>
                         </div>
 
                         <div class="col-md-4">
@@ -807,7 +807,7 @@
             document.getElementById("have-id-section-lost").style.display = "none";
             document.getElementById("have-id-section").style.display = "none";
         }
-        document.getElementById('input_del_id_question').disabled = true;//recheck this logic
+       // document.getElementById('input_del_id_question').disabled = true;//recheck this logic
     });
 
 </script>
@@ -1106,7 +1106,7 @@ if (nominationQuestionInput && hiddenInput) {
     nextBtn.addEventListener('click', goToNextStep);
     prevBtn.addEventListener('click', goToPrevStep);
 
-    document.getElementById('notify-form').addEventListener('submit', (event) => {
+    document.getElementById('notify-form-new').addEventListener('submit', (event) => {
         event.preventDefault();
 
         if (currentStep === steps.length - 1 && isStepValid()) {
@@ -1277,7 +1277,7 @@ if (nominationQuestionInput && hiddenInput) {
 
 
 <script>
-    document.getElementById('notify-form').addEventListener('submit', async (event) => {
+    document.getElementById('notify-form-new').addEventListener('submit', async (event) => {
         event.preventDefault();
 
         const submitButton = document.getElementById('submit-button-new');
