@@ -601,7 +601,7 @@
                         <span class="d-flex align-items-center">
                             <img class="rounded-circle header-profile-user" src="assets/images/users/user-dummy-img.jpg"
                                 alt="Header Avatar">
-                            <span class="text-start ms-xl-2">
+                                <span class="text-start ms-xl-2">
                                 <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">
                                     <?php if (array_key_exists('name', $_SESSION)): ?>
                                         <?= $_SESSION['name'] ?>
@@ -609,7 +609,25 @@
                                         GUEST
                                     <?php endif;?>
                                 </span>
-                                <!-- <span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">Founder</span> -->
+                                <span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">
+                                    <?php if (array_key_exists('super_admin', $_SESSION) && $_SESSION['super_admin']): ?>
+                                        Super Administrator
+                                    <?php elseif (array_key_exists('supervisor', $_SESSION) && $_SESSION['supervisor']): ?>
+                                        Supervisor
+                                    <?php elseif (array_key_exists('security_officer', $_SESSION) && $_SESSION['security_officer']): ?>
+                                        Security Officer
+                                    <?php elseif (array_key_exists('print_officer', $_SESSION) && $_SESSION['print_officer']): ?>
+                                        Print Officer
+                                    <?php elseif (array_key_exists('officer', $_SESSION) && $_SESSION['officer']): ?>
+                                        Officer
+                                    <?php elseif (array_key_exists('oas_officer', $_SESSION) && $_SESSION['oas_officer']): ?>
+                                        OAS Officer
+                                    <?php elseif (array_key_exists('tourism_officer', $_SESSION) && $_SESSION['tourism_officer']): ?>
+                                        Tourism Officer
+                                    <?php elseif (array_key_exists('hotel_officer', $_SESSION) && $_SESSION['hotel_officer']): ?>
+                                        Hotel Officer
+                                    <?php endif;?>
+                                </span>
                             </span>
                         </span>
                     </button>
