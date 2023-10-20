@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($input_del_id_question === "YES") {
         $random_id = generate_random_id();
         //STEP 3: GENERAL INFORMATION
-        $$input_del_first_name = isset($_POST['input_new_del_first_name']) ? strtoupper($_POST['input_new_del_first_name']) : null;
+        $input_del_first_name = isset($_POST['input_new_del_first_name']) ? strtoupper($_POST['input_new_del_first_name']) : null;
         $input_del_middle_name = isset($_POST['input_new_del_middle_name']) ? strtoupper($_POST['input_new_del_middle_name']) : null;
         $input_del_last_name = isset($_POST['input_new_del_last_name']) ? strtoupper($_POST['input_new_del_last_name']) : null;        
         $gender = isset($_POST['input_new_del_gender']) ? $_POST['input_new_del_gender'] : null;
