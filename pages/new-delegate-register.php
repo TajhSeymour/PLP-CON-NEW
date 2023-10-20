@@ -374,8 +374,8 @@
                         </div>
                         <div class="col-md-4">
                             <label class="form-control" for="travel_question">Enter Branch Code: *</label>
-                            <input type="text" class="form-control"  id="input_new_del_branch_id_code"
-                               required  name="input_new_del_branch_id_code">
+                            <input type="text" class="form-control"  id="input_branch_id_code"
+                               required  name="input_branch_id_code">
                             <strong>Please enter the unique branch code then press "VERIFY CODE" to proceed to the next
                                 step.</strong>
                         </div>
@@ -835,7 +835,7 @@ if (nominationQuestionInput && hiddenInput) {
    // document.addEventListener("DOMContentLoaded", function () {
       //  var dropdownDelQuestionNew = document.getElementById("input_vote_new_del_nomination_question");
       //  var inputDelNominationQuestion = document.getElementById("input_vote_new_del_nomination_question");
-     //   var inputBranchCode = document.getElementById("input_new_del_branch_id_code");
+     //   var inputBranchCode = document.getElementById("input_branch_id_code");
         //var buttonVerify = document.getElementById("verify-plp-branch-code");
 
 
@@ -890,7 +890,7 @@ if (nominationQuestionInput && hiddenInput) {
 
     function verifyPLPBranchInfo() {
         // Get the input values
-        const branchCode = document.getElementById('input_new_del_branch_id_code').value;
+        const branchCode = document.getElementById('input_branch_id_code').value;
 
         // Check if the input values are empty
         if (branchCode.trim() === '') {
@@ -900,7 +900,7 @@ if (nominationQuestionInput && hiddenInput) {
 
         // Create a FormData object with the POST data
         const formData = new FormData();
-        formData.append('input_new_del_branch_id_code', branchCode);
+        formData.append('input_branch_id_code', branchCode);
 
 
         // Make an AJAX request to the PHP API using the Fetch API
@@ -917,7 +917,7 @@ if (nominationQuestionInput && hiddenInput) {
                         timeout: 3000 // Optional: Set the alert to automatically close after 3 seconds
                     }).show();
                     // Disable the input fields
-                    document.getElementById('input_new_del_branch_id_code').disabled = true;
+                    document.getElementById('input_branch_id_code').disabled = true;
 
                     // Update the form fields with the retrieved data
                     document.getElementById('input_vote_new_del_nomination_question').value = response.data.name;
@@ -932,8 +932,8 @@ if (nominationQuestionInput && hiddenInput) {
 
                     document.getElementById('input_vote_new_del_nomination_question').value = "0";
                     document.getElementById('input_vote_new_del_nomination_question').value = "";
-                    document.getElementById('input_new_del_branch_id_code').value = "";
-                   // document.getElementById('input_new_del_branch_id_code').disabled = true;
+                    document.getElementById('input_branch_id_code').value = "";
+                   // document.getElementById('input_branch_id_code').disabled = true;
 
                 }
             })
