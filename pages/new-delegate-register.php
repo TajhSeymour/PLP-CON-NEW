@@ -957,41 +957,41 @@ if (nominationQuestionInput && hiddenInput) {
     const inputTravelQuestionNew = document.getElementById('input_travel_question');
     const arrivalSectionNew = document.getElementById('arrival-section');
     //const inputNationality = document.querySelector('[name="input_nationality"]');
-    const inputArrivalFlightNumber = document.querySelector('[name="input_arrival_flight_number"]');
-    const inputDepartureFlightNumber = document.querySelector('[name="input_departure_flight_number"]');
-    const inputHotel = document.querySelector('[name="input_hotel"]');
-    const inputArrivalAirline = document.querySelector('[name="input_arrival_airline"]');
-    const inputDepartureAirline = document.querySelector('[name="input_departure_airline"]');
-    const inputArrivalDateTime = document.querySelector('[name="input_arrival_date_time"]');
-    const inputDepartureDateTime = document.querySelector('[name="input_departure_date_time"]');
+    const inputArrivalFlightNumberNew = document.querySelector('[name="input_new_del_arrival_flight_number"]');
+    const inputDepartureFlightNumberNew = document.querySelector('[name="input_new_del_departure_flight_number"]');
+    const inputHotelNew = document.querySelector('[name="input_new_del_hotel"]');
+    const inputArrivalAirlineNew = document.querySelector('[name="input_new_del_arrival_airline"]');
+    const inputDepartureAirlineNew = document.querySelector('[name="input_new_del_departure_airline"]');
+    const inputArrivalDateTimeNew = document.querySelector('[name="input_new_del_arrival_date_time"]');
+    const inputDepartureDateTimeNew = document.querySelector('[name="input_new_del_departure_date_time"]');
     // Function to handle the country selection
     function handleTravelQuestionSelection() {
         if (input_travel_question.value === 'No') {
             arrivalSectionNew.style.display = 'none';
             //inputNationality.value = 'Bahamian';
-            inputArrivalFlightNumber.value = '';
-            inputDepartureFlightNumber.value = '';
-            inputArrivalAirline.value = '';
-            inputDepartureAirline.value = '';
-            inputHotel.value = '';
-            inputArrivalDateTime.value = '';
-            inputDepartureDateTime.value = '';
+            inputArrivalFlightNumberNew.value = '';
+            inputDepartureFlightNumberNew.value = '';
+            inputArrivalAirlineNew.value = '';
+            inputDepartureAirlineNew.value = '';
+            inputHotelNew.value = '';
+            inputArrivalDateTimeNew.value = '';
+            inputDepartureDateTimeNew.value = '';
             // Remove the 'required' attribute from the hidden inputs
-            inputArrivalFlightNumber.removeAttribute('required');
-            inputDepartureFlightNumber.removeAttribute('required');
-            inputArrivalAirline.removeAttribute('required');
-            inputDepartureAirline.removeAttribute('required');
-            inputHotel.removeAttribute('required');
-            inputArrivalDateTime.removeAttribute('required');
-            inputDepartureDateTime.removeAttribute('required');
+            inputArrivalFlightNumberNew.removeAttribute('required');
+            inputDepartureFlightNumberNew.removeAttribute('required');
+            inputArrivalAirlineNew.removeAttribute('required');
+            inputDepartureAirlineNew.removeAttribute('required');
+            inputHotelNew.removeAttribute('required');
+            inputArrivalDateTimeNew.removeAttribute('required');
+            inputDepartureDateTimeNew.removeAttribute('required');
         } else {
             arrivalSectionNew.style.display = 'block';
             //inputNationality.value = ''; // Reset the value to allow user input
-            inputArrivalFlightNumber.value = ''; // Reset the value to allow user input
-            inputDepartureFlightNumber.value = ''; // Reset the value to allow user input
+            inputArrivalFlightNumberNew.value = ''; // Reset the value to allow user input
+            inputDepartureFlightNumberNew.value = ''; // Reset the value to allow user input
             // Add the 'required' attribute back to the inputs
-            // inputArrivalFlightNumber.setAttribute('required', 'required');
-            // inputDepartureFlightNumber.setAttribute('required', 'required');
+            // inputArrivalFlightNumberNew.setAttribute('required', 'required');
+            // inputDepartureFlightNumberNew.setAttribute('required', 'required');
         }
     }
 
