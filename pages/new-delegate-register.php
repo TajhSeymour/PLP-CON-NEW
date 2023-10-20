@@ -1304,7 +1304,7 @@ if (nominationQuestionInput && hiddenInput) {
                         if (response.status === "success") {
                             // alert('Success! ' + response.message);
                             
-                            window.location.href = 'index.php?message=You are now registered!';
+                            window.location.href = 'index.php?message=Congratulations, your registration is complete! Please proceed to make your payment at the registration desk.';
                         } else {
                             alert('Error! ' + response.message);
                         }
