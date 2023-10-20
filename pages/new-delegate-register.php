@@ -388,9 +388,9 @@
                             <br>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-control" for="travel_question">Delegate Branch </label>
+                            <label class="form-control" for="travel_question">Delegate Branch *</label>
                             <input type="text" class="form-control" id="input_vote_new_del_nomination_question"
-                                name="input_vote_new_del_nomination_question" disabled>
+                                name="input_vote_new_del_nomination_question" required disabled>
                             <strong>Please be aware that your delegate status will undergo verification by The
                                 Convention Committee before payment is processed. </strong>
                                 
