@@ -45,7 +45,7 @@ function validate_input($data)
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $input_del_id_question = isset($_POST['input_del_id_question']) ? $_POST['input_del_id_question'] : null;
+    $input_del_id_question = isset($_POST['input_new_del_id_question']) ? $_POST['input_new_del_id_question'] : null;
 
     if ($input_del_id_question === "YES") {
         $random_id = generate_random_id();
@@ -218,7 +218,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $connection->close();
 
     } else {
-        echo json_encode(['status' => 'error', 'message' => 'Invalid request method.']);
+        echo json_encode(['status' => 'error', 'message' => 'Invalid request method.'. mysqli_error($connection)]);
     }
 }
 
