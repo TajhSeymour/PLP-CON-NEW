@@ -954,7 +954,7 @@ if (nominationQuestionInput && hiddenInput) {
 
 
 <script>
-    const inputTravelQuestion = document.getElementById('input_travel_question');
+    const inputTravelQuestionNew = document.getElementById('input_travel_question');
     const arrivalSection = document.getElementById('arrival-section');
     //const inputNationality = document.querySelector('[name="input_nationality"]');
     const inputArrivalFlightNumber = document.querySelector('[name="input_arrival_flight_number"]');
@@ -996,7 +996,7 @@ if (nominationQuestionInput && hiddenInput) {
     }
 
     // Add an event listener to the inputCountry element
-    inputTravelQuestion.addEventListener('change', handleTravelQuestionSelection);
+    inputTravelQuestionNew.addEventListener('change', handleTravelQuestionSelection);
 
     // Call the function initially to handle the initial state
     handleTravelQuestionSelection();
@@ -1177,10 +1177,10 @@ if (nominationQuestionInput && hiddenInput) {
 
 
     // Gov-ID preview
-    const govIdInput = document.getElementById('gov_id');
+    const govIdInputNew = document.getElementById('gov_id');
     const govIdPreview = document.getElementById('gov_id_preview');
 
-    govIdInput.addEventListener('change', function () {
+    govIdInputNew.addEventListener('change', function () {
         const file = this.files[0];
         if (file) {
             /* The above code is checking if the file name has a .jpg, .jpeg, or .png extension
