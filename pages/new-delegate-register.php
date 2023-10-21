@@ -340,6 +340,7 @@
                                 <option value="" disabled selected>Select Relationship</option>
                                 <option value="PARENT">Parent</option>
                                 <option value="GRAND PARENT">Grand Parent</option>
+                                <option value="CHILD">Child</option> 
                                 <option value="SIBLING">Sibling</option>
                                 <option value="AUNT">Aunt</option>
                                 <option value="UNCLE">Uncle</option>
