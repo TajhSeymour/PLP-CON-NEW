@@ -623,6 +623,7 @@
                                     <option value="" selected>Select Method</option>
                                     <option value="Cash">CASH (PLP HQ)</option>
                                     <option value="Bank">BANK WIRE TRANSFER</option>
+                                    <option value="Paid via Branch">PAID WITH BRANCH</option>
                                 </select>
                             </div>
                         </div>

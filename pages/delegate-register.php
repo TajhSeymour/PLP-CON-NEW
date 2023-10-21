@@ -380,14 +380,15 @@
                             <select class="form-control" id="input_del_emergency_relationship"
                                 name="input_del_emergency_relationship">
                                 <option value="" disabled selected>Select Relationship</option>
-                                <option value="Parent">Parent</option>
-                                <option value="Grand Parent">Grand Parent</option>
-                                <option value="Siblings">Sibling</option>
-                                <option value="Aunt">Aunt</option>
-                                <option value="Uncle">Uncle</option>
-                                <option value="Cousin">Cousin</option>
-                                <option value="Friend">Friend</option>
-                                <option value="Other">Other</option>
+                                <option value="PARENT">Parent</option>
+                                <option value="GRAND PARENT">Grand Parent</option>
+                                <option value="CHILD">Child</option> 
+                                <option value="SIBLING">Sibling</option>
+                                <option value="AUNT">Aunt</option>
+                                <option value="UNCLE">Uncle</option>
+                                <option value="COUSIN">Cousin</option>
+                                <option value="FRIEND">Friend</option>
+                                <option value="OTHER">Other</option>
                             </select>
                         </div>
                         <!-- Fifth column -->
@@ -762,6 +763,7 @@
                                     <option value="" selected>Select Method</option>
                                     <option value="Cash">CASH (PLP HQ)</option>
                                     <option value="Bank">BANK WIRE TRANSFER</option>
+                                    <option value="Paid via Branch">PAID WITH BRANCH</option>
                                 </select>
                             </div>
                         </div>
