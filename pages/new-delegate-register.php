@@ -1240,7 +1240,7 @@ if (nominationQuestionInput && hiddenInput) {
         var baseCost = 25.00;
 
         // Check if delQuestionValue is "Yes" and update the base cost accordingly
-        if (delQuestion === "Yes") {
+        if (delQuestion === "1") {
             baseCost = 50.00;
         }
 
