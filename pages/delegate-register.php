@@ -656,7 +656,7 @@
                             </div>
                         </div>
 
-                        <h3>Step6: CONVENTION SURVEY QUESTIONS</h3>
+                        <h3>Step 6: CONVENTION SURVEY QUESTIONS</h3>
                         <div class="row">
                             <!-- First column -->
                             <div class="col-md-8">
@@ -745,7 +745,7 @@
                                     <option value="6">6 - Above Average</option>
                                     <option value="7">7 - Good</option>
                                     <option value="8">8 - Very Good</option>
-                                    <option value="9">9- Excellent</option>
+                                    <option value="9">9 - Excellent</option>
                                     <option value="10">10 - Outstanding</option>
                                 </select>
                             </div>
