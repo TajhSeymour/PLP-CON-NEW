@@ -13,7 +13,7 @@ function validate_input($input) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Sanitize and validate the entered code and surname
-  $branchCode = validate_input($_POST['input_new_del_branch_id_code']);
+  $branchCode = validate_input($_POST['input_branch_id_code']);
   //$surname = validate_input($_POST['input_id_surname']);
 
   // Call the CHECK_MEMBER_ID_NUMBER stored procedure

@@ -1043,7 +1043,7 @@ if (nominationQuestionInput && hiddenInput) {
 
 
         // Make an AJAX request to the PHP API using the Fetch API
-        fetch('api/fetch_data/check_branch_code.php', {
+        fetch('api/fetch_data/check_branch_code_ext.php', {
             method: 'POST',
             body: formData,
         })
