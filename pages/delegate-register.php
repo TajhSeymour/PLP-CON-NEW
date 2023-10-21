@@ -1509,7 +1509,7 @@ if (nominationQuestionInput && hiddenInput) {
     document.getElementById('notify-form').addEventListener('submit', async (event) => {
         event.preventDefault();
 
-        const submitButton = document.getElementById('submit-button');
+        const submitButton = document.getElementById('submit-buttonUpdate');
         const disabledFields = document.querySelectorAll('[disabled]');
         const formData = new FormData(event.target);
         submitButton.disabled = true;
