@@ -111,7 +111,7 @@
             <div class="row">
                 <!-- First column -->
                 <div class="col-md-4">
-                    <center><img src="" alt="Site Logo"></center>
+                    <center><img src="assets/images/idcarddemo.png" alt="Site Logo"></center>
                     <!-- Other input fields for Step 1 -->
 
                 </div>
@@ -186,7 +186,7 @@
                     <div class="row">
                         <div class="col-md-1">
                             <label class="form-control" for="input_first_name">ID Photo</label>
-                            <img id="id-image" src="" alt="ID Badge">
+                            <img id="id-image-ext" src="" alt="ID Badge">
                         </div>
 
                         <div class="col-md-4">
@@ -1142,7 +1142,7 @@ if (nominationQuestionInput && hiddenInput) {
 
                     // Update the image source based on the PLP ID
                     const imageUrl = `idbadge/${plpId}.jpg`;
-                    document.getElementById('id-image').src = imageUrl;
+                    document.getElementById('id-image-ext').src = imageUrl;
 
                     // Show the div when verification is successful
                     document.getElementById('have-id-section-info-update').style.display = 'block';
