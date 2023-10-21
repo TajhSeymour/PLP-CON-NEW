@@ -111,7 +111,7 @@
             <div class="row">
                 <!-- First column -->
                 <div class="col-md-4">
-                    <center><img src="assets/images/idcarddemo.png" alt="Site Logo"></center>
+                    <center><img src="" alt="Site Logo"></center>
                     <!-- Other input fields for Step 1 -->
 
                 </div>
