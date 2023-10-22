@@ -254,9 +254,11 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <div>
-                                        <p class="fw-medium text-muted mb-0">DELEGATES REQUESTING TRANSPORATION ASSISTANCE</p>
+                                        <p class="fw-medium text-muted mb-0">DELEGATES REQUESTING TRANSPORATION
+                                            ASSISTANCE</p>
                                         <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
-                                                data-target="<?php echo $total_delegates_requesting_transportation_assistance; ?>">0</span></h2>
+                                                data-target="<?php echo $total_delegates_requesting_transportation_assistance; ?>">0</span>
+                                        </h2>
 
                                     </div>
                                     <div>
@@ -271,9 +273,9 @@
                         </div>
                     </div>
                     <!--end col-->
-                    
-                   
-            
+
+
+
                     <!--end col-->
                     <div class="col-xxl-3 col-sm-6">
                         <div class="card card-animate">
@@ -319,7 +321,7 @@
                             </div><!-- end card body -->
                         </div>
                     </div>
-                    
+
                     <div class="col-xxl-3 col-sm-6">
                         <div class="card card-animate">
                             <div class="card-body">
@@ -426,7 +428,7 @@
                                             <!-- This list item will be hidden on mobile devices -->
                                             <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
                                                 href="#pill-printed-badges" role="tab">
-                                               OBSERVER DELEGATES
+                                                OBSERVER DELEGATES
                                             </a>
                                         </li>
                                     <?php endif; ?>
@@ -435,7 +437,7 @@
                                             <!-- This list item will be hidden on mobile devices -->
                                             <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
                                                 href="#pill-printed-badges" role="tab">
-                                               BADGES PENDING PRINT
+                                                BADGES PENDING PRINT
                                             </a>
                                         </li>
                                     <?php endif; ?>
@@ -444,7 +446,7 @@
                                             <!-- This list item will be hidden on mobile devices -->
                                             <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
                                                 href="#pill-printed-badges" role="tab">
-                                               BADGES PRINTED
+                                                BADGES PRINTED
                                             </a>
                                         </li>
                                     <?php endif; ?>
@@ -457,31 +459,30 @@
                                             style="width:100%">
                                             <thead>
                                                 <tr>
-                                            
                                                     <th>PLP ID</th>
-                                                    <th>Priority</th>
+                                                    <th>PRIORITY</th>
                                                     <th>FIRST NAME</th>
                                                     <th>MIDDLE NAME</th>
                                                     <th>LAST NAME</th>
                                                     <th>GENDER</th>
-                                                   
-                                                    
+
+
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                <th>PLP ID</th>
-                                                <th>Priority</th>
+                                                    <th>PLP ID</th>
+                                                    <th>PRIORITY</th>
                                                     <th>LAST NAME</th>
                                                     <th>MIDDLE NAME</th>
                                                     <th>FIRST NAME</th>
                                                     <th>GENDER</th>
-                                                   
+
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div> <!--END OF PILL -->
-                                   
+
                                     <div class="tab-pane" id="pill-security-checks" role="tabpanel">
                                         <table id="pending-security" class="display table table-bordered dt-responsive"
                                             style="width:100%">
@@ -610,7 +611,7 @@ App js -->
 
 <!-- Your HTML code for the DataTables goes here -->
 <script>
-     $(document).ready(function () {
+    $(document).ready(function () {
         // Function to add the badge and gender icon based on the "Priority" and "Gender" column values
         function addBadge(row, data) {
             var priority = data.priority.toLowerCase(); // Assuming "priority" is the property representing the "Priority" column in the dataset
@@ -624,15 +625,15 @@ App js -->
             }
 
             if (badgeClass !== "") {
-                var priorityColumnIndex = $("#all-registrants thead th").filter(function() {
-                    return $(this).text() === "Priority";
+                var priorityColumnIndex = $("#all-registrants thead th").filter(function () {
+                    return $(this).text() === "PRIORITY";
                 }).index();
 
                 $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
             }
 
-             var gender = data.gender.toLowerCase();
-         var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
+            var gender = data.gender.toLowerCase();
+            var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
             $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
         }
         // Initialize DataTable for "all-registrants"
@@ -663,7 +664,27 @@ App js -->
             },
             {
                 "data": "gender", visible: false
+            },
+            {
+                "data": "dob"
+            },
+            {
+                "data": "nib_number"
+            },
+            {
+                "data": "constituency"
+            },
+            {
+                "data": "affiliated_branch", visible: false
+            },
+            {
+                "data": "membership_type"
+            },
+            {
+                "data": "date"
             }
+
+
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
                 $(nRow).attr('plp_id', aData.plp_id); // Assuming "id" is the property representing the "ID" column in the dataset
