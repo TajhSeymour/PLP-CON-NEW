@@ -405,7 +405,7 @@
 
                             <select class="form-control" required id="input_vote_new_del_badge_question"
                                 name="input_vote_new_del_badge_question">
-                                <option value="1" disabled selected>Yes</option>
+                                <option value="1" selected>Yes</option>
                                <!-- <option value="0" selected> No</option>
                                 <option value="1">Yes</option> -->
                             </select>
