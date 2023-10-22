@@ -421,7 +421,7 @@
                                         <li class="nav-item d-none d-sm-block">
                                             <!-- This list item will be hidden on mobile devices -->
                                             <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
-                                                href="#pill-printed-badges" role="tab">
+                                                href="#pill-pending-badges" role="tab">
                                                 BADGES PENDING PRINT
                                             </a>
                                         </li>
@@ -522,7 +522,7 @@
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div class="tab-pane" id="pill-approved-registrants" role="tabpanel">
+                                    <div class="tab-pane" id="pill-pending-badges" role="tabpanel">
                                         <table id="pending-print"
                                             class="display table table-bordered dt-responsive" style="width:100%">
                                             <thead>
