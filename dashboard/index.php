@@ -405,15 +405,7 @@
                                             </a>
                                         </li>
                                     <?php endif; ?>
-                                    <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']): ?>
-                                        <li class="nav-item d-none d-sm-block">
-                                            <!-- This list item will be hidden on mobile devices -->
-                                            <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
-                                                href="#pill-transportation" role="tab">
-                                                REQUESTING TRANSPORATION ASSISTANCE
-                                            </a>
-                                        </li>
-                                    <?php endif; ?>
+                                 
 
                                     <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']): ?>
                                         <li class="nav-item d-none d-sm-block">
@@ -487,8 +479,8 @@
                                         </table>
                                     </div> <!--END OF PILL -->
 
-                                    <div class="tab-pane" id="pill-transportation" role="tabpanel">
-                                        <table id="transporation" class="display table table-bordered dt-responsive"
+                                    <div class="tab-pane" id="pill-pending-payment" role="tabpanel">
+                                        <table id="pending-payment" class="display table table-bordered dt-responsive"
                                             style="width:100%">
                                             <thead>
                                                 <tr>
@@ -497,23 +489,29 @@
                                                     <th>FIRST NAME</th>
                                                     <th>MIDDLE NAME</th>
                                                     <th>LAST NAME</th>
-                        
+                                                    <th>GENDER</th>
+                                                    <th>DOB</th>
+                                                    <th>NIB NUMBER</th>
                                                     <th>CONSTITUENCY</th>
-                                                 
+                                                    <th>AFFILIATED BRANCH</th>
                                                     <th>MEMBERSHIP TYPE</th>
                                                     <th>REGISTRATION DATE</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th>ID</th>
-                                                    <th>First Name</th>
-                                                    <th>Middle Name</th>
-                                                    <th>Last Name</th>
-                                                    <th>NIB</th>
-                                                    <th>Assignment</th>
-                                                    <th>Job Title</th>
-                                                    <th>Priority</th>
+                                                <th>PLP ID</th>
+                                                    <th>PRIORITY</th>
+                                                    <th>FIRST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>LAST NAME</th>
+                                                    <th>GENDER</th>
+                                                    <th>DOB</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>CONSTITUENCY</th>
+                                                    <th>AFFILIATED BRANCH</th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    <th>REGISTRATION DATE</th>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -642,25 +640,6 @@ App js -->
             var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
             $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
         
-            var membershiptype = data.membership_type.toLowerCase(); // Assuming "priority" is the property representing the "Priority" column in the dataset
-            var membershiptypeBadgeClass = "";
-            if (membershiptype === 'DIRECT MEMBER') {
-                membershiptypeBadgeClass = "badge text-bg-info";
-            } else if (membershiptype === 'STALWART COUNCILLOR') {
-                membershiptypeBadgeClass = "badge text-bg-warning";
-            } else if (membershiptype === 'normal') {
-                membershiptypeBadgeClass = "badge text-bg-info";
-            }
-
-            if (membershiptypeBadgeClass !== "") {
-                var membershipColumnIndex = $("#all-registrants thead th").filter(function () {
-                    return $(this).text() === "MEMBERSHIP TYPE";
-                }).index();
-
-                $('td:eq(' + membershipColumnIndex + ')', row).html('<span class="' + membershiptypeBadgeClass + '">' + membershiptype + '</span>');
-            }
-        
-        
         }
         // Initialize DataTable for "all-registrants"
         $('#all-registrants').DataTable({
@@ -673,6 +652,7 @@ App js -->
                     alert('Error loading data: ' + errorThrown);
                 }
             },
+            
             "columns": [{
                 "data": "plp_id"
             },
@@ -737,6 +717,94 @@ App js -->
 
 
 
+        // Initialize DataTable for "all-registrants"
+        $('#pending-payment').DataTable({
+            "processing": false,
+            "serverSide": false,
+            "ajax": {
+                "url": "/api/dashboard/fetch_data/get_registrants_tb_pending_payment.php",
+                "type": "POST",
+                "error": function (jqXHR, textStatus, errorThrown) {
+                    alert('Error loading data: ' + errorThrown);
+                }
+            },
+            "columns": [{
+                "data": "plp_id"
+            },
+            {
+                "data": "priority"
+            },
+            {
+                "data": "first_name"
+            },
+            {
+                "data": "middle_name"
+            },
+            {
+                "data": "last_name"
+            },
+            {
+                "data": "price"
+            },
+            {
+                "data": "receipt_number"
+            },
+            {
+                "data": "method"
+            },
+            {
+                "data": "branch"
+            },
+            {
+                "data": "badge_reprint_status"
+            },
+            {
+                "data": "nib_number"
+            },
+          
+            {
+                "data": "gender", visible: false
+            },
+            {
+                "data": "dob", visible: false
+            },
+            {
+                "data": "nib_number"
+            },
+          
+          
+            {
+                "data": "delegate_type"
+            },
+            {
+                "data": "date"
+            }
+
+
+            ],
+            "fnCreatedRow": function (nRow, aData, iDataIndex) {
+                $(nRow).attr('plp_id', aData.plp_id); // Assuming "id" is the property representing the "ID" column in the dataset
+                addBadge(nRow, aData);
+            },
+            "dom": 'lBfrtip',
+            "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
+            "pageLength": 25,
+            "lengthMenu": [
+                [25, 50, 75, 100, -1],
+                [25, 50, 75, 100, "All"]
+            ],
+            "order": [
+                [1, 'asc'],
+                [4, 'asc'],
+                [8, 'asc']
+            ],
+            "searching": true,
+            "paging": true,
+            "info": true,
+            "scrollX": false,
+            "searchDelay": 550,
+        });
+
 
 
 
@@ -746,8 +814,8 @@ App js -->
 <style>
     #all-registrants thead th,
     #all-registrants tfoot th,
-    #pending-security thead th,
-    #pending-security tfoot th,
+    #pending-payment thead th,
+    #pending-payment tfoot th,
     #approved-registrants thead th,
     #approved-registrants tfoot th,
     #printed-badges thead th,
