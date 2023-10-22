@@ -145,7 +145,7 @@
                                     <div>
                                         <div class="avatar-sm flex-shrink-0">
                                             <span class="avatar-title bg-soft-info text-info rounded-circle fs-4">
-                                                <i class=" ri-team-fill"></i>
+                                                <i class=" mdi-account-cash"></i>
                                             </span>
                                         </div>
                                     </div>
@@ -169,7 +169,7 @@
                                     <div>
                                         <div class="avatar-sm flex-shrink-0">
                                             <span class="avatar-title bg-soft-info text-info rounded-circle fs-4">
-                                                <i class=" ri-team-fill"></i>
+                                                <i class=" mdi-account-cash"></i>
                                             </span>
                                         </div>
                                     </div>
@@ -194,7 +194,7 @@
                                     <div>
                                         <div class="avatar-sm flex-shrink-0">
                                             <span class="avatar-title bg-soft-info text-info rounded-circle fs-4">
-                                                <i class=" ri-team-fill"></i>
+                                                <i class=" mdi-account-cash"></i>
                                             </span>
                                         </div>
                                     </div>
