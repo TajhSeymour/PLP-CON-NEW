@@ -282,7 +282,7 @@
                                     <div>
                                         <p class="fw-medium text-muted mb-0">BADGES PRINTED</p>
                                         <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
-                                                data-target="<?php echo $printed_badges_count; ?>">0</span></h2>
+                                                data-target="<?php echo $badge_printed; ?>">0</span></h2>
 
                                     </div>
                                     <div>
@@ -305,7 +305,7 @@
                                     <div>
                                         <p class="fw-medium text-muted mb-0">BADGES IN PRINT QUEUE</p>
                                         <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
-                                                data-target="<?php echo $printer_users_count; ?>">0</span></h2>
+                                                data-target="<?php echo $badge_printed_pending; ?>">0</span></h2>
 
                                     </div>
                                     <div>
@@ -408,7 +408,7 @@
                                             <!-- This list item will be hidden on mobile devices -->
                                             <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
                                                 href="#pill-security-checks" role="tab">
-                                                ALL LOCAL REGISTRANTS
+                                                STALWART COUNCILLORS REGISTRANTS
                                             </a>
                                         </li>
                                     <?php endif; ?>
@@ -417,7 +417,7 @@
                                             <!-- This list item will be hidden on mobile devices -->
                                             <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
                                                 href="#pill-approved-registrants" role="tab">
-                                                ALL MEDIA REGISTRANTS
+                                                VOTING DELEGATE
                                             </a>
                                         </li>
                                     <?php endif; ?>
@@ -426,7 +426,25 @@
                                             <!-- This list item will be hidden on mobile devices -->
                                             <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
                                                 href="#pill-printed-badges" role="tab">
-                                                ALL PRINTED BADGES
+                                               OBSERVER DELEGATES
+                                            </a>
+                                        </li>
+                                    <?php endif; ?>
+                                    <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']): ?>
+                                        <li class="nav-item d-none d-sm-block">
+                                            <!-- This list item will be hidden on mobile devices -->
+                                            <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
+                                                href="#pill-printed-badges" role="tab">
+                                               BADGES PENDING PRINT
+                                            </a>
+                                        </li>
+                                    <?php endif; ?>
+                                    <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']): ?>
+                                        <li class="nav-item d-none d-sm-block">
+                                            <!-- This list item will be hidden on mobile devices -->
+                                            <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
+                                                href="#pill-printed-badges" role="tab">
+                                               BADGES PRINTED
                                             </a>
                                         </li>
                                     <?php endif; ?>
@@ -439,36 +457,34 @@
                                             style="width:100%">
                                             <thead>
                                                 <tr>
-                                                    <th>ID</th>
-                                                    <th>First Name</th>
-                                                    <th>Middle Name</th>
-                                                    <th>Last Name</th>
-                                                    <th>Nationality</th>
-                                                    <th>Country</th>
-                                                    <th>Passport Type</th>
-
-                                                    <th>Mobile</th>
-                                                    <th>Email</th>
-                                                    <th>Job Title</th>
-                                                    <th>Organization</th>
-                                                    <th>Priority</th>
+                                            
+                                                    <th>PLP ID</th>
+                                                    <th>LAST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>FIRST NAME</th>
+                                                    <th>GENDER</th>
+                                                    <th>DOB</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>CONSTITUENCY</th>
+                                                    <th>AFFILIATED BRANCH </th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    <th>REGISTRATION DATE</th>
+                                                    
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th>ID</th>
-                                                    <th>First Name</th>
-                                                    <th>Middle Name</th>
-                                                    <th>Last Name</th>
-                                                    <th>Nationality</th>
-                                                    <th>Country</th>
-                                                    <th>Passport Type</th>
-
-                                                    <th>Mobile</th>
-                                                    <th>Email</th>
-                                                    <th>Job Title</th>
-                                                    <th>Organization</th>
-                                                    <th>Priority</th>
+                                                <th>PLP ID</th>
+                                                    <th>LAST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>FIRST NAME</th>
+                                                    <th>GENDER</th>
+                                                    <th>DOB</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>CONSTITUENCY</th>
+                                                    <th>AFFILIATED BRANCH </th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    <th>REGISTRATION DATE</th>
                                                 </tr>
                                             </tfoot>
                                         </table>
