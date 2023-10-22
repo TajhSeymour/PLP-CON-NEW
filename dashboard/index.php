@@ -490,6 +490,7 @@
                                                     <th>MIDDLE NAME</th>
                                                     <th>LAST NAME</th>
                                                     <th>GENDER</th>
+                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>PRICE</th>
                                                     <th>RECEIPT NUMBER</th>
                                                     <th>PAYMENT METHOD</th>
@@ -497,8 +498,6 @@
                                                     <th>BADGE REPRINT</th>
                                                     <th>DOB</th>
                                                     <th>NIB NUMBER</th>
-                                                    
-                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>REGISTRATION DATE</th>
                                                 </tr>
                                             </thead>
@@ -510,6 +509,7 @@
                                                     <th>MIDDLE NAME</th>
                                                     <th>LAST NAME</th>
                                                     <th>GENDER</th>
+                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>PRICE</th>
                                                     <th>RECEIPT NUMBER</th>
                                                     <th>PAYMENT METHOD</th>
@@ -517,7 +517,6 @@
                                                     <th>BADGE REPRINT</th>
                                                     <th>DOB</th>
                                                     <th>NIB NUMBER</th>
-                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>REGISTRATION DATE</th>
                                                 </tr>
                                             </tfoot>
@@ -752,6 +751,9 @@ App js -->
                 "data": "gender", visible: false
             },
             {
+                "data": "delegate_type"
+            },
+            {
                 "data": "price"
             },
             {
@@ -767,15 +769,13 @@ App js -->
                 "data": "badge_reprint_status"
             },
             {
-                "data": "dob"
+                "data": "dob", visible: false
             },
             {
-                "data": "nib_number"
+                "data": "nib_number", visible: false
             },
         
-            {
-                "data": "delegate_type"
-            },
+          
             {
                 "data": "date"
             }
