@@ -706,7 +706,7 @@ App js -->
                 addBadge(nRow, aData);
             },
             "dom": 'lBfrtip',
-            "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
+           // "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
             "pageLength": 25,
             "lengthMenu": [
                 [25, 50, 75, 100, -1],
@@ -788,7 +788,7 @@ App js -->
                 addBadge(nRow, aData);
             },
             "dom": 'lBfrtip',
-            "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
+            //"buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
             "pageLength": 25,
             "lengthMenu": [
                 [25, 50, 75, 100, -1],
@@ -902,7 +902,7 @@ $('#pending-print').DataTable({
                 addBadge(nRow, aData);
             },
             "dom": 'lBfrtip',
-            "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
+            //"buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
             "pageLength": 25,
             "lengthMenu": [
                 [25, 50, 75, 100, -1],
