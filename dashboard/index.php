@@ -666,7 +666,7 @@ App js -->
             }
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
-                $(nRow).attr('plp_id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
+                $(nRow).attr('plp_id', aData.plp_id); // Assuming "id" is the property representing the "ID" column in the dataset
                 addBadge(nRow, aData);
             },
             "dom": 'lBfrtip',
