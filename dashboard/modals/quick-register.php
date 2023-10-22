@@ -17,6 +17,17 @@
                                 <option value="Normal">Normal</option>
                             </select>
                         </div>
+
+                        <div class="col-lg-6">
+
+<select class="form-control" data-plugin="choices" name="input_priority" id="input_priority" required>
+    <option value="">Select Priority</option>
+    <option value="High">High</option>
+    <option value="Medium">Medium</option>
+    <option value="Normal">Normal</option>
+</select>
+</div>
+
                     </div>
                     <div class="col-lg-6">
                         <div>
@@ -41,8 +52,8 @@
                         <label for="gender" class="form-label">Gender: *</label>
                         <select  required class="form-control" data-plugin="choices" name="gender" id="input_gender">
                             <option value="">Gender</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
+                            <option value="MALE">Male</option>
+                            <option value="FEMALE">Female</option>
 
                         </select>
                     </div>
