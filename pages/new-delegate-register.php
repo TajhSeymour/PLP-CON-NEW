@@ -1225,8 +1225,8 @@ if (nominationQuestionInput && hiddenInput) {
     var dropdownIDQuestionNew = document.getElementById("input_new_del_id_question");
     var dropdownBadgeQuestionNew = document.getElementById("input_vote_new_del_badge_question");
     var inputTotalCostNew = document.getElementById("input_new_del_total_cost");
-    var dropdownDelQuestionNew = document.getElementById("input_vote_new_del_nomination_question");
-
+    var dropdownDelQuestionNew = document.getElementById("input_vote_new_del_question");
+   
     // Add event listeners to handle changes in the dropdowns
     dropdownIDQuestionNew.addEventListener("change", updateTotalCost);
     dropdownBadgeQuestionNew.addEventListener("change", updateTotalCost);
