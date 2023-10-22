@@ -497,7 +497,7 @@
                                                     <th>BADGE REPRINT</th>
                                                     <th>DOB</th>
                                                     <th>NIB NUMBER</th>
-                                                    <th>CONSTITUENCY</th>
+                                                    
                                                     <th>MEMBERSHIP TYPE</th>
                                                     <th>REGISTRATION DATE</th>
                                                 </tr>
