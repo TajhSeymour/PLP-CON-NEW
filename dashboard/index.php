@@ -616,7 +616,6 @@ App js -->
 <script src="assets/js/app.js"></script>
 
 <!-- Your HTML code for the DataTables goes here -->
-
 <script>
     $(document).ready(function () {
         // Function to add the badge and gender icon based on the "Priority" and "Gender" column values
@@ -632,18 +631,17 @@ App js -->
             }
 
             if (badgeClass !== "") {
-                var priorityColumnIndex = $("#all-registrants thead th").filter(function () {
+                var priorityColumnIndex = $("#all-registrants thead th").filter(function() {
                     return $(this).text() === "Priority";
                 }).index();
 
                 $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
             }
 
-             var gender = data.gender.toLowerCase();
-            var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
-             $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+            // var gender = data.gender.toLowerCase();
+            // var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
+            // $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
         }
-
         // Initialize DataTable for "all-registrants"
         $('#all-registrants').DataTable({
             "processing": false,
@@ -656,7 +654,10 @@ App js -->
                 }
             },
             "columns": [{
-                "data": "plp_id"
+                "data": "id"
+            },
+            {
+                "data": "priority"
             },
             {
                 "data": "first_name"
@@ -687,9 +688,6 @@ App js -->
             },
             {
                 "data": "organization"
-            },
-            {
-                "data": "priority"
             }
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
@@ -704,7 +702,7 @@ App js -->
                 [25, 50, 75, 100, "All"]
             ],
             "order": [
-                [11, 'asc']
+                [4, 'asc']
             ],
             "searching": true,
             "paging": true,
@@ -728,6 +726,9 @@ App js -->
                 "data": "id"
             },
             {
+                "data": "priority"
+            },
+            {
                 "data": "first_name"
             },
             {
@@ -744,12 +745,7 @@ App js -->
             },
             {
                 "data": "job_title"
-            },
-
-            {
-                "data": "priority"
-            }
-            ],
+            }],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
                 $(nRow).attr('id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
                 addBadge(nRow, aData);
@@ -762,7 +758,7 @@ App js -->
                 [25, 50, 75, 100, "All"]
             ],
             "order": [
-                [7, 'asc']
+                [4, 'asc']
             ],
             "searching": true,
             "paging": true,
@@ -786,6 +782,9 @@ App js -->
                 "data": "id"
             },
             {
+                "data": "priority"
+            },
+            {
                 "data": "first_name"
             },
             {
@@ -799,11 +798,7 @@ App js -->
             },
             {
                 "data": "position"
-            },
-            {
-                "data": "priority"
-            }
-            ],
+            }],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
                 $(nRow).attr('id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
                 addBadge(nRow, aData);
@@ -816,7 +811,7 @@ App js -->
                 [25, 50, 75, 100, "All"]
             ],
             "order": [
-                [6, 'asc']
+                [4, 'asc']
             ],
             "searching": true,
             "paging": true,
@@ -830,11 +825,14 @@ App js -->
             "processing": false,
             "serverSide": false,
             "ajax": {
-                "url": "/api/dashboard/fetch_data/get_registrants_tb_badges_printed.php",
+                "url": "/api/dashboard/fetch_data/get_local_tb_badges_printed.php",
                 "type": "POST"
             },
             "columns": [{
                 "data": "id"
+            },
+            {
+                "data": "priority"
             },
             {
                 "data": "first_name"
@@ -844,13 +842,9 @@ App js -->
             },
             {
                 "data": "last_name"
-            },
-            {
-                "data": "priority"
-            }
-            ],
+            }],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
-                $(nRow).attr('id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
+                $(nRow).attr('id', aData.id);
                 addBadge(nRow, aData);
             },
             "dom": 'lBfrtip',
