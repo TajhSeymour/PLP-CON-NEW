@@ -661,7 +661,9 @@ App js -->
             {
                 "data": "last_name"
             },
-           
+            {
+                "data": "gender"
+            }
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
                 $(nRow).attr('id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
