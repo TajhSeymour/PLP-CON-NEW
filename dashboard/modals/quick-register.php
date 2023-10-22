@@ -1,7 +1,7 @@
 <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content border-0">
         <div class="modal-header p-3 bg-soft-info">
-            <h5 class="modal-title" id="exampleModalLabel">ADD NEW LOCAL STAFF</h5>
+            <h5 class="modal-title" id="exampleModalLabel">ADD NEW DELEGATE</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
         </div>
         <form id="registration-form"  method="post" enctype="multipart/form-data" class="tablelist-form" autocomplete="off">
@@ -51,10 +51,10 @@
                         <label for="assignments" class="form-label">Memebership Type</label>
                         <select class="form-control" data-plugin="choices" name="assignment" id="input_assignment" required>
                             <option value="">Select Memebership</option>
-                            <option value="BRANCH MEMEBER">Constituency Branch Memeber</option>
-                            <option value="DIRECT MEMEBER">Direct Memeber</option>
-                            <option value="STALWART COUNCILLOR">STALWART COUNCILLOR</option>
-                            <option value="LIFETIME MEMBER">LIFETIME MEMBER</option>
+                            <option value="BRANCH MEMBER">Constituency Branch Member</option>
+                            <option value="DIRECT MEMBER">Direct Member</option>
+                            <option value="STALWART COUNCILLOR">Stalwart Councillor/option>
+                            <option value="LIFETIME MEMBER">Lifetime Member</option>
                         </select>
                         </div>
                         <div class="col-lg-6">
@@ -67,6 +67,117 @@
                             <option value="LIFETIME MEMBER">LIFETIME MEMBER</option>
                         </select>
                     </div>
+                    <div class="col-lg-6">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="text" id="input_dob" name="dob" class="form-control" data-provider="flatpickr" data-date-format="Y-m-d" placeholder="Please enter your date of birth" required />
+
+                    </div>
+
+                    <div class="col-lg-6">
+                    <label class="form-control" for="country_name">Your Constituency *</label>
+                            <select class="form-control" id="input_new_del_constituency" name="input_new_del_constituency"
+                                required>
+                                <option value="" disabled selected>Select your constituency</option>
+                                <option value="BAINS & GRANTS TOWN">Bains & Grants Town</option>
+                                <option value="BAMBOO TOWN">Bamboo Town</option>
+                                <option value="CARMICHAEL">Carmichael</option>
+                                <option value="CAT ISL, R.CAY & SAN SAL">Cat Isl, R.Cay & San Sal</option>
+                                <option value="CENTRAL & SOUTH ABACO">Central & South Abaco</option>
+                                <option value="CENTRAL & SOUTH ELEUTHERA">Central & South Eleuthera</option>
+                                <option value="CENTRAL GRAND BAHAMA">Central Grand Bahama</option>
+                                <option value="CENTREVILLE">Centreville</option>
+                                <option value="EAST GRAND BAHAMA">East Grand Bahama</option>
+                                <option value="ELIZABETH">Elizabeth</option>
+                                <option value="ENGLERSTON">Englerston</option>
+                                <option value="EXUMAS & RAGGED ISL">Exumas & Ragged Isl</option>
+                                <option value="FORT CHARLOTTE">Fort Charlotte</option>
+                                <option value="FOX HILL">Fox Hill</option>
+                                <option value="FREE TOWN">Free Town</option>
+                                <option value="GARDEN HILLS">Garden Hills</option>
+                                <option value="GOLDEN GATES">Golden Gates</option>
+                                <option value="GOLDEN ISLES">Golden Isles</option>
+                                <option value="KILLARNEY">Killarney</option>
+                                <option value="LONG ISLAND">Long Island</option>
+                                <option value="MANGROVE CAY & S. ANDROS">Mangrove Cay & S. Andros</option>
+                                <option value="MARATHON">Marathon</option>
+                                <option value="MARCO CITY">Marco City</option>
+                                <option value="MICAL">MICAL</option>
+                                <option value="MOUNT MORIAH">Mount Moriah</option>
+                                <option value="N. ANDROS & BERRY ISL">N. Andros & Berry Isl</option>
+                                <option value="NASSAU VILLAGE">Nassau Village</option>
+                                <option value="NORTH ABACO">North Abaco</option>
+                                <option value="NORTH ELEUTHERA">North Eleuthera</option>
+                                <option value="PINERIDGE">Pineridge</option>
+                                <option value="PINEWOOD">Pinewood</option>
+                                <option value="SEABREEZE">Seabreeze</option>
+                                <option value="SOUTH BEACH">South Beach</option>
+                                <option value="SOUTHERN SHORES">Southern Shores</option>
+                                <option value="ST. ANNE'S">St. Anne's</option>
+                                <option value="ST. BARNABAS">St. Barnabas</option>
+                                <option value="TALL PINES">Tall Pines</option>
+                                <option value="WEST GB & BIMINI">West GB & Bimini</option>
+                                <option value="YAMACRAW">Yamacraw</option>
+                            </select>
+
+                    </div>
+                    <div class="col-lg-6">
+
+                    <label class="form-control" for="Nationality">Affiliated Branch Membership *</label>
+                            <select class="form-control" id="input_new_del_affiliated_branch" required
+                                name="input_new_del_affiliated_branch">
+                                <option value="None" disabled selected> N/A
+                                </option>
+                                <option value="PYL">PYL</option>
+                                <option value="PYL-GB">PYL-GB</option>
+                                <option value="NPI">NPI</option>
+                                <option value="NPI-GB">NPI-GB</option>
+                                <option value="MEN'S BRANCH">Men's Branch</option>
+                                <option value="WOMEN'S BRANCH">Women's Branch</option>
+                                <option value="BAINS & GRANTS TOWN">Bains & Grants Town</option>
+                                <option value="BAMBOO TOWN">Bamboo Town</option>
+                                <option value="CARMICHAEL">Carmichael</option>
+                                <option value="CAT ISL, R.CAY & SAN SAL">Cat Isl, R.Cay & San Sal</option>
+                                <option value="CENTRAL & SOUTH ABACO">Central & South Abaco</option>
+                                <option value="CENTRAL & SOUTH ELEUTHERA">Central & South Eleuthera</option>
+                                <option value="CENTRAL GRAND BAHAMA">Central Grand Bahama</option>
+                                <option value="CENTREVILLE">Centreville</option>
+                                <option value="EAST GRAND BAHAMA">East Grand Bahama</option>
+                                <option value="ELIZABETH">Elizabeth</option>
+                                <option value="ENGLERSTON">Englerston</option>
+                                <option value="EXUMAS & RAGGED ISL">Exumas & Ragged Isl</option>
+                                <option value="FORT CHARLOTTE">Fort Charlotte</option>
+                                <option value="FOX HILL">Fox Hill</option>
+                                <option value="FREE TOWN">Free Town</option>
+                                <option value="GARDEN HILLS">Garden Hills</option>
+                                <option value="GOLDEN GATES">Golden Gates</option>
+                                <option value="GOLDEN ISLES">Golden Isles</option>
+                                <option value="KILLARNEY">Killarney</option>
+                                <option value="LONG ISLAND">Long Island</option>
+                                <option value="MANGROVE CAY & S. ANDROS">Mangrove Cay & S. Andros</option>
+                                <option value="MARATHON">Marathon</option>
+                                <option value="MARCO CITY">Marco City</option>
+                                <option value="MICAL">MICAL</option>
+                                <option value="MOUNT MORIAH">Mount Moriah</option>
+                                <option value="N. ANDROS & BERRY ISL">N. Andros & Berry Isl</option>
+                                <option value="NASSAU VILLAGE">Nassau Village</option>
+                                <option value="NORTH ABACO">North Abaco</option>
+                                <option value="NORTH ELEUTHERA">North Eleuthera</option>
+                                <option value="PINERIDGE">Pineridge</option>
+                                <option value="PINEWOOD">Pinewood</option>
+                                <option value="SEABREEZE">Seabreeze</option>
+                                <option value="SOUTH BEACH">South Beach</option>
+                                <option value="SOUTHERN SHORES">Southern Shores</option>
+                                <option value="ST. ANNE'S">St. Anne's</option>
+                                <option value="ST. BARNABAS">St. Barnabas</option>
+                                <option value="TALL PINES">Tall Pines</option>
+                                <option value="WEST GB & BIMINI">West GB & Bimini</option>
+                                <option value="YAMACRAW">Yamacraw</option>
+                            </select>
+                            <strong>Please choose the main branch to which you are an active member.</strong>
+                        
+                    </div>
+
+
 
                     <div class="col-lg-6">
                         <div>
@@ -75,12 +186,13 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
-                        <label for="dob" class="form-label">Date of Birth</label>
-                        <input type="text" id="input_dob" name="dob" class="form-control" data-provider="flatpickr" data-date-format="Y-m-d" placeholder="Please enter your date of birth" required />
-
-                    </div>
+                 
+               
+               
+               
+               
                 </div>
+
                 <div class="row g-3">
                    
 
