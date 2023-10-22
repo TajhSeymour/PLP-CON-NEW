@@ -774,10 +774,8 @@ App js -->
             {
                 "data": "nib_number", visible: false
             },
-        
-          
             {
-                "data": "date"
+                "data": "date", visible: false
             }
 
             ],
