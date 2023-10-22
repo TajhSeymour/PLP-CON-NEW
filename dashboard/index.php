@@ -489,6 +489,7 @@
                                             </tfoot>
                                         </table>
                                     </div> <!--END OF PILL -->
+                                   
                                     <div class="tab-pane" id="pill-security-checks" role="tabpanel">
                                         <table id="pending-security" class="display table table-bordered dt-responsive"
                                             style="width:100%">
@@ -654,7 +655,7 @@ App js -->
                 }
             },
             "columns": [{
-                "data": "id"
+                "data": "plp_id"
             },
             {
                 "data": "priority"
@@ -710,6 +711,9 @@ App js -->
             "scrollX": false,
             "searchDelay": 550,
         });
+
+
+
 
         // Initialize DataTable for "pending-security"
         $('#pending-security').DataTable({
