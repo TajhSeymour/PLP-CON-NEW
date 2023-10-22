@@ -749,8 +749,9 @@ App js -->
                 "data": "last_name"
             },
             {
-                "data": "price"
+                "data": "gender", visible: false
             }
+            
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
                 $(nRow).attr('plp_id', aData.plp_id); // Assuming "id" is the property representing the "ID" column in the dataset
