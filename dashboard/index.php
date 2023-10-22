@@ -460,9 +460,9 @@
                                             
                                                     <th>PLP ID</th>
                                                     <th>PIRORITY</th>
-                                                    <th>LAST NAME</th>
-                                                    <th>MIDDLE NAME</th>
                                                     <th>FIRST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>LAST NAME</th>
                                                     <th>GENDER</th>
                                                    
                                                     
@@ -631,9 +631,9 @@ App js -->
                 $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
             }
 
-            // var gender = data.gender.toLowerCase();
-            // var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
-            // $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+             var gender = data.gender.toLowerCase();
+         var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
+            $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
         }
         // Initialize DataTable for "all-registrants"
         $('#all-registrants').DataTable({
@@ -666,7 +666,7 @@ App js -->
             }
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
-                $(nRow).attr('id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
+                $(nRow).attr('plp_id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
                 addBadge(nRow, aData);
             },
             "dom": 'lBfrtip',
