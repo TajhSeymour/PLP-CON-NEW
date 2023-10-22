@@ -732,6 +732,8 @@ App js -->
             ],
             "order": [
                 [1, 'asc']
+                [4, 'asc']
+                [8, 'asc']
             ],
             "searching": true,
             "paging": true,
