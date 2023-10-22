@@ -523,28 +523,28 @@
                                         </table>
                                     </div>
                                     <div class="tab-pane" id="pill-approved-registrants" role="tabpanel">
-                                        <table id="approved-registrants"
+                                        <table id="pending-print"
                                             class="display table table-bordered dt-responsive" style="width:100%">
                                             <thead>
                                                 <tr>
-                                                    <th>ID</th>
-                                                    <th>First Name</th>
-                                                    <th>Middle Name</th>
-                                                    <th>Last Name</th>
-                                                    <th>Organization</th>
-                                                    <th>Position</th>
-                                                    <th>Priority</th>
+                                                <th>PLP ID</th>
+                                                    <th>PRIORITY</th>
+                                                    <th>FIRST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>LAST NAME</th>
+                                                    <th>GENDER</th>
+                                                    <th>MEMBERSHIP TYPE</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th>ID</th>
-                                                    <th>First Name</th>
-                                                    <th>Middle Name</th>
-                                                    <th>Last Name</th>
-                                                    <th>Organization</th>
-                                                    <th>Position</th>
-                                                    <th>Priority</th>
+                                                <th>PLP ID</th>
+                                                    <th>PRIORITY</th>
+                                                    <th>FIRST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>LAST NAME</th>
+                                                    <th>GENDER</th>
+                                                    <th>MEMBERSHIP TYPE</th>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -801,7 +801,62 @@ App js -->
             "searchDelay": 550,
         });
 
+// Initialize DataTable for "all-registrants"
+$('#pending-print').DataTable({
+            "processing": false,
+            "serverSide": false,
+            "ajax": {
+                "url": "/api/dashboard/fetch_data/get_registrants_tb_badges_pending_print.php",
+                "type": "POST",
+                "error": function (jqXHR, textStatus, errorThrown) {
+                    alert('Error loading data: ' + errorThrown);
+                }
+            },
 
+            "columns": [{
+                "data": "plp_id"
+            },
+            {
+                "data": "priority"
+            },
+            {
+                "data": "first_name"
+            },
+            {
+                "data": "middle_name"
+            },
+            {
+                "data": "last_name"
+            },
+            {
+                "data": "gender", visible: false
+            },
+            {
+                "data": "membership_type"
+            }
+
+            ],
+            "fnCreatedRow": function (nRow, aData, iDataIndex) {
+                $(nRow).attr('plp_id', aData.plp_id); // Assuming "id" is the property representing the "ID" column in the dataset
+                addBadge(nRow, aData);
+            },
+            "dom": 'lBfrtip',
+            "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
+            "pageLength": 25,
+            "lengthMenu": [
+                [25, 50, 75, 100, -1],
+                [25, 50, 75, 100, "All"]
+            ],
+            "order": [
+                [1, 'asc']
+
+            ],
+            "searching": true,
+            "paging": true,
+            "info": true,
+            "scrollX": false,
+            "searchDelay": 550,
+        });
 
 
 
@@ -813,8 +868,8 @@ App js -->
     #all-registrants tfoot th,
     #pending-payment thead th,
     #pending-payment tfoot th,
-    #approved-registrants thead th,
-    #approved-registrants tfoot th,
+    #pending-print thead th,
+    #pending-print tfoot th,
     #printed-badges thead th,
     #printed-badges tfoot th {
         color: white;

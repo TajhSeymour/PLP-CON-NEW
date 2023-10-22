@@ -2,7 +2,7 @@
 // Include the database connection setup
 require_once(dirname(__DIR__, 3) . '/database/dbconnection.php');
 
-$query = 'CALL GET_ALL_REGISTRANTS_PENDING_PRINT()';
+$query = 'CALL GET_ALL_PENDING_PRINT()';
 $stmt = $connection->query($query);
 
 $data = [];
