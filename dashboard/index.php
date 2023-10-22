@@ -656,7 +656,7 @@ App js -->
                 }
             },
             "columns": [{
-                "data": "id"
+                "data": "plp_id"
             },
             {
                 "data": "first_name"
