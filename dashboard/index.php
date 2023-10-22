@@ -639,9 +639,9 @@ App js -->
                 $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
             }
 
-            // var gender = data.gender.toLowerCase();
-            // var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
-            // $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+             var gender = data.gender.toLowerCase();
+            var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
+             $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
         }
 
         // Initialize DataTable for "all-registrants"
