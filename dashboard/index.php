@@ -409,8 +409,18 @@
                                         <li class="nav-item d-none d-sm-block">
                                             <!-- This list item will be hidden on mobile devices -->
                                             <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
-                                                href="#pill-stalwarts" role="tab">
+                                                href="#pill-transportation" role="tab">
                                                 REQUESTING TRANSPORATION ASSISTANCE
+                                            </a>
+                                        </li>
+                                    <?php endif; ?>
+
+                                    <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']): ?>
+                                        <li class="nav-item d-none d-sm-block">
+                                            <!-- This list item will be hidden on mobile devices -->
+                                            <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
+                                                href="#pill-pending-payment" role="tab">
+                                                PENDING PAYMENT
                                             </a>
                                         </li>
                                     <?php endif; ?>
@@ -424,7 +434,7 @@
                                             </a>
                                         </li>
                                     <?php endif; ?>
-                                    
+
                                     <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']): ?>
                                         <li class="nav-item d-none d-sm-block">
                                             <!-- This list item will be hidden on mobile devices -->
@@ -459,11 +469,11 @@
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th>PLP ID</th>
+                                                <th>PLP ID</th>
                                                     <th>PRIORITY</th>
-                                                    <th>LAST NAME</th>
-                                                    <th>MIDDLE NAME</th>
                                                     <th>FIRST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>LAST NAME</th>
                                                     <th>GENDER</th>
                                                     <th>DOB</th>
                                                     <th>NIB NUMBER</th>
@@ -477,19 +487,21 @@
                                         </table>
                                     </div> <!--END OF PILL -->
 
-                                    <div class="tab-pane" id="pill-stalwarts" role="tabpanel">
-                                        <table id="stalwarts" class="display table table-bordered dt-responsive"
+                                    <div class="tab-pane" id="pill-transportation" role="tabpanel">
+                                        <table id="transporation" class="display table table-bordered dt-responsive"
                                             style="width:100%">
                                             <thead>
                                                 <tr>
-                                                    <th>ID</th>
-                                                    <th>First Name</th>
-                                                    <th>Middle Name</th>
-                                                    <th>Last Name</th>
-                                                    <th>NIB</th>
-                                                    <th>Assignment</th>
-                                                    <th>Job Title</th>
-                                                    <th>Priority</th>
+                                                 <th>PLP ID</th>
+                                                    <th>PRIORITY</th>
+                                                    <th>FIRST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>LAST NAME</th>
+                        
+                                                    <th>CONSTITUENCY</th>
+                                                 
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    <th>REGISTRATION DATE</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
