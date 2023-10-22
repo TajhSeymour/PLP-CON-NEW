@@ -1,10 +1,10 @@
 <?php
     $lang["t-menu"]="Menu";
     $lang["t-dashboards"]="Dashboard";
-    $lang["t-applications"]="All Applications";
+    $lang["t-applications"]="All Conference Delegates";
     $lang["t-departments"]="Departments";
     $lang["t-systemusers"]="System Users";
-    $lang["t-delegates"]="Conference Delegates";
+    $lang["t-delegates"]="PLP Delegates";
     $lang["t-new"]="New";
     $lang["t-oas-checks"]="OAS Checks";
     $lang["t-security"]="Security Checks";
@@ -18,7 +18,7 @@
     $lang["t-administration"]="Administration";
     $lang["t-add-user"]="Add User";
     $lang["t-printer-queue"]="Printer Queue";
-    $lang["t-media-application"]="Media Registrants";
+    $lang["t-media-application"]="Media/Press Registrants";
 
 
     $lang["t-analytics"]="Analytics";
