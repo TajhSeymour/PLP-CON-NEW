@@ -719,20 +719,18 @@ App js -->
             "scrollX": false,
             "searchDelay": 550,
         });
-
-
-
-        // Initialize DataTable for "all-registrants"
-        $('#pending-payment').DataTable({
+ // Initialize DataTable for "all-registrants"
+ $('#pending-payment').DataTable({
             "processing": false,
             "serverSide": false,
             "ajax": {
-                "url": "/api/dashboard/fetch_data/get_registrants_tb_pending_payment.php",
+                "url": "/api/dashboard/fetch_data/get_registrants_tb_all.php",
                 "type": "POST",
                 "error": function (jqXHR, textStatus, errorThrown) {
                     alert('Error loading data: ' + errorThrown);
                 }
             },
+            
             "columns": [{
                 "data": "plp_id"
             },
@@ -750,8 +748,26 @@ App js -->
             },
             {
                 "data": "gender", visible: false
+            },
+            {
+                "data": "dob"
+            },
+            {
+                "data": "nib_number"
+            },
+            {
+                "data": "constituency"
+            },
+            {
+                "data": "affiliated_branch", visible: false
+            },
+            {
+                "data": "membership_type"
+            },
+            {
+                "data": "date"
             }
-            
+
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
                 $(nRow).attr('plp_id', aData.plp_id); // Assuming "id" is the property representing the "ID" column in the dataset
@@ -766,7 +782,7 @@ App js -->
             ],
             "order": [
                 [1, 'asc']
-              
+               
             ],
             "searching": true,
             "paging": true,
@@ -774,6 +790,7 @@ App js -->
             "scrollX": false,
             "searchDelay": 550,
         });
+
 
 
 
