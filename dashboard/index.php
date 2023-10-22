@@ -399,7 +399,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link waves-effect waves-light active" data-bs-toggle="tab"
                                                 href="#pill-all-registrants" role="tab">
-                                                ALL DELEGATE REGISTRANTS
+                                                ALL REGISTRANTS
                                             </a>
                                         </li>
                                     <?php endif; ?>
