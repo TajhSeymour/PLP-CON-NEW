@@ -638,9 +638,9 @@ App js -->
                 $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
             }
 
-            // var gender = data.gender.toLowerCase();
-            // var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
-            // $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+             var gender = data.gender.toLowerCase();
+            var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
+            $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
         }
         // Initialize DataTable for "all-registrants"
         $('#all-registrants').DataTable({
@@ -669,29 +669,29 @@ App js -->
                 "data": "last_name"
             },
             {
-                "data": "nationality"
+                "data": "gender"
             },
             {
-                "data": "country"
+                "data": "dob"
             },
             {
-                "data": "passport_type"
+                "data": "nib_number"
             },
             {
-                "data": "mobile"
+                "data": "constituency"
             },
             {
-                "data": "email"
+                "data": "affiliated_branch"
             },
             {
-                "data": "job_title"
+                "data": "membership_type"
             },
             {
-                "data": "organization"
+                "data": "date"
             }
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
-                $(nRow).attr('id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
+                $(nRow).attr('plp_id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
                 addBadge(nRow, aData);
             },
             "dom": 'lBfrtip',
