@@ -471,7 +471,7 @@
                                             <tfoot>
                                                 <tr>
                                                 <th>PLP ID</th>
-                                                <th>PIRORITY</th>
+                                                <th>Priority</th>
                                                     <th>LAST NAME</th>
                                                     <th>MIDDLE NAME</th>
                                                     <th>FIRST NAME</th>
