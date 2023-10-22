@@ -271,69 +271,9 @@
                         </div>
                     </div>
                     <!--end col-->
-                    <div class="col-xxl-3 col-sm-6">
-                        <div class="card card-animate">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <p class="fw-medium text-muted mb-0">PENDING OAS APPROVAL</p>
-                                        <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
-                                                data-target="<?php echo $pending_users_count; ?>">0</span></h2>
-
-                                    </div>
-                                    <div>
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-soft-info text-info rounded-circle fs-4">
-                                                <i class=" ri-shield-user-fill"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
-                        </div>
-                    </div>
-                    <!--end col-->
-                    <div class="col-xxl-3 col-sm-6">
-                        <div class="card card-animate">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <p class="fw-medium text-muted mb-0">OAS APPROVED REGISTRANTS</p>
-                                        <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
-                                                data-target="<?php echo $printer_users_count; ?>">0</span></h2>
-                                    </div>
-                                    <div>
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-soft-info text-info rounded-circle fs-4">
-                                                <i class="ri-thumb-up-fill"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
-                        </div>
-                    </div>
-                    <!--end col-->
-                    <div class="col-xxl-3 col-sm-6">
-                        <div class="card card-animate">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <p class="fw-medium text-muted mb-0">LOCAL APPROVED REGISTRANTS</p>
-                                        <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
-                                                data-target="<?php echo $printer_users_count; ?>">0</span></h2>
-                                    </div>
-                                    <div>
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-soft-info text-info rounded-circle fs-4">
-                                                <i class="ri-thumb-up-fill"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
-                        </div>
-                    </div>
+                    
+                   
+            
                     <!--end col-->
                     <div class="col-xxl-3 col-sm-6">
                         <div class="card card-animate">
@@ -379,28 +319,7 @@
                             </div><!-- end card body -->
                         </div>
                     </div>
-                    <div class="col-xxl-3 col-sm-6">
-                        <div class="card card-animate">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <p class="fw-medium text-muted mb-0">DENIED REGISTRANTS</p>
-                                        <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
-                                                data-target="<?php echo $denied_users_count; ?>">0</span></h2>
-
-                                    </div>
-                                    <div>
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-soft-info text-info rounded-circle fs-4">
-                                                <i class=" ri-thumb-down-fill"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
-                        </div>
-                    </div>
-
+                    
                     <div class="col-xxl-3 col-sm-6">
                         <div class="card card-animate">
                             <div class="card-body">
