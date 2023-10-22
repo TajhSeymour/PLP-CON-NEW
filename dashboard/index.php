@@ -459,32 +459,24 @@
                                                 <tr>
                                             
                                                     <th>PLP ID</th>
+                                                    <th>PIRORITY</th>
                                                     <th>LAST NAME</th>
                                                     <th>MIDDLE NAME</th>
                                                     <th>FIRST NAME</th>
                                                     <th>GENDER</th>
-                                                    <th>DOB</th>
-                                                    <th>NIB NUMBER</th>
-                                                    <th>CONSTITUENCY</th>
-                                                    <th>AFFILIATED BRANCH </th>
-                                                    <th>MEMBERSHIP TYPE</th>
-                                                    <th>REGISTRATION DATE</th>
+                                                   
                                                     
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
                                                 <th>PLP ID</th>
+                                                <th>PIRORITY</th>
                                                     <th>LAST NAME</th>
                                                     <th>MIDDLE NAME</th>
                                                     <th>FIRST NAME</th>
                                                     <th>GENDER</th>
-                                                    <th>DOB</th>
-                                                    <th>NIB NUMBER</th>
-                                                    <th>CONSTITUENCY</th>
-                                                    <th>AFFILIATED BRANCH </th>
-                                                    <th>MEMBERSHIP TYPE</th>
-                                                    <th>REGISTRATION DATE</th>
+                                                   
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -655,7 +647,7 @@ App js -->
                 }
             },
             "columns": [{
-                "data": "id"
+                "data": "plp_id"
             },
             {
                 "data": "priority"
@@ -669,27 +661,7 @@ App js -->
             {
                 "data": "last_name"
             },
-            {
-                "data": "nationality"
-            },
-            {
-                "data": "country"
-            },
-            {
-                "data": "passport_type"
-            },
-            {
-                "data": "mobile"
-            },
-            {
-                "data": "email"
-            },
-            {
-                "data": "job_title"
-            },
-            {
-                "data": "organization"
-            }
+           
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
                 $(nRow).attr('id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
