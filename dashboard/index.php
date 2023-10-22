@@ -408,7 +408,7 @@
                                             <!-- This list item will be hidden on mobile devices -->
                                             <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
                                                 href="#pill-security-checks" role="tab">
-                                                STALWART COUNCILLORS REGISTRANTS
+                                                STALWARTS
                                             </a>
                                         </li>
                                     <?php endif; ?>
