@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                    <label class="form-control" for="country_name">Your Constituency *</label>
+                    <label class="form-label" for="country_name">Your Constituency *</label>
                             <select class="form-control" id="input_new_del_constituency" name="input_new_del_constituency"
                                 required>
                                 <option value="" disabled selected>Select your constituency</option>
@@ -114,7 +114,7 @@
                     </div>
                     <div class="col-lg-6">
 
-                    <label class="form-control" for="Nationality">Affiliated Branch Membership *</label>
+                    <label class="form-label" for="Nationality">Affiliated Branch Membership *</label>
                             <select class="form-control" id="input_new_del_affiliated_branch" required
                                 name="input_new_del_affiliated_branch">
                                 <option value="None" disabled selected> N/A
