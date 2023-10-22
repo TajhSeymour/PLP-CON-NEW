@@ -649,7 +649,7 @@ App js -->
             var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
             $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
         
-            var membershiptype = data.membershiptype.toLowerCase(); // Assuming "priority" is the property representing the "Priority" column in the dataset
+            var membershiptype = data.membership_type.toLowerCase(); // Assuming "priority" is the property representing the "Priority" column in the dataset
             var membershiptypeBadgeClass = "";
             if (membershiptype === 'DIRECT MEMBER') {
                 membershiptypeBadgeClass = "badge text-bg-info";
