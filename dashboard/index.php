@@ -459,7 +459,7 @@
                                                 <tr>
                                             
                                                     <th>PLP ID</th>
-                                                    <th>PIRORITY</th>
+                                                    <th>Priority</th>
                                                     <th>FIRST NAME</th>
                                                     <th>MIDDLE NAME</th>
                                                     <th>LAST NAME</th>
