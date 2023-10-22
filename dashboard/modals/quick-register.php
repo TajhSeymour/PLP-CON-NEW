@@ -19,12 +19,10 @@
                         </div>
 
                         <div class="col-lg-6">
-
+                        <label for="first_name" class="form-label">Have a PLP ID Card ? *</label>
 <select class="form-control" data-plugin="choices" name="input_priority" id="input_priority" required>
-    <option value="">Select Priority</option>
-    <option value="High">High</option>
-    <option value="Medium">Medium</option>
-    <option value="Normal">Normal</option>
+    <option select value="YES">No, new member / Never issued a PLP ID Card</option>
+ 
 </select>
 </div>
 
