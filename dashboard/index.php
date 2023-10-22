@@ -690,7 +690,6 @@ App js -->
                 "data": "date"
             }
 
-
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
                 $(nRow).attr('plp_id', aData.plp_id); // Assuming "id" is the property representing the "ID" column in the dataset
@@ -771,16 +770,12 @@ App js -->
             {
                 "data": "nib_number"
             },
-          
-          
             {
                 "data": "delegate_type"
             },
             {
                 "data": "date"
             }
-
-
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
                 $(nRow).attr('plp_id', aData.plp_id); // Assuming "id" is the property representing the "ID" column in the dataset
@@ -794,9 +789,8 @@ App js -->
                 [25, 50, 75, 100, "All"]
             ],
             "order": [
-                [1, 'asc'],
-                [4, 'asc'],
-                [8, 'asc']
+                [1, 'asc']
+              
             ],
             "searching": true,
             "paging": true,
