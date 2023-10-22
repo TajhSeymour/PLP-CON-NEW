@@ -18,14 +18,6 @@
                             </select>
                         </div>
 
-                        <div class="col-lg-6">
-                        <label for="first_name" class="form-label">Have a PLP ID Card ? *</label>
-<select class="form-control" data-plugin="choices" name="input_priority" id="input_priority" required>
-    <option select value="YES">No, new member / Never issued a PLP ID Card</option>
- 
-</select>
-</div>
-
                     </div>
                     <div class="col-lg-6">
                         <div>
@@ -55,7 +47,7 @@
 
                         </select>
                     </div>
-                        <div class="col-lg-6">
+                    <div class="col-lg-6">
                         <label for="assignments" class="form-label">Memebership Type</label>
                         <select class="form-control" data-plugin="choices" name="assignment" id="input_assignment" required>
                             <option value="">Select Memebership</option>
@@ -64,7 +56,8 @@
                             <option value="STALWART COUNCILLOR">STALWART COUNCILLOR</option>
                             <option value="LIFETIME MEMBER">LIFETIME MEMBER</option>
                         </select>
-
+                        </div>
+                        <div class="col-lg-6">
                         <label for="assignments" class="form-label">Memebership Type</label>
                         <select class="form-control" data-plugin="choices" name="assignment" id="input_assignment" required>
                             <option value="">Select Memebership</option>
