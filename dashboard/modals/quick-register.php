@@ -47,16 +47,8 @@
 
                         </select>
                     </div>
-                    <div class="col-lg-6">
-                        <label for="assignments" class="form-label">Memebership Type</label>
-                        <select class="form-control" data-plugin="choices" name="assignment" id="input_assignment" required>
-                            <option value="">Select Memebership</option>
-                            <option value="BRANCH MEMBER">Constituency Branch Member</option>
-                            <option value="DIRECT MEMBER">Direct Member</option>
-                            <option value="STALWART COUNCILLOR">Stalwart Councillor/option>
-                            <option value="LIFETIME MEMBER">Lifetime Member</option>
-                        </select>
-                        </div>
+                
+                       
                         <div class="col-lg-6">
                         <label for="assignments" class="form-label">Memebership Type</label>
                         <select class="form-control" data-plugin="choices" name="assignment" id="input_assignment" required>
