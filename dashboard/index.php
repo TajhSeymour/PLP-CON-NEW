@@ -484,20 +484,17 @@
                                             style="width:100%">
                                             <thead>
                                                 <tr>
-                                                 <th>PLP ID</th>
+                                                <th>PLP ID</th>
                                                     <th>PRIORITY</th>
                                                     <th>FIRST NAME</th>
                                                     <th>MIDDLE NAME</th>
                                                     <th>LAST NAME</th>
-                                                    <th>PRICE</th>
-                                                    <th>RECEIPT NUMBER</th>
-                                                    <th>PAYMENT METHOD</th>
-                                                    <th>REP. BRANCH</th>
-                                                    <th>BADGE REPRINT</th>
-                                                    <th>NIB NUMBER</th>
                                                     <th>GENDER</th>
                                                     <th>DOB</th>
-                                                    <th>DELEGATE TYPE</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>CONSTITUENCY</th>
+                                                    <th>AFFILIATED BRANCH</th>
+                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>REGISTRATION DATE</th>
                                                 </tr>
                                             </thead>
@@ -508,15 +505,12 @@
                                                     <th>FIRST NAME</th>
                                                     <th>MIDDLE NAME</th>
                                                     <th>LAST NAME</th>
-                                                    <th>PRICE</th>
-                                                    <th>RECEIPT NUMBER</th>
-                                                    <th>PAYMENT METHOD</th>
-                                                    <th>REP. BRANCH</th>
-                                                    <th>BADGE REPRINT</th>
-                                                    <th>NIB NUMBER</th>
                                                     <th>GENDER</th>
                                                     <th>DOB</th>
-                                                    <th>DELEGATE TYPE</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>CONSTITUENCY</th>
+                                                    <th>AFFILIATED BRANCH</th>
+                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>REGISTRATION DATE</th>
                                                 </tr>
                                             </tfoot>
@@ -719,6 +713,7 @@ App js -->
             "scrollX": false,
             "searchDelay": 550,
         });
+
  // Initialize DataTable for "all-registrants"
  $('#pending-payment').DataTable({
             "processing": false,
