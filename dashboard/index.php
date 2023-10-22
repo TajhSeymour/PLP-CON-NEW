@@ -662,7 +662,7 @@ App js -->
                 "data": "last_name"
             },
             {
-                "data": "gender"
+                "data": "gender", visible: false
             }
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
