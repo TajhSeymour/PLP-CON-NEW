@@ -731,8 +731,8 @@ App js -->
                 [25, 50, 75, 100, "All"]
             ],
             "order": [
-                [1, 'asc']
-                [4, 'asc']
+                [1, 'asc'],
+                [4, 'asc'],
                 [8, 'asc']
             ],
             "searching": true,
