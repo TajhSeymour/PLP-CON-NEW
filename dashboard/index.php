@@ -705,8 +705,8 @@ App js -->
                 $(nRow).attr('plp_id', aData.plp_id); // Assuming "id" is the property representing the "ID" column in the dataset
                 addBadge(nRow, aData);
             },
-            "dom": 'lBfrtip',
-           // "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
+            "dom": 'lfrtip', //lBfrtip to include buttons
+            "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
             "pageLength": 25,
             "lengthMenu": [
                 [25, 50, 75, 100, -1],
@@ -787,8 +787,8 @@ App js -->
                 $(nRow).attr('plp_id', aData.plp_id); // Assuming "id" is the property representing the "ID" column in the dataset
                 addBadge(nRow, aData);
             },
-            "dom": 'lBfrtip',
-            //"buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
+            "dom": 'lfrtip', //lBfrtip to include buttons
+            "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
             "pageLength": 25,
             "lengthMenu": [
                 [25, 50, 75, 100, -1],
@@ -844,7 +844,7 @@ $('#printed-badges').DataTable({
                 $(nRow).attr('plp_id', aData.plp_id); // Assuming "id" is the property representing the "ID" column in the dataset
                 addBadge(nRow, aData);
             },
-            "dom": 'lBfrtip',
+            "dom": 'lfrtip', //lBfrtip to include buttons
             "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
             "pageLength": 25,
             "lengthMenu": [
@@ -901,8 +901,8 @@ $('#pending-print').DataTable({
                 $(nRow).attr('plp_id', aData.plp_id); // Assuming "id" is the property representing the "ID" column in the dataset
                 addBadge(nRow, aData);
             },
-            "dom": 'lBfrtip',
-            //"buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
+            "dom": 'lfrtip', //lBfrtip to include buttons
+            "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
             "pageLength": 25,
             "lengthMenu": [
                 [25, 50, 75, 100, -1],
