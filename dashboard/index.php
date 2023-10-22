@@ -719,7 +719,7 @@ App js -->
             "processing": false,
             "serverSide": false,
             "ajax": {
-                "url": "/api/dashboard/fetch_data/get_registrants_tb_all.php",
+                "url": "/api/dashboard/fetch_data/get_registrants_tb_pending_payment.php",
                 "type": "POST",
                 "error": function (jqXHR, textStatus, errorThrown) {
                     alert('Error loading data: ' + errorThrown);
@@ -745,6 +745,21 @@ App js -->
                 "data": "gender", visible: false
             },
             {
+                "data": "price"
+            },
+            {
+                "data": "receipt_number"
+            },
+            {
+                "data": "method"
+            },
+            {
+                "data": "branch"
+            },
+            {
+                "data": "badge_reprint_status"
+            },
+            {
                 "data": "dob"
             },
             {
@@ -754,10 +769,7 @@ App js -->
                 "data": "constituency"
             },
             {
-                "data": "affiliated_branch", visible: false
-            },
-            {
-                "data": "membership_type"
+                "data": "delegate_type"
             },
             {
                 "data": "date"
