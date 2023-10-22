@@ -409,29 +409,12 @@
                                         <li class="nav-item d-none d-sm-block">
                                             <!-- This list item will be hidden on mobile devices -->
                                             <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
-                                                href="#pill-security-checks" role="tab">
-                                                STALWARTS
+                                                href="#pill-stalwarts" role="tab">
+                                                REQUESTING TRANSPORATION ASSISTANCE
                                             </a>
                                         </li>
                                     <?php endif; ?>
-                                    <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']): ?>
-                                        <li class="nav-item d-none d-sm-block">
-                                            <!-- This list item will be hidden on mobile devices -->
-                                            <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
-                                                href="#pill-approved-registrants" role="tab">
-                                                VOTING DELEGATE
-                                            </a>
-                                        </li>
-                                    <?php endif; ?>
-                                    <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']): ?>
-                                        <li class="nav-item d-none d-sm-block">
-                                            <!-- This list item will be hidden on mobile devices -->
-                                            <a class="nav-link waves-effect waves-light" data-bs-toggle="tab"
-                                                href="#pill-printed-badges" role="tab">
-                                                OBSERVER DELEGATES
-                                            </a>
-                                        </li>
-                                    <?php endif; ?>
+                                    
                                     <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']): ?>
                                         <li class="nav-item d-none d-sm-block">
                                             <!-- This list item will be hidden on mobile devices -->
@@ -441,6 +424,7 @@
                                             </a>
                                         </li>
                                     <?php endif; ?>
+                                    
                                     <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']): ?>
                                         <li class="nav-item d-none d-sm-block">
                                             <!-- This list item will be hidden on mobile devices -->
@@ -471,9 +455,6 @@
                                                     <th>AFFILIATED BRANCH</th>
                                                     <th>MEMBERSHIP TYPE</th>
                                                     <th>REGISTRATION DATE</th>
-
-
-
                                                 </tr>
                                             </thead>
                                             <tfoot>
@@ -496,8 +477,8 @@
                                         </table>
                                     </div> <!--END OF PILL -->
 
-                                    <div class="tab-pane" id="pill-security-checks" role="tabpanel">
-                                        <table id="pending-security" class="display table table-bordered dt-responsive"
+                                    <div class="tab-pane" id="pill-stalwarts" role="tabpanel">
+                                        <table id="stalwarts" class="display table table-bordered dt-responsive"
                                             style="width:100%">
                                             <thead>
                                                 <tr>
@@ -741,6 +722,11 @@ App js -->
             "scrollX": false,
             "searchDelay": 550,
         });
+
+
+
+
+
 
     });
 </script>
