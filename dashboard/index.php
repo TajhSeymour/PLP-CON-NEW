@@ -648,6 +648,26 @@ App js -->
             var gender = data.gender.toLowerCase();
             var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
             $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+        
+            var membershiptype = data.membershiptype.toLowerCase(); // Assuming "priority" is the property representing the "Priority" column in the dataset
+            var membershiptypeBadgeClass = "";
+            if (membershiptype === 'DIRECT MEMBER') {
+                membershiptypeBadgeClass = "badge text-bg-info";
+            } else if (membershiptype === 'STALWART COUNCILLOR') {
+                membershiptypeBadgeClass = "badge text-bg-warning";
+            } else if (membershiptype === 'normal') {
+                membershiptypeBadgeClass = "badge text-bg-info";
+            }
+
+            if (membershiptypeBadgeClass !== "") {
+                var membershipColumnIndex = $("#all-registrants thead th").filter(function () {
+                    return $(this).text() === "MEMBERSHIP TYPE";
+                }).index();
+
+                $('td:eq(' + membershipColumnIndex + ')', row).html('<span class="' + membershiptypeBadgeClass + '">' + membershiptype + '</span>');
+            }
+        
+        
         }
         // Initialize DataTable for "all-registrants"
         $('#all-registrants').DataTable({
