@@ -405,7 +405,7 @@
                                             </a>
                                         </li>
                                     <?php endif; ?>
-                                 
+
 
                                     <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']): ?>
                                         <li class="nav-item d-none d-sm-block">
@@ -416,7 +416,7 @@
                                             </a>
                                         </li>
                                     <?php endif; ?>
-                                    
+
                                     <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']): ?>
                                         <li class="nav-item d-none d-sm-block">
                                             <!-- This list item will be hidden on mobile devices -->
@@ -461,7 +461,7 @@
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                <th>PLP ID</th>
+                                                    <th>PLP ID</th>
                                                     <th>PRIORITY</th>
                                                     <th>FIRST NAME</th>
                                                     <th>MIDDLE NAME</th>
@@ -484,7 +484,7 @@
                                             style="width:100%">
                                             <thead>
                                                 <tr>
-                                                <th>PLP ID</th>
+                                                    <th>PLP ID</th>
                                                     <th>PRIORITY</th>
                                                     <th>FIRST NAME</th>
                                                     <th>MIDDLE NAME</th>
@@ -492,13 +492,12 @@
                                                     <th>GENDER</th>
                                                     <th>PRICE</th>
                                                     <th>RECEIPT NUMBER</th>
-                                                     <th>PAYMENT METHOD</th>
-                                                      <th>REP. BRANCH</th>
-                                                   <th>BADGE REPRINT</th>
+                                                    <th>PAYMENT METHOD</th>
+                                                    <th>REP. BRANCH</th>
+                                                    <th>BADGE REPRINT</th>
                                                     <th>DOB</th>
                                                     <th>NIB NUMBER</th>
                                                     <th>CONSTITUENCY</th>
-                                                
                                                     <th>MEMBERSHIP TYPE</th>
                                                     <th>REGISTRATION DATE</th>
                                                 </tr>
@@ -511,10 +510,14 @@
                                                     <th>MIDDLE NAME</th>
                                                     <th>LAST NAME</th>
                                                     <th>GENDER</th>
+                                                    <th>PRICE</th>
+                                                    <th>RECEIPT NUMBER</th>
+                                                    <th>PAYMENT METHOD</th>
+                                                    <th>REP. BRANCH</th>
+                                                    <th>BADGE REPRINT</th>
                                                     <th>DOB</th>
                                                     <th>NIB NUMBER</th>
                                                     <th>CONSTITUENCY</th>
-                                                    <th>AFFILIATED BRANCH</th>
                                                     <th>MEMBERSHIP TYPE</th>
                                                     <th>REGISTRATION DATE</th>
                                                 </tr>
@@ -644,7 +647,7 @@ App js -->
             var gender = data.gender.toLowerCase();
             var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
             $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
-        
+
         }
         // Initialize DataTable for "all-registrants"
         $('#all-registrants').DataTable({
@@ -657,7 +660,7 @@ App js -->
                     alert('Error loading data: ' + errorThrown);
                 }
             },
-            
+
             "columns": [{
                 "data": "plp_id"
             },
@@ -719,8 +722,8 @@ App js -->
             "searchDelay": 550,
         });
 
- // Initialize DataTable for "all-registrants"
- $('#pending-payment').DataTable({
+        // Initialize DataTable for "all-registrants"
+        $('#pending-payment').DataTable({
             "processing": false,
             "serverSide": false,
             "ajax": {
@@ -730,7 +733,7 @@ App js -->
                     alert('Error loading data: ' + errorThrown);
                 }
             },
-            
+
             "columns": [{
                 "data": "plp_id"
             },
@@ -794,7 +797,7 @@ App js -->
             ],
             "order": [
                 [1, 'asc']
-               
+
             ],
             "searching": true,
             "paging": true,
