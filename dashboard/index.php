@@ -750,37 +750,6 @@ App js -->
             },
             {
                 "data": "price"
-            },
-            {
-                "data": "receipt_number"
-            },
-            {
-                "data": "method"
-            },
-            {
-                "data": "branch"
-            },
-            {
-                "data": "badge_reprint_status"
-            },
-            {
-                "data": "nib_number"
-            },
-          
-            {
-                "data": "gender", visible: false
-            },
-            {
-                "data": "dob", visible: false
-            },
-            {
-                "data": "nib_number"
-            },
-            {
-                "data": "delegate_type"
-            },
-            {
-                "data": "date"
             }
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
