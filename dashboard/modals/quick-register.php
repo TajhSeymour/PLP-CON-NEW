@@ -55,28 +55,23 @@
 
                         </select>
                     </div>
-
-
-                               <div class="col-lg-6">
-                        <label for="assignments" class="form-label">Assignment: *</label>
+                        <div class="col-lg-6">
+                        <label for="assignments" class="form-label">Memebership Type</label>
                         <select class="form-control" data-plugin="choices" name="assignment" id="input_assignment" required>
-                            <option value="">Conference Assignment</option>
-                            <?php
-                            // Function to fetch items from the API and populate the select box
-                            function fetchItems()
-                            {
-                                $apiUrl = 'https://oasministersregister.gov.bs/api/fetch_data/get_assignments.php';
-                                $response = file_get_contents($apiUrl);
-                                $items = json_decode($response);
+                            <option value="">Select Memebership</option>
+                            <option value="BRANCH MEMEBER">Constituency Branch Memeber</option>
+                            <option value="DIRECT MEMEBER">Direct Memeber</option>
+                            <option value="STALWART COUNCILLOR">STALWART COUNCILLOR</option>
+                            <option value="LIFETIME MEMBER">LIFETIME MEMBER</option>
+                        </select>
 
-                                if (!empty($items)) {
-                                    foreach ($items as $item) {
-                                        echo '<option value="' . htmlspecialchars($item) . '">' . htmlspecialchars($item) . '</option>';
-                                    }
-                                }
-                            }
-                            fetchItems();
-                            ?>
+                        <label for="assignments" class="form-label">Memebership Type</label>
+                        <select class="form-control" data-plugin="choices" name="assignment" id="input_assignment" required>
+                            <option value="">Select Memebership</option>
+                            <option value="BRANCH MEMEBER">Constituency Branch Memeber</option>
+                            <option value="DIRECT MEMEBER">Direct Memeber</option>
+                            <option value="STALWART COUNCILLOR">STALWART COUNCILLOR</option>
+                            <option value="LIFETIME MEMBER">LIFETIME MEMBER</option>
                         </select>
                     </div>
 
@@ -94,11 +89,7 @@
                     </div>
                 </div>
                 <div class="row g-3">
-                    <div class="col-lg-6">
-                        <label for="imageUpload" class="form-label">Government ID (PNG/JPG only):</label>
-                        <input type="file" class="form-control" id="gov_id" name="input_local_govid_path" accept=".jpg, .jpeg, .png" />
-                        <small id="fileHelp" class="form-text text-muted">Please upload a .jpg, .jpeg, or .png file.</small>
-                    </div>
+                   
 
                     <div class="col-lg-6">
                         <label for="imageUpload" class="form-label">Badge ID Photo (PNG/JPG only):</label>
