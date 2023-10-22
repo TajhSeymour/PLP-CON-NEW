@@ -618,7 +618,7 @@ App js -->
 
 <!-- Your HTML code for the DataTables goes here -->
 <script>
-    $(document).ready(function () {
+     $(document).ready(function () {
         // Function to add the badge and gender icon based on the "Priority" and "Gender" column values
         function addBadge(row, data) {
             var priority = data.priority.toLowerCase(); // Assuming "priority" is the property representing the "Priority" column in the dataset
@@ -639,9 +639,9 @@ App js -->
                 $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
             }
 
-             var gender = data.gender.toLowerCase();
-            var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
-            $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+            // var gender = data.gender.toLowerCase();
+            // var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
+            // $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
         }
         // Initialize DataTable for "all-registrants"
         $('#all-registrants').DataTable({
@@ -655,7 +655,7 @@ App js -->
                 }
             },
             "columns": [{
-                "data": "plp_id"
+                "data": "id"
             },
             {
                 "data": "priority"
@@ -670,29 +670,29 @@ App js -->
                 "data": "last_name"
             },
             {
-                "data": "gender"
+                "data": "nationality"
             },
             {
-                "data": "dob"
+                "data": "country"
             },
             {
-                "data": "nib_number"
+                "data": "passport_type"
             },
             {
-                "data": "constituency"
+                "data": "mobile"
             },
             {
-                "data": "affiliated_branch"
+                "data": "email"
             },
             {
-                "data": "membership_type"
+                "data": "job_title"
             },
             {
-                "data": "date"
+                "data": "organization"
             }
             ],
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
-                $(nRow).attr('plp_id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
+                $(nRow).attr('id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
                 addBadge(nRow, aData);
             },
             "dom": 'lBfrtip',
@@ -711,10 +711,6 @@ App js -->
             "scrollX": false,
             "searchDelay": 550,
         });
-
-
-
-
 
     });
 </script>
