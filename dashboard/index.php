@@ -465,6 +465,13 @@
                                                     <th>MIDDLE NAME</th>
                                                     <th>LAST NAME</th>
                                                     <th>GENDER</th>
+                                                    <th>DOB</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>CONSTITUENCY</th>
+                                                    <th>AFFILIATED BRANCH</th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    <th>REGISTRATION DATE</th>
+
 
 
                                                 </tr>
@@ -477,6 +484,12 @@
                                                     <th>MIDDLE NAME</th>
                                                     <th>FIRST NAME</th>
                                                     <th>GENDER</th>
+                                                    <th>DOB</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>CONSTITUENCY</th>
+                                                    <th>AFFILIATED BRANCH</th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    <th>REGISTRATION DATE</th>
 
                                                 </tr>
                                             </tfoot>
