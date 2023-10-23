@@ -307,12 +307,12 @@
                     <div class="row">
                     <div class="col-md-4">
                             <label class="form-control" for="input_new_del_house_number">House Number *</label>
-                            <input type="email" class="form-control" id="input_new_del_house_number" name="input_new_del_house_number"
+                            <input type="number" class="form-control" id="input_new_del_house_number" name="input_new_del_house_number"
                                 required>
                         </div>
                         <div class="col-md-8">
-                            <label class="form-control" for="input_new_del_street_address">Street Address *</label>
-                            <input type="email" class="form-control" id="input_new_del_street_address" name="input_new_del_street_address"
+                            <label class="form-control" for="input_new_del_street_address">Home Street Address *</label>
+                            <input type="text" class="form-control" id="input_new_del_street_address" name="input_new_del_street_address"
                                 required>
                         </div>
                     </div>
