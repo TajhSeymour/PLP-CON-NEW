@@ -258,9 +258,9 @@
 <br>
                 <div class="row g-3">
                     <div class="col-lg-6">
-                        <label for="imageUpload" class="form-label">Badge ID Photo (/PG only):</label>
+                        <label for="imageUpload" class="form-label">Badge ID Photo (JPG Only):</label>
                         <input type="file" class="form-control" id="badge_photo" name="local_badge_photo_path"
-                            accept=".jpg, .jpeg, .png" />
+                            accept=".jpg" />
                         <small id="fileHelp" class="form-text text-muted">Please upload a .jpg
                             file.</small>
                     </div>

@@ -306,9 +306,9 @@
                     <h3>Step 4: ADDRESSS & CONTACT INFORMATION</h3>
                     <div class="row">
                     <div class="col-md-4">
-                            <label class="form-control" for="input_new_del_house_number">House/Property Number *</label>
+                            <label class="form-control" for="input_new_del_house_number">House/Property Number</label>
                             <input type="number" class="form-control" id="input_new_del_house_number" name="input_new_del_house_number"
-                                required>
+                                >
                         </div>
                         <div class="col-md-8">
                             <label class="form-control" for="input_new_del_street_address">Home Street Address *</label>
