@@ -26,12 +26,12 @@ function validate_input($data)
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
-    $first_name =  isset($_POST['input_first_name']) ? strtoupper($_POST['input_first_name']) : null;
-    $middle_name = isset($_POST['input_middle_name']) ? strtoupper($_POST['input_middle_name']) : null;
-    $last_name = isset($_POST['input_last_name']) ? strtoupper($_POST['input_last_name']) : null;
-    $gender = isset($_POST['input_gender']) ? strtoupper($_POST['input_gender']) : null; 
-    $dob = isset($_POST['input_dob']) ? strtoupper($_POST['input_dob']) : null; 
-    $nib_number = isset($_POST['input_nib_number']) ? strtoupper($_POST['input_nib_number']) : null; 
+    $first_name =  isset($_POST['input_new_del_first_name']) ? strtoupper($_POST['input_new_del_first_name']) : null;
+    $middle_name = isset($_POST['input_new_del_middle_name']) ? strtoupper($_POST['input_new_del_middle_name']) : null;
+    $last_name = isset($_POST['input_new_del_last_name']) ? strtoupper($_POST['input_new_del_last_name']) : null;
+    $gender = isset($_POST['input_new_del_gender']) ? strtoupper($_POST['input_new_del_gender']) : null; 
+    $dob = isset($_POST['input_new_del_dob']) ? strtoupper($_POST['input_new_del_dob']) : null; 
+    $nib_number = isset($_POST['input_new_del_nib_number']) ? strtoupper($_POST['input_new_del_nib_number']) : null; 
     $membership_type = isset($_POST['input_membership_type']) ? strtoupper($_POST['input_membership_type']) : null; 
     $constituency = isset($_POST['input_new_del_constituency']) ? strtoupper($_POST['input_new_del_constituency']) : null;  
     $affiliated_branch = isset($_POST['input_new_del_affiliated_branch']) ? strtoupper($_POST['input_new_del_affiliated_branch']) : null; 

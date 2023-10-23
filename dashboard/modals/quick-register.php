@@ -25,28 +25,28 @@
                     <div class="col-lg-6">
                         <div>
                             <label for="first_name" class="form-label">First Name: *</label>
-                            <input type="text" name="first_name" id="input_first_name" class="form-control"
+                            <input type="text" name="input_new_del_first_name" id="input_new_del_first_name" class="form-control"
                                 placeholder="First Name" required />
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div>
                             <label for="middle_name" class="form-label">Middle Name:</label>
-                            <input type="text" name="middle_name" id="input_middle_name" class="form-control"
+                            <input type="text" name="input_new_del_middle_name" id="input_new_del_middle_name" class="form-control"
                                 placeholder="Middle Name" />
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div>
                             <label for="last_name" class="form-label">Last Name: *</label>
-                            <input type="text" name="last_name" id="input_last_name" class="form-control"
+                            <input type="text" name="input_new_del_last_name" id="input_new_del_last_name" class="form-control"
                                 placeholder="Last Name" required />
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <label for="gender" class="form-label">Gender: *</label>
-                        <select required class="form-control" data-plugin="choices" name="gender" id="input_gender">
+                        <select required class="form-control" data-plugin="choices" name="input_new_del_gender" id="input_new_del_gender">
                             <option value="">Gender</option>
                             <option value="MALE">Male</option>
                             <option value="FEMALE">Female</option>
