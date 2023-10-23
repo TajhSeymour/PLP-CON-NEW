@@ -337,7 +337,7 @@
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: 'Failed to add record to the database.',
+                    text: data.message,
                     confirmButtonColor: '#dc3545'
                 });
             }
@@ -346,7 +346,7 @@
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
-                text: 'An unexpected error occurred. Please try again later.',
+                text: data.message,
                 confirmButtonColor: '#dc3545'
             });
         }
