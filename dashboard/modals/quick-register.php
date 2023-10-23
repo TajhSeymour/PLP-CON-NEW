@@ -245,7 +245,7 @@
                     </div>
                     <div class="col-lg-6">
                     <label class="form-label" for="travel_question">Street Address *</label>
-                    <input type="number" class="form-control" id="input_new_del_street_address"  placeholder="Enter Street Address"
+                    <input type="text" class="form-control" id="input_new_del_street_address"  placeholder="Enter Street Address"
                                 name="input_new_del_street_address">
                     </div>
 
