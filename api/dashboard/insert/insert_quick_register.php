@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }    
 
     // Call the stored procedure to insert data
-    $stmt = $connection->prepare("CALL INSERT_QUICK_REGISTER(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+    $stmt = $connection->prepare("CALL INSERT_MEMBER_PROFILE(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
     $stmt->bind_param("sssssssssssssssssss",
     $random_id, 
     $priority,
