@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $membership_type = isset($_POST['input_membership_type']) ? strtoupper($_POST['input_membership_type']) : null; 
     $constituency = isset($_POST['input_new_del_constituency']) ? strtoupper($_POST['input_new_del_constituency']) : null;  
     $affiliated_branch = isset($_POST['input_new_del_affiliated_branch']) ? strtoupper($_POST['input_new_del_affiliated_branch']) : null; 
-    $email_address = isset($_POST['input_new_del_email_address']) ? strtoupper($_POST['input_new_del_email_address']) : null; 
+    $email_address = validate_input($_POST["input_new_del_email"]);
     $mobile_number = isset($_POST['input_new_del_mobile']) ? strtoupper($_POST['input_new_del_mobile']) : null;  
     $telephone_number = isset($_POST['input_new_del_telephone']) ? strtoupper($_POST['input_new_del_telephone']) : null;  
     $emergency_name = isset($_POST['input_new_del_emergency_name']) ? strtoupper($_POST['input_new_del_emergency_name']) : null;  
