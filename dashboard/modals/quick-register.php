@@ -55,8 +55,8 @@
                             <option value="">Select Memebership</option>
                             <option value="BRANCH MEMEBER">Constituency Branch Memeber</option>
                             <option value="DIRECT MEMEBER">Direct Memeber</option>
-                            <option value="STALWART COUNCILLOR">STALWART COUNCILLOR</option>
-                            <option value="LIFETIME MEMBER">LIFETIME MEMBER</option>
+                            <option value="STALWART COUNCILLOR">Stalwart Councillor</option>
+                            <option value="LIFETIME MEMBER">Lifetime Member</option>
                         </select>
                     </div>
                     <div class="col-lg-6">
@@ -165,11 +165,7 @@
                                 <option value="WEST GB & BIMINI">West GB & Bimini</option>
                                 <option value="YAMACRAW">Yamacraw</option>
                             </select>
-                            <strong>Please choose the main branch to which you are an active member.</strong>
-                        
                     </div>
-
-
 
                     <div class="col-lg-6">
                         <div>
