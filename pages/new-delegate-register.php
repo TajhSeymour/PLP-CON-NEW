@@ -303,7 +303,19 @@
                     </div>
 
 
-                    <h3>Step 4: CONTACT INFORMATION</h3>
+                    <h3>Step 4: ADDRESSS & CONTACT INFORMATION</h3>
+                    <div class="row">
+                    <div class="col-md-3">
+                            <label class="form-control" for="input_new_del_house_number">House Number *</label>
+                            <input type="email" class="form-control" id="input_new_del_house_number" name="input_new_del_house_number"
+                                required>
+                        </div>
+                        <div class="col-md-8">
+                            <label class="form-control" for="input_new_del_street_address">Street Address *</label>
+                            <input type="email" class="form-control" id="input_new_del_street_address" name="input_new_del_street_address"
+                                required>
+                        </div>
+                    </div>
                     <div class="row">
 
                         <div class="col-md-4">

@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $affiliated_branch = isset($_POST['input_new_del_affiliated_branch']) ? htmlspecialchars_decode($_POST['input_new_del_affiliated_branch']) : null;
        
 
-        //STEP 4: CONTACT INFORMATION
+        //STEP 4: ADDRESS & CONTACT INFORMATION
 
         $email = validate_input($_POST["input_new_del_email"]);
         $mobile = validate_input($_POST["input_new_del_mobile"]);
@@ -69,6 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $emergency_contact_name = validate_input($_POST["input_new_del_emergency_name"]);
         $emergency_contact_relationship = validate_input($_POST["input_new_del_emergency_relationship"]);
         $emergency_contact_number = validate_input($_POST["input_new_del_emergency_telephone"]);
+        $house_number = validate_input($_POST["input_new_del_house_number"]); 
+        $street_address = validate_input($_POST["input_new_del_street_address"]); 
 
         //STEP 5A: CONVENTION REGISTRATION
         if ($_POST["input_vote_new_del_question"] === "1") {
@@ -148,9 +150,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         //10 CALLS PER LINE
-        $stmt = $connection->prepare("CALL INSERT_MEMBER_PROFILE_V2(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $stmt = $connection->prepare("CALL INSERT_MEMBER_PROFILE_V2(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $stmt->bind_param(
-            "sssssssssssssssssssssssssssssss",
+            "sssssssssssssssssssssssssssssssss",
 
             $random_id,
             $del_id_question,
@@ -182,7 +184,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $departure_airline_flight_number,
             $hotel_name,
             $pay_method,
-            $total_cost
+            $total_cost,
+            $house_number,
+            $street_address
            // $input_survey_question_1,
            // $input_survey_question_2,
            // $input_survey_question_3,
