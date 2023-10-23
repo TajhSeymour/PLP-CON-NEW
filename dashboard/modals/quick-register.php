@@ -60,7 +60,6 @@
                         <select class="form-control" data-plugin="choices" name="assignment" id="input_assignment"
                             required>
                             <option value="">Select Memebership</option>
-                            <option value="BRANCH MEMEBER">Constituency Branch Memeber</option>
                             <option value="DIRECT MEMEBER">Direct Memeber</option>
                             <option value="STALWART COUNCILLOR">Stalwart Councillor</option>
                             <option value="LIFETIME MEMBER">Lifetime Member</option>
@@ -232,15 +231,7 @@
                             <div id="input_new_del_emergency_telephone-validation"></div>
                     </div>
 
-                    <div class="col-lg-6">
-                    <label class="form-label" for="travel_question">Are you voting or observer
-                                delegate?</label>
-                            <select class="form-control" required id="input_vote_new_del_question"
-                                name="input_vote_new_del_question" required>
-                                <option value="0" selected>Observer Delegate</option>
-                                <option value="1">Voting Delegate</option>
-                            </select>
-                    </div>
+                
                     <div class="col-lg-6">
                     <label class="form-label" for="travel_question">House/Property Number</label>
                     <input type="number" class="form-control" id="input_new_del_house_number"  placeholder=""
@@ -265,16 +256,7 @@
                             file.</small>
                     </div>
 
-                    <div class="col-lg-6">
-                    <label class="form-label" for="travel_question">Preferred Payment Method *</label>
-                                <select class="form-control" required id="input_new_del_pay_method_question"
-                                    name="input_new_del_pay_method_question" onchange="showPaymentInstructionsNew()">
-                                    <option value="" selected>Select Method</option>
-                                    <option value="Cash">CASH (PLP HQ)</option>
-                                    <option value="Bank">BANK WIRE TRANSFER</option>
-                                    <option value="Paid via Branch">PAID WITH BRANCH</option>
-                                </select>
-                    </div>
+               
                 </div>
             </div>
             <div class="modal-footer">
