@@ -347,7 +347,7 @@
 
                     <h3>Step 4: ADDRESSS & CONTACT INFORMATION</h3>
                     <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                             <label class="form-control" for="input_del_house_number">House Number *</label>
                             <input type="email" class="form-control" id="input_del_house_number" name="input_del_house_number"
                                 required>
