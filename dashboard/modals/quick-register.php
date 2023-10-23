@@ -63,7 +63,7 @@
 
                     <div class="col-lg-6">
                         <label for="assignments" class="form-label">Memebership Type</label>
-                        <select class="form-control" data-plugin="choices" name="assignment" id="input_assignment"
+                        <select class="form-control" data-plugin="choices" name="input_membership_type" id="input_membership_type"
                             required>
                             <option value="">Select Memebership</option>
                             <option value="DIRECT MEMEBER">Direct Memeber</option>
@@ -316,7 +316,7 @@
 
         try {
             const formData = new FormData(registrationForm);
-            const response = await fetch('https://s/api/insert/add_local_record.php', {
+            const response = await fetch('https://plpconvention.org/api/dashboard/insert/insert_quick_register.php', {
                 method: 'POST',
                 body: formData
             });
