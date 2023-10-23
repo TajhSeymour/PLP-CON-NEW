@@ -241,17 +241,17 @@
                                 <option value="1">Voting Delegate</option>
                             </select>
                     </div>
-
                     <div class="col-lg-6">
-                    <label class="form-label" for="travel_question">Would you like a badge reprint/replacement?</label>
-                            <select class="form-control" required id="input_vote_new_del_badge_question"
-                                name="input_vote_new_del_badge_question">
-                                <option value="1" selected>Yes</option>
-                               <!-- <option value="0" selected> No</option>
-                                <option value="1">Yes</option> -->
-                            </select>
-                            <strong>Please Note: New applicants badges are free. </strong>
+                    <label class="form-label" for="travel_question">House/Property Number</label>
+                    <input type="number" class="form-control" id="input_new_del_house_number"  placeholder=""
+                                name="input_new_del_house_number">
                     </div>
+                    <div class="col-lg-6">
+                    <label class="form-label" for="travel_question">Street Address *</label>
+                    <input type="number" class="form-control" id="input_new_del_street_address"  placeholder="Enter Street Address"
+                                name="input_new_del_street_address">
+                    </div>
+
 
                 </div>
 <br>
