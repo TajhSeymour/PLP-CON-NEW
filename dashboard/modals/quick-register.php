@@ -53,7 +53,13 @@
 
                         </select>
                     </div>
-
+                    <div class="col-lg-6">
+                        <div>
+                            <label for="last_name" class="form-label">NIB Number: *</label>
+                            <input type="number" name="last_name" id="input_nib_number" class="form-control"
+                                placeholder="NIB Number" required />
+                        </div>
+                    </div>
 
                     <div class="col-lg-6">
                         <label for="assignments" class="form-label">Memebership Type</label>
