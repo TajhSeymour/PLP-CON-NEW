@@ -73,7 +73,7 @@
                     </div>
                     <div class="col-lg-6">
                         <label for="dob" class="form-label">Date of Birth</label>
-                        <input type="text" id="input_dob" name="dob" class="form-control" data-provider="flatpickr"
+                        <input type="text" id="input_new_del_dob" name="input_new_del_dob" class="form-control" data-provider="flatpickr"
                             data-date-format="Y-m-d" placeholder="Please enter your date of birth" required />
 
                     </div>
