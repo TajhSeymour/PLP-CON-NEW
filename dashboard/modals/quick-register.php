@@ -208,7 +208,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <label class="form-control" for="gender">Contact Relationship</label>
+                        <label class="form-label" for="gender">Contact Relationship</label>
                         <select class="form-control" id="input_new_del_emergency_relationship"
                             name="input_new_del_emergency_relationship">
                             <option value="" disabled selected>Select Relationship</option>
@@ -223,7 +223,6 @@
                             <option value="OTHER">Other</option>
                         </select>
                     </div>
-
 
                     <div class="col-lg-6">
                     <label class="form-label" for="input_del_emergency_telephone">Emergency Telephone</label>
@@ -244,7 +243,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                    <label class="form-control" for="travel_question">Would you like a badge reprint/replacement?</label>
+                    <label class="form-label" for="travel_question">Would you like a badge reprint/replacement?</label>
                             <select class="form-control" required id="input_vote_new_del_badge_question"
                                 name="input_vote_new_del_badge_question">
                                 <option value="1" selected>Yes</option>
@@ -254,8 +253,19 @@
                             <strong>Please Note: New applicants badges are free. </strong>
                     </div>
 
+                </div>
+
+                <div class="row g-3">
                     <div class="col-lg-6">
-                    <label class="form-control" for="travel_question">Preferred Payment Method *</label>
+                        <label for="imageUpload" class="form-label">Badge ID Photo (/PG only):</label>
+                        <input type="file" class="form-control" id="badge_photo" name="local_badge_photo_path"
+                            accept=".jpg, .jpeg, .png" />
+                        <small id="fileHelp" class="form-text text-muted">Please upload a .jpg
+                            file.</small>
+                    </div>
+
+                    <div class="col-lg-6">
+                    <label class="form-label" for="travel_question">Preferred Payment Method *</label>
                                 <select class="form-control" required id="input_new_del_pay_method_question"
                                     name="input_new_del_pay_method_question" onchange="showPaymentInstructionsNew()">
                                     <option value="" selected>Select Method</option>
@@ -263,42 +273,6 @@
                                     <option value="Bank">BANK WIRE TRANSFER</option>
                                     <option value="Paid via Branch">PAID WITH BRANCH</option>
                                 </select>
-                    </div>
-
-
-                    <div class="col-lg-6">
-
-                    </div>
-
-
-                    <div class="col-lg-6">
-
-                    </div>
-
-
-
-
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-                <div class="row g-3">
-
-
-                    <div class="col-lg-6">
-                        <label for="imageUpload" class="form-label">Badge ID Photo (PNG/JPG only):</label>
-                        <input type="file" class="form-control" id="badge_photo" name="local_badge_photo_path"
-                            accept=".jpg, .jpeg, .png" />
-                        <small id="fileHelp" class="form-text text-muted">Please upload a .jpg, .jpeg, or .png
-                            file.</small>
                     </div>
                 </div>
             </div>
