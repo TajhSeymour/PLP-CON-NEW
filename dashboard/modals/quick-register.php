@@ -14,7 +14,7 @@
 
                             <select class="form-control" data-plugin="choices" name="input_priority" id="input_priority"
                                 required>
-                                <option value="">Select Priority</option>
+                                <option value="Normal">Select Priority</option>
                                 <option value="High">High</option>
                                 <option value="Medium">Medium</option>
                                 <option value="Normal">Normal</option>
@@ -77,7 +77,7 @@
                         <label class="form-label" for="country_name">Your Constituency *</label>
                         <select class="form-control" id="input_new_del_constituency" name="input_new_del_constituency"
                             required>
-                            <option value="" disabled selected>Select your constituency</option>
+                            <option value="" disabled selected>Select constituency</option>
                             <option value="BAINS & GRANTS TOWN">Bains & Grants Town</option>
                             <option value="BAMBOO TOWN">Bamboo Town</option>
                             <option value="CARMICHAEL">Carmichael</option>
@@ -289,6 +289,33 @@
 </div>
 
 <script>
+    function formatPhoneNumber(inputId) {
+        var input = document.getElementById(inputId);
+        var value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+
+        if (value.length >= 3) {
+            value = '(' + value.substring(0, 3) + ')' + (value.length > 3 ? value.substring(3, 6) + '-' + value.substring(6, 10) : '');
+        }
+
+        input.value = value;
+    }
+
+    function validatePhoneNumber(inputId) {
+        var phoneNumber = document.getElementById(inputId).value;
+        var regex = /^\(\d{3}\)\d{3}-\d{4}$/; // Regex pattern for (XXX)XXX-XXXX format
+        var validationMessage = document.getElementById(inputId + '-validation');
+
+        if (regex.test(phoneNumber)) {
+            validationMessage.textContent = 'Phone number is valid.';
+        } else {
+            validationMessage.textContent = 'Phone number is not valid. Please enter it in the format (XXX)XXX-XXXX.';
+        }
+    }
+</script>
+
+
+
+<script>
     const registrationForm = document.getElementById('registration-form');
 
     function closeModal() {
@@ -301,7 +328,7 @@
 
         try {
             const formData = new FormData(registrationForm);
-            const response = await fetch('https://oasministersregister.gov.bs/api/insert/add_local_record.php', {
+            const response = await fetch('https://s/api/insert/add_local_record.php', {
                 method: 'POST',
                 body: formData
             });
