@@ -166,17 +166,41 @@
                                 <option value="YAMACRAW">Yamacraw</option>
                             </select>
                     </div>
-
                     <div class="col-lg-6">
                         <div>
-                            <label for="job_title" class="form-label">Job Title:*</label>
-                            <input type="text" name="job_title" id="input_job_title" class="form-control" placeholder="Job Title" required />
+                        <label class="form-label" for="input_new_del_email">Email Address *</label>
+                            <input type="email" class="form-control" id="input_new_del_email" name="input_new_del_email"
+                                required>
                         </div>
                     </div>
+                    <div class="col-lg-6">
+                        <div>
+                        <label class="form-label" for="input_del_mobile">Mobile Number</label>
+                            <input class="form-control" type="text" id="input_new_del_mobile" name="input_new_del_mobile"
+                                placeholder="Enter Your Mobile Number"
+                                oninput="formatPhoneNumber('input_new_del_mobile'); validatePhoneNumber('input_new_del_mobile')">
+                            <div id="input_new_del_mobile-validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div>
+                        <label class="form-label" for="input_del_telephone">Telephone Number (Other)</label>
+                            <input class="form-control" type="text" id="input_new_del_telephone" name="input_new_del_telephone"
+                                placeholder="Enter Your Telephone Number"
+                                oninput="formatPhoneNumber('input_new_del_telephone'); validatePhoneNumber('input_new_del_telephone')">
+                            <div id="input_new_del_telephone-validation"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div>
+                        <label class="form-label" for="input_del_emergency_name">Emergency Contact Name</label>
+                            <input type="text" class="form-control" id="input_new_del_emergency_name"
+                                name="input_new_del_emergency_name">
+                        </div>
+                    </div>
+               
 
-                 
-               
-               
+                    
                
                
                 </div>
