@@ -29,21 +29,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name =  isset($_POST['input_first_name']) ? strtoupper($_POST['input_first_name']) : null;
     $middle_name = isset($_POST['input_middle_name']) ? strtoupper($_POST['input_middle_name']) : null;
     $last_name = isset($_POST['input_last_name']) ? strtoupper($_POST['input_last_name']) : null;
-    $gender = validate_input($_POST["input_gender"]);
-    $dob = validate_input($_POST["input_dob"]);
-    $nib_number = validate_input($_POST["input_nib_number"]);
-    $membership_type = validate_input($_POST["input_membership_type"]);
-    $constituency = validate_input($_POST["input_new_del_constituency"]);
-    $affiliated_branch = validate_input($_POST["input_new_del_affiliated_branch"]);
-    $email_address = validate_input($_POST["input_new_del_email_address"]);
-    $mobile_number = validate_input($_POST["input_new_del_mobile"]);
-    $telephone_number = validate_input($_POST["input_new_del_telephone"]);
-    $emergency_name = validate_input($_POST["input_new_del_emergency_name"]);
-    $emergency_relationship = validate_input($_POST["input_new_del_emergency_relationship"]);
-    $emergency_telephone = validate_input($_POST["input_new_del_emergency_telephone"]);
-    $house_number = validate_input($_POST["input_new_del_house_number"]);
+    $gender = isset($_POST['input_gender']) ? strtoupper($_POST['input_gender']) : null; 
+    $dob = isset($_POST['input_dob']) ? strtoupper($_POST['input_dob']) : null; 
+    $nib_number = isset($_POST['input_nib_number']) ? strtoupper($_POST['input_nib_number']) : null; 
+    $membership_type = isset($_POST['input_membership_type']) ? strtoupper($_POST['input_membership_type']) : null; 
+    $constituency = isset($_POST['input_new_del_constituency']) ? strtoupper($_POST['input_new_del_constituency']) : null;  
+    $affiliated_branch = isset($_POST['input_new_del_affiliated_branch']) ? strtoupper($_POST['input_new_del_affiliated_branch']) : null; 
+    $email_address = isset($_POST['input_new_del_email_address']) ? strtoupper($_POST['input_new_del_email_address']) : null; 
+    $mobile_number = isset($_POST['input_new_del_mobile']) ? strtoupper($_POST['input_new_del_mobile']) : null;  
+    $telephone_number = isset($_POST['input_new_del_telephone']) ? strtoupper($_POST['input_new_del_telephone']) : null;  
+    $emergency_name = isset($_POST['input_new_del_emergency_name']) ? strtoupper($_POST['input_new_del_emergency_name']) : null;  
+    $emergency_relationship = isset($_POST['input_new_del_emergency_relationship']) ? strtoupper($_POST['input_new_del_emergency_relationship']) : null; 
+    $emergency_telephone = isset($_POST['input_new_del_emergency_telephone']) ? strtoupper($_POST['input_new_del_emergency_telephone']) : null; 
+    $house_number = isset($_POST['input_new_del_house_number']) ? strtoupper($_POST['input_new_del_house_number']) : null;  
     $street_name = isset($_POST['input_new_del_street_address']) ? strtoupper($_POST['input_new_del_street_address']) : null;
-    $priority = validate_input($_POST["input_priority"]);
+    $priority =  isset($_POST['input_priority']) ? strtoupper($_POST['input_priority']) : null;
     // Generate a 10-digit random ID number
     $random_id = generate_random_id();
 
