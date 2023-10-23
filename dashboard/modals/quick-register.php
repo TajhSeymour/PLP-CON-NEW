@@ -125,7 +125,7 @@
                         <label class="form-label" for="Nationality">Affiliated Branch Membership *</label>
                         <select class="form-control" id="input_new_del_affiliated_branch" required
                             name="input_new_del_affiliated_branch">
-                            <option value="None" disabled selected> N/A
+                            <option value="None" disabled selected> Select Affiliate Branch
                             </option>
                             <option value="PYL">PYL</option>
                             <option value="PYL-GB">PYL-GB</option>
@@ -177,7 +177,7 @@
                     <div class="col-lg-6">
                         <div>
                             <label class="form-label" for="input_new_del_email">Email Address *</label>
-                            <input type="email" class="form-control" id="input_new_del_email" name="input_new_del_email"
+                            <input type="email" class="form-control" placeholder="Enter Email Address" id="input_new_del_email" name="input_new_del_email"
                                 required>
                         </div>
                     </div>
@@ -202,13 +202,13 @@
                     <div class="col-lg-6">
                         <div>
                             <label class="form-label" for="input_del_emergency_name">Emergency Contact Name</label>
-                            <input type="text" class="form-control" id="input_new_del_emergency_name"
+                            <input type="text" class="form-control" id="input_new_del_emergency_name"  placeholder="Enter Full Name"
                                 name="input_new_del_emergency_name">
                         </div>
                     </div>
 
                     <div class="col-lg-6">
-                        <label class="form-label" for="gender">Contact Relationship</label>
+                        <label class="form-label" for="gender">Emergency Contact Relationship</label>
                         <select class="form-control" id="input_new_del_emergency_relationship"
                             name="input_new_del_emergency_relationship">
                             <option value="" disabled selected>Select Relationship</option>
@@ -254,7 +254,8 @@
                     </div>
 
                 </div>
-
+<br>
+<br>
                 <div class="row g-3">
                     <div class="col-lg-6">
                         <label for="imageUpload" class="form-label">Badge ID Photo (/PG only):</label>
