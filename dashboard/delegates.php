@@ -124,33 +124,41 @@
                                         <table id="checked-in-delegates" class="display table table-bordered dt-responsive" style="width:100%">
                                                 <thead>
                                                     <tr>
-                                                        <th>ID</th>
-                                                        <th>First Name</th>
-                                                        <th>Middle Name</th>
-                                                        <th>Last Name</th>
-                                                        <th>NIB Number</th>
-                                                        <th>Priority</th>
-                                                        <th>Gender</th>
-                                                        <th>DOB</th>
-                                                        <th>Assignment</th>
-                                                        <th>Badge Photo</th>
-                                                        <th>Gov ID Photo</th>
+                                                    <th>PLP ID</th>
+                                                    <th>PRIORITY</th>
+                                                    <th>FIRST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>LAST NAME</th>
+                                                    <th>GENDER</th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    <th>PRICE</th>
+                                                    <th>RECEIPT NUMBER</th>
+                                                    <th>PAYMENT METHOD</th>
+                                                    <th>REP. BRANCH</th>
+                                                    <th>BADGE REPRINT</th>
+                                                    <th>DOB</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>REGISTRATION DATE</th>
 
                                                     </tr>
                                                 </thead>
                                                 <tfoot>
                                                     <tr>
-                                                        <th>ID</th>
-                                                        <th>First Name</th>
-                                                        <th>Middle Name</th>
-                                                        <th>Last Name</th>
-                                                        <th>NIB Number</th>
-                                                        <th>Priority</th>
-                                                        <th>Gender</th>
-                                                        <th>DOB</th>
-                                                        <th>Assignment</th>
-                                                        <th>Badge Photo</th>
-                                                        <th>Gov ID Photo</th>
+                                                    <th>PLP ID</th>
+                                                    <th>PRIORITY</th>
+                                                    <th>FIRST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>LAST NAME</th>
+                                                    <th>GENDER</th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    <th>PRICE</th>
+                                                    <th>RECEIPT NUMBER</th>
+                                                    <th>PAYMENT METHOD</th>
+                                                    <th>REP. BRANCH</th>
+                                                    <th>BADGE REPRINT</th>
+                                                    <th>DOB</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>REGISTRATION DATE</th>
                                                     </tr>
                                                 </tfoot>
                                             </table>
@@ -159,28 +167,7 @@
                                 </div><!--end col-->
                             </div><!-- end row -->
                 <!-- Modal -->
-                <div class="modal fade flip" id="deleteOrder" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body p-5 text-center">
-                                <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#405189,secondary:#f06548" style="width:90px;height:90px">
-                                </lord-icon>
-                                <div class="mt-4 text-center">
-                                    <h4>You are about to delete a order ?</h4>
-                                    <p class="text-muted fs-14 mb-4">Deleting your order will remove all
-                                        of
-                                        your information from our database.</p>
-                                    <div class="hstack gap-2 justify-content-center remove">
-                                        <button class="btn btn-link link-success fw-medium text-decoration-none" id="deleteRecord-close" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i>
-                                            Close</button>
-                                        <button class="btn btn-danger" id="delete-record">Yes, Delete
-                                            It</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <!--end modal -->
               
                 <div class="modal fade zoomIn" id="notesModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -196,7 +183,6 @@
 <!--end row-->
 <!--ADD NEW REGISTRANT MODAL row-->
 
-<
 <div class="modal fade zoomIn" id="showModal" tabindex="-1" aria-hidden="true">
     <?php include 'modals/quick-register.php'; ?>
 </div>
@@ -237,7 +223,11 @@
             }
 
             if (badgeClass !== "") {
-                $('td:eq(5)', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
+                var priorityColumnIndex = $("#all-delegates thead th").filter(function () {
+                    return $(this).text() === "PRIORITY";
+                }).index();
+
+                $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
             }
 
             var gender = data.gender.toLowerCase(); // Assuming "gender" is available in the array as a property
