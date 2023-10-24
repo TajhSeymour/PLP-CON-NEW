@@ -89,32 +89,40 @@
                                             <table id="all-delegates" class="display table table-bordered dt-responsive" style="width:100%">
                                                 <thead>
                                                     <tr>
-                                                        <th>ID</th>
-                                                        <th>First Name</th>
-                                                        <th>Middle Name</th>
-                                                        <th>Last Name</th>
-                                                        <th>NIB Number</th>
-                                                        <th>Priority</th>
-                                                        <th>Gender</th>
-                                                        <th>DOB</th>
-                                                        <th>Assignment</th>
-                                                        <th>Badge Photo</th>
-                                                        <th>Gov ID Photo</th>
+                                                    <th>PLP ID</th>
+                                                    <th>PRIORITY</th>
+                                                    <th>FIRST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>LAST NAME</th>
+                                                    <th>GENDER</th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    <th>PRICE</th>
+                                                    <th>RECEIPT NUMBER</th>
+                                                    <th>PAYMENT METHOD</th>
+                                                    <th>REP. BRANCH</th>
+                                                    <th>BADGE REPRINT</th>
+                                                    <th>DOB</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>REGISTRATION DATE</th>
                                                     </tr>
                                                 </thead>
                                                 <tfoot>
                                                     <tr>
-                                                        <th>ID</th>
-                                                        <th>First Name</th>
-                                                        <th>Middle Name</th>
-                                                        <th>Last Name</th>
-                                                        <th>NIB Number</th>
-                                                        <th>Priority</th>
-                                                        <th>Gender</th>
-                                                        <th>DOB</th>
-                                                        <th>Assignment</th>
-                                                        <th>Badge Photo</th>
-                                                        <th>Gov ID Photo</th>
+                                                    <th>PLP ID</th>
+                                                    <th>PRIORITY</th>
+                                                    <th>FIRST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>LAST NAME</th>
+                                                    <th>GENDER</th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    <th>PRICE</th>
+                                                    <th>RECEIPT NUMBER</th>
+                                                    <th>PAYMENT METHOD</th>
+                                                    <th>REP. BRANCH</th>
+                                                    <th>BADGE REPRINT</th>
+                                                    <th>DOB</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>REGISTRATION DATE</th>
                                                     </tr>
                                                 </tfoot>
                                             </table>
@@ -241,7 +249,7 @@
         option. */
         var table = $('#all-delegates').DataTable({
             "columns": [{
-                    "data": "id"
+                    "data": "plp_id"
                 },
                 {
                     "data": "first_name"
@@ -320,7 +328,7 @@
             named id, first_name, middle_name, last_name, email, nib, assignment, and priority. The values
             of these constants are being assigned from the corresponding properties of an object named
             rowData. */
-            const id = rowData.id;
+            const id = rowData.plp_if;
             const first_name = rowData.first_name;
             const middle_name = rowData.middle_name;
             const last_name = rowData.last_name;
