@@ -423,8 +423,8 @@
               const displayedPriorityElement = document.getElementById("oc_priority");
              displayedPriorityElement.value = priority;
 
-            //  const displayedGenderElement = document.getElementById("oc_gender");
-            //  displayedGenderElement.value = gender;
+             const displayedGenderElement = document.getElementById("oc_gender");
+            displayedGenderElement.value = gender;
 
             //  const displayedNIBElement = document.getElementById("oc_nib_number");
             //  displayedNIBElement.value = nib_number;
