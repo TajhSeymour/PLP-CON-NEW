@@ -420,17 +420,17 @@
             const displayedEmailElement = document.getElementById("oc_email_address");
             displayedEmailElement.value = email;
 
-            const displayedPriorityElement = document.getElementById("oc_priority");
-            displayedPriorityElement.value = priority;
+             // const displayedPriorityElement = document.getElementById("oc_priority");
+             // displayedPriorityElement.value = priority;
 
-            const displayedGenderElement = document.getElementById("oc_gender");
-            displayedGenderElement.value = gender;
+            //  const displayedGenderElement = document.getElementById("oc_gender");
+            //  displayedGenderElement.value = gender;
 
             const displayedNIBElement = document.getElementById("oc_nib_number");
             displayedNIBElement.value = nib_number;
 
-            const displayedConstituencyElement = document.getElementById("oc_constituency");
-            displayedConstituencyElement.value = constituency;
+        //    const displayedConstituencyElement = document.getElementById("oc_constituency");
+         //   displayedConstituencyElement.value = constituency;
 
             const displayedAffiliatedBranchElement = document.getElementById("oc_affiliated_branch");
             displayedAffiliatedBranchElement.value = affiliated_branch;
@@ -456,8 +456,8 @@
             const displayedEmergencyContactNameElement = document.getElementById("oc_emergency_contact_name");
             displayedEmergencyContactNameElement.value = emergency_contact_name;
 
-            const displayedEmergencyContactRelationshipElement = document.getElementById("oc_emergency_contact_relationship");
-            displayedEmergencyContactRelationshipElement.value = emergency_contact_relationship;
+            // const displayedEmergencyContactRelationshipElement = document.getElementById("oc_emergency_contact_relationship");
+            //  displayedEmergencyContactRelationshipElement.value = emergency_contact_relationship;
 
             const displayedEmergencyContactTelephoneNumberElement = document.getElementById("oc_emergency_contact_telephone_number");
             displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
