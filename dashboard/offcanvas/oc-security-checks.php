@@ -3,6 +3,12 @@
   <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   <p id="displayedId">ID will be displayed here</p>
   <p id="displayGovID">ID will be displayed here</p>
+    <!-- Responsive Images -->
+<center><h4>Badge Photo</h4></center>
+  <div class="img-container-photo">
+        <!-- The image will be inserted here by the JavaScript code -->
+    </div>
+   
 </div>
 <div class="offcanvas-body">
 
@@ -30,15 +36,7 @@
     <input type="date" class="form-control" id="oc_dob" name="oc_dob" disabled >
   </div>
 
-  <!-- Responsive Images -->
-<center><h4>Badge Photo</h4></center>
-  <div class="img-container-photo">
-        <!-- The image will be inserted here by the JavaScript code -->
-    </div>
-    <center><h4>Government ID</h4></center>
-  <div class="img-container-govid">
-        <!-- The image will be inserted here by the JavaScript code -->
-    </div>
+
 
 
 
