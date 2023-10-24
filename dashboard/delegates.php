@@ -447,8 +447,8 @@
            const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
             displayedTelephoneNumberElement.value = telephone_number;
 
-         //   const displayedStreetAddressElement = document.getElementById("oc_street_address");
-          //  displayedStreetAddressElement.value = street_address;
+          const displayedStreetAddressElement = document.getElementById("oc_street_address");
+           displayedStreetAddressElement.value = street_address;
 
           //  const displayedHouseNumberElement = document.getElementById("oc_house_number");
            //  displayedHouseNumberElement.value = house_number;
