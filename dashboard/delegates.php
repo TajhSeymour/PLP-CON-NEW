@@ -417,8 +417,8 @@
             const displayedDOBElement = document.getElementById("oc_dob");
             displayedDOBElement.value = dob;
 
-            const displayedFEmailElement = document.getElementById("oc_email_address");
-            displayedFEmailElement.value = email_address;
+            const displayedEmailElement = document.getElementById("oc_email_address");
+            displayedEmailElement.value = email_address;
 
             const displayedPriorityElement = document.getElementById("oc_priority");
             displayedPriorityElement.value = priority;
@@ -572,7 +572,7 @@
                 addBadge(nRow, aData);
             },
             "ajax": {
-                "url": "/api/dashboard/fetch_data/get_staff_tb_local_approved.php",
+                "url": "/api/dashboard/fetch_data/get_all_registrants_tb_checked_in.php",
                 "type": "GET"
             },
             "dom": 'lBfrtip',
@@ -624,37 +624,7 @@
         const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
         
 
-            //const nib = rowData.nib;
-
-
-            const displayedIdElement = document.getElementById("displayedId");
-            displayedIdElement.textContent = id
-
-            const displayedIdElement2 = document.getElementById("input_user_id");
-            displayedIdElement.value = id;
-
-
-            const displayedNameElement = document.getElementById("offcanvasSecurityLabel");
-            displayedNameElement.textContent = first_name + " " + last_name;
-
-            const displayedGovIDPhotoElement = document.getElementById("displayGovID");
-            displayedGovIDPhotoElement.textContent = "https://oasministersregister.gov.bs/uploads/govid" + gov_id;
-
-
-            //THE INPUT TEXT FORM
-
-            const displayedFirstNameElement = document.getElementById("oc_first_name");
-            displayedFirstNameElement.value = first_name;
-
-            const displayedMiddleNameElement = document.getElementById("oc_middle_name");
-            displayedMiddleNameElement.value = middle_name;
-
-            const displayedLastNameElement = document.getElementById("oc_last_name");
-            displayedLastNameElement.value = last_name;
-
-            const displayedDOBElement = document.getElementById("oc_dob");
-            displayedDOBElement.value = dob;
-
+       
 
             offcanvas.show(); // Show the offcanvas
         });
