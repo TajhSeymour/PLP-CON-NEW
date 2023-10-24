@@ -420,8 +420,8 @@
             const displayedEmailElement = document.getElementById("oc_email_address");
             displayedEmailElement.value = email;
 
-            const displayedPriorityElement = document.getElementById("oc_priority");
-            displayedPriorityElement.value = priority;
+            //const displayedPriorityElement = document.getElementById("oc_priority");
+           // displayedPriorityElement.value = priority;
 
              const displayedGenderElement = document.getElementById("oc_gender");
             displayedGenderElement.value = gender;
