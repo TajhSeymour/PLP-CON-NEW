@@ -626,7 +626,7 @@
 
        
 
-            offcanvas.show(); // Show the offcanvas
+           // offcanvas.show(); // Show the offcanvas
         });
     });
 </script>
