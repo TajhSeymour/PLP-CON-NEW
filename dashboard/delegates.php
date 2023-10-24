@@ -441,8 +441,8 @@
          const displayedDateElement = document.getElementById("oc_date");
          displayedDateElement.value = date;
 
-       //  const displayedMobileNumberElement = document.getElementById("oc_mobile_number");
-       //    displayedMobileNumberElement.value = mobile_number;
+       const displayedMobileNumberElement = document.getElementById("oc_mobile_number");
+         displayedMobileNumberElement.value = mobile_number;
 
         //     const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
          //    displayedTelephoneNumberElement.value = telephone_number;
