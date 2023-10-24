@@ -61,18 +61,18 @@
         </div>
 
         <div class="mb-3">
-          <label for="oc_dob" class="form-label">Date of Birth</label>
+          <label for="oc_dob" class="form-label">Date of Birth: *</label>
           <input type="date" class="form-control" id="oc_dob" name="oc_dob" data-provider="flatpickr"
             data-date-format="Y-m-d" placeholder="Please enter your date of birth" required />
         </div>
 
         <div class="mb-3">
-          <label for="nib_number" class="form-label">NIB Number</label>
-          <input type="number" class="form-control" id="oc_nib_number" name="oc_nib_number">
+          <label for="nib_number" class="form-label">NIB Number: *</label>
+          <input type="number" class="form-control" id="oc_nib_number" name="oc_nib_number" required>
         </div>
 
         <div class="mb-3">
-          <label for="membership_type" class="form-label">Membership Type</label>
+          <label for="membership_type" class="form-label">Membership Type: *</label>
           <select class="form-control" data-plugin="choices" name="oc_membership_type" id="oc_membership_type" required>
             <option value="DIRECT MEMEBER">Direct Memeber</option>
             <option value="STALWART COUNCILLOR">Stalwart Councillor</option>
@@ -81,7 +81,7 @@
         </div>
 
         <div class="mb-3">
-          <label for="constitution" class="form-label">Current Constituency</label>
+          <label for="constitution" class="form-label">Current Constituency: *</label>
           <select class="form-control" data-plugin="choices" name="oc_constituency" id="oc_constituency" required>
             <option value="" disabled selected>Select constituency</option>
             <option value="BAINS & GRANTS TOWN">Bains & Grants Town</option>
@@ -127,18 +127,18 @@
         </div>
 
         <div class="mb-3">
-          <label for="house_number" class="form-label">House Number</label>
-          <input type="number" class="form-control" id="oc_house_number" name="oc_house_number">
+          <label for="house_number" class="form-label">House/Property Number: *</label>
+          <input type="number" class="form-control" id="oc_house_number" name="oc_house_number" required>
         </div>
 
 
         <div class="mb-3">
-          <label for="street_name" class="form-label">Street Address</label>
-          <input type="text" class="form-control" id="oc_street_address" name="oc_street_address">
+          <label for="street_name" class="form-label">Street Address: *</label>
+          <input type="text" class="form-control" id="oc_street_address" name="oc_street_address" required>
         </div>
 
         <div class="mb-3">
-          <label for="membership_type" class="form-label">Affiliated Branch</label>
+          <label for="membership_type" class="form-label">Affiliated Branch: *</label>
           <select class="form-control" data-plugin="choices" name="oc_affiliated_branch" id="oc_affiliated_branch"
             required>
             <option value="" disabled selected>Select constituency</option>
@@ -186,12 +186,12 @@
 
 
         <div class="mb-3">
-          <label for="oc_email" class="form-label">Email Address</label>
+          <label for="oc_email" class="form-label">Email Address: </label>
           <input type="email" class="form-control" id="oc_email_address" name="oc_email_address">
         </div>
 
         <div class="mb-3">
-          <label for="oc_mobile" class="form-label">Mobile Number</label>
+          <label for="oc_mobile" class="form-label">Mobile Number: </label>
           <input type="text" class="form-control" id="oc_mobile_number" name="oc_mobile_number"
             placeholder="Enter Your Mobile Number"
             oninput="formatPhoneNumber('oc_mobile_number'); validatePhoneNumber('oc_mobile_number')">
@@ -199,7 +199,7 @@
         </div>
 
         <div class="mb-3">
-          <label for="oc_mobile" class="form-label">Telephone Number (Other)</label>
+          <label for="oc_mobile" class="form-label">Telephone Number (Other): </label>
           <input type="text" class="form-control" id="oc_telephone_number" name="oc_telephone_number"
             placeholder="Enter Telephone Number"
             oninput="formatPhoneNumber('oc_telephone_number'); validatePhoneNumber('oc_telephone_number')">
@@ -207,12 +207,12 @@
         </div>
 
         <div class="mb-3">
-          <label for="oc_emergency_contact_name" class="form-label">Emergency Contact Name</label>
+          <label for="oc_emergency_contact_name" class="form-label">Emergency Contact Name: </label>
           <input type="text" class="form-control" id="oc_emergency_contact_name" name="oc_emergency_contact_name">
         </div>
 
         <div class="mb-3">
-          <label for="oc_emergency_contact_name" class="form-label">Emergency Contact Relationship</label>
+          <label for="oc_emergency_contact_name" class="form-label">Emergency Contact Relationship: </label>
           <select class="form-control" id="oc_emergency_contact_name" name="oc_emergency_contact_name">
             <option value="" disabled selected>Select Relationship</option>
             <option value="PARENT">PARENT</option>
@@ -228,7 +228,7 @@
         </div>
 
         <div class="mb-3">
-          <label for="oc_mobile" class="form-label">Emergency Telephone Number</label>
+          <label for="oc_mobile" class="form-label">Emergency Telephone Number: </label>
           <input type="text" class="form-control" id="oc_emergency_contact_telephone_number" name="oc_emergency_contact_telephone_number"
             placeholder="Enter Emergency Telephone Number"
             oninput="formatPhoneNumber('oc_emergency_contact_telephone_number'); validatePhoneNumber('oc_emergency_contact_telephone_number')">
@@ -262,6 +262,30 @@
 
 </div>
 
+<script>
+    function formatPhoneNumber(inputId) {
+        var input = document.getElementById(inputId);
+        var value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+
+        if (value.length >= 3) {
+            value = '(' + value.substring(0, 3) + ')' + (value.length > 3 ? value.substring(3, 6) + '-' + value.substring(6, 10) : '');
+        }
+
+        input.value = value;
+    }
+
+    function validatePhoneNumber(inputId) {
+        var phoneNumber = document.getElementById(inputId).value;
+        var regex = /^\(\d{3}\)\d{3}-\d{4}$/; // Regex pattern for (XXX)XXX-XXXX format
+        var validationMessage = document.getElementById(inputId + '-validation');
+
+        if (regex.test(phoneNumber)) {
+            validationMessage.textContent = 'Phone number is valid.';
+        } else {
+            validationMessage.textContent = 'Phone number is not valid. Please enter it in the format (XXX)XXX-XXXX.';
+        }
+    }
+</script>
 
 
 <script>
