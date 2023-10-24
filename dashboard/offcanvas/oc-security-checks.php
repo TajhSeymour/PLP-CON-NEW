@@ -307,7 +307,7 @@ observer.observe(targetNode, config);
 
              /* Adjust the styles as needed */
      .img-container-photo {
-            width: 300px;
+            width: 360px;
             height: 250px;
         }
         .img-container-photo img {
