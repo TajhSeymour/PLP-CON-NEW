@@ -438,20 +438,20 @@
               const displayedMembershipTypeElement = document.getElementById("oc_membership_type");
              displayedMembershipTypeElement.value = membership_type;
 
-           //  const displayedDateElement = document.getElementById("oc_date");
-           //   displayedDateElement.value = date;
+         const displayedDateElement = document.getElementById("oc_date");
+         displayedDateElement.value = date;
 
              const displayedMobileNumberElement = document.getElementById("oc_mobile_number");
            displayedMobileNumberElement.value = mobile_number;
 
-           //   const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
-           //   displayedTelephoneNumberElement.value = telephone_number;
+             const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
+             displayedTelephoneNumberElement.value = telephone_number;
 
-           //   const displayedStreetAddressElement = document.getElementById("oc_street_address");
-           //   displayedStreetAddressElement.value = street_address;
+             const displayedStreetAddressElement = document.getElementById("oc_street_address");
+            displayedStreetAddressElement.value = street_address;
 
-           //   const displayedHouseNumberElement = document.getElementById("oc_house_number");
-           //   displayedHouseNumberElement.value = house_number;
+            const displayedHouseNumberElement = document.getElementById("oc_house_number");
+             displayedHouseNumberElement.value = house_number;
 
            //   const displayedEmergencyContactNameElement = document.getElementById("oc_emergency_contact_name");
            //  displayedEmergencyContactNameElement.value = emergency_contact_name;
