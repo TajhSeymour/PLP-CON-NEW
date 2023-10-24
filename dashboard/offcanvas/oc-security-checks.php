@@ -398,8 +398,8 @@
     // Show the SweetAlert with the icon and the delete confirmation
     Swal.fire({
       icon: "question", // Icon "Warning"
-      title: "Deny Registrant",
-      text: `Are you sure that you want to deny this registration?`,
+      title: "Duplicate Registrant",
+      text: `Are you sure that this is a duplicate registrant?`,
       showCancelButton: true,
       confirmButtonText: "Confirm",
       cancelButtonText: "Cancel",
