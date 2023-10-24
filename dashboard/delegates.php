@@ -438,8 +438,8 @@
               const displayedMembershipTypeElement = document.getElementById("oc_membership_type");
              displayedMembershipTypeElement.value = membership_type;
 
-         const displayedDateElement = document.getElementById("oc_date");
-         displayedDateElement.value = date;
+         //const displayedDateElement = document.getElementById("oc_date");
+         //displayedDateElement.value = date;
 
              const displayedMobileNumberElement = document.getElementById("oc_mobile_number");
            displayedMobileNumberElement.value = mobile_number;
