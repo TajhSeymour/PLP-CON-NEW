@@ -456,11 +456,11 @@
          const displayedEmergencyContactNameElement = document.getElementById("oc_emergency_contact_name");
          displayedEmergencyContactNameElement.value = emergency_contact_name;
 
-         //   const displayedEmergencyContactRelationshipElement = document.getElementById("oc_emergency_contact_relationship");
-          //  displayedEmergencyContactRelationshipElement.value = emergency_contact_relationship;
+           const displayedEmergencyContactRelationshipElement = document.getElementById("oc_emergency_contact_relationship");
+           displayedEmergencyContactRelationshipElement.value = emergency_contact_relationship;
 
-          //   const displayedEmergencyContactTelephoneNumberElement = document.getElementById("oc_emergency_contact_telephone_number");
-          //  displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
+            const displayedEmergencyContactTelephoneNumberElement = document.getElementById("oc_emergency_contact_telephone_number");
+           displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
 
            
 
