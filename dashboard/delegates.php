@@ -249,44 +249,42 @@
         option. */
         var table = $('#all-delegates').DataTable({
             "columns": [{
-                    "data": "plp_id"
-                },
-                {
-                    "data": "first_name"
-                },
-                {
-                    "data": "middle_name"
-                },
-                {
-                    "data": "last_name"
-                },
-                {
-                    "data": "nib",
-                    visible: false
-                },
-                {
-                    "data": "priority"
-                },
-                {
-                    "data": "gender",
-                    visible: false
-                },
-                {
-                    "data": "dob",
-                    visible: false
-                },
-                {
-                    "data": "assignment",
-                    visible: false
-                },
-                {
-                    "data": "local_badge_photo_path",
-                    visible: false
-                },
-                {
-                    "data": "input_local_govid_path",
-                    visible: false
-                }
+                "data": "plp_id"
+            },
+            {
+                "data": "priority"
+            },
+            {
+                "data": "first_name"
+            },
+            {
+                "data": "middle_name"
+            },
+            {
+                "data": "last_name"
+            },
+            {
+                "data": "gender", visible: false
+            },
+            {
+                "data": "dob"
+            },
+            {
+                "data": "nib_number"
+            },
+            {
+                "data": "constituency"
+            },
+            {
+                "data": "affiliated_branch", visible: false
+            },
+            {
+                "data": "membership_type"
+            },
+            {
+                "data": "date"
+            }
+
             ],
             /* This is a JavaScript function that is being used in a DataTables plugin for PHP. */
             "fnCreatedRow": function(nRow, aData, iDataIndex) {
