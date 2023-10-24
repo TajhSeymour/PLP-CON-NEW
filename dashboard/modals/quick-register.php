@@ -181,9 +181,9 @@
                     </div>
                     <div class="col-lg-6">
                         <div>
-                            <label class="form-label" for="input_new_del_email">Email Address *</label>
+                            <label class="form-label" for="input_new_del_email">Email Address</label>
                             <input type="email" class="form-control" placeholder="Enter Email Address" id="input_new_del_email" name="input_new_del_email"
-                                required>
+                                >
                         </div>
                     </div>
                     <div class="col-lg-6">
