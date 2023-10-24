@@ -453,8 +453,8 @@
         const displayedHouseNumberElement = document.getElementById("oc_house_number");
             displayedHouseNumberElement.value = house_number;
 
-           // const displayedEmergencyContactNameElement = document.getElementById("oc_emergency_contact_name");
-         //displayedEmergencyContactNameElement.value = emergency_contact_name;
+         const displayedEmergencyContactNameElement = document.getElementById("oc_emergency_contact_name");
+         displayedEmergencyContactNameElement.value = emergency_contact_name;
 
          //   const displayedEmergencyContactRelationshipElement = document.getElementById("oc_emergency_contact_relationship");
           //  displayedEmergencyContactRelationshipElement.value = emergency_contact_relationship;
