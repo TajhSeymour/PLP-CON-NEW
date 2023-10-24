@@ -239,12 +239,17 @@
             }
 
             if (badgeClass !== "") {
-                $('td:eq(5)', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
+                var priorityColumnIndex = $("#all-registrants thead th").filter(function () {
+                    return $(this).text() === "PRIORITY";
+                }).index();
+
+                $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
             }
 
-            var gender = data.gender.toLowerCase(); // Assuming "gender" is available in the array as a property
+            var gender = data.gender.toLowerCase();
             var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
-            $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+            $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+
         }
         // Initialize DataTable
         /* The code below is using the DataTables plugin in jQuery to create a table with specific columns.
@@ -394,12 +399,17 @@
             }
 
             if (badgeClass !== "") {
-                $('td:eq(5)', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
+                var priorityColumnIndex = $("#all-registrants thead th").filter(function () {
+                    return $(this).text() === "PRIORITY";
+                }).index();
+
+                $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
             }
 
-            var gender = data.gender.toLowerCase(); // Assuming "gender" is available in the array as a property
+            var gender = data.gender.toLowerCase();
             var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
-            $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+            $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+
         }
         // Initialize DataTable
         /* The code below is using the DataTables plugin in jQuery to create a table with specific columns.
