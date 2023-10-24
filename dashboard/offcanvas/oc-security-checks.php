@@ -28,9 +28,9 @@
         <div class="mb-3">
         <label for="oc_first_name" class="form-label">Process Priority"</label>
           <select class="form-control" data-plugin="choices" name="oc_priority" id="oc_priority">
-            <option value="High">High</option>
-            <option value="Medium">Medium</option>
-            <option select value="Normal">Normal</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option  value="normal">Normal</option>
           </select>
         </div>
 

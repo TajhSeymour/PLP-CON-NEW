@@ -15,9 +15,9 @@
                             <select class="form-control" data-plugin="choices" name="input_priority" id="input_priority"
                                 required>
                                 <option value="Normal">Select Priority</option>
-                                <option value="High">High</option>
-                                <option value="Medium">Medium</option>
-                                <option value="Normal">Normal</option>
+                                <option value="high">High</option>
+                                <option value="medium">Medium</option>
+                                <option value="normal">Normal</option>
                             </select>
                         </div>
 
