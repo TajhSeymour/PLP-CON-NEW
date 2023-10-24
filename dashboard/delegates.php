@@ -377,14 +377,14 @@
             const middle_name = rowData.middle_name;
             const last_name = rowData.last_name;
            const email = rowData.email_address;
-           //const priority = rowData.priority;
+           const priority = rowData.priority;
            const dob = rowData.dob;
         const gender = rowData.gender;
             const nib_number = rowData.nib_number;
             const constituency = rowData.constituency;
             const affiliated_branch = rowData.affiliated_branch;
             const membership_type = rowData.membership_type;
-            //const date = rowData.date;
+            const date = rowData.date;
             const mobile_number = rowData.mobile_number;
             const telephone_number = rowData.telephone_number;
             const street_address = rowData.street_address;
@@ -420,7 +420,51 @@
             const displayedEmailElement = document.getElementById("oc_email_address");
             displayedEmailElement.value = email;
 
-          
+            const displayedPriorityElement = document.getElementById("oc_priority");
+            displayedPriorityElement.value = priority;
+
+           const displayedGenderElement = document.getElementById("oc_gender");
+            displayedGenderElement.value = gender;
+
+             const displayedNIBElement = document.getElementById("oc_nib_number");
+             displayedNIBElement.value = nib_number;
+
+           const displayedConstituencyElement = document.getElementById("oc_constituency");
+            displayedConstituencyElement.value = constituency;
+
+            const displayedAffiliatedBranchElement = document.getElementById("oc_affiliated_branch");
+             displayedAffiliatedBranchElement.value = affiliated_branch;
+
+              const displayedMembershipTypeElement = document.getElementById("oc_membership_type");
+             displayedMembershipTypeElement.value = membership_type;
+
+         const displayedDateElement = document.getElementById("oc_date");
+         displayedDateElement.value = date;
+
+       //  const displayedMobileNumberElement = document.getElementById("oc_mobile_number");
+       //    displayedMobileNumberElement.value = mobile_number;
+
+        //     const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
+         //    displayedTelephoneNumberElement.value = telephone_number;
+
+         //   const displayedStreetAddressElement = document.getElementById("oc_street_address");
+          //  displayedStreetAddressElement.value = street_address;
+
+          //  const displayedHouseNumberElement = document.getElementById("oc_house_number");
+           //  displayedHouseNumberElement.value = house_number;
+
+           // const displayedEmergencyContactNameElement = document.getElementById("oc_emergency_contact_name");
+         //displayedEmergencyContactNameElement.value = emergency_contact_name;
+
+         //   const displayedEmergencyContactRelationshipElement = document.getElementById("oc_emergency_contact_relationship");
+          //  displayedEmergencyContactRelationshipElement.value = emergency_contact_relationship;
+
+          //   const displayedEmergencyContactTelephoneNumberElement = document.getElementById("oc_emergency_contact_telephone_number");
+          //  displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
+
+           
+
+
 
             offcanvas.show(); // Show the offcanvas
         });
