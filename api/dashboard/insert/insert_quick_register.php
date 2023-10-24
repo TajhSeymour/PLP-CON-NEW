@@ -8,12 +8,14 @@ require_once(dirname(__DIR__, 3) . '/helpers/upload_helper.php');
 function generate_random_id()
 {
     $timestampComponent = substr(time(), -5);
-    $maxRandom = 99999;
     $maxTotalLength = 7;
-    $maxRandom = min($maxRandom, pow(10, $maxTotalLength - strlen($timestampComponent)) - 1);
-    $randomComponent = str_pad(mt_rand(0, $maxRandom), $maxTotalLength - strlen($timestampComponent), '0', STR_PAD_LEFT);
+    $maxRandom = str_pad('99999', $maxTotalLength - strlen($timestampComponent), '9', STR_PAD_LEFT);
+    
+    do {
+        $randomComponent = mt_rand(1, (int)$maxRandom);
+    } while ($randomComponent < pow(10, $maxTotalLength - strlen($timestampComponent) - 1));
 
-    return $timestampComponent . $randomComponent;
+    return $timestampComponent . str_pad($randomComponent, $maxTotalLength - strlen($timestampComponent), '0', STR_PAD_LEFT);
 }
 
 
