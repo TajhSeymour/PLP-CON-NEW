@@ -361,9 +361,9 @@
                     <div class="row">
 
                         <div class="col-md-4">
-                            <label class="form-control" for="input_del_email">Email Address *</label>
+                            <label class="form-control" for="input_del_email">Email Address</label>
                             <input type="email" class="form-control" id="input_del_email" name="input_del_email"
-                                required>
+                                >
                         </div>
                         <div class="col-md-4">
                             <label class="form-control" for="input_del_mobile">Mobile Number</label>
