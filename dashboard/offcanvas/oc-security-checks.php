@@ -50,10 +50,11 @@
         </div>
 
         <div class="mb-3">
+        <label for="oc_last_name" class="form-label">Gender: </label>
           <select class="form-control" data-plugin="choices" name="oc_gender" id="oc_gender" required>
-            <option value="">Gender</option>
-            <option value="MALE">Male</option>
-            <option value="FEMALE">Female</option>
+            <option value="">Select Gender</option>
+            <option value="MALE">MALE</option>
+            <option value="FEMALE">FEMALE</option>
           </select>
         </div>
 

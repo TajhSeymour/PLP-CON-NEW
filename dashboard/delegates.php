@@ -414,11 +414,11 @@
             const displayedLastNameElement = document.getElementById("oc_last_name");
             displayedLastNameElement.value = last_name;
 
-            //  const displayedDOBElement = document.getElementById("oc_dob");
-           //  displayedDOBElement.value = dob;
+              const displayedDOBElement = document.getElementById("oc_dob");
+           displayedDOBElement.value = dob;
 
-            //  const displayedEmailElement = document.getElementById("oc_email_address");
-           //   displayedEmailElement.value = email;
+            const displayedEmailElement = document.getElementById("oc_email_address");
+            displayedEmailElement.value = email;
 
              // const displayedPriorityElement = document.getElementById("oc_priority");
              // displayedPriorityElement.value = priority;
