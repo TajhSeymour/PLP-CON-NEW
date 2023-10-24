@@ -314,7 +314,7 @@
             named id, first_name, middle_name, last_name, email, nib, assignment, and priority. The values
             of these constants are being assigned from the corresponding properties of an object named
             rowData. */
-            const id = rowData.plp_if;
+            const id = rowData.plp_id;
             const first_name = rowData.first_name;
             const middle_name = rowData.middle_name;
             const last_name = rowData.last_name;
