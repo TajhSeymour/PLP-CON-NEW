@@ -57,6 +57,7 @@
 </div>
 
 
+
 <script>
 // Select the node that will be observed for mutations
 const targetNode = document.getElementById('displayedId');
@@ -71,35 +72,15 @@ const callback = function(mutationsList, observer) {
             // The innerText of displayedId has changed
             let userID = targetNode.innerText;
 
-            // Fetch the photo image for the new userID and insert it into the document
-            fetch(`/api/dashboard/fetch_data/get_photo_image.php`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `userID=${userID}`
-            })
-            .then(response => response.text())
-            .then(data => {
-                // Insert the HTML into your document
-                // Replace .img-container-photo with the selector for the element where you want to insert the photo image
-                document.querySelector(".img-container-photo").innerHTML = data;
-            });
+            // Construct the photo URL using the userID
+            let photoURL = `https://plpconvention.org/idbadge/${userID}.jpg`;
 
-            // Fetch the govid image for the new userID and insert it into the document
-            fetch(`/api/dashboard/fetch_data/get_govid_image.php`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `userID=${userID}`
-            })
-            .then(response => response.text())
-            .then(data => {
-                // Insert the HTML into your document
-                // Replace .img-container-govid with the selector for the element where you want to insert the govid image
-                document.querySelector(".img-container-govid").innerHTML = data;
-            });
+            // Update the .img-container-photo with the new photo image
+            let photoContainer = document.querySelector(".img-container-photo");
+            photoContainer.innerHTML = `<img src="${photoURL}" alt="Photo of user ${userID}">`;
+
+            // If you still want to fetch the govid image from the API, 
+            // you can retain that portion of the code here.
         }
     }
 };
@@ -111,6 +92,8 @@ const observer = new MutationObserver(callback);
 observer.observe(targetNode, config);
 
 </script>
+
+
 
 
 <!-- Reset Password Script -->
