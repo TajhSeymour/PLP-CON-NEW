@@ -296,7 +296,7 @@
                 addBadge(nRow, aData);
             },
             "ajax": {
-                "url": "/api/dashboard/fetch_data/get_staff_tb_local_pending_approval.php",
+                "url": "/api/dashboard/fetch_data/get_all_registrants_tb_not_checked_in.php",
                 "type": "GET",
                 "dataType": 'json',
                 "error": function(jqXHR, textStatus, errorThrown) {

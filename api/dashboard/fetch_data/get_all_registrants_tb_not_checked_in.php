@@ -7,7 +7,7 @@ require dirname(__DIR__, 3) . '/database/dbconnection.php';
 header('Content-Type: application/json; charset=UTF-8');
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    if (!$results = $connection->query('CALL GET_ALL_LOCAL_STAFF_PENDING_APPROVAL();')) {
+    if (!$results = $connection->query('CALL GET_ALL_DELEGATE_REGISTRANTS_NOT_CHECKED_IN();')) {
         http_response_code(500);
         die(json_encode([
             'success' => false,
