@@ -69,7 +69,7 @@
                                 <ul class="nav nav-pills nav-justified mb-3" role="tablist">
                                     <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']) : ?>
                                             <li class="nav-item">
-                                                <a class="nav-link waves-effect waves-light active" data-bs-toggle="tab" href="#pill-pending-security-check" role="tab">
+                                                <a class="nav-link waves-effect waves-light active" data-bs-toggle="tab" href="#all-delegates" role="tab">
                                                     ALL PLP DELEGATES (NOT CHECKED IN)
                                                 </a>
                                             </li>
@@ -85,7 +85,7 @@
                                     <!-- Tab panes -->
                                     <div class="tab-content text-muted">
                                   
-                                    <div class="tab-pane active" id="pill-pending-security-check" role="tabpanel">
+                                    <div class="tab-pane active" id="pill-all-delegates" role="tabpanel">
                                             <table id="all-delegates" class="display table table-bordered dt-responsive" style="width:100%">
                                                 <thead>
                                                     <tr>
@@ -306,7 +306,7 @@
 
         const offcanvas = new bootstrap.Offcanvas(document.getElementById("offcanvasSecurity"));
 
-        $('#pending-security tbody').on('click', 'tr', function() {
+        $('#all-delegates tbody').on('click', 'tr', function() {
             console.log("Row Clicked!"); // Add this line for testing
             const rowData = table.row(this).data();
 
@@ -362,6 +362,11 @@
         });
     });
 </script>
+
+
+
+
+
 
 <script>
     $(document).ready(function () {
