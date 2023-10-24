@@ -26,11 +26,11 @@
         </div>
 
         <div class="mb-3">
-          <select class="form-control" data-plugin="choices" name="oc_priority" id="oc_priority" required>
-            <option value="">Select Priority</option>
+        <label for="oc_first_name" class="form-label">Process Priority"</label>
+          <select class="form-control" data-plugin="choices" name="oc_priority" id="oc_priority">
             <option value="High">High</option>
             <option value="Medium">Medium</option>
-            <option value="Normal">Normal</option>
+            <option select value="Normal">Normal</option>
           </select>
         </div>
 

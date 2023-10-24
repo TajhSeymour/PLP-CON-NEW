@@ -432,8 +432,8 @@
            const displayedConstituencyElement = document.getElementById("oc_constituency");
             displayedConstituencyElement.value = constituency;
 
-             // const displayedAffiliatedBranchElement = document.getElementById("oc_affiliated_branch");
-            //  displayedAffiliatedBranchElement.value = affiliated_branch;
+            const displayedAffiliatedBranchElement = document.getElementById("oc_affiliated_branch");
+             displayedAffiliatedBranchElement.value = affiliated_branch;
 
             //  const displayedMembershipTypeElement = document.getElementById("oc_membership_type");
             //  displayedMembershipTypeElement.value = membership_type;
