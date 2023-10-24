@@ -17,8 +17,10 @@
   <form id="update-staff-info-form" class="tablelist-form" autocomplete="off">
     <div class="modal-body">
       <div class="row g-3">
-        <br>
+       
         <center>
+        <br>
+        <br>
           <h4>General Information</h4>
         </center>
         <div>
