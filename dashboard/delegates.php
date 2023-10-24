@@ -602,16 +602,27 @@
             named id, first_name, middle_name, last_name, email, nib, assignment, and priority. The values
             of these constants are being assigned from the corresponding properties of an object named
             rowData. */
-            const id = rowData.id;
+            const id = rowData.plp_id;
             const first_name = rowData.first_name;
             const middle_name = rowData.middle_name;
             const last_name = rowData.last_name;
-            const email = rowData.email;
-            const nib = rowData.nib;
-            const priority = rowData.priority;
-            const badge_photo = rowData.badge_photo;
-            const gov_id = rowData.gov_id;
-            const dob = rowData.dob;
+           const email = rowData.email_address;
+           const priority = rowData.priority;
+           const dob = rowData.dob;
+        const gender = rowData.gender;
+            const nib_number = rowData.nib_number;
+            const constituency = rowData.constituency;
+            const affiliated_branch = rowData.affiliated_branch;
+            const membership_type = rowData.membership_type;
+            const date = rowData.date;
+            const mobile_number = rowData.mobile_number;
+            const telephone_number = rowData.telephone_number;
+            const street_address = rowData.street_address;
+            const house_number = rowData.house_number;
+            const emergency_contact_name = rowData.emergency_contact_name;
+            const emergency_contact_relationship = rowData.emergency_contact_relationship;
+        const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
+        
 
             //const nib = rowData.nib;
 
