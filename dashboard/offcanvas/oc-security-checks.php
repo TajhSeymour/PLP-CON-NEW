@@ -38,6 +38,10 @@
     <label for="oc_dob" class="form-label">Date of Birth</label>
     <input type="date" class="form-control" id="oc_dob" name="oc_dob" disabled >
   </div>
+  <div class="mb-3">
+    <label for="oc_dob" class="form-label">Email Address</label>
+    <input type="date" class="form-control" id="oc_email_address" name="oc_email_address" disabled >
+  </div>
 
 
 
