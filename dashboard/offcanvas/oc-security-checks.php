@@ -31,12 +31,20 @@
         <div class="mb-3">
         <label for="oc_first_name" class="form-label">Process Priority:</label>
           <select class="form-control" data-plugin="choices" name="oc_priority" id="oc_priority">
-            <option value="high">HIGH</option>
-            <option value="medium">MEDIUM</option>
-            <option  value="normal">NORMAL</option>
+            <option value="HIGH">HIGH</option>
+            <option value="MEDIUM">MEDIUM</option>
+            <option  value="NORMAL">NORMAL</option>
           </select>
         </div>
 
+        <div class="mb-3">
+        <label for="oc_first_name" class="form-label">Requires New Badge?: *</label>
+          <select class="form-control" data-plugin="choices" name="oc_new_badge" id="oc_new_badge">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+      
+          </select>
+        </div>
         <div class="mb-3">
           <label for="oc_first_name" class="form-label">First Name:</label>
           <input type="text" class="form-control" id="oc_first_name" name="oc_first_name" disabled>
@@ -244,10 +252,10 @@
         </div>
 
         <div class="d-grid gap-2">
-          <button name="add-notes-btn" id="add-notes-btn" class="btn btn-dark waves-effect waves-light"
+         <!-- <button name="add-notes-btn" id="add-notes-btn" class="btn btn-dark waves-effect waves-light"
             type="button">ADD NOTES</button>
           <button name="view-notes-btn" id="view-notes-btn" class="btn btn-dark waves-effect waves-light"
-            data-bs-toggle="modal" data-bs-target="#notesModel" type="button">VIEW NOTES</button>
+            data-bs-toggle="modal" data-bs-target="#notesModel" type="button">VIEW NOTES</button> -->
           <button name="approve-btn" id="approve-btn" class="btn btn-success waves-effect waves-light"
             type="button">CHECKED-IN / UPDATE RECORD</button>
           <button name="deny-btn" id="deny-btn" class="btn btn-danger waves-effect waves-light" type="button">MARKED AS DUPLICATE</button>
@@ -331,62 +339,52 @@
 
   //APPROVE APPLICANT'S REGISTRATION
   document.getElementById("approve-btn").addEventListener("click", function () {
-    // Get the UserID from the displayedId element
-    const userID = document.getElementById("displayedId").innerText;
+  // Prevent the default form submission behavior
+  event.preventDefault();
 
-    // Show the SweetAlert with the icon and the reset confirmation
-    Swal.fire({
-      icon: "question", // Icon "
-      title: "Approve Applicant",
-      text: `Are you sure that you want to clear this officer's registration?`,
-      showCancelButton: true,
-      confirmButtonText: "Confirm",
-      cancelButtonText: "Cancel",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Call the API to reset the password with the obtained userID
-        callApprovedRegAPI(userID);
-      }
-    });
-  });
+  // Get the user ID from the displayedId element
+  const userID = document.getElementById("displayedId").innerText;
 
-  function callApprovedRegAPI(userID) {
-    // Make the API call to egistrant-security-check api passing the userID
-    // Implement your API call here, using fetch, Axios, or any other method you prefer
-    // Example using fetch:
-    fetch("/api/dashboard/update/local_staff_security_check_approved.php", {
-      method: "POST", // Use the appropriate method for your API
-      body: JSON.stringify({
-        userID
-      }), // Send the userID in the request body
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // Handle the response from the API if necessary
-        // For example, show a success message using SweetAlert
-        Swal.fire({
-          icon: "success",
-          title: "Security Clearance Completed!",
-          text: "Registrant is now cleared to particpate!",
-        }).then(() => {
-          // Reload the page after the success message is closed
-          window.location.reload();
-        });
-      })
-      .catch((error) => {
-        // Handle any errors that occur during the API call
-        console.error("Error in security check approval:", error);
-        // Show an error message using SweetAlert
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "An error occurred while approving registrant's application. Please try again later.",
-        });
+  // Get the form data
+  const formData = new FormData(document.getElementById("update-staff-info-form"));
+  formData.append("input_userid", userID); // Add the user ID to the form data
+
+  // Make the API call to update the user information
+  callUpdateUserAPI(formData);
+});
+function callUpdateUserAPI(formData) {
+  // Make the API call to update_user.php with the provided data
+  // Implement your API call here, using fetch, Axios, or any other method you prefer
+  // Example using fetch:
+  fetch("/api/dashboard/update/update_delegate_info.php", {
+    method: "POST", // Use the appropriate method for your API
+    body: formData, // Send the form data in the request body
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // Handle the response from the API if necessary
+      // For example, show a success message using SweetAlert
+      Swal.fire({
+        icon: "success",
+        title: "User Updated",
+        text: "User information has been successfully updated!",
+      }).then(() => {
+        // Reload the page after the success message is closed
+        window.location.reload();
       });
-  }
+    })
+    .catch((error) => {
+      // Handle any errors that occur during the API call
+      console.error("Error updating user:", error);
+      // Show an error message using SweetAlert
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "An error occurred while updating the user information. Please try again later.",
+      });
+    });
+}
+
 </script>
 
 <script>

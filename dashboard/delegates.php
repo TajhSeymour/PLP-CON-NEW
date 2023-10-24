@@ -52,7 +52,7 @@
                                     <h5 class="card-title mb-0 flex-grow-1">QUICK REGISTER</h5>
                                     <div class="flex-shrink-0">
                                         <div class="d-flex flex-wrap gap-2">
-                                            <button class="btn btn-danger add-btn" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-add-line align-bottom me-1"></i>Add New Registrant</button>
+                                            <button class="btn btn-danger add-btn" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-add-line align-bottom me-1"></i>ADD NEW DELEGATE</button>
                                             <button class="btn btn-success" id="remove-actions" onClick="deleteMultiple()"><i class="ri-delete-bin-2-line"></i></button>
                                         </div>
                                     </div>
