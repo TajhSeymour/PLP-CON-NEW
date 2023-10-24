@@ -100,16 +100,16 @@
                                                     <th>CONSTITUENCY</th>
                                                     <th>AFFILIATED BRANCH</th>
                                                     <th>MEMBERSHIP TYPE</th>
+                                                    <th>EMAIL ADDRESS</th>
+                                                    <th>MOBILE NUMBER</th>
+                                                    <th>TELEPHONE NUMBER</th>
+                                                    <th>STREET ADDRESS</th>
+                                                    <th>HOUSE NUMBER</th>
+                                                    <th>EMERGENCY CONTACT NAME</th>
+                                                    <th>EMERGENCY RELATIONSHIP </th>
+                                                    <th>EMERGENCY TELEPHONE</th>
                                                     <th>REGISTRATION DATE</th>
-                                                    <th>REGISTRATION DATE</th>
-                                                    <th>REGISTRATION DATE</th>
-                                                    <th>REGISTRATION DATE</th>
-                                                    <th>REGISTRATION DATE</th>
-                                                    <th>REGISTRATION DATE</th>
-                                                    <th>REGISTRATION DATE</th>
-                                                    <th>REGISTRATION DATE</th>
-                                                    <th>REGISTRATION DATE</th>
-                                                    
+
                                                     </tr>
                                                 </thead>
                                                 <tfoot>
@@ -125,6 +125,14 @@
                                                     <th>CONSTITUENCY</th>
                                                     <th>AFFILIATED BRANCH</th>
                                                     <th>MEMBERSHIP TYPE</th>
+                                                    <th>EMAIL ADDRESS</th>
+                                                    <th>MOBILE NUMBER</th>
+                                                    <th>TELEPHONE NUMBER</th>
+                                                    <th>STREET ADDRESS</th>
+                                                    <th>HOUSE NUMBER</th>
+                                                    <th>EMERGENCY CONTACT NAME</th>
+                                                    <th>EMERGENCY RELATIONSHIP </th>
+                                                    <th>EMERGENCY TELEPHONE</th>
                                                     <th>REGISTRATION DATE</th>
                                                     </tr>
                                                 </tfoot>
@@ -146,6 +154,14 @@
                                                     <th>CONSTITUENCY</th>
                                                     <th>AFFILIATED BRANCH</th>
                                                     <th>MEMBERSHIP TYPE</th>
+                                                    <th>EMAIL ADDRESS</th>
+                                                    <th>MOBILE NUMBER</th>
+                                                    <th>TELEPHONE NUMBER</th>
+                                                    <th>STREET ADDRESS</th>
+                                                    <th>HOUSE NUMBER</th>
+                                                    <th>EMERGENCY CONTACT NAME</th>
+                                                    <th>EMERGENCY RELATIONSHIP </th>
+                                                    <th>EMERGENCY TELEPHONE</th>
                                                     <th>REGISTRATION DATE</th>
 
                                                     </tr>
@@ -163,6 +179,14 @@
                                                     <th>CONSTITUENCY</th>
                                                     <th>AFFILIATED BRANCH</th>
                                                     <th>MEMBERSHIP TYPE</th>
+                                                    <th>EMAIL ADDRESS</th>
+                                                    <th>MOBILE NUMBER</th>
+                                                    <th>TELEPHONE NUMBER</th>
+                                                    <th>STREET ADDRESS</th>
+                                                    <th>HOUSE NUMBER</th>
+                                                    <th>EMERGENCY CONTACT NAME</th>
+                                                    <th>EMERGENCY RELATIONSHIP </th>
+                                                    <th>EMERGENCY TELEPHONE</th>
                                                     <th>REGISTRATION DATE</th>
                                                     </tr>
                                                 </tfoot>
@@ -244,6 +268,12 @@
         The columns are defined using the "columns" option, and each column is specified with its
         corresponding data property. Some columns are set to be visible or hidden using the "visible"
         option. */
+
+                                                    
+                                                    
+
+
+
         var table = $('#all-delegates').DataTable({
             "columns": [{
                 "data": "plp_id"
