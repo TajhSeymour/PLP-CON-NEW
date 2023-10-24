@@ -27,7 +27,7 @@
 
         <div class="mb-3">
           <select class="form-control" data-plugin="choices" name="oc_priority" id="oc_priority" required>
-            <option value="Normal">Select Priority</option>
+            <option value="">Select Priority</option>
             <option value="High">High</option>
             <option value="Medium">Medium</option>
             <option value="Normal">Normal</option>
