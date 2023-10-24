@@ -420,35 +420,7 @@
             const displayedEmailElement = document.getElementById("oc_email_address");
             displayedEmailElement.value = email;
 
-            //const displayedPriorityElement = document.getElementById("oc_priority");
-           // displayedPriorityElement.value = priority;
-
-             const displayedGenderElement = document.getElementById("oc_gender");
-            displayedGenderElement.value = gender;
-
-             const displayedNIBElement = document.getElementById("oc_nib_number");
-             displayedNIBElement.value = nib_number;
-
-           const displayedConstituencyElement = document.getElementById("oc_constituency");
-            displayedConstituencyElement.value = constituency;
-
-            const displayedAffiliatedBranchElement = document.getElementById("oc_affiliated_branch");
-             displayedAffiliatedBranchElement.value = affiliated_branch;
-
-              const displayedMembershipTypeElement = document.getElementById("oc_membership_type");
-             displayedMembershipTypeElement.value = membership_type;
-
-         //const displayedDateElement = document.getElementById("oc_date");
-         //displayedDateElement.value = date;
-
-             const displayedMobileNumberElement = document.getElementById("oc_mobile_number");
-           displayedMobileNumberElement.value = mobile_number;
-
-             const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
-             displayedTelephoneNumberElement.value = telephone_number;
-
-           
-
+          
 
             offcanvas.show(); // Show the offcanvas
         });
