@@ -69,7 +69,7 @@
                                 <ul class="nav nav-pills nav-justified mb-3" role="tablist">
                                     <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']) : ?>
                                             <li class="nav-item">
-                                                <a class="nav-link waves-effect waves-light active" data-bs-toggle="tab" href="#all-delegates" role="tab">
+                                                <a class="nav-link waves-effect waves-light active" data-bs-toggle="tab" href="#pill-all-delegates" role="tab">
                                                     ALL PLP DELEGATES (NOT CHECKED IN)
                                                 </a>
                                             </li>
@@ -358,9 +358,7 @@
             const emergency_contact_name = rowData.emergency_contact_name;
             const emergency_contact_relationship = rowData.emergency_contact_relationship;
             const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
-           
-
-
+        
             const displayedIdElement = document.getElementById("displayedId");
             displayedIdElement.textContent = id
 
@@ -370,8 +368,6 @@
 
             const displayedNameElement = document.getElementById("offcanvasSecurityLabel");
             displayedNameElement.textContent = first_name + " " + last_name;
-
-    
 
           
             //THE INPUT TEXT FORM
@@ -685,10 +681,6 @@ populateDataTableWithUserID(userID);
 });
 
 </script>
-
-
-
-
 
 <style>
     #all-delegates thead th,
