@@ -15,7 +15,7 @@ function generate_random_id()
     $maxRandom = 99999;
     $maxTotalLength = 7;
     $maxRandom = min($maxRandom, pow(10, $maxTotalLength - strlen($timestampComponent)) - 1);
-    $randomComponent = str_pad(mt_rand(0, $maxRandom), $maxTotalLength - strlen($timestampComponent), '0', STR_PAD_LEFT);
+    $randomComponent = str_pad(mt_rand(1, $maxRandom), $maxTotalLength - strlen($timestampComponent), '1', STR_PAD_LEFT);
 
     return $timestampComponent . $randomComponent;
 }
