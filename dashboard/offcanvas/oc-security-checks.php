@@ -30,9 +30,9 @@
         <div class="mb-3">
         <label for="oc_first_name" class="form-label">Process Priority"</label>
           <select class="form-control" data-plugin="choices" name="oc_priority" id="oc_priority">
-            <option value="high">High</option>
-            <option value="medium">Medium</option>
-            <option  value="normal">Normal</option>
+            <option value="high">HIGH</option>
+            <option value="medium">MEDIUM</option>
+            <option  value="normal">NORMAL</option>
           </select>
         </div>
 
@@ -201,7 +201,7 @@
         <div class="mb-3">
           <label for="oc_mobile" class="form-label">Telephone Number (Other)</label>
           <input type="text" class="form-control" id="oc_telephone_number" name="oc_telephone_number"
-            placeholder="Enter Your Mobile Number"
+            placeholder="Enter Telephone Number"
             oninput="formatPhoneNumber('oc_telephone_number'); validatePhoneNumber('oc_telephone_number')">
           <div id="oc_telephone_number-validation"></div>
         </div>
@@ -215,22 +215,22 @@
           <label for="oc_emergency_contact_name" class="form-label">Emergency Contact Relationship</label>
           <select class="form-control" id="oc_emergency_contact_name" name="oc_emergency_contact_name">
             <option value="" disabled selected>Select Relationship</option>
-            <option value="PARENT">Parent</option>
-            <option value="GRAND PARENT">Grand Parent</option>
-            <option value="CHILD">Child</option>
-            <option value="SIBLING">Sibling</option>
-            <option value="AUNT">Aunt</option>
-            <option value="UNCLE">Uncle</option>
-            <option value="COUSIN">Cousin</option>
-            <option value="FRIEND">Friend</option>
-            <option value="OTHER">Other</option>
+            <option value="PARENT">PARENT</option>
+            <option value="GRAND PARENT">GRAND PARENT</option>
+            <option value="CHILD">CHILD</option>
+            <option value="SIBLING">SIBLING</option>
+            <option value="AUNT">AUNT</option>
+            <option value="UNCLE">UNCLE</option>
+            <option value="COUSIN">COUSIN</option>
+            <option value="FRIEND">FRIEND</option>
+            <option value="OTHER">OTHER</option>
           </select>
         </div>
 
         <div class="mb-3">
           <label for="oc_mobile" class="form-label">Emergency Telephone Number</label>
           <input type="text" class="form-control" id="oc_emergency_contact_telephone_number" name="oc_emergency_contact_telephone_number"
-            placeholder="Enter Your Mobile Number"
+            placeholder="Enter Emergency Telephone Number"
             oninput="formatPhoneNumber('oc_emergency_contact_telephone_number'); validatePhoneNumber('oc_emergency_contact_telephone_number')">
           <div id="oc_emergency_contact_telephone_number-validation"></div>
         </div>
