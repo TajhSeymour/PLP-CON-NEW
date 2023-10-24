@@ -377,7 +377,7 @@
             const middle_name = rowData.middle_name;
             const last_name = rowData.last_name;
            const email = rowData.email_address;
-           const priority = rowData.priority;
+           //const priority = rowData.priority;
            const dob = rowData.dob;
         const gender = rowData.gender;
             const nib_number = rowData.nib_number;
@@ -420,17 +420,17 @@
             const displayedEmailElement = document.getElementById("oc_email_address");
             displayedEmailElement.value = email;
 
-              const displayedPriorityElement = document.getElementById("oc_priority");
-             displayedPriorityElement.value = priority;
+              //const displayedPriorityElement = document.getElementById("oc_priority");
+            // displayedPriorityElement.value = priority;
 
              const displayedGenderElement = document.getElementById("oc_gender");
             displayedGenderElement.value = gender;
 
-            //  const displayedNIBElement = document.getElementById("oc_nib_number");
-            //  displayedNIBElement.value = nib_number;
+             const displayedNIBElement = document.getElementById("oc_nib_number");
+             displayedNIBElement.value = nib_number;
 
-        //    const displayedConstituencyElement = document.getElementById("oc_constituency");
-         //   displayedConstituencyElement.value = constituency;
+           const displayedConstituencyElement = document.getElementById("oc_constituency");
+            displayedConstituencyElement.value = constituency;
 
              // const displayedAffiliatedBranchElement = document.getElementById("oc_affiliated_branch");
             //  displayedAffiliatedBranchElement.value = affiliated_branch;
