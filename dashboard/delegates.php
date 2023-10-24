@@ -228,7 +228,7 @@
 
             var gender = data.gender.toLowerCase(); // Assuming "gender" is available in the array as a property
             var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
-            $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+            $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
         }
         // Initialize DataTable
         /* The code below is using the DataTables plugin in jQuery to create a table with specific columns.
