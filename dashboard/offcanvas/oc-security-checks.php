@@ -233,6 +233,13 @@
           <div id="oc_emergency_contact_telephone_number-validation"></div>
         </div>
 
+
+        <div class="mb-3">
+          <label for="oc_dob" class="form-label">Registration Date</label>
+          <input type="date" class="form-control" id="oc_date" name="oc_date" data-provider="flatpickr"
+            data-date-format="Y-m-d" disabled />
+        </div>
+
         <div class="d-grid gap-2">
           <button name="add-notes-btn" id="add-notes-btn" class="btn btn-dark waves-effect waves-light"
             type="button">ADD NOTES</button>
