@@ -384,7 +384,7 @@
             const constituency = rowData.constituency;
             const affiliated_branch = rowData.affiliated_branch;
             const membership_type = rowData.membership_type;
-            const date = rowData.date;
+            //const date = rowData.date;
             const mobile_number = rowData.mobile_number;
             const telephone_number = rowData.telephone_number;
             const street_address = rowData.street_address;
