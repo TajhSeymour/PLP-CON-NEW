@@ -298,8 +298,6 @@
             }
 
             ],
-
-
             /* This is a JavaScript function that is being used in a DataTables plugin for PHP. */
             "fnCreatedRow": function(nRow, aData, iDataIndex) {
                 $(nRow).attr('id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
@@ -435,7 +433,7 @@
             const displayedEmergencyContactTelephoneNumberElement = document.getElementById("oc_emergency_contact_telephone_number");
             displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
 
-            
+
 
 
             offcanvas.show(); // Show the offcanvas
@@ -567,7 +565,7 @@
 
         const offcanvas = new bootstrap.Offcanvas(document.getElementById("offcanvasSecurityLabel"));
 
-        $('#approved-security tbody').on('click', 'tr', function () {
+        $('#checked-in-delegates tbody').on('click', 'tr', function () {
             console.log("Row Clicked!"); // Add this line for testing
             const rowData = table.row(this).data();
 
