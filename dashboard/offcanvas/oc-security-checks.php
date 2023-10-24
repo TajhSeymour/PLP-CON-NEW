@@ -249,9 +249,8 @@
           <button name="view-notes-btn" id="view-notes-btn" class="btn btn-dark waves-effect waves-light"
             data-bs-toggle="modal" data-bs-target="#notesModel" type="button">VIEW NOTES</button>
           <button name="approve-btn" id="approve-btn" class="btn btn-success waves-effect waves-light"
-            type="button">APPROVE APPLICANT</button>
-          <button name="deny-btn" id="deny-btn" class="btn btn-danger waves-effect waves-light" type="button">DENY
-            APPLICANT</button>
+            type="button">CHECKED-IN / UPDATE RECORD</button>
+          <button name="deny-btn" id="deny-btn" class="btn btn-danger waves-effect waves-light" type="button">MARKED AS DUPLICATE</button>
         </div>
       </div>
     </div>
