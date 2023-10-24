@@ -22,6 +22,9 @@
       <div class="mb-3">
     <label for="oc_first_name" class="form-label">First Name:</label>
     <input type="text" class="form-control" id="oc_first_name" name="oc_first_name" disabled >
+  
+    <label for="oc_middle_name" class="form-label">Middle Name:</label>
+    <input type="text" class="form-control" id="oc_middle_name" name="oc_middle_name" disabled >
   </div>
   <div class="mb-3">
     <label for="oc_middle_name" class="form-label">Middle Name:</label>

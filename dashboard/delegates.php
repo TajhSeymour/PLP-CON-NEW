@@ -76,7 +76,7 @@
                                         <?php endif; ?>
                                             <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']) : ?>
                                             <li class="nav-item d-none d-sm-block"> <!-- This list item will be hidden on mobile devices -->
-                                                <a class="nav-link waves-effect waves-light" data-bs-toggle="tab" href="#pill-approved-security-check" role="tab">
+                                                <a class="nav-link waves-effect waves-light" data-bs-toggle="tab" href="#pill-checked-in-delegates" role="tab">
                                                     ALL CHECKED-IN PLP DELEGATES
                                                 </a>
                                             </li>
@@ -122,7 +122,7 @@
                                             </table>
 
                                             </div>
-                                    <div class="tab-pane" id="pill-approved-security-check" role="tabpanel">
+                                    <div class="tab-pane" id="pill-checked-in-delegates" role="tabpanel">
                                         <table id="checked-in-delegates" class="display table table-bordered dt-responsive" style="width:100%">
                                                 <thead>
                                                     <tr>
@@ -270,10 +270,36 @@
                 "data": "membership_type"
             },
             {
+                "data": "email_address", visible: false
+            },
+            {
+                "data": "mobile_number", visible: false
+            },
+            {
+                "data": "telephone_number", visible: false
+            },
+            {
+                "data": "street_address", visible: false
+            },
+            {
+                "data": "house_number", visible: false
+            },
+            {
+                "data": "emergency_contact_name", visible: false
+            },
+            {
+                "data": "emergency_contact_relationship", visible: false
+            },
+            {
+                "data": "emergency_contact_telephone_number", visible: false
+            },
+            {
                 "data": "date"
             }
 
             ],
+
+
             /* This is a JavaScript function that is being used in a DataTables plugin for PHP. */
             "fnCreatedRow": function(nRow, aData, iDataIndex) {
                 $(nRow).attr('id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
@@ -318,15 +344,23 @@
             const first_name = rowData.first_name;
             const middle_name = rowData.middle_name;
             const last_name = rowData.last_name;
-            const email = rowData.email;
-            const nib = rowData.nib;
-          //  const assignment = rowData.assignment;
+            const email = rowData.email_address;
             const priority = rowData.priority;
-            const badge_photo = rowData.badge_photo;
-            const gov_id = rowData.gov_id;
             const dob = rowData.dob;
-
-            //const nib = rowData.nib;
+            const gender = rowData.gender;
+            const nib_number = rowData.nib_number;
+            const constituency = rowData.constituency;
+            const affiliated_branch = rowData.affiliated_branch;
+            const membership_type = rowData.membership_type;
+            const date = rowData.date;
+            const mobile_number = rowData.mobile_number;
+            const telephone_number = rowData.telephone_number;
+            const street_address = rowData.street_address;
+            const house_number = rowData.house_number;
+            const emergency_contact_name = rowData.emergency_contact_name;
+            const emergency_contact_relationship = rowData.emergency_contact_relationship;
+            const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
+           
 
 
             const displayedIdElement = document.getElementById("displayedId");
@@ -339,10 +373,9 @@
             const displayedNameElement = document.getElementById("offcanvasSecurityLabel");
             displayedNameElement.textContent = first_name + " " + last_name;
 
-            const displayedGovIDPhotoElement = document.getElementById("displayGovID");
-            displayedGovIDPhotoElement.textContent = "/uploads/govid" + gov_id;
+    
 
-
+          
             //THE INPUT TEXT FORM
 
             const displayedFirstNameElement = document.getElementById("oc_first_name");
@@ -356,6 +389,53 @@
 
             const displayedDOBElement = document.getElementById("oc_dob");
             displayedDOBElement.value = dob;
+
+            const displayedFEmailElement = document.getElementById("oc_email_address");
+            displayedFEmailElement.value = email_address;
+
+            const displayedPriorityElement = document.getElementById("oc_priority");
+            displayedPriorityElement.value = priority;
+
+            const displayedGenderElement = document.getElementById("oc_gender");
+            displayedGenderElement.value = gender;
+
+            const displayedNIBElement = document.getElementById("oc_nib_number");
+            displayedNIBElement.value = nib_number;
+
+            const displayedConstituencyElement = document.getElementById("oc_constituency");
+            displayedConstituencyElement.value = constituency;
+
+            const displayedAffiliatedBranchElement = document.getElementById("oc_affiliated_branch");
+            displayedAffiliatedBranchElement.value = affiliated_branch;
+
+            const displayedMembershipTypeElement = document.getElementById("oc_membership_type");
+            displayedMembershipTypeElement.value = membership_type;
+
+            const displayedDateElement = document.getElementById("oc_date");
+            displayedDateElement.value = date;
+
+            const displayedMobileNumberElement = document.getElementById("oc_mobile_number");
+            displayedMobileNumberElement.value = mobile_number;
+
+            const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
+            displayedTelephoneNumberElement.value = telephone_number;
+
+            const displayedStreetAddressElement = document.getElementById("oc_street_address");
+            displayedStreetAddressElement.value = street_address;
+
+            const displayedHouseNumberElement = document.getElementById("oc_house_number");
+            displayedHouseNumberElement.value = house_number;
+
+            const displayedEmergencyContactNameElement = document.getElementById("oc_emergency_contact_name");
+            displayedEmergencyContactNameElement.value = emergency_contact_name;
+
+            const displayedEmergencyContactRelationshipElement = document.getElementById("oc_emergency_contact_relationship");
+            displayedEmergencyContactRelationshipElement.value = emergency_contact_relationship;
+
+            const displayedEmergencyContactTelephoneNumberElement = document.getElementById("oc_emergency_contact_telephone_number");
+            displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
+
+            
 
 
             offcanvas.show(); // Show the offcanvas
@@ -395,47 +475,70 @@
         The columns are defined using the "columns" option, and each column is specified with its
         corresponding data property. Some columns are set to be visible or hidden using the "visible"
         option. */
-        var table = $('#approved-security').DataTable({
+        var table = $('#checked-in-delegates').DataTable({
             "columns": [{
-                    "data": "id"
-                },
-                {
-                    "data": "first_name"
-                },
-                {
-                    "data": "middle_name"
-                },
-                {
-                    "data": "last_name"
-                },
-                {
-                    "data": "nib",
-                    visible: false
-                },
-                {
-                    "data": "priority"
-                },
-                {
-                    "data": "gender",
-                    visible: false
-                },
-                {
-                    "data": "dob",
-                    visible: false
-                },
-                {
-                    "data": "assignment",
-                    visible: false
-                },
-                {
-                    "data": "local_badge_photo_path",
-                    visible: false
-                },
-                {
-                    "data": "input_local_govid_path",
-                    visible: false
-                }
+                "data": "plp_id"
+            },
+            {
+                "data": "priority"
+            },
+            {
+                "data": "first_name"
+            },
+            {
+                "data": "middle_name"
+            },
+            {
+                "data": "last_name"
+            },
+            {
+                "data": "gender", visible: false
+            },
+            {
+                "data": "dob"
+            },
+            {
+                "data": "nib_number"
+            },
+            {
+                "data": "constituency"
+            },
+            {
+                "data": "affiliated_branch", visible: false
+            },
+            {
+                "data": "membership_type"
+            },
+            {
+                "data": "email_address", visible: false
+            },
+            {
+                "data": "mobile_number", visible: false
+            },
+            {
+                "data": "telephone_number", visible: false
+            },
+            {
+                "data": "street_address", visible: false
+            },
+            {
+                "data": "house_number", visible: false
+            },
+            {
+                "data": "emergency_contact_name", visible: false
+            },
+            {
+                "data": "emergency_contact_relationship", visible: false
+            },
+            {
+                "data": "emergency_contact_telephone_number", visible: false
+            },
+            {
+                "data": "date"
+            }
+
             ],
+
             /* This is a JavaScript function that is being used in a DataTables plugin for PHP. */
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
                 $(nRow).attr('id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
