@@ -303,7 +303,7 @@
                 "data": "membership_type"
             },
             {
-                "data": "email_address", visible: false
+                "data": "email_address", visible: true
             },
             {
                 "data": "mobile_number", visible: false
