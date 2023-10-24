@@ -444,8 +444,8 @@
        const displayedMobileNumberElement = document.getElementById("oc_mobile_number");
          displayedMobileNumberElement.value = mobile_number;
 
-        //     const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
-         //    displayedTelephoneNumberElement.value = telephone_number;
+           const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
+            displayedTelephoneNumberElement.value = telephone_number;
 
          //   const displayedStreetAddressElement = document.getElementById("oc_street_address");
           //  displayedStreetAddressElement.value = street_address;
