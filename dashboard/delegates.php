@@ -88,36 +88,34 @@
                                     <div class="tab-pane active" id="pill-pending-security-check" role="tabpanel">
                                             <table id="all-delegates" class="display table table-bordered dt-responsive" style="width:100%">
                                                 <thead>
-                                                <tr>
-                                                    <th>PLP ID</th>
-                                                    <th>PRIORITY</th>
-                                                    <th>FIRST NAME</th>
-                                                    <th>MIDDLE NAME</th>
-                                                    <th>LAST NAME</th>
-                                                    <th>GENDER</th>
-                                                    <th>DOB</th>
-                                                    <th>NIB NUMBER</th>
-                                                    <th>CONSTITUENCY</th>
-                                                    <th>AFFILIATED BRANCH</th>
-                                                    <th>MEMBERSHIP TYPE</th>
-                                                    <th>REGISTRATION DATE</th>
-                                                </tr>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>First Name</th>
+                                                        <th>Middle Name</th>
+                                                        <th>Last Name</th>
+                                                        <th>NIB Number</th>
+                                                        <th>Priority</th>
+                                                        <th>Gender</th>
+                                                        <th>DOB</th>
+                                                        <th>Assignment</th>
+                                                        <th>Badge Photo</th>
+                                                        <th>Gov ID Photo</th>
+                                                    </tr>
                                                 </thead>
                                                 <tfoot>
-                                                <tr>
-                                                    <th>PLP ID</th>
-                                                    <th>PRIORITY</th>
-                                                    <th>FIRST NAME</th>
-                                                    <th>MIDDLE NAME</th>
-                                                    <th>LAST NAME</th>
-                                                    <th>GENDER</th>
-                                                    <th>DOB</th>
-                                                    <th>NIB NUMBER</th>
-                                                    <th>CONSTITUENCY</th>
-                                                    <th>AFFILIATED BRANCH</th>
-                                                    <th>MEMBERSHIP TYPE</th>
-                                                    <th>REGISTRATION DATE</th>
-                                                </tr>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>First Name</th>
+                                                        <th>Middle Name</th>
+                                                        <th>Last Name</th>
+                                                        <th>NIB Number</th>
+                                                        <th>Priority</th>
+                                                        <th>Gender</th>
+                                                        <th>DOB</th>
+                                                        <th>Assignment</th>
+                                                        <th>Badge Photo</th>
+                                                        <th>Gov ID Photo</th>
+                                                    </tr>
                                                 </tfoot>
                                             </table>
 
@@ -239,17 +237,12 @@
             }
 
             if (badgeClass !== "") {
-                var priorityColumnIndex = $("#all-registrants thead th").filter(function () {
-                    return $(this).text() === "PRIORITY";
-                }).index();
-
-                $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
+                $('td:eq(5)', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
             }
 
-            var gender = data.gender.toLowerCase();
+            var gender = data.gender.toLowerCase(); // Assuming "gender" is available in the array as a property
             var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
-            $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
-
+            $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
         }
         // Initialize DataTable
         /* The code below is using the DataTables plugin in jQuery to create a table with specific columns.
@@ -258,42 +251,44 @@
         option. */
         var table = $('#all-delegates').DataTable({
             "columns": [{
-                "data": "plp_id"
-            },
-            {
-                "data": "priority"
-            },
-            {
-                "data": "first_name"
-            },
-            {
-                "data": "middle_name"
-            },
-            {
-                "data": "last_name"
-            },
-            {
-                "data": "gender", visible: false
-            },
-            {
-                "data": "dob"
-            },
-            {
-                "data": "nib_number"
-            },
-            {
-                "data": "constituency"
-            },
-            {
-                "data": "affiliated_branch", visible: false
-            },
-            {
-                "data": "membership_type"
-            },
-            {
-                "data": "date"
-            }
-
+                    "data": "id"
+                },
+                {
+                    "data": "first_name"
+                },
+                {
+                    "data": "middle_name"
+                },
+                {
+                    "data": "last_name"
+                },
+                {
+                    "data": "nib",
+                    visible: false
+                },
+                {
+                    "data": "priority"
+                },
+                {
+                    "data": "gender",
+                    visible: false
+                },
+                {
+                    "data": "dob",
+                    visible: false
+                },
+                {
+                    "data": "assignment",
+                    visible: false
+                },
+                {
+                    "data": "local_badge_photo_path",
+                    visible: false
+                },
+                {
+                    "data": "input_local_govid_path",
+                    visible: false
+                }
             ],
             /* This is a JavaScript function that is being used in a DataTables plugin for PHP. */
             "fnCreatedRow": function(nRow, aData, iDataIndex) {
@@ -399,17 +394,12 @@
             }
 
             if (badgeClass !== "") {
-                var priorityColumnIndex = $("#all-registrants thead th").filter(function () {
-                    return $(this).text() === "PRIORITY";
-                }).index();
-
-                $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
+                $('td:eq(5)', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
             }
 
-            var gender = data.gender.toLowerCase();
+            var gender = data.gender.toLowerCase(); // Assuming "gender" is available in the array as a property
             var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
-            $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
-
+            $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
         }
         // Initialize DataTable
         /* The code below is using the DataTables plugin in jQuery to create a table with specific columns.
@@ -418,42 +408,44 @@
         option. */
         var table = $('#approved-security').DataTable({
             "columns": [{
-                "data": "plp_id"
-            },
-            {
-                "data": "priority"
-            },
-            {
-                "data": "first_name"
-            },
-            {
-                "data": "middle_name"
-            },
-            {
-                "data": "last_name"
-            },
-            {
-                "data": "gender", visible: false
-            },
-            {
-                "data": "dob"
-            },
-            {
-                "data": "nib_number"
-            },
-            {
-                "data": "constituency"
-            },
-            {
-                "data": "affiliated_branch", visible: false
-            },
-            {
-                "data": "membership_type"
-            },
-            {
-                "data": "date"
-            }
-
+                    "data": "id"
+                },
+                {
+                    "data": "first_name"
+                },
+                {
+                    "data": "middle_name"
+                },
+                {
+                    "data": "last_name"
+                },
+                {
+                    "data": "nib",
+                    visible: false
+                },
+                {
+                    "data": "priority"
+                },
+                {
+                    "data": "gender",
+                    visible: false
+                },
+                {
+                    "data": "dob",
+                    visible: false
+                },
+                {
+                    "data": "assignment",
+                    visible: false
+                },
+                {
+                    "data": "local_badge_photo_path",
+                    visible: false
+                },
+                {
+                    "data": "input_local_govid_path",
+                    visible: false
+                }
             ],
             /* This is a JavaScript function that is being used in a DataTables plugin for PHP. */
             "fnCreatedRow": function (nRow, aData, iDataIndex) {
