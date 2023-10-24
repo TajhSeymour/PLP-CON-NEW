@@ -3,15 +3,15 @@
   <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   <p id="displayedId">ID will be displayed here</p>
   <p id="displayGovID">ID will be displayed here</p>
-    <!-- Responsive Images -->
-<center><h4>Badge Photo</h4></center>
-  <div class="img-container-photo">
-        <!-- The image will be inserted here by the JavaScript code -->
-    </div>
+ 
    
 </div>
 <div class="offcanvas-body">
-
+   <!-- Responsive Images -->
+   <center><h4>Badge Photo</h4></center>
+  <div class="img-container-photo">
+        <!-- The image will be inserted here by the JavaScript code -->
+    </div>
   <form id="update-staff-info-form" class="tablelist-form" autocomplete="off">
     <div class="modal-body">
       <div class="row g-3">
