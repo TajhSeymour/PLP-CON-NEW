@@ -9,6 +9,7 @@
 <div class="offcanvas-body">
   <!-- Responsive Images -->
   <center>
+    <br>
     <h4>Badge Photo</h4>
   </center>
   <div class="img-container-photo">
@@ -20,7 +21,7 @@
        
         <center>
         <br>
-        <br>
+  
           <h4>General Information</h4>
         </center>
         <div>
