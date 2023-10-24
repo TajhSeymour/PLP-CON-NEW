@@ -450,8 +450,8 @@
           const displayedStreetAddressElement = document.getElementById("oc_street_address");
            displayedStreetAddressElement.value = street_address;
 
-          //  const displayedHouseNumberElement = document.getElementById("oc_house_number");
-           //  displayedHouseNumberElement.value = house_number;
+        const displayedHouseNumberElement = document.getElementById("oc_house_number");
+            displayedHouseNumberElement.value = house_number;
 
            // const displayedEmergencyContactNameElement = document.getElementById("oc_emergency_contact_name");
          //displayedEmergencyContactNameElement.value = emergency_contact_name;
