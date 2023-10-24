@@ -268,12 +268,6 @@
         The columns are defined using the "columns" option, and each column is specified with its
         corresponding data property. Some columns are set to be visible or hidden using the "visible"
         option. */
-
-                                                    
-                                                    
-
-
-
         var table = $('#all-delegates').DataTable({
             "columns": [{
                 "data": "plp_id"
@@ -382,9 +376,9 @@
             const first_name = rowData.first_name;
             const middle_name = rowData.middle_name;
             const last_name = rowData.last_name;
-           // const email = rowData.email_address;
-           // const priority = rowData.priority;
-            //const dob = rowData.dob;
+           const email = rowData.email_address;
+           const priority = rowData.priority;
+           const dob = rowData.dob;
             // const gender = rowData.gender;
             // const nib_number = rowData.nib_number;
             // const constituency = rowData.constituency;
@@ -570,7 +564,6 @@
             {
                 "data": "date"
             }
-
             ],
 
             /* This is a JavaScript function that is being used in a DataTables plugin for PHP. */
