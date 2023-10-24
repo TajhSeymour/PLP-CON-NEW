@@ -70,14 +70,14 @@
                                     <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']) : ?>
                                             <li class="nav-item">
                                                 <a class="nav-link waves-effect waves-light active" data-bs-toggle="tab" href="#pill-pending-security-check" role="tab">
-                                                    Pending Security Checks
+                                                    ALL PLP DELEGATES (NOT CHECKED IN)
                                                 </a>
                                             </li>
                                         <?php endif; ?>
                                             <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['officer'] || $_SESSION['print_officer']) : ?>
                                             <li class="nav-item d-none d-sm-block"> <!-- This list item will be hidden on mobile devices -->
                                                 <a class="nav-link waves-effect waves-light" data-bs-toggle="tab" href="#pill-approved-security-check" role="tab">
-                                                    Approved Security Checks
+                                                    ALL CHECKED-IN PLP DELEGATES
                                                 </a>
                                             </li>
                                         <?php endif; ?>
