@@ -48,50 +48,34 @@
                                 <table id="process-delegates" class="display table table-bordered dt-responsive" style="width:100%">
                                 <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Priority</th>
-                                            <th>Invite Letter</th>
-                                            <th>First Name</th>
-                                            <th>Middle Name</th>
-                                            <th>Last Name</th>
-                                            <th>DOB</th>
-                                            <th>Gender</th>
-                                            <th>Country</th>
-                                            <th>Nationality</th>
-                                            <th>Passport Type</th>
-                                            <th>Passport Number</th>
-                                            <th>Organization</th>
-                                            <th>Occupation</th>
-                                            <th>Job Title</th>
-                                            <th>Email</th>
-                                            <th>Mobile Number</th>
-                                            <th>Telephone Contact</th>
-                                            <th>Fax Number</th>                        
-                                            <th>Registration Date</th>
+                                        <th>PLP ID</th>
+                                                    <th>PRIORITY</th>
+                                                    <th>FIRST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>LAST NAME</th>
+                                                    <th>GENDER</th>
+                                                    <th>DOB</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>CONSTITUENCY</th>
+                                                    <th>AFFILIATED BRANCH</th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    <th>REGISTRATION DATE</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Priority</th>
-                                            <th>Invite Letter</th>
-                                            <th>First Name</th>
-                                            <th>Middle Name</th>
-                                            <th>Last Name</th>
-                                            <th>DOB</th>
-                                            <th>Gender</th>
-                                            <th>Country</th>
-                                            <th>Nationality</th>
-                                            <th>Passport Type</th>
-                                            <th>Passport Number</th>
-                                            <th>Organization</th>
-                                            <th>Occupation</th>
-                                            <th>Job Title</th>
-                                            <th>Email</th>
-                                            <th>Mobile Number</th>
-                                            <th>Telephone Contact</th>
-                                            <th>Fax Number</th>                        
-                                            <th>Registration Date</th>
+                                        <th>PLP ID</th>
+                                                    <th>PRIORITY</th>
+                                                    <th>FIRST NAME</th>
+                                                    <th>MIDDLE NAME</th>
+                                                    <th>LAST NAME</th>
+                                                    <th>GENDER</th>
+                                                    <th>DOB</th>
+                                                    <th>NIB NUMBER</th>
+                                                    <th>CONSTITUENCY</th>
+                                                    <th>AFFILIATED BRANCH</th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    <th>REGISTRATION DATE</th>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -99,30 +83,7 @@
                         </div><!-- end card -->
                     </div><!--end col-->
                 </div><!-- end row -->
-                <!-- DELETE Modal NOT USED 
-                <div class="modal fade flip" id="deleteOrder" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body p-5 text-center">
-                                <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#405189,secondary:#f06548" style="width:90px;height:90px">
-                                </lord-icon>
-                                <div class="mt-4 text-center">
-                                    <h4>You are about to delete a order ?</h4>
-                                    <p class="text-muted fs-14 mb-4">Deleting your order will remove all
-                                        of
-                                        your information from our database.</p>
-                                    <div class="hstack gap-2 justify-content-center remove">
-                                        <button class="btn btn-link link-success fw-medium text-decoration-none" id="deleteRecord-close" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i>
-                                            Close</button>
-                                        <button class="btn btn-danger" id="delete-record">Yes, Delete
-                                            It</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
-              <!-- DELETE Modal  end modal -->
+                
             </div>
             <!--end card-body-->
         </div>
@@ -229,72 +190,41 @@
         }
         var table = $('#process-delegates').DataTable({
             "columns": [{
-                    "data": "id"
-                },
-                {
-                    "data": "priority"
-                },
-                {
-                    "data": "invite_letter",
-                    "render": function (data, type, row, meta) {
-                            if (type === 'display' && data) {
-                                return '<a href="/uploads/delegate-letters' + data + '" target="_blank">View Letter</a>';
-                            }
-                            return data;
-                        },
-                        visible: false
-                },
-                {
-                    "data": "first_name"
-                },
-                {
-                    "data": "middle_name"
-                },
-                {
-                    "data": "last_name"
-                },
-                {
-                    "data": "dob"
-                },
-                {
-                    "data": "gender"
-                },
-                {
-                    "data": "country"
-                },
-                {
-                    "data": "nationality"
-                },
-                {
-                    "data": "passport_type"
-                },
-                {
-                    "data": "passport_number"
-                },
-                {
-                    "data": "organization"
-                },
-                {
-                    "data": "occupation"
-                },
-                {
-                    "data": "job_title"
-                },
-                {
-                    "data": "email"
-                },
-                {
-                    "data": "mobile"
-                },
-                {
-                    "data": "telephone"
-                },
-                {
-                    "data": "fax_number"
-                },
-                {
-                    "data": "registered_date"
-                }
+                "data": "plp_id"
+            },
+            {
+                "data": "priority"
+            },
+            {
+                "data": "first_name"
+            },
+            {
+                "data": "middle_name"
+            },
+            {
+                "data": "last_name"
+            },
+            {
+                "data": "gender", visible: false
+            },
+            {
+                "data": "dob"
+            },
+            {
+                "data": "nib_number"
+            },
+            {
+                "data": "constituency"
+            },
+            {
+                "data": "affiliated_branch", visible: false
+            },
+            {
+                "data": "membership_type"
+            },
+            {
+                "data": "date"
+            }
             ],
                 /* This is a JavaScript function that is being used in a DataTables plugin for PHP. */
                 "fnCreatedRow": function(nRow, aData, iDataIndex) {
@@ -305,7 +235,7 @@
                 "url": "/api/dashboard/fetch_data/get_registrants_tb_all.php",
                 "type": "post"
             },
-            "dom": 'lBfrtip',
+            "dom": 'lfrtip',
             "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
             "pageLength": 25,
             "lengthMenu": [
@@ -332,7 +262,6 @@
             const middle_name = rowData.middle_name ?? '';
             const last_name = rowData.last_name;
             const dob = rowData.dob;
-            const invite_letter = rowData.invite_letter;
             const gender = rowData.gender;
             const assignment = rowData.assignment;
             const job_title = rowData.job_title;
