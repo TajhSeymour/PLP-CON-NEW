@@ -9,15 +9,14 @@ function generate_random_id()
 {
     $timestampComponent = substr(time(), -5);
     $maxTotalLength = 7;
-    $maxRandom = str_pad('99999', $maxTotalLength - strlen($timestampComponent), '9', STR_PAD_LEFT);
-    
+    $maxRandom = str_pad('999999', $maxTotalLength - strlen($timestampComponent), '9', STR_PAD_LEFT);
+
     do {
         $randomComponent = mt_rand(1, (int)$maxRandom);
     } while ($randomComponent < pow(10, $maxTotalLength - strlen($timestampComponent) - 1));
 
     return $timestampComponent . str_pad($randomComponent, $maxTotalLength - strlen($timestampComponent), '0', STR_PAD_LEFT);
 }
-
 
 // Function to validate and sanitize input data
 function validate_input($data)
