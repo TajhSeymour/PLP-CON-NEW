@@ -101,6 +101,15 @@
                                                     <th>AFFILIATED BRANCH</th>
                                                     <th>MEMBERSHIP TYPE</th>
                                                     <th>REGISTRATION DATE</th>
+                                                    <th>REGISTRATION DATE</th>
+                                                    <th>REGISTRATION DATE</th>
+                                                    <th>REGISTRATION DATE</th>
+                                                    <th>REGISTRATION DATE</th>
+                                                    <th>REGISTRATION DATE</th>
+                                                    <th>REGISTRATION DATE</th>
+                                                    <th>REGISTRATION DATE</th>
+                                                    <th>REGISTRATION DATE</th>
+                                                    
                                                     </tr>
                                                 </thead>
                                                 <tfoot>
