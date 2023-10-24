@@ -262,8 +262,41 @@
             },
             {
                 "data": "constituency"
+            },
+            {
+                "data": "affiliated_branch", visible: false
+            },
+            {
+                "data": "membership_type"
+            },
+            {
+                "data": "email_address", visible: false
+            },
+            {
+                "data": "mobile_number", visible: false
+            },
+            {
+                "data": "telephone_number", visible: false
+            },
+            {
+                "data": "street_address", visible: false
+            },
+            {
+                "data": "house_number", visible: false
+            },
+            {
+                "data": "emergency_contact_name", visible: false
+            },
+            {
+                "data": "emergency_contact_relationship", visible: false
+            },
+            {
+                "data": "emergency_contact_telephone_number", visible: false
+            },
+            {
+                "data": "date"
             }
-            
+      
 
             ],
             /* This is a JavaScript function that is being used in a DataTables plugin for PHP. */
@@ -310,22 +343,22 @@
             const first_name = rowData.first_name;
             const middle_name = rowData.middle_name;
             const last_name = rowData.last_name;
-            const email = rowData.email_address;
-            const priority = rowData.priority;
-            const dob = rowData.dob;
-            const gender = rowData.gender;
-            const nib_number = rowData.nib_number;
-            const constituency = rowData.constituency;
-            const affiliated_branch = rowData.affiliated_branch;
-            const membership_type = rowData.membership_type;
-            const date = rowData.date;
-            const mobile_number = rowData.mobile_number;
-            const telephone_number = rowData.telephone_number;
-            const street_address = rowData.street_address;
-            const house_number = rowData.house_number;
-            const emergency_contact_name = rowData.emergency_contact_name;
-            const emergency_contact_relationship = rowData.emergency_contact_relationship;
-            const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
+           // const email = rowData.email_address;
+           // const priority = rowData.priority;
+            //const dob = rowData.dob;
+            // const gender = rowData.gender;
+            // const nib_number = rowData.nib_number;
+            // const constituency = rowData.constituency;
+            // const affiliated_branch = rowData.affiliated_branch;
+            // const membership_type = rowData.membership_type;
+            // const date = rowData.date;
+            // const mobile_number = rowData.mobile_number;
+            // const telephone_number = rowData.telephone_number;
+            // const street_address = rowData.street_address;
+            // const house_number = rowData.house_number;
+            // const emergency_contact_name = rowData.emergency_contact_name;
+            // const emergency_contact_relationship = rowData.emergency_contact_relationship;
+            // const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
         
             const displayedIdElement = document.getElementById("displayedId");
             displayedIdElement.textContent = id
