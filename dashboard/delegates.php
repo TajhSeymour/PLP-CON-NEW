@@ -377,7 +377,7 @@
             const middle_name = rowData.middle_name;
             const last_name = rowData.last_name;
            const email = rowData.email_address;
-           //const priority = rowData.priority;
+           const priority = rowData.priority;
            const dob = rowData.dob;
         const gender = rowData.gender;
             const nib_number = rowData.nib_number;
