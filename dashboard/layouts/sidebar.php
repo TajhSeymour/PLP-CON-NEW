@@ -46,16 +46,16 @@
                     <div class="collapse menu-dropdown" id="applicationsSidebar">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="/dashboard/delegates.php" class="nav-link"><?= $lang['t-delegates'] ?></a>
+                                <a href="/dashboard/delegates" class="nav-link"><?= $lang['t-delegates'] ?></a>
                             </li>
                            
-                            <li class="nav-item">
+                           <!--  <li class="nav-item">
                                 <a href="/dashboard/local-staff.php" class="nav-link"><?= $lang['t-local-application'] ?></a>
-                            </li>
+                            </li> 
                             
                             <li class="nav-item">
                                 <a href="/dashboard/media-staff.php" class="nav-link"><?= $lang['t-media-application'] ?></a>
-                            </li>
+                            </li>-->
                            
                         </ul>
                     </div>
@@ -115,13 +115,7 @@
                     </li>
                 <?php endif; ?>
 
-                <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['oas_user']): ?>
-                    <li class="nav-item">
-                        <a class="nav-link menu-link" href="oas-checks" data-bs-toggle="" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-                            <i data-feather="shield" class="icon-dual"></i> <span><?= $lang['t-oas-checks'] ?></span>
-                        </a>
-                    </li>
-                <?php endif; ?>
+               
                 <!-- End Navigation Menu Item -->
 
                 <!--</li> end Dashboard Menu -->

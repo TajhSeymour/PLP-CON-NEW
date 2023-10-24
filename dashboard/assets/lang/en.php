@@ -1,7 +1,7 @@
 <?php
     $lang["t-menu"]="Menu";
     $lang["t-dashboards"]="Dashboard";
-    $lang["t-applications"]="All Delegates";
+    $lang["t-applications"]="All Registration";
     $lang["t-departments"]="Departments";
     $lang["t-systemusers"]="System Users";
     $lang["t-delegates"]="PLP Delegates";
