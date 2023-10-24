@@ -84,9 +84,7 @@
                                     </ul>
                                     <!-- Tab panes -->
                                     <div class="tab-content text-muted">
-                                    <div class="button-container" style="margin-bottom: 20px; text-align: right;">
-                                        <button id="approveAllUsers" class="btn btn-success">Approve All Users</button>
-                                    </div>
+                                  
                                     <div class="tab-pane active" id="pill-pending-security-check" role="tabpanel">
                                             <table id="all-delegates" class="display table table-bordered dt-responsive" style="width:100%">
                                                 <thead>
