@@ -447,23 +447,7 @@
              const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
              displayedTelephoneNumberElement.value = telephone_number;
 
-             const displayedStreetAddressElement = document.getElementById("oc_street_address");
-            displayedStreetAddressElement.value = street_address;
-
-            const displayedHouseNumberElement = document.getElementById("oc_house_number");
-             displayedHouseNumberElement.value = house_number;
-
-            const displayedEmergencyContactNameElement = document.getElementById("oc_emergency_contact_name");
-         displayedEmergencyContactNameElement.value = emergency_contact_name;
-
-            const displayedEmergencyContactRelationshipElement = document.getElementById("oc_emergency_contact_relationship");
-            displayedEmergencyContactRelationshipElement.value = emergency_contact_relationship;
-
-             const displayedEmergencyContactTelephoneNumberElement = document.getElementById("oc_emergency_contact_telephone_number");
-            displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
-
            
-
 
 
             offcanvas.show(); // Show the offcanvas
