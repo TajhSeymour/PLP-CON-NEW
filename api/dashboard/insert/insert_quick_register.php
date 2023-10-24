@@ -7,14 +7,15 @@ require_once(dirname(__DIR__, 3) . '/helpers/upload_helper.php');
 
 function generate_random_id()
 {
-    $timestampComponent = substr(time(), -5);
-    $maxRandom = 99999;
+    $offset = mt_rand(10000, 90000); // Random offset between 10000 and 90000
+    $timestampComponent = substr(time() + $offset, -5); // Ensuring at least 5 digits
     $maxTotalLength = 7;
-    $maxRandom = min($maxRandom, pow(10, $maxTotalLength - strlen($timestampComponent)) - 1);
-    $randomComponent = str_pad(mt_rand(0, $maxRandom), $maxTotalLength - strlen($timestampComponent), '0', STR_PAD_LEFT);
+    $maxRandom = min(99999, pow(10, $maxTotalLength - strlen($timestampComponent)) - 1);
+    $randomComponent = str_pad(mt_rand(1, $maxRandom), $maxTotalLength - strlen($timestampComponent), '1', STR_PAD_LEFT);
 
     return $timestampComponent . $randomComponent;
 }
+
 
 // Function to validate and sanitize input data
 function validate_input($data)
