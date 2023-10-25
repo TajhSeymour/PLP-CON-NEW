@@ -428,20 +428,20 @@ function callUpdateUserAPI(formData) {
           // If the response is successful (status code 2xx), show success message
           Swal.fire({
             icon: "success",
-            title: "Duplicate Registrant Account Denied",
-            text: "This registrant has been successfully denied!",
+            title: "Duplicate Registrant Account Deleged",
+            text: "This duplicate registrant has been successfully deleted!",
           }).then(() => {
             // Reload the page after the success message is closed
             window.location.reload();
           });
         } else {
           // If the response is not successful, handle the error
-          throw new Error("Failed to update account status.");
+          throw new Error("Failed to delete duplicated registrant.");
         }
       })
       .catch((error) => {
         // Handle any errors that occur during the API call
-        console.error("Error update account status:", error);
+        console.error("Failed to delete duplicated registrant:", error);
         // Show an error message using SweetAlert
         Swal.fire({
           icon: "error",

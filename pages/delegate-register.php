@@ -474,7 +474,7 @@
                                 <label class="form-control" for="conference_photo">Upload New Badge Photo ID (JPG IMAGES
                                     ONLY)*</label>
                                 <input class="form-control" type="file" accept="image/jpg" id="input_badge_photo"
-                                    name="input_badge_photo" disabled>
+                                    name="input_badge_photo" onchange="validateFile()" disabled>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-control" for="conference_photo2">Preview</label>
@@ -1036,6 +1036,18 @@ if (nominationQuestionInput && hiddenInput) {
         }
     });
 
+    function validateFile() {
+    const fileInput = document.getElementById('input_badge_photo');
+    const filePath = fileInput.value;
+    
+    // Check file extension
+    const allowedExtensions = /(\.jpg)$/i;
+    if (!allowedExtensions.exec(filePath)) {
+        alert('Please upload a .jpg image file only.');
+        fileInput.value = '';
+        return false;
+    }
+}
 </script>
 
 <script>

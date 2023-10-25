@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
 
     // Prepare and execute the stored procedure
-    $query = "CALL UPDATE_SYSTEM_USER(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    $query = "CALL UPDATE_MEMBER_PROFILE_W2(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     $stmt = mysqli_prepare($connection, $query);
     mysqli_stmt_bind_param($stmt, "isssssssssssssssssss", 
     $user_id,
