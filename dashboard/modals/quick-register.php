@@ -66,7 +66,7 @@
                         <label for="assignments" class="form-label">Memebership Type</label>
                         <select class="form-control" data-plugin="choices" name="input_membership_type"
                             id="input_membership_type" required>
-                            <option value="">Select Memebership</option>
+                            <option value="">Select Membership</option>
                             <option value="BRANCH MEMBER">Branch Member</option>
           <option value="DIRECT MEMBER">Direct Member</option>
             <option value="STALWART COUNCILLOR">Stalwart Councillor</option>
