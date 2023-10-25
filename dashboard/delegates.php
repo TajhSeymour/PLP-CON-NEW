@@ -486,7 +486,7 @@
             }
 
             if (badgeClass !== "") {
-                var priorityColumnIndex = $("#all-delegates thead th").filter(function () {
+                var priorityColumnIndex = $("#checked-in-delegates thead th").filter(function () {
                     return $(this).text() === "PRIORITY";
                 }).index();
 
@@ -502,7 +502,7 @@
         The columns are defined using the "columns" option, and each column is specified with its
         corresponding data property. Some columns are set to be visible or hidden using the "visible"
         option. */
-        var table = $('#all-delegates').DataTable({
+        var table = $('#checked-in-delegates').DataTable({
             "columns": [{
                 "data": "plp_id"
             },
@@ -572,7 +572,7 @@
                 addBadge(nRow, aData);
             },
             "ajax": {
-                "url": "/api/dashboard/fetch_data/get_all_registrants_tb_not_checked_in.php",
+                "url": "/api/dashboard/fetch_data/get_all_registrants_tb_checked_in.php",
                 "type": "GET",
                 "dataType": 'json',
                 "error": function(jqXHR, textStatus, errorThrown) {
