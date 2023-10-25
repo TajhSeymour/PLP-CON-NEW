@@ -16,7 +16,6 @@ function generate_random_id()
     return $timestampComponent . $randomComponent;
 }
 
-
 // Function to validate and sanitize input data
 function validate_input($data)
 {
