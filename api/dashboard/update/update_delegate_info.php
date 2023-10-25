@@ -1,7 +1,7 @@
 <?php
 // Add appropriate error handling and database connection here
 require_once(dirname(__DIR__, 3) . '/database/dbconnection.php');
-
+require_once(dirname(__DIR__, 3) . '/helpers/upload_helper.php');
 // Check if the form was submitted
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Validate "input_vote_del_badge_question" value
-        $badge = "1"; // Sanitize the input
+        //$badge = "1"; // Sanitize the input
 
         if ($badge === "1") {
             if (isset($_FILES['oc_badge_photo']) && is_uploaded_file($_FILES['oc_badge_photo']['tmp_name'])) {
