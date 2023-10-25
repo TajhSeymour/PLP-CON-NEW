@@ -48,7 +48,7 @@
                     <div class="col-lg-6">
                         <div>
                             <label for="nib_number" class="form-label">NIB Number: *</label>
-                            <input required type="number" id="input_nib" class="form-control" name="input_nib" placeholder="NIB Number" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            <input  type="number" id="input_nib" class="form-control" name="input_nib" placeholder="NIB Number" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                         </div>
                     </div>
 
