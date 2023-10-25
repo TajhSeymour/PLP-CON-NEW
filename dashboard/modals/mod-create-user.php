@@ -56,9 +56,7 @@
                         <label for="assignments" class="form-label">System User Roles</label>
                         <select class="form-control" data-plugin="choices" name="input_system_assignment" id="input_system_assignment" required>
                             <option value="">Select Access Roles</option>
-                            <select class="form-control" data-plugin="choices" name="input_priority" id="input_priority" required>
-                                <option value="">Select Priority</option>
-                                <option value="Officer">Officer</option>
+                               <option value="Officer">Officer</option>
                                 <option value="Supervisor">Supervisor</option>
                                 <option value="System Administrator">System Administrator</option>
                             </select>
