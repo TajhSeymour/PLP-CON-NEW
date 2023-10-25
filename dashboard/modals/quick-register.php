@@ -322,7 +322,7 @@
 
 
 <script>
-  registrationForm.addEventListener('submit', async function (event) {
+ registrationForm.addEventListener('submit', async function (event) {
     event.preventDefault();
 
     try {
@@ -349,24 +349,20 @@
                 closeModal();
                 window.location.reload();
             });
-        } else if (data.status === 'error') {
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: data.message,
-                confirmButtonColor: '#dc3545'
-            });
+        } else {
+            // This will handle if data.status is 'error' or any other unexpected value.
+            throw new Error(data.message || 'An unexpected error occurred');
         }
     } catch (error) {
         console.error('Error:', error);
         Swal.fire({
             icon: 'error',
             title: 'Error',
-            // Use error.message here instead of data.message
             text: error.message || 'An unexpected error occurred',
             confirmButtonColor: '#dc3545'
         });
     }
 });
+
 
 </script>
