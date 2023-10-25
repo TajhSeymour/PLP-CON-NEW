@@ -60,7 +60,7 @@
                             // Function to fetch items from the API and populate the select box
                             function fetchItems()
                             {
-                                $apiUrl = 'https://oasministersregister.gov.bs/api/dashboard/fetch_data/get_system_roles.php';
+                                $apiUrl = '/api/dashboard/fetch_data/get_system_roles.php';
                                 $response = file_get_contents($apiUrl);
                                 $items = json_decode($response);
 
