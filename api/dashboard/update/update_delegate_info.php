@@ -34,18 +34,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if ($badge === "1") {
             if (isset($_FILES['oc_badge_photo']) && is_uploaded_file($_FILES['oc_badge_photo']['tmp_name'])) {
-                // Generate a unique badge file name using $random_id
-                $badgeFileName = pathinfo($user_id, PATHINFO_FILENAME) . '.jpg';
-
-
-
+                
+                // Generate a unique badge file name using $user_id
+                $badgeFileName = $user_id . '.jpg';
+                
+                // Rename the uploaded file's name in the $_FILES superglobal
+                $_FILES['oc_badge_photo']['name'] = $badgeFileName;
+                
                 // Perform upload
                 $badge_photo_result = upload_photo(dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge', $badgeFileName, $_FILES["oc_badge_photo"]);
-
+        
                 if ($badge_photo_result['error']) {
                     // Set Content-Type to application/json
                     header('Content-Type: application/json');
-
+        
                     // Return error response
                     echo json_encode(['status' => 'error', 'message' => 'Failed to upload badge photo. ' . $badge_photo_result['msg']]);
                     exit();
@@ -56,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 exit();
             }
         }
+        
     }    
 
 
