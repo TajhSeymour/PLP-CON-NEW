@@ -82,21 +82,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
             // Validate "input_vote_del_badge_question" value
             $badge_reprint = strip_tags($_POST["input_vote_del_badge_question"]); // Sanitize the input
 
             if ($badge_reprint === "1") {
-                if (isset($_FILES['input_badge_photo']) && is_uploaded_file($_FILES['input_badge_photo']['tmp_name'])) {
-                    // Generate a unique badge file name using $random_id
-                    $badgeFileName = $random_id;
 
+                if (isset($_FILES['input_badge_photo']) && is_uploaded_file($_FILES['input_badge_photo']['tmp_name'])) {
+                
+                    // Use $user_id directly for the badge file name
+                    $badgeFileName = $user_id;
+            
                     // Perform upload
                     $badge_photo_result = upload_photo(dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge', $badgeFileName, $_FILES["input_badge_photo"]);
-
-                    if ($badge_photo_result['error']) {
+            
+                    if (!$badge_photo_result['error']) {
+                        // Rename the file to ensure it has a .jpg extension
+                        $uploadedExtension = pathinfo($_FILES['input_badge_photo']['name'], PATHINFO_EXTENSION);
+                        $originalPath = dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge/' . $badgeFileName . '.' . $uploadedExtension;
+            
+                        if (file_exists($originalPath) && strtolower($uploadedExtension) !== 'jpg') {
+                            rename($originalPath, dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge/' . $badgeFileName . '.jpg');
+                        }
+                    } else {
                         // Set Content-Type to application/json
                         header('Content-Type: application/json');
-
+            
                         // Return error response
                         echo json_encode(['status' => 'error', 'message' => 'Failed to upload badge photo. ' . $badge_photo_result['msg']]);
                         exit();
@@ -108,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             }
         }
-
+            
 
         $ground_transportation_request = validate_input($_POST["input_ground_transportation_question"]);
 
