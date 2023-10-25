@@ -210,7 +210,7 @@
 </div>
 <!-- end main content-->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSecurity" aria-labelledby="offcanvasSecurityLabel">
-    <?php include 'offcanvas/oc-security-checks.php'; ?>
+    <?php include 'offcanvas/oc-payment-checks.php'; ?>
 </div>
 </div>
 <!-- END layout-wrapper -->
@@ -311,7 +311,7 @@
                 addBadge(nRow, aData);
             },
             "ajax": {
-                "url": "/api/dashboard/fetch_data/get_all_registrants_tb_not_checked_in.php",
+                "url": "/api/dashboard/fetch_data/get_registrants_tb_pending_payment.php",
                 "type": "GET",
                 "dataType": 'json',
                 "error": function(jqXHR, textStatus, errorThrown) {
@@ -533,7 +533,7 @@
                 addBadge(nRow, aData);
             },
             "ajax": {
-                "url": "/api/dashboard/fetch_data/get_all_registrants_tb_checked_in.php",
+                "url": "/api/dashboard/fetch_data/get_registrants_tb_paid.php",
                 "type": "GET",
                 "dataType": 'json',
                 "error": function(jqXHR, textStatus, errorThrown) {
