@@ -56,22 +56,12 @@
                         <label for="assignments" class="form-label">System User Roles</label>
                         <select class="form-control" data-plugin="choices" name="input_system_assignment" id="input_system_assignment" required>
                             <option value="">Select Access Roles</option>
-                            <?php
-                            // Function to fetch items from the API and populate the select box
-                            function fetchItems()
-                            {
-                                $apiUrl = '/api/dashboard/fetch_data/get_system_roles.php';
-                                $response = file_get_contents($apiUrl);
-                                $items = json_decode($response);
-
-                                if (!empty($items)) {
-                                    foreach ($items as $item) {
-                                        echo '<option value="' . htmlspecialchars($item) . '">' . htmlspecialchars($item) . '</option>';
-                                    }
-                                }
-                            }
-                            fetchItems();
-                            ?>
+                            <select class="form-control" data-plugin="choices" name="input_priority" id="input_priority" required>
+                                <option value="">Select Priority</option>
+                                <option value="Officer">Officer</option>
+                                <option value="Supervisor">Supervisor</option>
+                                <option value="System Administrator">System Administrator</option>
+                            </select>
                         </select>
                     </div>
 
