@@ -42,10 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $badge_photo_result = upload_photo(dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge', $badgeFileName, $_FILES["oc_badge_photo"]);
         
                 if (!$badge_photo_result['error']) {
-                    // Check for double extension and rename if necessary
-                    $doubleExtensionPath = dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge/' . $badgeFileName . '.jpg.jpg';
-                    if (file_exists($doubleExtensionPath)) {
-                        rename($doubleExtensionPath, dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge/' . $badgeFileName . '.jpg');
+                    // Rename the file to ensure it has a .jpg extension
+                    $uploadedExtension = pathinfo($_FILES['oc_badge_photo']['name'], PATHINFO_EXTENSION);
+                    $originalPath = dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge/' . $badgeFileName . '.' . $uploadedExtension;
+        
+                    if (file_exists($originalPath) && strtolower($uploadedExtension) !== 'jpg') {
+                        rename($originalPath, dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge/' . $badgeFileName . '.jpg');
                     }
                 } else {
                     // Set Content-Type to application/json
