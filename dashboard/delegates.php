@@ -471,13 +471,8 @@
     });
 </script>
 
-
-
-
-
-
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         // Function to add the badge and gender icon based on the "Priority" and "Gender" column values
         function addBadge(row, data) {
             var priority = data.priority.toLowerCase(); // Assuming "priority" is the property representing the "Priority" column in the dataset
@@ -491,19 +486,23 @@
             }
 
             if (badgeClass !== "") {
-                $('td:eq(5)', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
+                var priorityColumnIndex = $("#all-delegates thead th").filter(function () {
+                    return $(this).text() === "PRIORITY";
+                }).index();
+
+                $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
             }
 
             var gender = data.gender.toLowerCase(); // Assuming "gender" is available in the array as a property
             var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
-            $('td:eq(1)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+            $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
         }
         // Initialize DataTable
         /* The code below is using the DataTables plugin in jQuery to create a table with specific columns.
         The columns are defined using the "columns" option, and each column is specified with its
         corresponding data property. Some columns are set to be visible or hidden using the "visible"
         option. */
-        var table = $('#checked-in-delegates').DataTable({
+        var table = $('#all-delegates').DataTable({
             "columns": [{
                 "data": "plp_id"
             },
@@ -538,7 +537,7 @@
                 "data": "membership_type"
             },
             {
-                "data": "email_address", visible: false
+                "data": "email_address", visible: true
             },
             {
                 "data": "mobile_number", visible: false
@@ -564,16 +563,21 @@
             {
                 "data": "date"
             }
-            ],
+      
 
+            ],
             /* This is a JavaScript function that is being used in a DataTables plugin for PHP. */
-            "fnCreatedRow": function (nRow, aData, iDataIndex) {
+            "fnCreatedRow": function(nRow, aData, iDataIndex) {
                 $(nRow).attr('id', aData.id); // Assuming "id" is the property representing the "ID" column in the dataset
                 addBadge(nRow, aData);
             },
             "ajax": {
-                "url": "/api/dashboard/fetch_data/get_all_registrants_tb_checked_in.php",
-                "type": "GET"
+                "url": "/api/dashboard/fetch_data/get_all_registrants_tb_not_checked_in.php",
+                "type": "GET",
+                "dataType": 'json',
+                "error": function(jqXHR, textStatus, errorThrown) {
+                    console.error('Ajax request failed:', textStatus, errorThrown);
+                },
             },
             "dom": 'lBfrtip',
             "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
@@ -592,9 +596,9 @@
             "searchDelay": 550,
         });
 
-        const offcanvas = new bootstrap.Offcanvas(document.getElementById("offcanvasSecurityLabel"));
+        const offcanvas = new bootstrap.Offcanvas(document.getElementById("offcanvasSecurity"));
 
-        $('#checked-in-delegates tbody').on('click', 'tr', function () {
+        $('#checked-in-delegates tbody').on('click', 'tr', function() {
             console.log("Row Clicked!"); // Add this line for testing
             const rowData = table.row(this).data();
 
@@ -623,13 +627,86 @@
             const emergency_contact_relationship = rowData.emergency_contact_relationship;
         const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
         
+            const displayedIdElement = document.getElementById("displayedId");
+            displayedIdElement.textContent = id
 
-       
+            const displayedIdElement2 = document.getElementById("input_user_id");
+            displayedIdElement.value = id;
 
-           // offcanvas.show(); // Show the offcanvas
+
+            const displayedNameElement = document.getElementById("offcanvasSecurityLabel");
+            displayedNameElement.textContent = first_name + " " + last_name;
+
+           //THE INPUT TEXT FORM
+
+           const displayedFirstNameElement = document.getElementById("oc_first_name");
+            displayedFirstNameElement.value = first_name;
+
+            const displayedMiddleNameElement = document.getElementById("oc_middle_name");
+            displayedMiddleNameElement.value = middle_name;
+
+            const displayedLastNameElement = document.getElementById("oc_last_name");
+            displayedLastNameElement.value = last_name;
+
+              const displayedDOBElement = document.getElementById("oc_dob");
+           displayedDOBElement.value = dob;
+
+            const displayedEmailElement = document.getElementById("oc_email_address");
+            displayedEmailElement.value = email;
+
+            const displayedPriorityElement = document.getElementById("oc_priority");
+            displayedPriorityElement.value = priority;
+
+           const displayedGenderElement = document.getElementById("oc_gender");
+            displayedGenderElement.value = gender;
+
+             const displayedNIBElement = document.getElementById("oc_nib_number");
+             displayedNIBElement.value = nib_number;
+
+           const displayedConstituencyElement = document.getElementById("oc_constituency");
+            displayedConstituencyElement.value = constituency;
+
+            const displayedAffiliatedBranchElement = document.getElementById("oc_affiliated_branch");
+             displayedAffiliatedBranchElement.value = affiliated_branch;
+
+              const displayedMembershipTypeElement = document.getElementById("oc_membership_type");
+             displayedMembershipTypeElement.value = membership_type;
+
+         const displayedDateElement = document.getElementById("oc_date");
+         displayedDateElement.value = date;
+
+       const displayedMobileNumberElement = document.getElementById("oc_mobile_number");
+         displayedMobileNumberElement.value = mobile_number;
+
+           const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
+            displayedTelephoneNumberElement.value = telephone_number;
+
+          const displayedStreetAddressElement = document.getElementById("oc_street_address");
+           displayedStreetAddressElement.value = street_address;
+
+        const displayedHouseNumberElement = document.getElementById("oc_house_number");
+            displayedHouseNumberElement.value = house_number;
+
+         const displayedEmergencyContactNameElement = document.getElementById("oc_emergency_contact_name");
+         displayedEmergencyContactNameElement.value = emergency_contact_name;
+
+           const displayedEmergencyContactRelationshipElement = document.getElementById("oc_emergency_contact_relationship");
+           displayedEmergencyContactRelationshipElement.value = emergency_contact_relationship;
+
+            const displayedEmergencyContactTelephoneNumberElement = document.getElementById("oc_emergency_contact_telephone_number");
+           displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
+
+           
+
+
+
+            offcanvas.show(); // Show the offcanvas
         });
     });
 </script>
+
+
+
 
 
 <script>
