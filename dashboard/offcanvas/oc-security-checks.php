@@ -15,7 +15,7 @@
   <div class="img-container-photo">
     <!-- The image will be inserted here by the JavaScript code -->
   </div>
-  <form id="update-staff-info-form" class="tablelist-form" autocomplete="off">
+  <form id="update-staff-info-form" enctype="multipart/form-data"  class="tablelist-form" autocomplete="off">
     <div class="modal-body">
       <div class="row g-3">
        
