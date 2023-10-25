@@ -140,8 +140,8 @@
                                                     <th>FIRST NAME</th>
                                                     <th>MIDDLE NAME</th>
                                                     <th>LAST NAME</th>
+                                                    <th>GENDER</th>
                                                     <th>DOB</th>
-                                                    
                                                     <th>NIB NUMBER</th>
                                                     <th>RECEIPT NUMBER</th>
                                                     <th>METHOD</th>
@@ -161,7 +161,7 @@
                                                     <th>FIRST NAME</th>
                                                     <th>MIDDLE NAME</th>
                                                     <th>LAST NAME</th>
-                                                    
+                                                    <th>GENDER</th>
                                                     <th>DOB</th>
                                                     <th>NIB NUMBER</th>
                                                     <th>RECEIPT NUMBER</th>
@@ -291,7 +291,7 @@
                 "data": "branch", visible: true
             },
             {
-                "data": "badge_reprint_status", visible: true
+                "data": "badge_reprint_status", visible: false
             },
             {
                 "data": "price", visible: true
@@ -513,7 +513,7 @@
                 "data": "branch", visible: true
             },
             {
-                "data": "badge_reprint_status", visible: true
+                "data": "badge_reprint_status", visible: false
             },
             {
                 "data": "price", visible: true
