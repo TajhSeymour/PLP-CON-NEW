@@ -83,7 +83,7 @@
         <div class="mb-3">
           <label for="membership_type" class="form-label">Membership Type: *</label>
           <select class="form-control" data-plugin="choices" name="oc_membership_type" id="oc_membership_type" required>
-          <option value="">Select Memebership</option>
+          <option value="">Select Membership</option>
           <option value="BRANCH MEMBER">Branch Member</option>
           <option value="DIRECT MEMBER">Direct Member</option>
             <option value="STALWART COUNCILLOR">Stalwart Councillor</option>
