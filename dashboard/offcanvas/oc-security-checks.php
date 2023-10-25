@@ -261,7 +261,7 @@
 
         <div class="mb-3">
         <label for="imageUpload" class="form-label">Badge ID Photo (JPG Only):</label>
-                        <input type="file" class="form-control" id="oc_badge_photo" disable
+                        <input type="file" class="form-control" id="oc_badge_photo" disabled
                             name="oc_badge_photo" accept="image/jpg" onchange="validateFile()" />
                         <small id="fileHelp" class="form-text text-muted">Please upload a .jpg file.</small>
 
