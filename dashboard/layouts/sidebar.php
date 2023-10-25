@@ -5,7 +5,7 @@
         <!-- Dark Logo-->
         <a href="index.php" class="logo logo-dark">
             <span class="logo-sm">
-                <img src="assets/images/logos/plp-hands-gold.png" alt="" height="75">
+                <img src="assets/images/logos/plp-hands-gold.png" alt="" height="50">
             </span>
             <span class="logo-lg">
                 <img src="assets/images/logos/plp-hands-gold.png" alt="" height="175">
@@ -14,7 +14,7 @@
         <!-- Light Logo-->
         <a href="index.php" class="logo logo-light">
             <span class="logo-sm">
-                <img src="assets/images/logos/plp-hands-gold.png" alt="" height="75">
+                <img src="assets/images/logos/plp-hands-gold.png" alt="" height="50">
             </span>
             <span class="logo-lg">
                 <img src="assets/images/logos/plp-hands-gold.png" alt="" height="175">
@@ -81,7 +81,7 @@
                 <?php if (isAllowedUser()) : ?>
                     <li class="nav-item">
                         <a class="nav-link menu-link" href="security-checks" data-bs-toggle="" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-                            <i data-feather="shield" class="icon-dual"></i> <span><?= $lang['t-security'] ?></span>
+                            <i data-feather="dollar-sign" class="icon-dual"></i> <span><?= $lang['t-security'] ?></span>
                         </a>
                     </li>
                 <?php endif; ?>

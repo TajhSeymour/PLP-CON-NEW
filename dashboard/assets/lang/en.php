@@ -7,7 +7,7 @@
     $lang["t-delegates"]="PLP Delegates";
     $lang["t-new"]="New";
     $lang["t-oas-checks"]="OAS Checks";
-    $lang["t-security"]="Security Checks";
+    $lang["t-security"]="Payments";
     $lang["t-tourist-info"]="Tourist Information";
     $lang["t-tourist-travel"]="Tourist Travel Information";
     $lang["t-tourist-special-food-needs"]="Tourist Special Food Needs";
