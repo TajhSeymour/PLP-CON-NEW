@@ -354,7 +354,7 @@
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: data.message,
+                    text: 'Failed to add the record to the database. Please ensure the NIB Number is not already registered or reach out to the system administrator for assistance.',
                     confirmButtonColor: '#dc3545'
                 });
             }
@@ -363,7 +363,7 @@
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
-                text: data.message,
+                text: 'Failed to add the record to the database. Please ensure the NIB Number is not already registered or reach out to the system administrator for assistance.',
                 confirmButtonColor: '#dc3545'
             });
         }
