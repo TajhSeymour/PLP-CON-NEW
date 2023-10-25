@@ -28,28 +28,33 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $emergency_contact_telephone_number = isset($_POST['oc_emergency_contact_telephone_number']) ? strtoupper($_POST['oc_emergency_contact_telephone_number']) : null;
     
 
-    if ($badge === "1") {
-        if (isset($_FILES['oc_badge_photo']) && is_uploaded_file($_FILES['oc_badge_photo']['tmp_name'])) {
-            // Generate a unique badge file name using $random_id
-            $badgeFileName = $user_id;
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        // Validate "input_vote_del_badge_question" value
+        $badge = "1"; // Sanitize the input
 
-            // Perform upload
-            $badge_photo_result = upload_photo(dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge', $badgeFileName, $_FILES["input_new_del_badge_photo"]);
+        if ($badge === "1") {
+            if (isset($_FILES['oc_badge_photo']) && is_uploaded_file($_FILES['oc_badge_photo']['tmp_name'])) {
+                // Generate a unique badge file name using $random_id
+                $badgeFileName = $random_id;
 
-            if ($badge_photo_result['error']) {
-                // Set Content-Type to application/json
+                // Perform upload
+                $badge_photo_result = upload_photo(dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge', $badgeFileName, $_FILES["input_new_del_badge_photo"]);
+
+                if ($badge_photo_result['error']) {
+                    // Set Content-Type to application/json
+                    header('Content-Type: application/json');
+
+                    // Return error response
+                    echo json_encode(['status' => 'error', 'message' => 'Failed to upload badge photo. ' . $badge_photo_result['msg']]);
+                    exit();
+                }
+            } else {
                 header('Content-Type: application/json');
-
-                // Return error response
-                echo json_encode(['status' => 'error', 'message' => 'Failed to upload badge photo. ' . $badge_photo_result['msg']]);
+                echo json_encode(['status' => 'error', 'message' => 'No valid file provided']);
                 exit();
             }
-        } else {
-            header('Content-Type: application/json');
-            echo json_encode(['status' => 'error', 'message' => 'No valid file provided']);
-            exit();
         }
-    }
+    }    
 
 
 
