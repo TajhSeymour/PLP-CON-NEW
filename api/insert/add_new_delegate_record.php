@@ -91,8 +91,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 if (isset($_FILES['input_new_del_badge_photo']) && is_uploaded_file($_FILES['input_new_del_badge_photo']['tmp_name'])) {
                 
-                    // Use $user_id directly for the badge file name
-                    $badgeFileName = $user_id;
+                    // Use $random_id directly for the badge file name
+                    $badgeFileName = $random_id;
             
                     // Perform upload
                     $badge_photo_result = upload_photo(dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge', $badgeFileName, $_FILES["input_new_del_badge_photo"]);

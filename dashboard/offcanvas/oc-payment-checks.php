@@ -246,10 +246,9 @@
 
         <div class="mb-3">
           <label for="oc_mobile" class="form-label">Emergency Telephone Number: </label>
-          <input type="text" class="form-control" id="oc_emergency_contact_telephone_number" name="oc_emergency_contact_telephone_number"
-            placeholder="Enter Emergency Telephone Number"
-            oninput="formatPhoneNumber('oc_emergency_contact_telephone_number'); validatePhoneNumber('oc_emergency_contact_telephone_number')">
-          <div id="oc_emergency_contact_telephone_number-validation"></div>
+          <textarea class="form-control" id="exampleFormControlTextarea5" rows="3" spellcheck="false" style="height: 227px;"></textarea>
+        
+        
         </div>
 
 
