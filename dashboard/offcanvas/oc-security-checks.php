@@ -414,7 +414,7 @@ function callUpdateUserAPI(formData) {
     // Make the API call to delete the officer's account using DELETE method
     // Implement your API call here, using fetch, Axios, or any other method you prefer
     // Example using fetch:
-    fetch("/api/dashboard/update/local_staff_security_check_denied.php", {
+    fetch("/api/dashboard/update/update_delegate_info_duplicate.php", {
       method: "POST", // Use the appropriate method for your API
       body: JSON.stringify({
         userID
@@ -428,7 +428,7 @@ function callUpdateUserAPI(formData) {
           // If the response is successful (status code 2xx), show success message
           Swal.fire({
             icon: "success",
-            title: "Registrant Account Denied",
+            title: "Duplicate Registrant Account Denied",
             text: "This registrant has been successfully denied!",
           }).then(() => {
             // Reload the page after the success message is closed
@@ -454,42 +454,7 @@ function callUpdateUserAPI(formData) {
 
 <!-- Modal HTML code remains the same -->
 
-<script>
-  (document.getElementById("ajax-alert"))
-  document.getElementById("add-notes-btn").addEventListener("click", function () {
-    Swal.fire({
-      title: 'Submit email to run ajax request',
-      input: 'email',
-      showCancelButton: true,
-      confirmButtonText: 'Submit',
-      showLoaderOnConfirm: true,
-      confirmButtonClass: 'btn btn-primary w-xs me-2',
-      cancelButtonClass: 'btn btn-danger w-xs',
-      buttonsStyling: false,
-      showCloseButton: true,
-      preConfirm: function (email) {
-        return new Promise(function (resolve, reject) {
-          setTimeout(function () {
-            if (email === 'taken@example.com') {
-              reject('This email is already taken.')
-            } else {
-              resolve()
-            }
-          }, 2000)
-        })
-      },
-      allowOutsideClick: false
-    }).then(function (email) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Ajax request finished!',
-        confirmButtonClass: 'btn btn-primary w-xs',
-        buttonsStyling: false,
-        html: 'Submitted email: ' + email
-      })
-    })
-  });
-</script>
+
 
 <!-- CSS code remains the same -->
 

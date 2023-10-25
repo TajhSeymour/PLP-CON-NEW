@@ -25,28 +25,29 @@
                     <div class="col-lg-6">
                         <div>
                             <label for="first_name" class="form-label">First Name: *</label>
-                            <input type="text" name="input_new_del_first_name" id="input_new_del_first_name" class="form-control"
-                                placeholder="First Name" required />
+                            <input type="text" name="input_new_del_first_name" id="input_new_del_first_name"
+                                class="form-control" placeholder="First Name" required />
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div>
                             <label for="middle_name" class="form-label">Middle Name:</label>
-                            <input type="text" name="input_new_del_middle_name" id="input_new_del_middle_name" class="form-control"
-                                placeholder="Middle Name" />
+                            <input type="text" name="input_new_del_middle_name" id="input_new_del_middle_name"
+                                class="form-control" placeholder="Middle Name" />
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div>
                             <label for="last_name" class="form-label">Last Name: *</label>
-                            <input type="text" name="input_new_del_last_name" id="input_new_del_last_name" class="form-control"
-                                placeholder="Last Name" required />
+                            <input type="text" name="input_new_del_last_name" id="input_new_del_last_name"
+                                class="form-control" placeholder="Last Name" required />
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <label for="gender" class="form-label">Gender: *</label>
-                        <select required class="form-control" data-plugin="choices" name="input_new_del_gender" id="input_new_del_gender">
+                        <select required class="form-control" data-plugin="choices" name="input_new_del_gender"
+                            id="input_new_del_gender">
                             <option value="">Gender</option>
                             <option value="MALE">Male</option>
                             <option value="FEMALE">Female</option>
@@ -63,8 +64,8 @@
 
                     <div class="col-lg-6">
                         <label for="assignments" class="form-label">Memebership Type</label>
-                        <select class="form-control" data-plugin="choices" name="input_membership_type" id="input_membership_type"
-                            required>
+                        <select class="form-control" data-plugin="choices" name="input_membership_type"
+                            id="input_membership_type" required>
                             <option value="">Select Memebership</option>
                             <option value="DIRECT MEMEBER">Direct Memeber</option>
                             <option value="STALWART COUNCILLOR">Stalwart Councillor</option>
@@ -73,8 +74,9 @@
                     </div>
                     <div class="col-lg-6">
                         <label for="dob" class="form-label">Date of Birth</label>
-                        <input type="text" id="input_new_del_dob" name="input_new_del_dob" class="form-control" data-provider="flatpickr"
-                            data-date-format="Y-m-d" placeholder="Please enter your date of birth" required />
+                        <input type="text" id="input_new_del_dob" name="input_new_del_dob" class="form-control"
+                            data-provider="flatpickr" data-date-format="Y-m-d"
+                            placeholder="Please enter your date of birth" required />
 
                     </div>
 
@@ -182,8 +184,8 @@
                     <div class="col-lg-6">
                         <div>
                             <label class="form-label" for="input_new_del_email">Email Address</label>
-                            <input type="email" class="form-control" placeholder="Enter Email Address" id="input_new_del_email" name="input_new_del_email"
-                                >
+                            <input type="email" class="form-control" placeholder="Enter Email Address"
+                                id="input_new_del_email" name="input_new_del_email">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -207,8 +209,8 @@
                     <div class="col-lg-6">
                         <div>
                             <label class="form-label" for="input_del_emergency_name">Emergency Contact Name</label>
-                            <input type="text" class="form-control" id="input_new_del_emergency_name"  placeholder="Enter Full Name"
-                                name="input_new_del_emergency_name">
+                            <input type="text" class="form-control" id="input_new_del_emergency_name"
+                                placeholder="Enter Full Name" name="input_new_del_emergency_name">
                         </div>
                     </div>
 
@@ -230,39 +232,39 @@
                     </div>
 
                     <div class="col-lg-6">
-                    <label class="form-label" for="input_del_emergency_telephone">Emergency Telephone</label>
-                            <input class="form-control" type="text" id="input_new_del_emergency_telephone"
-                                name="input_new_del_emergency_telephone" placeholder="Enter Emergency Telephone Number"
-                                oninput="formatPhoneNumber('input_new_del_emergency_telephone'); validatePhoneNumber('input_new_del_emergency_telephone')">
-                            <div id="input_new_del_emergency_telephone-validation"></div>
+                        <label class="form-label" for="input_del_emergency_telephone">Emergency Telephone</label>
+                        <input class="form-control" type="text" id="input_new_del_emergency_telephone"
+                            name="input_new_del_emergency_telephone" placeholder="Enter Emergency Telephone Number"
+                            oninput="formatPhoneNumber('input_new_del_emergency_telephone'); validatePhoneNumber('input_new_del_emergency_telephone')">
+                        <div id="input_new_del_emergency_telephone-validation"></div>
                     </div>
 
-                
+
                     <div class="col-lg-6">
-                    <label class="form-label" for="travel_question">House/Property Number</label>
-                    <input type="number" class="form-control" id="input_new_del_house_number"  placeholder=""
-                                name="input_new_del_house_number">
+                        <label class="form-label" for="travel_question">House/Property Number</label>
+                        <input type="number" class="form-control" id="input_new_del_house_number" placeholder=""
+                            name="input_new_del_house_number">
                     </div>
                     <div class="col-lg-6">
-                    <label class="form-label" for="travel_question">Street Address *</label>
-                    <input type="text" class="form-control" id="input_new_del_street_address"  placeholder="Enter Street Address"
-                                name="input_new_del_street_address">
+                        <label class="form-label" for="travel_question">Street Address *</label>
+                        <input type="text" class="form-control" id="input_new_del_street_address"
+                            placeholder="Enter Street Address" name="input_new_del_street_address">
                     </div>
 
 
                 </div>
-<br>
-<br>
+                <br>
+                <br>
                 <div class="row g-3">
                     <div class="col-lg-6">
                         <label for="imageUpload" class="form-label">Badge ID Photo (JPG Only):</label>
-                        <input type="file" class="form-control" id="input_new_del_badge_photo" name="input_new_del_badge_photo"
-                            accept=".jpg" />
-                        <small id="fileHelp" class="form-text text-muted">Please upload a .jpg
-                            file.</small>
+                        <input type="file" class="form-control" id="input_new_del_badge_photo"
+                            name="input_new_del_badge_photo" accept="image/jpg" />
+                        <small id="fileHelp" class="form-text text-muted">Please upload a .jpg file.</small>
+
                     </div>
 
-               
+
                 </div>
             </div>
             <div class="modal-footer">
