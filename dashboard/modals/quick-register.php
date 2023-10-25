@@ -259,7 +259,7 @@
                     <div class="col-lg-6">
                         <label for="imageUpload" class="form-label">Badge ID Photo (JPG Only):</label>
                         <input type="file" class="form-control" id="input_new_del_badge_photo"
-                            name="input_new_del_badge_photo" accept="image/jpg" onchange="validateFile()" />
+                            name="input_new_del_badge_photo" accept="image/jpg" onchange="ok_validateFile()" />
                         <small id="fileHelp" class="form-text text-muted">Please upload a .jpg file.</small>
 
                     </div>
