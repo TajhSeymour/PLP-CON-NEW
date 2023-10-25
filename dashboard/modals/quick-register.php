@@ -57,7 +57,7 @@
                     <div class="col-lg-6">
                         <div>
                             <label for="last_name" class="form-label">NIB Number: *</label>
-                            <input type="number" name="input_nib_number" id="input_nib_number" class="form-control"
+                            <input type="number" name="input_new_del_nib_number" id="input_new_del_nib_number" class="form-control"
                                 placeholder="NIB Number" required />
                         </div>
                     </div>
