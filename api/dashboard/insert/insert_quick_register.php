@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $emergency_telephone = isset($_POST['input_new_del_emergency_telephone']) ? strtoupper($_POST['input_new_del_emergency_telephone']) : null; 
     $house_number = isset($_POST['input_new_del_house_number']) ? strtoupper($_POST['input_new_del_house_number']) : null;  
     $street_name = isset($_POST['input_new_del_street_address']) ? strtoupper($_POST['input_new_del_street_address']) : null;
-    $priority =  isset($_POST['input_priority']) ? strtoupper($_POST['input_priority']) : null;
+    $priority =  isset($_POST['input_new_del_priority']) ? strtoupper($_POST['input_new_del_priority']) : null;
     // Generate a 10-digit random ID number
     $random_id = generate_random_id();
 

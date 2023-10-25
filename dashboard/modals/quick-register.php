@@ -12,7 +12,7 @@
                     <div class="row g-3">
                         <div class="col-lg-6">
 
-                            <select class="form-control" data-plugin="choices" name="input_priority" id="input_priority"
+                            <select class="form-control" data-plugin="choices" name="input_new_del_priority" id="input_new_del_priority"
                                 required>
                                 <option value="Normal">Select Priority</option>
                                 <option value="high">High</option>
