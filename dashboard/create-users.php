@@ -159,7 +159,7 @@
                 },
             ],
             "ajax": {
-                "url": "api/dashboard/fetch_data/get_staff_tb_all.php",
+                "url": "/api/dashboard/fetch_data/get_staff_tb_all.php",
                 "type": "post"
             },
             "dom": 'lBfrtip',
