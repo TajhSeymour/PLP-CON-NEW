@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($badge === "1") {
             if (isset($_FILES['oc_badge_photo']) && is_uploaded_file($_FILES['oc_badge_photo']['tmp_name'])) {
                 // Generate a unique badge file name using $random_id
-                $badgeFileName = $user_id;
+                $badgeFileName = $user_id . '.jpg';
 
                 // Perform upload
                 $badge_photo_result = upload_photo(dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge', $badgeFileName, $_FILES["oc_badge_photo"]);
