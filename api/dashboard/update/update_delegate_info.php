@@ -38,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $badgeFileName = pathinfo($user_id, PATHINFO_FILENAME) . '.jpg';
 
 
+
                 // Perform upload
                 $badge_photo_result = upload_photo(dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge', $badgeFileName, $_FILES["oc_badge_photo"]);
 
