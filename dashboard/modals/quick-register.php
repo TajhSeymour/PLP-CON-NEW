@@ -259,7 +259,7 @@
                     <div class="col-lg-6">
                         <label for="imageUpload" class="form-label">Badge ID Photo (JPG Only):</label>
                         <input type="file" class="form-control" id="input_new_del_badge_photo"
-                            name="input_new_del_badge_photo" accept="image/jpg" />
+                            name="input_new_del_badge_photo" accept="image/jpg" onchange="validateFile()" />/>
                         <small id="fileHelp" class="form-text text-muted">Please upload a .jpg file.</small>
 
                     </div>
@@ -301,6 +301,20 @@
             validationMessage.textContent = 'Phone number is not valid. Please enter it in the format (XXX)XXX-XXXX.';
         }
     }
+
+    function validateFile() {
+    const fileInput = document.getElementById('input_new_del_badge_photo');
+    const filePath = fileInput.value;
+    
+    // Check file extension
+    const allowedExtensions = /(\.jpg)$/i;
+    if (!allowedExtensions.exec(filePath)) {
+        alert('Please upload a .jpg file only.');
+        fileInput.value = '';
+        return false;
+    }
+}
+
 </script>
 
 
