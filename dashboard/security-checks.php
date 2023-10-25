@@ -294,7 +294,7 @@
                 "data": "badge_reprint_status", visible: false
             },
             {
-                "data": "price", visible: true
+                "data": "price", visible: false
             },
             {
                 "data": "notes", visible: true
@@ -516,7 +516,7 @@
                 "data": "badge_reprint_status", visible: false
             },
             {
-                "data": "price", visible: true
+                "data": "price", visible: false
             },
             {
                 "data": "notes", visible: true
