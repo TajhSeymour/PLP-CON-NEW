@@ -320,49 +320,52 @@
 </script>
 
 
-
 <script>
- registrationForm.addEventListener('submit', async function (event) {
-    event.preventDefault();
+    const registrationForm = document.getElementById('registration-form');
 
-    try {
-        const formData = new FormData(registrationForm);
-        const response = await fetch('https://plpconvention.org/api/dashboard/insert/insert_quick_register.php', {
-            method: 'POST',
-            body: formData
-        });
-
-        // Check if the response status is not OK
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-        const data = await response.json();
-
-        if (data.status === 'success') {
-            Swal.fire({
-                icon: 'success',
-                title: 'Success',
-                text: 'Record added successfully!',
-                confirmButtonColor: '#28a745'
-            }).then(() => {
-                closeModal();
-                window.location.reload();
-            });
-        } else {
-            // This will handle if data.status is 'error' or any other unexpected value.
-            throw new Error(data.message || 'An unexpected error occurred');
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: error.message || 'An unexpected error occurred',
-            confirmButtonColor: '#dc3545'
-        });
+    function closeModal() {
+        registrationForm.reset();
+        $('#showModal').modal('hide'); // Close the Bootstrap modal
     }
-});
 
+    registrationForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
 
+        try {
+            const formData = new FormData(registrationForm);
+            const response = await fetch('https://plpconvention.org/api/dashboard/insert/insert_quick_register.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.status === 'success') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Record added successfully!',
+                    confirmButtonColor: '#28a745'
+                }).then(() => {
+                    closeModal();
+                    window.location.reload();
+                });
+            } else if (data.status === 'error') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: data.message,
+                    confirmButtonColor: '#dc3545'
+                });
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: data.message,
+                confirmButtonColor: '#dc3545'
+            });
+        }
+    });
 </script>
