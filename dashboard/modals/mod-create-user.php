@@ -4,7 +4,7 @@
             <h5 class="modal-title" id="exampleModalLabel">ADD NEW USER</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
         </div>
-        <form id="registration-form" action="https://oasministersregister.gov.bs/api/dashboard/insert/insert_system_users.php" method="post" enctype="multipart/form-data" class="tablelist-form" autocomplete="off">
+        <form id="registration-form" action="/api/dashboard/insert/insert_system_users.php" method="post" enctype="multipart/form-data" class="tablelist-form" autocomplete="off">
             <div class="modal-body">
                 <div class="row g-3">
                     <!--  <div class="row g-3">
