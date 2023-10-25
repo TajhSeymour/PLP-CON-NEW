@@ -392,15 +392,16 @@
                             <select class="form-control" id="input_del_emergency_relationship"
                                 name="input_del_emergency_relationship">
                                 <option value="" disabled selected>Select Relationship</option>
-                                <option value="PARENT">Parent</option>
-                                <option value="GRAND PARENT">Grand Parent</option>
-                                <option value="CHILD">Child</option> 
-                                <option value="SIBLING">Sibling</option>
-                                <option value="AUNT">Aunt</option>
-                                <option value="UNCLE">Uncle</option>
-                                <option value="COUSIN">Cousin</option>
-                                <option value="FRIEND">Friend</option>
-                                <option value="OTHER">Other</option>
+                                <option value="SPOUSE">Spouse</option>
+                            <option value="PARENT">Parent</option>
+                            <option value="GRAND PARENT">Grand Parent</option>
+                            <option value="CHILD">Child</option>
+                            <option value="SIBLING">Sibling</option>
+                            <option value="AUNT">Aunt</option>
+                            <option value="UNCLE">Uncle</option>
+                            <option value="COUSIN">Cousin</option>
+                            <option value="FRIEND">Friend</option>
+                             <option value="OTHER">Other</option>
                             </select>
                         </div>
                         <!-- Fifth column -->
