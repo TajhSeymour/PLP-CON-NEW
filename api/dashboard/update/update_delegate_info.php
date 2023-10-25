@@ -35,16 +35,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($badge === "1") {
             if (isset($_FILES['oc_badge_photo']) && is_uploaded_file($_FILES['oc_badge_photo']['tmp_name'])) {
                 
-                // Generate a unique badge file name using $user_id
-                $badgeFileName = $user_id . '.jpg';
-                
-                // Rename the uploaded file's name in the $_FILES superglobal
-                $_FILES['oc_badge_photo']['name'] = $badgeFileName;
-                
+                // Use $user_id directly for the badge file name
+                $badgeFileName = $user_id;
+        
                 // Perform upload
                 $badge_photo_result = upload_photo(dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge', $badgeFileName, $_FILES["oc_badge_photo"]);
         
-                if ($badge_photo_result['error']) {
+                if (!$badge_photo_result['error']) {
+                    // Check for double extension and rename if necessary
+                    $doubleExtensionPath = dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge/' . $badgeFileName . '.jpg.jpg';
+                    if (file_exists($doubleExtensionPath)) {
+                        rename($doubleExtensionPath, dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge/' . $badgeFileName . '.jpg');
+                    }
+                } else {
                     // Set Content-Type to application/json
                     header('Content-Type: application/json');
         
@@ -58,6 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 exit();
             }
         }
+        
         
     }    
 
