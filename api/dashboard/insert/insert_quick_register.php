@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $last_name = isset($_POST['input_new_del_last_name']) ? strtoupper($_POST['input_new_del_last_name']) : null;
     $gender = isset($_POST['input_new_del_gender']) ? strtoupper($_POST['input_new_del_gender']) : null; 
     $dob = validate_input($_POST["input_new_del_dob"]);
-    $nib_number = isset($_POST['input_new_del_nib_number']) ? strtoupper($_POST['input_new_del_nib_number']) : null; 
+    $nib_number = isset($_POST['input_nib_number']) ? strtoupper($_POST['input_nib_number']) : null; 
     $membership_type = isset($_POST['input_membership_type']) ? strtoupper($_POST['input_membership_type']) : null; 
     $constituency = isset($_POST['input_new_del_constituency']) ? strtoupper($_POST['input_new_del_constituency']) : null;  
     $affiliated_branch = isset($_POST['input_new_del_affiliated_branch']) ? strtoupper($_POST['input_new_del_affiliated_branch']) : null; 
