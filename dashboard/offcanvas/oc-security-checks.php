@@ -261,7 +261,7 @@
 
         <div class="mb-3">
         <label for="imageUpload" class="form-label">Badge ID Photo (JPG Only):</label>
-                        <input type="file" class="form-control" id="oc_badge_photo"
+                        <input type="file" class="form-control" id="oc_badge_photo" disable
                             name="oc_badge_photo" accept="image/jpg" onchange="validateFile()" />
                         <small id="fileHelp" class="form-text text-muted">Please upload a .jpg file.</small>
 
@@ -285,6 +285,20 @@
 
 
 </div>
+
+
+<script>
+    document.getElementById('oc_new_badge').addEventListener('input', function() {
+        var newBadgeValue = this.value;
+        var badgePhotoInput = document.getElementById('oc_badge_photo');
+        
+        if (newBadgeValue === '1') {
+            badgePhotoInput.removeAttribute('disabled');
+        } else {
+            badgePhotoInput.setAttribute('disabled', 'true');
+        }
+    });
+</script>
 
 <script>
     function formatPhoneNumber(inputId) {
