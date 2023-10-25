@@ -259,6 +259,14 @@
             data-date-format="Y-m-d" disabled />
         </div>
 
+        <div class="mb-3">
+        <label for="imageUpload" class="form-label">Badge ID Photo (JPG Only):</label>
+                        <input type="file" class="form-control" id="oc_badge_photo"
+                            name="oc_badge_photo" accept="image/jpg" onchange="validateFile()" />
+                        <small id="fileHelp" class="form-text text-muted">Please upload a .jpg file.</small>
+
+        </div>
+
         <div class="d-grid gap-2">
          <!-- <button name="add-notes-btn" id="add-notes-btn" class="btn btn-dark waves-effect waves-light"
             type="button">ADD NOTES</button>
@@ -301,6 +309,18 @@
             validationMessage.textContent = 'Phone number is not valid. Please enter it in the format (XXX)XXX-XXXX.';
         }
     }
+    function validateFile() {
+    const fileInput = document.getElementById('input_new_del_badge_photo');
+    const filePath = fileInput.value;
+    
+    // Check file extension
+    const allowedExtensions = /(\.jpg)$/i;
+    if (!allowedExtensions.exec(filePath)) {
+        alert('Please upload a .jpg image file only.');
+        fileInput.value = '';
+        return false;
+    }
+}
 </script>
 
 
