@@ -76,35 +76,6 @@
                 }
                 ?>
 
-                <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['hotel_officer']): ?>
-                    <li class="nav-item">
-                        <a class="nav-link menu-link" href="#hotelbarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="hotelbarLayouts">
-                            <i data-feather="file-text" class="icon-dual"></i> <span><?= $lang['t-tourist-special-food-information'] ?></span><span class="badge badge-pill bg-danger" data-key="t-new"><?= $lang['t-new'] ?></span>
-                        </a>
-                        <div class="collapse menu-dropdown" id="hotelbarLayouts">
-                            <ul class="nav nav-sm flex-column">
-                                <li class="nav-item">
-                                    <a href="/dashboard/tourist-special-food-needs.php" class="nav-link"><?= $lang['t-food-needs'] ?></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li> 
-                <?php endif; ?>
-
-                <?php if ($_SESSION['super_admin'] || $_SESSION['supervisor'] || $_SESSION['tourism_user']): ?>
-                    <li class="nav-item">
-                        <a class="nav-link menu-link" href="#visitorbarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="visitorbarLayouts">
-                            <i data-feather="file-text" class="icon-dual"></i> <span><?= $lang['t-tourist-info'] ?></span><span class="badge badge-pill bg-danger" data-key="t-new"><?= $lang['t-new'] ?></span>
-                        </a>
-                        <div class="collapse menu-dropdown" id="visitorbarLayouts">
-                            <ul class="nav nav-sm flex-column">
-                                <li class="nav-item">
-                                    <a href="/dashboard/tourist-info.php" class="nav-link"><?= $lang['t-visitor-info'] ?></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li> 
-                <?php endif; ?>
 
                 <!-- Navigation Menu Item -->
                 <?php if (isAllowedUser()) : ?>
@@ -118,7 +89,7 @@
                
                 <!-- End Navigation Menu Item -->
 
-                <!--</li> end Dashboard Menu -->
+                <!--</li> end Dashboard Menu 
 
                 <?php if (isAllowedUser()) : ?>
                 <li class="nav-item">
@@ -126,7 +97,7 @@
                         <i data-feather="printer" class="icon-dual"></i> <span><?= $lang['t-printer-queue'] ?></span>
                     </a>
                 </li>
-                <?php endif; ?>
+                <?php endif; ?>-->
 
                 <?php
                 // Start the PHP session (if not already started)
