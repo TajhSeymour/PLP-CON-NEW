@@ -92,67 +92,10 @@
         </div>
 
         <div class="mb-3">
-          <label for="constitution" class="form-label">Current Constituency: *</label>
-          <select class="form-control" data-plugin="choices" name="oc_constituency" id="oc_constituency" required>
-            <option value="" disabled selected>Select Constituency</option>
-            <option value="BAINS & GRANTS TOWN">Bains & Grants Town</option>
-            <option value="BAMBOO TOWN">Bamboo Town</option>
-            <option value="CARMICHAEL">Carmichael</option>
-            <option value="CAT ISL, R.CAY & SAN SAL">Cat Isl, R.Cay & San Sal</option>
-            <option value="CENTRAL & SOUTH ABACO">Central & South Abaco</option>
-            <option value="CENTRAL & SOUTH ELEUTHERA">Central & South Eleuthera</option>
-            <option value="CENTRAL GRAND BAHAMA">Central Grand Bahama</option>
-            <option value="CENTREVILLE">Centreville</option>
-            <option value="EAST GRAND BAHAMA">East Grand Bahama</option>
-            <option value="ELIZABETH">Elizabeth</option>
-            <option value="ENGLERSTON">Englerston</option>
-            <option value="EXUMAS & RAGGED ISL">Exumas & Ragged Isl</option>
-            <option value="FORT CHARLOTTE">Fort Charlotte</option>
-            <option value="FOX HILL">Fox Hill</option>
-            <option value="FREE TOWN">Free Town</option>
-            <option value="GARDEN HILLS">Garden Hills</option>
-            <option value="GOLDEN GATES">Golden Gates</option>
-            <option value="GOLDEN ISLES">Golden Isles</option>
-            <option value="KILLARNEY">Killarney</option>
-            <option value="LONG ISLAND">Long Island</option>
-            <option value="MANGROVE CAY & S. ANDROS">Mangrove Cay & S. Andros</option>
-            <option value="MARATHON">Marathon</option>
-            <option value="MARCO CITY">Marco City</option>
-            <option value="MICAL">MICAL</option>
-            <option value="MOUNT MORIAH">Mount Moriah</option>
-            <option value="N. ANDROS & BERRY ISL">N. Andros & Berry Isl</option>
-            <option value="NASSAU VILLAGE">Nassau Village</option>
-            <option value="NORTH ABACO">North Abaco</option>
-            <option value="NORTH ELEUTHERA">North Eleuthera</option>
-            <option value="PINERIDGE">Pineridge</option>
-            <option value="PINEWOOD">Pinewood</option>
-            <option value="SEABREEZE">Seabreeze</option>
-            <option value="SOUTH BEACH">South Beach</option>
-            <option value="SOUTHERN SHORES">Southern Shores</option>
-            <option value="ST. ANNE'S">St. Anne's</option>
-            <option value="ST. BARNABAS">St. Barnabas</option>
-            <option value="TALL PINES">Tall Pines</option>
-            <option value="WEST GB & BIMINI">West GB & Bimini</option>
-            <option value="YAMACRAW">Yamacraw</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label for="house_number" class="form-label">House/Property Number: *</label>
-          <input type="number" class="form-control" id="oc_house_number" name="oc_house_number" required>
-        </div>
-
-
-        <div class="mb-3">
-          <label for="street_name" class="form-label">Street Address: *</label>
-          <input type="text" class="form-control" id="oc_street_address" name="oc_street_address" required>
-        </div>
-
-        <div class="mb-3">
-          <label for="membership_type" class="form-label">Affiliated Branch: *</label>
+          <label for="membership_type" class="form-label">Representing Branch: *</label>
           <select class="form-control" data-plugin="choices" name="oc_affiliated_branch" id="oc_affiliated_branch"
             required>
-            <option value="" disabled selected>Select Branch</option>
+            <option value="None" disabled selected>Select Branch</option>
             <option value="PYL">PYL</option>
                                 <option value="PYL-GB">PYL-GB</option>
                                 <option value="NPI">NPI</option>
@@ -201,71 +144,32 @@
           </select>
         </div>
 
+      
 
         <div class="mb-3">
-          <label for="oc_email" class="form-label">Email Address: </label>
-          <input type="email" class="form-control" id="oc_email_address" name="oc_email_address">
-        </div>
-
-        <div class="mb-3">
-          <label for="oc_mobile" class="form-label">Mobile Number: </label>
-          <input type="text" class="form-control" id="oc_mobile_number" name="oc_mobile_number"
-            placeholder="Enter Your Mobile Number"
-            oninput="formatPhoneNumber('oc_mobile_number'); validatePhoneNumber('oc_mobile_number')">
-          <div id="oc_mobile_number-validation"></div>
-        </div>
-
-        <div class="mb-3">
-          <label for="oc_mobile" class="form-label">Telephone Number (Other): </label>
-          <input type="text" class="form-control" id="oc_telephone_number" name="oc_telephone_number"
-            placeholder="Enter Telephone Number"
-            oninput="formatPhoneNumber('oc_telephone_number'); validatePhoneNumber('oc_telephone_number')">
-          <div id="oc_telephone_number-validation"></div>
-        </div>
-
-        <div class="mb-3">
-          <label for="oc_emergency_contact_name" class="form-label">Emergency Contact Name: </label>
-          <input type="text" class="form-control" id="oc_emergency_contact_name" name="oc_emergency_contact_name">
-        </div>
-
-        <div class="mb-3">
-          <label for="oc_emergency_contact_name" class="form-label">Emergency Contact Relationship: </label>
-          <select class="form-control" id="oc_emergency_contact_relationship" name="oc_emergency_contact_relationship">
-            <option value="" disabled selected>Select Relationship</option>
-            <option value="PARENT">PARENT</option>
-            <option value="GRAND PARENT">GRAND PARENT</option>
-            <option value="CHILD">CHILD</option>
-            <option value="SIBLING">SIBLING</option>
-            <option value="AUNT">AUNT</option>
-            <option value="UNCLE">UNCLE</option>
-            <option value="COUSIN">COUSIN</option>
-            <option value="FRIEND">FRIEND</option>
-            <option value="OTHER">OTHER</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label for="oc_mobile" class="form-label">Emergency Telephone Number: </label>
-          <textarea class="form-control" id="exampleFormControlTextarea5" rows="3" spellcheck="false" style="height: 227px;"></textarea>
-        
-        
-        </div>
-
-
-        <div class="mb-3">
-          <label for="oc_dob" class="form-label">Registration Date</label>
-          <input type="date" class="form-control" id="oc_date" name="oc_date" data-provider="flatpickr"
-            data-date-format="Y-m-d" disabled />
-        </div>
-
-        <div class="mb-3">
-        <label for="imageUpload" class="form-label">Badge ID Photo (JPG Only):</label>
+        <label for="imageUpload" class="form-label">Badge ID Photo:</label>
                         <input type="file" class="form-control" id="oc_badge_photo" disabled
                             name="oc_badge_photo" accept="image/jpg"  />
                         <small id="fileHelp" class="form-text text-muted">Please upload a .jpg file.</small>
 
         </div>
 
+        <div class="mb-3">
+          <label for="nib_number" class="form-label">Receipt Number: *</label>
+          <input type="text" class="form-control" id="oc_receipt_number" name="oc_receipt_number" required>
+        </div>
+
+
+        <div class="mb-3">
+        <label for="oc_dob" class="form-label">Notes:</label>
+        <textarea class="form-control" id="oc_notes" name="oc_notes" rows="5" spellcheck="false"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="oc_dob" class="form-label">Registration Date</label>
+          <input type="date" class="form-control" id="oc_date" name="oc_date" data-provider="flatpickr"
+            data-date-format="Y-m-d" disabled />
+        </div>
         <div class="d-grid gap-2">
          <!-- <button name="add-notes-btn" id="add-notes-btn" class="btn btn-dark waves-effect waves-light"
             type="button">ADD NOTES</button>
