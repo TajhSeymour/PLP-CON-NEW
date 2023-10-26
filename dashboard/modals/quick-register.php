@@ -271,7 +271,7 @@
             </div>
             <div class="modal-footer">
                 <div class="hstack gap-2 justify-content-end">
-                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <button id="closeModalBtn" type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-success" id="add-btn">Submit Registration</button>
                     <!-- <button type="button" class="btn btn-success" id="edit-btn">Update</button> -->
                 </div>
@@ -280,6 +280,12 @@
     </div>
 </div>
 
+<script>
+
+document.getElementById('closeModalBtn').addEventListener('click', function() {
+    location.reload();
+});
+</script>
 <script>
     function formatPhoneNumber(inputId) {
         var input = document.getElementById(inputId);
@@ -325,8 +331,7 @@
 
     function closeModal() {
         registrationForm.reset();
-//$('#showModal').modal('hide'); // Close the Bootstrap moda
-        window.location.reload();
+        $('#showModal').modal('hide'); // Close the Bootstrap modal
     }
 
     registrationForm.addEventListener('submit', async function (event) {
