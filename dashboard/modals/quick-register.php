@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <label for="assignments" class="form-label">Memebership Type</label>
+                        <label for="assignments" class="form-label">Memebership Type: *</label>
                         <select class="form-control" data-plugin="choices" name="input_membership_type"
                             id="input_membership_type" required>
                             <option value="">Select Membership</option>
@@ -74,10 +74,10 @@
                         </select>
                     </div>
                     <div class="col-lg-6">
-                        <label for="dob" class="form-label">Date of Birth</label>
+                        <label for="dob" class="form-label">Date of Birth: </label>
                         <input type="text" id="input_new_del_dob" name="input_new_del_dob" class="form-control"
                             data-provider="flatpickr" data-date-format="Y-m-d"
-                            placeholder="Please enter your date of birth" required />
+                            placeholder="Please enter your date of birth" />
 
                     </div>
 
@@ -85,7 +85,7 @@
                         <label class="form-label" for="country_name">Your Constituency *</label>
                         <select class="form-control" id="input_new_del_constituency" name="input_new_del_constituency"
                             required>
-                            <option value="" disabled selected>Select constituency</option>
+                            <option value="" disabled selected>Select Constituency</option>
                             <option value="BAINS & GRANTS TOWN">Bains & Grants Town</option>
                             <option value="BAMBOO TOWN">Bamboo Town</option>
                             <option value="CARMICHAEL">Carmichael</option>
@@ -184,14 +184,14 @@
                     </div>
                     <div class="col-lg-6">
                         <div>
-                            <label class="form-label" for="input_new_del_email">Email Address</label>
+                            <label class="form-label" for="input_new_del_email">Email Address: </label>
                             <input type="email" class="form-control" placeholder="Enter Email Address"
                                 id="input_new_del_email" name="input_new_del_email">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div>
-                            <label class="form-label" for="input_del_mobile">Mobile Number</label>
+                            <label class="form-label" for="input_del_mobile">Mobile Number: </label>
                             <input class="form-control" type="text" id="input_new_del_mobile"
                                 name="input_new_del_mobile" placeholder="Enter Your Mobile Number"
                                 oninput="formatPhoneNumber('input_new_del_mobile'); validatePhoneNumber('input_new_del_mobile')">
@@ -200,7 +200,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div>
-                            <label class="form-label" for="input_del_telephone">Telephone Number (Other)</label>
+                            <label class="form-label" for="input_del_telephone">Telephone Number (Other):</label>
                             <input class="form-control" type="text" id="input_new_del_telephone"
                                 name="input_new_del_telephone" placeholder="Enter Your Telephone Number"
                                 oninput="formatPhoneNumber('input_new_del_telephone'); validatePhoneNumber('input_new_del_telephone')">
@@ -209,14 +209,14 @@
                     </div>
                     <div class="col-lg-6">
                         <div>
-                            <label class="form-label" for="input_del_emergency_name">Emergency Contact Name</label>
+                            <label class="form-label" for="input_del_emergency_name">Emergency Contact Name:</label>
                             <input type="text" class="form-control" id="input_new_del_emergency_name"
                                 placeholder="Enter Full Name" name="input_new_del_emergency_name">
                         </div>
                     </div>
 
                     <div class="col-lg-6">
-                        <label class="form-label" for="gender">Emergency Contact Relationship</label>
+                        <label class="form-label" for="gender">Emergency Contact Relationship:</label>
                         <select class="form-control" id="input_new_del_emergency_relationship"
                             name="input_new_del_emergency_relationship">
                             <option value="" disabled selected>Select Relationship</option>
@@ -234,7 +234,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <label class="form-label" for="input_del_emergency_telephone">Emergency Telephone</label>
+                        <label class="form-label" for="input_del_emergency_telephone">Emergency Telephone:</label>
                         <input class="form-control" type="text" id="input_new_del_emergency_telephone"
                             name="input_new_del_emergency_telephone" placeholder="Enter Emergency Telephone Number"
                             oninput="formatPhoneNumber('input_new_del_emergency_telephone'); validatePhoneNumber('input_new_del_emergency_telephone')">
@@ -243,12 +243,12 @@
 
 
                     <div class="col-lg-6">
-                        <label class="form-label" for="travel_question">House/Property Number</label>
+                        <label class="form-label" for="travel_question">House/Property Number:</label>
                         <input type="number" class="form-control" id="input_new_del_house_number" placeholder=""
                             name="input_new_del_house_number">
                     </div>
                     <div class="col-lg-6">
-                        <label class="form-label" for="travel_question">Street Address *</label>
+                        <label class="form-label" for="travel_question">Street Address: *</label>
                         <input required type="text" class="form-control" id="input_new_del_street_address"
                             placeholder="Enter Street Address" name="input_new_del_street_address">
                     </div>
