@@ -301,7 +301,7 @@
                 "data": "price", visible: false
             },
             {
-                "data": "notes", visible: true
+                "data": "notes", visible: false
             },
             {
                 "data": "membership_type", visible: false
@@ -504,7 +504,7 @@
                 "data": "price", visible: false
             },
             {
-                "data": "notes", visible: true
+                "data": "notes", visible: false
             },
             {
                 "data": "date"
