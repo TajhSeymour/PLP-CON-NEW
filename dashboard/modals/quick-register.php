@@ -326,7 +326,7 @@
     function closeModal() {
         registrationForm.reset();
         $('#showModal').modal('hide'); // Close the Bootstrap moda
-        window.location.reload();l
+        window.location.reload();
     }
 
     registrationForm.addEventListener('submit', async function (event) {
