@@ -325,7 +325,7 @@
 
     function closeModal() {
         registrationForm.reset();
-        $('#showModal').modal('hide'); // Close the Bootstrap moda
+//$('#showModal').modal('hide'); // Close the Bootstrap moda
         window.location.reload();
     }
 
