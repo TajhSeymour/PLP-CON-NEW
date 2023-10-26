@@ -146,6 +146,7 @@
                                                     <th>RECEIPT NUMBER</th>
                                                     <th>METHOD</th>
                                                     <th>DELEGATE TYPE</th>
+                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>BRANCH</th>
                                                     <th>BADGE REPRINT</th>
                                                     <th>PRICE</th>
@@ -167,6 +168,7 @@
                                                     <th>RECEIPT NUMBER</th>
                                                     <th>METHOD</th>
                                                     <th>DELEGATE TYPE</th>
+                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>BRANCH</th>
                                                     <th>BADGE REPRINT</th>
                                                     <th>PRICE</th>
