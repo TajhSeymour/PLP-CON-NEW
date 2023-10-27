@@ -104,9 +104,10 @@
         <div class="mb-3">
           <label for="membership_type" class="form-label">Representing Branch: *</label>
           <select class="form-control" data-plugin="choices" name="oc_affiliated_branch" id="oc_affiliated_branch"
-            required>
+            >
             <option value="">Select Branch</option>
-            <option value="PYL">PYL</option>
+
+                                <option value="PYL">PYL</option>
                                 <option value="PYL-GB">PYL-GB</option>
                                 <option value="NPI">NPI</option>
                                 <option value="NPI-GB">NPI-GB</option>
@@ -199,6 +200,7 @@
 </div>
 
 
+
 <script>
     document.getElementById('oc_new_badge').addEventListener('input', function() {
         var newBadgeValue = this.value;
@@ -247,6 +249,21 @@
         return false;
     }
 }
+
+// Get the dropdown and the oc_affiliated_branch element
+const delegateDropdown = document.getElementById("oc_delegate_type");
+const ocAffiliatedBranch = document.getElementById("oc_affiliated_branch");
+
+// Add a 'change' event listener to the dropdown
+delegateDropdown.addEventListener("change", function() {
+    const selection = this.value;
+    if (selection === "Observer Delegate" || selection === "Voting Delegate") {
+        ocAffiliatedBranch.disabled = false;
+    } else {
+        ocAffiliatedBranch.disabled = true;
+    }
+});
+
 </script>
 
 
