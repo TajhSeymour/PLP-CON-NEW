@@ -425,14 +425,14 @@
             const displayedMembershipTypeElement = document.getElementById("oc_membership_type");
             displayedMembershipTypeElement.value = membership_type;
 
-            const displayedDateElement = document.getElementById("oc_pay_date");
+            const displayedDateElement = document.getElementById("oc_date");
             displayedDateElement.value = date;
 
             const displayedNoteElement = document.getElementById("oc_notes");
-            displayedDateElement.value = notes;
+            displayedNotesElement.value = notes;
 
             const displayedReceiptElement = document.getElementById("oc_receipt_number");
-            displayedDateElement.value = receipt;
+            displayedReceiptElement.value = receipt;
 
             offcanvas.show(); // Show the offcanvas
         });
