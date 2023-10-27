@@ -249,6 +249,20 @@
         return false;
     }
 }
+// Get the dropdown and the oc_affiliated_branch element
+const MemberShipDropdown = document.getElementById("oc_membershio_type");
+const ocDelegateType = document.getElementById("oc_delegate_type");
+
+// Add a 'change' event listener to the dropdown
+MemberShipDropdown.addEventListener("change", function() {
+    const selection = this.value;
+    if (selection === "Stalwart Councillor") {
+      ocDelegateType.value = "Stalwart Councillor";
+  
+        
+    }
+});
+
 
 // Get the dropdown and the oc_affiliated_branch element
 const delegateDropdown = document.getElementById("oc_delegate_type");
@@ -261,6 +275,7 @@ delegateDropdown.addEventListener("change", function() {
         ocAffiliatedBranch.disabled = false;
     } else {
         ocAffiliatedBranch.disabled = true;
+
     }
 });
 

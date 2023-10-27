@@ -16,10 +16,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $dob = isset($_POST['oc_dob']) ? strtoupper($_POST['oc_dob']) : null;
     $nib_number = isset($_POST['oc_nib_number']) ? strtoupper($_POST['oc_nib_number']) : null;
     $membership_type = isset($_POST['oc_membership_type']) ? strtoupper($_POST['oc_membership_type']) : null;
-    $delegate_type = isset($_POST['oc_delegate_type']) ? strtoupper($_POST['oc_delegate_type']) : null;
+    
+    
+    
     //$house_number = isset($_POST['oc_house_number']) ? strtoupper($_POST['oc_house_number']) : null;
    // $street_address = isset($_POST['oc_street_address']) ? strtoupper($_POST['oc_street_address']) : null;
-    $affiliated_branch = isset($_POST['oc_affiliated_branch']) ? strtoupper($_POST['oc_affiliated_branch']) : null;
+   $membership_type = isset($_POST['oc_membership_type']) ? strtoupper($_POST['oc_membership_type']) : null;
+   $delegate_type = isset($_POST['oc_delegate_type']) ? strtoupper($_POST['oc_delegate_type']) : null;
+   $affiliated_branch = isset($_POST['oc_affiliated_branch']) ? strtoupper($_POST['oc_affiliated_branch']) : null;
+    
+    
+    
     //$email_address = isset($_POST['oc_email_address']) ? strtoupper($_POST['oc_email_address']) : null;
    // $mobile_number = isset($_POST['oc_mobile_number']) ? strtoupper($_POST['oc_mobile_number']) : null;
     //$telephone_number = isset($_POST['oc_telephone_number']) ? strtoupper($_POST['oc_telephone_number']) : null;
