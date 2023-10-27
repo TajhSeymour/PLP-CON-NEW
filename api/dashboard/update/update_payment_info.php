@@ -72,30 +72,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     // Prepare and execute the stored procedure
-    $query = "CALL UPDATE_MEMBER_PROFILE_W2(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    $query = "CALL UPDATE_PROFILE_CONFIRM_PAYMENT_V1(?,?,?,?,?,?,?,?,?,?)";
     $stmt = mysqli_prepare($connection, $query);
-    mysqli_stmt_bind_param($stmt, "isssssssssssssssssss", 
+    mysqli_stmt_bind_param($stmt, "isssssssss", 
+   
     $user_id,
     $priority,
     $badge,
-    $first_name,
-    $middle_name,
-    $last_name,
     $gender,
     $dob,
     $nib_number,
     $membership_type,
-    $constituency, 
-    $house_number,
-    $street_address,
     $affiliated_branch,
-    $email_address,
-    $mobile_number,
-    $telephone_number,
-    $emergency_contact_name,
-    $emergency_contact_relationship,
-    $emergency_contact_telephone_number
-    
+  $receipt_number,
+  $notes
     
     );
 
