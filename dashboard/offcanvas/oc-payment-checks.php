@@ -167,7 +167,7 @@
 
         <div class="mb-3">
           <label for="oc_dob" class="form-label">Registration Date</label>
-          <input type="date" class="form-control" id="oc_date" name="oc_date" data-provider="flatpickr"
+          <input type="date" class="form-control" id="oc_pay_date" name="oc_pay_date" data-provider="flatpickr"
             data-date-format="Y-m-d" disabled />
         </div>
         <div class="d-grid gap-2">
