@@ -146,7 +146,7 @@
                                             class="display table table-bordered dt-responsive" style="width:100%">
                                             <thead>
                                                 <tr>
-                                                    <th>PLP ID</th>
+                                                <th>PLP ID</th>
                                                     <th>PRIORITY</th>
                                                     <th>FIRST NAME</th>
                                                     <th>MIDDLE NAME</th>
@@ -168,7 +168,7 @@
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th>PLP ID</th>
+                                                <th>PLP ID</th>
                                                     <th>PRIORITY</th>
                                                     <th>FIRST NAME</th>
                                                     <th>MIDDLE NAME</th>
@@ -515,6 +515,9 @@
             },
             {
                 "data": "notes", visible: false
+            },
+            {
+                "data": "membership_type", visible: false
             },
             {
                 "data": "date"

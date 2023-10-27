@@ -318,7 +318,7 @@ function callUpdateUserAPI(formData) {
   // Make the API call to update_user.php with the provided data
   // Implement your API call here, using fetch, Axios, or any other method you prefer
   // Example using fetch:
-  fetch("/api/dashboard/update/update_delegate_info.php", {
+  fetch("/api/dashboard/update/update_payment_info.php", {
     method: "POST", // Use the appropriate method for your API
     body: formData, // Send the form data in the request body
   })
