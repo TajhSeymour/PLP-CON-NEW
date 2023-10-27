@@ -250,7 +250,7 @@
     }
 }
 // Get the dropdown and the oc_affiliated_branch element
-const MemberShipDropdown = document.getElementById("oc_membershio_type");
+const MemberShipDropdown = document.getElementById("oc_membership_type");
 const ocDelegateType = document.getElementById("oc_delegate_type");
 
 // Add a 'change' event listener to the dropdown
