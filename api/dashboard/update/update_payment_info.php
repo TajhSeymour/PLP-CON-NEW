@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $dob = isset($_POST['oc_dob']) ? strtoupper($_POST['oc_dob']) : null;
     $nib_number = isset($_POST['oc_nib_number']) ? strtoupper($_POST['oc_nib_number']) : null;
     $membership_type = isset($_POST['oc_membership_type']) ? strtoupper($_POST['oc_membership_type']) : null;
-    //$constituency = isset($_POST['oc_constituency']) ? strtoupper($_POST['oc_constituency']) : null;
+    $delegate_type = isset($_POST['oc_delegate_type']) ? strtoupper($_POST['oc_delegate_type']) : null;
     //$house_number = isset($_POST['oc_house_number']) ? strtoupper($_POST['oc_house_number']) : null;
    // $street_address = isset($_POST['oc_street_address']) ? strtoupper($_POST['oc_street_address']) : null;
     $affiliated_branch = isset($_POST['oc_affiliated_branch']) ? strtoupper($_POST['oc_affiliated_branch']) : null;
@@ -72,9 +72,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     // Prepare and execute the stored procedure
-    $query = "CALL UPDATE_PROFILE_CONFIRM_PAYMENT_V1(?,?,?,?,?,?,?,?,?,?)";
+    $query = "CALL UPDATE_PROFILE_CONFIRM_PAYMENT_V1(?,?,?,?,?,?,?,?,?,?,?)";
     $stmt = mysqli_prepare($connection, $query);
-    mysqli_stmt_bind_param($stmt, "isssssssss", 
+    mysqli_stmt_bind_param($stmt, "issssssssss", 
    
     $user_id,
     $priority,
@@ -83,6 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $dob,
     $nib_number,
     $membership_type,
+    $delegate_type,
     $affiliated_branch,
   $receipt_number,
   $notes
