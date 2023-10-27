@@ -74,7 +74,7 @@
           <input type="date" class="form-control" id="oc_dob" name="oc_dob" data-provider="flatpickr"
             data-date-format="Y-m-d" placeholder="Please enter your date of birth" required />
         </div>
-
+        
         <div class="mb-3">
           <label for="nib_number" class="form-label">NIB Number: *</label>
           <input type="number" class="form-control" id="oc_nib_number" name="oc_nib_number" required>
@@ -90,7 +90,7 @@
             <option value="LIFETIME MEMBER">Lifetime Member</option>
           </select>
         </div>
-
+       
         <div class="mb-3">
           <label for="membership_type" class="form-label">Representing Branch: *</label>
           <select class="form-control" data-plugin="choices" name="oc_affiliated_branch" id="oc_affiliated_branch"
@@ -159,7 +159,6 @@
           <input type="text" class="form-control" id="oc_receipt_number" name="oc_receipt_number" required>
         </div>
 
-
         <div class="mb-3">
         <label for="oc_dob" class="form-label">Notes:</label>
         <textarea class="form-control" id="oc_notes" name="oc_notes" rows="5" spellcheck="false"></textarea>
@@ -175,7 +174,7 @@
             type="button">ADD NOTES</button>
           <button name="view-notes-btn" id="view-notes-btn" class="btn btn-dark waves-effect waves-light"
             data-bs-toggle="modal" data-bs-target="#notesModel" type="button">VIEW NOTES</button> -->
-          <button name="approve-btn" id="approve-btn" class="btn btn-success waves-effect waves-light"
+          <button name="approve-pay-btn" id="approve-pay-btn" class="btn btn-success waves-effect waves-light"
             type="button"> ACTIVATE CARD / APPROVE PAYMENT</button>
          <button name="deny-btn" id="deny-btn" class="btn btn-danger waves-effect waves-light" type="button">VOID PAYMENT</button>
         </div>
@@ -283,9 +282,27 @@
 <script>
 
   //APPROVE APPLICANT'S REGISTRATION
-  document.getElementById("approve-btn").addEventListener("click", function () {
+  document.getElementById("approve-pay-btn").addEventListener("click", function () {
   // Prevent the default form submission behavior
   event.preventDefault();
+
+    // Check if required fields are empty
+    const dobFeild = document.getElementById("oc_dob").value;
+    const nibNumber = document.getElementById("oc_nib_number").value;
+    const membershipType = document.getElementById("oc_membership_type").value;
+    const affiliateBranch = document.getElementById("oc_affiliated_branch").value;
+    const receiptNumber = document.getElementById("oc_receipt_number").value;
+
+    
+    if (!dobFeild || !nibNumber  || !membershipType  || !affiliateBranch  || !receiptNumber ) {
+        // Display an error message and exit
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Please fill out all required fields.",
+        });
+        return; // Stop the execution of the function
+    }
 
   // Get the user ID from the displayedId element
   const userID = document.getElementById("displayedId").innerText;

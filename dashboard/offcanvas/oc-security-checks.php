@@ -138,11 +138,11 @@
         </div>
 
         <div class="mb-3">
-          <label for="house_number" class="form-label">House/Property Number: *</label>
-          <input type="number" class="form-control" id="oc_house_number" name="oc_house_number" required>
+          <label for="house_number" class="form-label">House/Property Number: </label>
+          <input type="number" class="form-control" id="oc_house_number" name="oc_house_number" >
         </div>
 
-
+       
         <div class="mb-3">
           <label for="street_name" class="form-label">Street Address: *</label>
           <input type="text" class="form-control" id="oc_street_address" name="oc_street_address" required>
@@ -383,6 +383,26 @@
   document.getElementById("approve-btn").addEventListener("click", function () {
   // Prevent the default form submission behavior
   event.preventDefault();
+
+  const dobFeild = document.getElementById("oc_dob").value;
+    const nibNumber = document.getElementById("oc_nib_number").value;
+    const membershipType = document.getElementById("oc_membership_type").value;
+    const affiliateBranch = document.getElementById("oc_affiliated_branch").value;
+    //const receiptNumber = document.getElementById("oc_receipt_number").value;
+    const constituency = document.getElementById("oc_constituency").value;
+    const streetAddress = document.getElementById("oc_street_address").value;
+     
+    
+    if (!dobFeild || !nibNumber  || !membershipType  || !affiliateBranch  || !oc_constituency || !streetAddress ) {
+        // Display an error message and exit
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Please fill out all required fields.",
+        });
+        return; // Stop the execution of the function
+    }
+
 
   // Get the user ID from the displayedId element
   const userID = document.getElementById("displayedId").innerText;
