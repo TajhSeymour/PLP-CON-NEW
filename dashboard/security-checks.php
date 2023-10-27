@@ -372,7 +372,7 @@
             const gender = rowData.gender;
             const nib_number = rowData.nib_number;
             // const constituency = rowData.constituency;
-            const affiliated_branch = rowData.affiliated_branch;
+            const affiliated_branch = rowData.branch;
             const membership_type = rowData.membership_type;
             const date = rowData.date;
             const receipt = rowData.receipt_number;
