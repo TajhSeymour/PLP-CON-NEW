@@ -374,9 +374,11 @@
             // const constituency = rowData.constituency;
             const affiliated_branch = rowData.branch;
             const membership_type = rowData.membership_type;
+            const delegate_type = rowData.delegate_type;
             const date = rowData.date;
             const receipt = rowData.receipt_number;
             const notes = rowData.notes;
+            
 
             // const mobile_number = rowData.mobile_number;
             // const telephone_number = rowData.telephone_number;
@@ -433,6 +435,9 @@
 
             const displayedReceiptElement = document.getElementById("oc_receipt_number");
             displayedReceiptElement.value = receipt;
+
+            const displayDelegateTypeElement = document.getElementById("oc_delegate_type");
+            displayDelegateTypeElement.value = delegate_type;
 
             offcanvas.show(); // Show the offcanvas
         });
@@ -577,6 +582,7 @@
             // const constituency = rowData.constituency;
             const affiliated_branch = rowData.branch;
             const membership_type = rowData.membership_type;
+            const delegate_type = rowData.delegate_type;
             const date = rowData.date;
             const receipt = rowData.receipt_number;
             const notes = rowData.notes;
@@ -636,6 +642,9 @@
 
             const displayedReceiptElement = document.getElementById("oc_receipt_number");
             displayedReceiptElement.value = receipt;
+
+            const displayDelegateTypeElement = document.getElementById("oc_delegate_type");
+            displayDelegateTypeElement.value = delegate_type;
 
 
 
