@@ -428,7 +428,7 @@
             const displayedDateElement = document.getElementById("oc_date");
             displayedDateElement.value = date;
 
-            const displayedNoteElement = document.getElementById("oc_notes");
+            const displayedNotesElement = document.getElementById("oc_notes");
             displayedNotesElement.value = notes;
 
             const displayedReceiptElement = document.getElementById("oc_receipt_number");
@@ -652,7 +652,11 @@
             const displayedEmergencyContactTelephoneNumberElement = document.getElementById("oc_emergency_contact_telephone_number");
             displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
 
+            const displayedNotesElement = document.getElementById("oc_notes");
+            displayedNotesElement.value = notes;
 
+            const displayedReceiptElement = document.getElementById("oc_receipt_number");
+            displayedReceiptElement.value = receipt;
 
 
 
