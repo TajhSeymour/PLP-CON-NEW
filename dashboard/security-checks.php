@@ -574,17 +574,20 @@
             const dob = rowData.dob;
             const gender = rowData.gender;
             const nib_number = rowData.nib_number;
-            const constituency = rowData.constituency;
-            const affiliated_branch = rowData.affiliated_branch;
+            // const constituency = rowData.constituency;
+            const affiliated_branch = rowData.branch;
             const membership_type = rowData.membership_type;
             const date = rowData.date;
-            const mobile_number = rowData.mobile_number;
-            const telephone_number = rowData.telephone_number;
-            const street_address = rowData.street_address;
-            const house_number = rowData.house_number;
-            const emergency_contact_name = rowData.emergency_contact_name;
-            const emergency_contact_relationship = rowData.emergency_contact_relationship;
-            const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
+            const receipt = rowData.receipt_number;
+            const notes = rowData.notes;
+
+            // const mobile_number = rowData.mobile_number;
+            // const telephone_number = rowData.telephone_number;
+            // const street_address = rowData.street_address;
+            //  const house_number = rowData.house_number;
+            //  const emergency_contact_name = rowData.emergency_contact_name;
+            //   const emergency_contact_relationship = rowData.emergency_contact_relationship;
+            //const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
 
             const displayedIdElement = document.getElementById("displayedId");
             displayedIdElement.textContent = id
@@ -610,9 +613,6 @@
             const displayedDOBElement = document.getElementById("oc_dob");
             displayedDOBElement.value = dob;
 
-            const displayedEmailElement = document.getElementById("oc_email_address");
-            displayedEmailElement.value = email;
-
             const displayedPriorityElement = document.getElementById("oc_priority");
             displayedPriorityElement.value = priority;
 
@@ -622,9 +622,6 @@
             const displayedNIBElement = document.getElementById("oc_nib_number");
             displayedNIBElement.value = nib_number;
 
-            const displayedConstituencyElement = document.getElementById("oc_constituency");
-            displayedConstituencyElement.value = constituency;
-
             const displayedAffiliatedBranchElement = document.getElementById("oc_affiliated_branch");
             displayedAffiliatedBranchElement.value = affiliated_branch;
 
@@ -633,27 +630,6 @@
 
             const displayedDateElement = document.getElementById("oc_date");
             displayedDateElement.value = date;
-
-            const displayedMobileNumberElement = document.getElementById("oc_mobile_number");
-            displayedMobileNumberElement.value = mobile_number;
-
-            const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
-            displayedTelephoneNumberElement.value = telephone_number;
-
-            const displayedStreetAddressElement = document.getElementById("oc_street_address");
-            displayedStreetAddressElement.value = street_address;
-
-            const displayedHouseNumberElement = document.getElementById("oc_house_number");
-            displayedHouseNumberElement.value = house_number;
-
-            const displayedEmergencyContactNameElement = document.getElementById("oc_emergency_contact_name");
-            displayedEmergencyContactNameElement.value = emergency_contact_name;
-
-            const displayedEmergencyContactRelationshipElement = document.getElementById("oc_emergency_contact_relationship");
-            displayedEmergencyContactRelationshipElement.value = emergency_contact_relationship;
-
-            const displayedEmergencyContactTelephoneNumberElement = document.getElementById("oc_emergency_contact_telephone_number");
-            displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
 
             const displayedNotesElement = document.getElementById("oc_notes");
             displayedNotesElement.value = notes;
