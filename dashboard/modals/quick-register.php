@@ -74,9 +74,11 @@
                         </select>
                     </div>
                     <div class="col-lg-6">
+
+                
                         <label for="dob" class="form-label">Date of Birth: </label>
-                        <input type="text" id="input_new_del_dob" name="input_new_del_dob" class="form-control"
-                            
+                        <input type="date" id="input_new_del_dob" name="input_new_del_dob" class="form-control"
+                        
                             placeholder="Please enter your date of birth" />
                             
                     </div>
