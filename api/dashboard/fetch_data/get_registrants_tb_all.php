@@ -37,7 +37,7 @@ $sql = "SELECT " . implode(", ", $columns) . "
 
 // Execute the SQL query and fetch data
 // You will need to replace these lines with your database connection code
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($connection, $sql);
 $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 // Return the data as JSON
