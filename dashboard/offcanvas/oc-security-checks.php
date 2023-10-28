@@ -77,7 +77,7 @@
 
         <div class="mb-3">
           <label for="nib_number" class="form-label">NIB Number: *</label>
-          <input type="number" class="form-control" id="oc_nib_number" name="oc_nib_number" required>
+          <input type="number" class="form-control" id="oc_up_nib_number" name="oc_up_nib_number" required>
         </div>
 
         <div class="mb-3">
