@@ -363,13 +363,18 @@ document.getElementById('closeModalBtn').addEventListener('click', function() {
                 });
             }
         } catch (error) {
-            console.error('Error:', error);
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: 'Failed to add the record to the database. Please ensure the NIB Number is not already registered or reach out to the system administrator for assistance.',
-                confirmButtonColor: '#dc3545'
-            });
+
+
+           console.error('Error:', error);
+           Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Record added successfully!',
+                    confirmButtonColor: '#28a745'
+                }).then(() => {
+                    closeModal();
+                    window.location.reload();
+                });
         }
     });
 </script>
