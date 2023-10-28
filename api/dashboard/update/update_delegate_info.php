@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $last_name = isset($_POST['oc_last_name']) ? strtoupper($_POST['oc_last_name']) : null;
     $gender = isset($_POST['oc_gender']) ? strtoupper($_POST['oc_gender']) : null;
     $dob = isset($_POST['oc_dob']) ? strtoupper($_POST['oc_dob']) : null;
-    $nib_number =  $_POST["oc_nib_number"];
+    $nib_number =  $_POST["oc_up_nib_number"];
     $membership_type = isset($_POST['oc_membership_type']) ? strtoupper($_POST['oc_membership_type']) : null;
     $constituency = isset($_POST['oc_constituency']) ? strtoupper($_POST['oc_constituency']) : null;
     $house_number = isset($_POST['oc_house_number']) ? strtoupper($_POST['oc_house_number']) : null;
