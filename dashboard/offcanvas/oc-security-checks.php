@@ -232,7 +232,7 @@
           <label for="oc_emergency_contact_name" class="form-label">Emergency Contact Relationship: </label>
           <select class="form-control" id="oc_emergency_contact_relationship" name="oc_emergency_contact_relationship">
             <option value="" disabled selected>Select Relationship</option>
-            <option value="SPOUSE">Spouse</option>
+            <option value="SPOUSE">SPOUSE</option>
             <option value="PARENT">PARENT</option>
             <option value="GRAND PARENT">GRAND PARENT</option>
             <option value="CHILD">CHILD</option>
