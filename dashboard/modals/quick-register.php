@@ -358,7 +358,7 @@ document.getElementById('closeModalBtn').addEventListener('click', function() {
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: 'Failed to add the record to the database. Please ensure the NIB Number is not already registered or reach out to the system administrator for assistance.',
+                    text: '101 Failed to add the record to the database. Please ensure the NIB Number is not already registered or reach out to the system administrator for assistance.',
                     confirmButtonColor: '#dc3545'
                 });
             }
