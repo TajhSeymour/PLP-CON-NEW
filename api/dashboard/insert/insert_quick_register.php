@@ -69,14 +69,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header('Content-Type: application/json');
                 
                 // Return error response
-                echo json_encode(['status' => 'error', 'message' => 'Failed to upload badge photo. ' . $badge_photo_result['msg']]);
+              //  echo json_encode(['status' => 'error', 'message' => 'Failed to upload badge photo. ' . $badge_photo_result['msg']]);
                 exit();
             }
         } elseif (!isset($_FILES['input_new_del_badge_photo']) || !$_FILES['input_new_del_badge_photo']['tmp_name']) {
             // If 'input_new_del_badge_photo' is not set or null, just skip (no action required)
         } else {
             header('Content-Type: application/json');
-            echo json_encode(['status' => 'error', 'message' => 'No valid file provided']);
+           // echo json_encode(['status' => 'error', 'message' => 'No valid file provided']);
             exit();
         }
     }    
