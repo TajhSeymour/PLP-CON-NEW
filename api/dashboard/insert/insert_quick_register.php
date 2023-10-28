@@ -47,45 +47,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $random_id = generate_random_id();
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        // Validate "input_vote_del_badge_question" value
-        $badge_reprint = "1"; // Sanitize the input
-
-        if ($badge_reprint === "1") {
-            // Check if 'input_new_del_badge_photo' is set and is not null
-            if (isset($_FILES['input_new_del_badge_photo']) && $_FILES['input_new_del_badge_photo']['tmp_name'] && is_uploaded_file($_FILES['input_new_del_badge_photo']['tmp_name'])) {
-                
-                // Use $random_id directly for the badge file name
-                $badgeFileName = $random_id;
-        
-                // Perform upload
-                $badge_photo_result = upload_photo(dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge', $badgeFileName, $_FILES["input_new_del_badge_photo"]);
-        
-                if (!$badge_photo_result['error']) {
-                    // Rename the file to ensure it has a .jpg extension
-                    $uploadedExtension = pathinfo($_FILES['input_new_del_badge_photo']['name'], PATHINFO_EXTENSION);
-                    $originalPath = dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge/' . $badgeFileName . '.' . $uploadedExtension;
-        
-                    if (file_exists($originalPath) && strtolower($uploadedExtension) !== 'jpg') {
-                        rename($originalPath, dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge/' . $badgeFileName . '.jpg');
-                    }
-                } else {
-                    // Set Content-Type to application/json
-                    header('Content-Type: application/json');
+        // Check if 'input_new_del_badge_photo' is set and is not null
+        if (isset($_FILES['input_new_del_badge_photo']) && $_FILES['input_new_del_badge_photo']['tmp_name'] && is_uploaded_file($_FILES['input_new_del_badge_photo']['tmp_name'])) {
             
-                    // Return error response
-                    echo json_encode(['status' => 'error', 'message' => 'Failed to upload badge photo. ' . $badge_photo_result['msg']]);
-                    exit();
+            // Use $random_id directly for the badge file name
+            $badgeFileName = $random_id;
+    
+            // Perform upload
+            $badge_photo_result = upload_photo(dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge', $badgeFileName, $_FILES["input_new_del_badge_photo"]);
+            
+            if (!$badge_photo_result['error']) {
+                // Rename the file to ensure it has a .jpg extension
+                $uploadedExtension = pathinfo($_FILES['input_new_del_badge_photo']['name'], PATHINFO_EXTENSION);
+                $originalPath = dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge/' . $badgeFileName . '.' . $uploadedExtension;
+            
+                if (file_exists($originalPath) && strtolower($uploadedExtension) !== 'jpg') {
+                    rename($originalPath, dirname($_SERVER['DOCUMENT_ROOT']) . '/httpdocs/idbadge/' . $badgeFileName . '.jpg');
                 }
-            } elseif (!isset($_FILES['input_new_del_badge_photo']) || !$_FILES['input_new_del_badge_photo']['tmp_name']) {
-                // If 'input_new_del_badge_photo' is not set or null, just skip (no action required)
             } else {
+                // Set Content-Type to application/json
                 header('Content-Type: application/json');
-                echo json_encode(['status' => 'error', 'message' => 'No valid file provided']);
+                
+                // Return error response
+                echo json_encode(['status' => 'error', 'message' => 'Failed to upload badge photo. ' . $badge_photo_result['msg']]);
                 exit();
             }
-        }        
-
+        } elseif (!isset($_FILES['input_new_del_badge_photo']) || !$_FILES['input_new_del_badge_photo']['tmp_name']) {
+            // If 'input_new_del_badge_photo' is not set or null, just skip (no action required)
+        } else {
+            header('Content-Type: application/json');
+            echo json_encode(['status' => 'error', 'message' => 'No valid file provided']);
+            exit();
+        }
     }    
+    
 
     // Call the stored procedure to insert data
     $stmt = $connection->prepare("CALL INSERT_MEMBER_PROFILE(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
