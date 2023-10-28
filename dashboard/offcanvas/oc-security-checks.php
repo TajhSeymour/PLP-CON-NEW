@@ -15,7 +15,7 @@
   <div class="img-container-photo">
     <!-- The image will be inserted here by the JavaScript code -->
   </div>
-  <form id="update-staff-info-form" enctype="multipart/form-data"  class="tablelist-form" autocomplete="off">
+  <form id="update-staff-info-form" action="/api/dashboard/update/update_delegate_info.php" enctype="multipart/form-data"  class="tablelist-form" autocomplete="off">
     <div class="modal-body">
       <div class="row g-3">
        
@@ -77,7 +77,7 @@
 
         <div class="mb-3">
           <label for="nib_number" class="form-label">NIB Number: *</label>
-          <input type="number" class="form-control" id="oc_up_nib_number" name="oc_up_nib_number" required>
+          <input type="number" class="form-control" id="oc_nib_number" name="oc_nib_number" required>
         </div>
 
         <div class="mb-3">
@@ -373,6 +373,77 @@
 
 </script>
 
+<script>
+  // Get the reference to the form element
+  const registrationForm = document.getElementById('registration-form');
+  const modalContainer = document.getElementById('showModal');
+
+  // Function to close the modal
+  function closeModal() {
+    // Reset the form fields to clear any previous data
+    registrationForm.reset();
+
+    // Manually close the modal by removing the 'show' class
+    modalContainer.classList.remove('show');
+
+    // Clear the backdrop class to hide the backdrop
+    document.body.classList.remove('modal-open');
+  }
+
+  // Add an event listener to the form's submit event
+  registrationForm.addEventListener('submit', async function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    try {
+      // Handle the form submission using AJAX or any other logic you need
+      // Here, you can use AJAX to submit the form data to the server without a full page reload
+      const response = await fetch(registrationForm.action, {
+        method: 'POST',
+        body: new FormData(registrationForm)
+      });
+
+      const data = await response.json();
+
+      // Show a SweetAlert message based on the response status
+      if (data.status === 'success') {
+        // Show a success message using SweetAlert
+        await Swal.fire({
+          icon: 'success',
+          title: 'Success',
+          text: 'Record added successfully!',
+          confirmButtonColor: '#28a745'
+        }).then(() => {
+          // Close the modal after successful registration
+          closeModal();
+
+          // Reload the page after successful submission
+          window.location.reload();
+        });
+      } else if (data.status === 'error') {
+        // Show an error message using SweetAlert
+        await Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Failed to add record to the database.',
+          confirmButtonColor: '#dc3545'
+        });
+      }
+    } catch (error) {
+      // Handle any errors that occurred during form submission
+      console.error('Error:', error);
+      // Show an error message using SweetAlert for unexpected errors
+      await Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'An unexpected error occurred. Please try again later.',
+        confirmButtonColor: '#dc3545'
+      });
+    }
+  });
+</script>
+
+
 
 
 
@@ -385,7 +456,7 @@
   event.preventDefault();
 
   const dobFeild = document.getElementById("oc_dob").value;
-    const nibNumber = document.getElementById("oc_up_nib_number").value;
+    const nibNumber = document.getElementById("oc_nib_number").value;
     const membershipType = document.getElementById("oc_membership_type").value;
     const affiliateBranch = document.getElementById("oc_affiliated_branch").value;
     //const receiptNumber = document.getElementById("oc_receipt_number").value;
