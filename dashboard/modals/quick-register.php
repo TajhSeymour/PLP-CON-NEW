@@ -312,10 +312,6 @@ document.getElementById('closeModalBtn').addEventListener('click', function() {
         }
     }
 
-    function validateFile() {
-    const fileInput = document.getElementById('input_new_del_badge_photo');
-    const filePath = fileInput.value;
-    
     // Check file extension
     const allowedExtensions = /(\.jpg)$/i;
     if (!allowedExtensions.exec(filePath)) {
@@ -323,7 +319,7 @@ document.getElementById('closeModalBtn').addEventListener('click', function() {
         fileInput.value = '';
         return false;
     }
-}
+
 
 </script>
 
