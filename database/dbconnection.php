@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 $host = 'localhost';
-$username = 'db_PLPUser';
+$username = 'h5g8w9v3_PLPUser';
 $password = '8nYKLisOmIM';
 $database = 'plp_convention';
 
