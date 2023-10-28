@@ -199,7 +199,38 @@
 
 </div>
 
+<script>
+// Get the dropdown and the oc_affiliated_branch element
+const MemberShipDropdown = document.getElementById("oc_membership_type");
+const ocDelegateType = document.getElementById("oc_delegate_type");
 
+// Add a 'change' event listener to the dropdown
+MemberShipDropdown.addEventListener("change", function() {
+    const selection = this.value;
+    if (selection === "Stalwart Councillor") {
+      ocDelegateType.value = "Stalwart Councillor";
+  
+        
+    }
+});
+
+
+// Get the dropdown and the oc_affiliated_branch element
+const delegateDropdown = document.getElementById("oc_delegate_type");
+const ocAffiliatedBranch = document.getElementById("oc_affiliated_branch");
+
+// Add a 'change' event listener to the dropdown
+delegateDropdown.addEventListener("change", function() {
+    const selection = this.value;
+    if (selection === "Observer Delegate" || selection === "Voting Delegate") {
+        ocAffiliatedBranch.disabled = false;
+    } else {
+        ocAffiliatedBranch.disabled = true;
+
+    }
+});
+
+</script>
 
 <script>
     document.getElementById('oc_new_badge').addEventListener('input', function() {
@@ -249,35 +280,6 @@
         return false;
     }
 }
-// Get the dropdown and the oc_affiliated_branch element
-const MemberShipDropdown = document.getElementById("oc_membership_type");
-const ocDelegateType = document.getElementById("oc_delegate_type");
-
-// Add a 'change' event listener to the dropdown
-MemberShipDropdown.addEventListener("change", function() {
-    const selection = this.value;
-    if (selection === "Stalwart Councillor") {
-      ocDelegateType.value = "Stalwart Councillor";
-  
-        
-    }
-});
-
-
-// Get the dropdown and the oc_affiliated_branch element
-const delegateDropdown = document.getElementById("oc_delegate_type");
-const ocAffiliatedBranch = document.getElementById("oc_affiliated_branch");
-
-// Add a 'change' event listener to the dropdown
-delegateDropdown.addEventListener("change", function() {
-    const selection = this.value;
-    if (selection === "Observer Delegate" || selection === "Voting Delegate") {
-        ocAffiliatedBranch.disabled = false;
-    } else {
-        ocAffiliatedBranch.disabled = true;
-
-    }
-});
 
 </script>
 
