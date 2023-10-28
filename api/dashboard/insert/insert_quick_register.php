@@ -51,7 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $badge_reprint = "1"; // Sanitize the input
 
         if ($badge_reprint === "1") {
-            if (isset($_FILES['input_new_del_badge_photo']) && is_uploaded_file($_FILES['input_new_del_badge_photo']['tmp_name'])) {
+            // Check if 'input_new_del_badge_photo' is set and is not null
+            if (isset($_FILES['input_new_del_badge_photo']) && $_FILES['input_new_del_badge_photo']['tmp_name'] && is_uploaded_file($_FILES['input_new_del_badge_photo']['tmp_name'])) {
                 
                 // Use $random_id directly for the badge file name
                 $badgeFileName = $random_id;
@@ -70,17 +71,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 } else {
                     // Set Content-Type to application/json
                     header('Content-Type: application/json');
-        
+            
                     // Return error response
                     echo json_encode(['status' => 'error', 'message' => 'Failed to upload badge photo. ' . $badge_photo_result['msg']]);
                     exit();
                 }
+            } elseif (!isset($_FILES['input_new_del_badge_photo']) || !$_FILES['input_new_del_badge_photo']['tmp_name']) {
+                // If 'input_new_del_badge_photo' is not set or null, just skip (no action required)
             } else {
                 header('Content-Type: application/json');
                 echo json_encode(['status' => 'error', 'message' => 'No valid file provided']);
                 exit();
             }
-        }
+        }        
 
     }    
 
