@@ -726,7 +726,7 @@ App js -->
          // Poll for new data every 5 seconds
     setInterval(function () {
         allRegistrants.ajax.reload(null, false); // null means reload all data, false means no reset of sorting/paging
-    }, 5000); // Refresh every 5 seconds
+    }, 35000); // Refresh every 5 seconds
 
 
         // Initialize DataTable for "all-registrants"
