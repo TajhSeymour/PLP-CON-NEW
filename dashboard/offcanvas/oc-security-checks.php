@@ -457,24 +457,24 @@
   // Prevent the default form submission behavior
   event.preventDefault();
 
-  //const dobFeild = document.getElementById("oc_dob").value;
-    //const nibNumber = document.getElementById("oc_up_nib_number").value;
-   // const membershipType = document.getElementById("oc_membership_type").value;
+  const dobFeild = document.getElementById("oc_dob").value;
+    const nibNumber = document.getElementById("oc_up_nib_number").value;
+   const membershipType = document.getElementById("oc_membership_type").value;
     //const affiliateBranch = document.getElementById("oc_affiliated_branch").value;
-    //const receiptNumber = document.getElementById("oc_receipt_number").value;
-   //const constituency = document.getElementById("oc_constituency").value;
-    //const streetAddress = document.getElementById("oc_street_address").value;
+    const receiptNumber = document.getElementById("oc_receipt_number").value;
+   const constituency = document.getElementById("oc_constituency").value;
+    const streetAddress = document.getElementById("oc_street_address").value;
      
     
-    //if (!dobFeild || !nibNumber  || !membershipType  || !affiliateBranch  || !oc_constituency || !streetAddress ) {
-        // Display an error message and exit
-     //   Swal.fire({
-      //      icon: "error",
-      //      title: "Error",
-      //      text: "Please fill out all required fields.",
-      //  });
-      //  return; // Stop the execution of the function
-   // }
+    if (!dobFeild || !nibNumber  || !membershipType  || !oc_constituency || !streetAddress ) {
+       //  Display an error message and exit
+       Swal.fire({
+           icon: "error",
+          title: "Error",
+          text: "Please fill out all required fields.",
+      });
+       return; // Stop the execution of the function
+   }
 
 
   // Get the user ID from the displayedId element
