@@ -182,9 +182,9 @@
         </div>
         <div class="d-grid gap-2">
          <!-- <button name="add-notes-btn" id="add-notes-btn" class="btn btn-dark waves-effect waves-light"
-            type="button">ADD NOTES</button>
-          <button name="view-notes-btn" id="view-notes-btn" class="btn btn-dark waves-effect waves-light"
-            data-bs-toggle="modal" data-bs-target="#notesModel" type="button">VIEW NOTES</button> -->
+            type="button">ADD NOTES</button>-->
+            <button name="update-btn" id="update-btn" class="btn btn-dark waves-effect waves-light"
+            type="button"> UPDATE RECORD</button>
           <button name="approve-pay-btn" id="approve-pay-btn" class="btn btn-success waves-effect waves-light"
             type="button"> ACTIVATE CARD / APPROVE PAYMENT</button>
          <button name="deny-btn" id="deny-btn" class="btn btn-danger waves-effect waves-light" type="button">VOID PAYMENT</button>
@@ -326,7 +326,7 @@ delegateDropdown.addEventListener("change", function() {
 <script>
 
   //APPROVE APPLICANT'S REGISTRATION
-  document.getElementById("approve-pay-btn").addEventListener("click", function () {
+  document.getElementById("update-btn").addEventListener("click", function () {
   // Prevent the default form submission behavior
   event.preventDefault();
 
@@ -362,7 +362,7 @@ function callUpdateUserAPI(formData) {
   // Make the API call to update_user.php with the provided data
   // Implement your API call here, using fetch, Axios, or any other method you prefer
   // Example using fetch:
-  fetch("/api/dashboard/update/update_payment_info.php", {
+  fetch("/api/dashboard/update/update_payment_record_only.php", {
     method: "POST", // Use the appropriate method for your API
     body: formData, // Send the form data in the request body
   })
