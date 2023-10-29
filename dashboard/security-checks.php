@@ -335,7 +335,7 @@
                     console.error('Ajax request failed:', textStatus, errorThrown);
                 },
             },
-            "dom": 'lBfrtip',
+            "dom": 'lfrtip',
             "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
             "pageLength": 50,
             "lengthMenu": [
@@ -543,7 +543,7 @@
                     console.error('Ajax request failed:', textStatus, errorThrown);
                 },
             },
-            "dom": 'lBfrtip',
+            "dom": 'lfrtip',
             "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
             "pageLength": 50,
             "lengthMenu": [
