@@ -1,45 +1,57 @@
+//<?php
+require_once(dirname(__DIR__, 3) . '/database/dbconnection.php');
 
+$query = 'CALL GET_ALL_DELEGATE_REGISTRANTS()';
+$stmt = mysqli_query($connection, $query);
+
+$data = [];
+while ($row = mysqli_fetch_assoc($stmt)) {
+    $data[] = $row;
+}
+
+$results = ["draw" => 1, "recordsTotal" => count($data), "recordsFiltered" => count($data), "data" => $data];
+
+echo json_encode($results);
+
+mysqli_close($connection);
+?>
 
 
 <?php
 // Include database connection
-require_once(dirname(__DIR__, 3) . '/database/dbconnection.php');
+include('db_connection.php');
 
-$columns = array(
-    'mpi.plp_id',
-    'mpi.last_name',
-    'mpi.middle_name',
-    'mpi.first_name',
-    'mpi.gender',
-    'mpi.dob',
-    'mpi.nib_number',
-    'mpi.constituency',
-    'mpi.affiliated_branch',
-    'mpi.membership_type',
-    'mpi.priority',
-    'mpi.date',
-    'maci.email_address',
-    'maci.mobile_number',
-    'maci.telephone_number',
-    'maci.street_address',
-    'maci.house_number',
-    'maci.emergency_contact_name',
-    'maci.emergency_contact_relationship',
-    'maci.emergency_contact_telephone_number'
-);
+// DataTables request parameters
+$draw = $_POST['draw'];
+$start = $_POST['start'];
+$length = $_POST['length'];
+$search = $_POST['search']['value'];
+$order_column = $_POST['order'][0]['column'];
+$order_dir = $_POST['order'][0]['dir'];
 
-// SQL query
-$sql = "SELECT " . implode(", ", $columns) . "
-        FROM members_profile_information mpi
-        JOIN members_address_contact_information maci ON mpi.plp_id = maci.plp_id
-        JOIN system_queues sq ON mpi.plp_id = sq.id
-        WHERE sq.duplicate = 'O'";
+// Call the stored procedure
+$stmt = mysqli_prepare($connection, "CALL GET_ALL_DELEGATE_REGISTRANTS(?, ?, ?, ?, ?)");
+mysqli_stmt_bind_param($stmt, "iissi", $start, $length, $search, $order_column, $order_dir);
+mysqli_stmt_execute($stmt);
 
-// Execute the SQL query and fetch data
-// You will need to replace these lines with your database connection code
-$result = mysqli_query($connection, $sql);
-$data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+// Fetch the result set
+$result = mysqli_stmt_get_result($stmt);
 
-// Return the data as JSON
-echo json_encode($data);
+// Fetch data into an array
+$data = [];
+while ($row = mysqli_fetch_assoc($result)) {
+    $data[] = $row;
+}
+
+// Close the statement
+mysqli_stmt_close($stmt);
+
+// Construct the response in the DataTables format
+$response = [
+    "draw" => intval($draw),
+    "data" => $data
+];
+
+// Return the response as JSON
+echo json_encode($response);
 ?>
