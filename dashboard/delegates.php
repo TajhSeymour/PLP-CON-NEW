@@ -369,7 +369,7 @@
 
         $('#all-delegates tbody').on('click', 'tr', function() {
             console.log("Row Clicked!"); // Add this line for testing
-            const rowData = table.row(this).data();
+            const rowData = alldelegats.row(this).data();
 
             /* The above code is declaring and assigning values to several constants in PHP. The constants are
             named id, first_name, middle_name, last_name, email, nib, assignment, and priority. The values
@@ -476,6 +476,7 @@
             reloadData(alldelegats); // Replace 'table' with your DataTable variable
         }, 15000); // 15 seconds (15000 milliseconds)
     });
+  
 </script>
 
 <script>
@@ -610,7 +611,7 @@
 
         $('#checked-in-delegates tbody').on('click', 'tr', function() {
             console.log("Row Clicked!"); // Add this line for testing
-            const rowData = table.row(this).data();
+            const rowData = checkedin.row(this).data();
 
             /* The above code is declaring and assigning values to several constants in PHP. The constants are
             named id, first_name, middle_name, last_name, email, nib, assignment, and priority. The values
