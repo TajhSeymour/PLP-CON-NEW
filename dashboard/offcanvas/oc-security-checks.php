@@ -25,7 +25,7 @@
           <h4>General Information</h4>
         </center>
         <div>
-          <input type="hidden" name="input_userid" id="input_userid" />
+          <input name="input_userid" id="input_userid" />
         </div>
 
         <div class="mb-3">
