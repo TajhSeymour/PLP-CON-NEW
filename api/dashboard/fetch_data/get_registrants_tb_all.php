@@ -1,57 +1,82 @@
-//<?php
+<?php
 require_once(dirname(__DIR__, 3) . '/database/dbconnection.php');
 
-$query = 'CALL GET_ALL_DELEGATE_REGISTRANTS()';
-$stmt = mysqli_query($connection, $query);
+// Process incoming parameters
+$start = $_GET['start'] ?? 0;
+$length = $_GET['length'] ?? 10;
+$order = $_GET['order'][0] ?? [];
+$draw = $_GET['draw'] ?? 1;
+$search = $_GET['search']['value'] ?? '';
 
-$data = [];
-while ($row = mysqli_fetch_assoc($stmt)) {
+// Define the main SQL query
+$sql = "
+SELECT 
+    mpi.plp_id,
+    mpi.last_name,
+    mpi.middle_name,
+    mpi.first_name,
+    mpi.gender,
+    mpi.dob,
+    mpi.nib_number,
+    mpi.constituency,
+    mpi.affiliated_branch,
+    mpi.membership_type,
+    mpi.priority,
+    mpi.date,
+    maci.email_address,
+    maci.mobile_number,
+    maci.telephone_number,
+    maci.street_address,
+    maci.house_number,
+    maci.emergency_contact_name,
+    maci.emergency_contact_relationship,
+    maci.emergency_contact_telephone_number
+FROM 
+    members_profile_information mpi
+JOIN
+    members_address_contact_information maci
+ON
+    mpi.plp_id = maci.plp_id
+JOIN 
+    system_queues sq
+ON 
+    mpi.plp_id = sq.id
+WHERE  
+    sq.duplicate = 'O'
+";
+
+// Get the total number of records
+$totalRecords = $db->query("SELECT COUNT(*) FROM ($sql) as subquery")->fetch_row()[0];
+
+// Apply ordering if specified
+if (!empty($order)) {
+    $columnIndex = intval($order['column']);
+    $orderBy = $columns[$columnIndex];
+    $orderDir = $order['dir'];
+    $sql .= " ORDER BY $orderBy $orderDir";
+}
+
+// Apply pagination
+$sql .= " LIMIT $start, $length";
+
+// Execute the SQL query
+$result = $db->query($sql);
+
+// Prepare the data
+$data = array();
+while ($row = $result->fetch_assoc()) {
     $data[] = $row;
 }
 
-$results = ["draw" => 1, "recordsTotal" => count($data), "recordsFiltered" => count($data), "data" => $data];
-
-echo json_encode($results);
-
-mysqli_close($connection);
-?>
-
-
-<?php
-// Include database connection
-include('db_connection.php');
-
-// DataTables request parameters
-$draw = $_POST['draw'];
-$start = $_POST['start'];
-$length = $_POST['length'];
-$search = $_POST['search']['value'];
-$order_column = $_POST['order'][0]['column'];
-$order_dir = $_POST['order'][0]['dir'];
-
-// Call the stored procedure
-$stmt = mysqli_prepare($connection, "CALL GET_ALL_DELEGATE_REGISTRANTS(?, ?, ?, ?, ?)");
-mysqli_stmt_bind_param($stmt, "iissi", $start, $length, $search, $order_column, $order_dir);
-mysqli_stmt_execute($stmt);
-
-// Fetch the result set
-$result = mysqli_stmt_get_result($stmt);
-
-// Fetch data into an array
-$data = [];
-while ($row = mysqli_fetch_assoc($result)) {
-    $data[] = $row;
-}
-
-// Close the statement
-mysqli_stmt_close($stmt);
-
-// Construct the response in the DataTables format
-$response = [
+// Build the JSON response
+$response = array(
     "draw" => intval($draw),
+    "recordsTotal" => intval($totalRecords),
+    "recordsFiltered" => count($data),
     "data" => $data
-];
+);
 
-// Return the response as JSON
+// Return the JSON response to the client
+header('Content-Type: application/json');
 echo json_encode($response);
 ?>
