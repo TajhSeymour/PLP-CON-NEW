@@ -728,151 +728,9 @@ App js -->
             "scrollX": false,
             "searchDelay": 550,
         });
-        const offcanvas = new bootstrap.Offcanvas(document.getElementById("offcanvasSecurity"));
-
-$('#all-delegates tbody').on('click', 'tr', function() {
-    console.log("Row Clicked!"); // Add this line for testing
-    const rowData = allRegistrantsTable.row(this).data();
-
-    /* The above code is declaring and assigning values to several constants in PHP. The constants are
-    named id, first_name, middle_name, last_name, email, nib, assignment, and priority. The values
-    of these constants are being assigned from the corresponding properties of an object named
-    rowData. */
-    const id = rowData.plp_id;
-    const first_name = rowData.first_name;
-    const middle_name = rowData.middle_name;
-    const last_name = rowData.last_name;
-   const email = rowData.email_address;
-   const priority = rowData.priority;
-   const dob = rowData.dob;
-const gender = rowData.gender;
-    const nib_number = rowData.nib_number;
-    const constituency = rowData.constituency;
-    const affiliated_branch = rowData.affiliated_branch;
-    const membership_type = rowData.membership_type;
-    const date = rowData.date;
-    const mobile_number = rowData.mobile_number;
-    const telephone_number = rowData.telephone_number;
-    const street_address = rowData.street_address;
-    const house_number = rowData.house_number;
-    const emergency_contact_name = rowData.emergency_contact_name;
-    const emergency_contact_relationship = rowData.emergency_contact_relationship;
-const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
-
-    const displayedIdElement = document.getElementById("displayedId");
-    displayedIdElement.textContent = id
-
-    const displayedIdElement2 = document.getElementById("input_userid");
-   displayedIdElement.value = id;
 
 
-    const displayedNameElement = document.getElementById("offcanvasSecurityLabel");
-    displayedNameElement.textContent = first_name + " " + last_name;
 
-   //THE INPUT TEXT FORM
-
-   const displayedFirstNameElement = document.getElementById("oc_first_name");
-    displayedFirstNameElement.value = first_name;
-
-    const displayedMiddleNameElement = document.getElementById("oc_middle_name");
-    displayedMiddleNameElement.value = middle_name;
-
-    const displayedLastNameElement = document.getElementById("oc_last_name");
-    displayedLastNameElement.value = last_name;
-
-      const displayedDOBElement = document.getElementById("oc_dob");
-   displayedDOBElement.value = dob;
-
-    const displayedEmailElement = document.getElementById("oc_email_address");
-    displayedEmailElement.value = email;
-
-    const displayedPriorityElement = document.getElementById("oc_priority");
-    displayedPriorityElement.value = priority;
-
-   const displayedGenderElement = document.getElementById("oc_gender");
-    displayedGenderElement.value = gender;
-
-     const displayedNIBElement = document.getElementById("oc_up_nib_number");
-     displayedNIBElement.value = nib_number;
-
-   const displayedConstituencyElement = document.getElementById("oc_constituency");
-    displayedConstituencyElement.value = constituency;
-
-    const displayedAffiliatedBranchElement = document.getElementById("oc_affiliated_branch");
-     displayedAffiliatedBranchElement.value = affiliated_branch;
-
-      const displayedMembershipTypeElement = document.getElementById("oc_membership_type");
-     displayedMembershipTypeElement.value = membership_type;
-
- const displayedDateElement = document.getElementById("oc_date");
- displayedDateElement.value = date;
-
-const displayedMobileNumberElement = document.getElementById("oc_mobile_number");
- displayedMobileNumberElement.value = mobile_number;
-
-   const displayedTelephoneNumberElement = document.getElementById("oc_telephone_number");
-    displayedTelephoneNumberElement.value = telephone_number;
-
-  const displayedStreetAddressElement = document.getElementById("oc_street_address");
-   displayedStreetAddressElement.value = street_address;
-
-const displayedHouseNumberElement = document.getElementById("oc_house_number");
-    displayedHouseNumberElement.value = house_number;
-
- const displayedEmergencyContactNameElement = document.getElementById("oc_emergency_contact_name");
- displayedEmergencyContactNameElement.value = emergency_contact_name;
-
-   const displayedEmergencyContactRelationshipElement = document.getElementById("oc_emergency_contact_relationship");
-   displayedEmergencyContactRelationshipElement.value = emergency_contact_relationship;
-
-    const displayedEmergencyContactTelephoneNumberElement = document.getElementById("oc_emergency_contact_telephone_number");
-   displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
-
-   
-   offcanvas.show(); // Show the offcanvas
-
-
-});
-        // Reload data for the DataTable every 15 seconds
-        setInterval(function () {
-            reloadData(allRegistrantsTable); // Replace 'table' with your DataTable variable
-        }, 7000); // 15 seconds (7000 milliseconds)
-    });
-  
-</script>
-<script>
-        function reloadData(table) {
-        table.ajax.reload(null, false); // Reload the data without resetting the current page
-    }
-
-    $(document).ready(function () {
-        // Function to add the badge and gender icon based on the "Priority" and "Gender" column values
-        function addBadge(row, data) {
-            var priority = data.priority.toLowerCase(); // Assuming "priority" is the property representing the "Priority" column in the dataset
-            var badgeClass = "";
-            if (priority === 'high') {
-                badgeClass = "badge text-bg-danger";
-            } else if (priority === 'medium') {
-                badgeClass = "badge text-bg-warning";
-            } else if (priority === 'normal') {
-                badgeClass = "badge text-bg-info";
-            }
-
-    
-
-            if (badgeClass !== "") {
-                var priorityColumnIndex = $("#all-registrants thead th").filter(function () {
-                    return $(this).text() === "PRIORITY";
-                }).index();
-
-                $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
-            }
-
-            var gender = data.gender.toLowerCase();
-            var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
-            $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
-
-        }
         // Initialize DataTable for "all-registrants"
         var pendingPaymentTable = $('#pending-payment').DataTable({
             "processing": false,
@@ -1070,13 +928,13 @@ var pendingPrintTable = $('#pending-print').DataTable({
 
          // Reload data for all DataTables every 15 seconds
     setInterval(function () {
-       // reloadData(allRegistrantsTable);
+        reloadData(allRegistrantsTable);
         reloadData(pendingPaymentTable);
         reloadData(printedBadgesTable);
         reloadData(pendingPrintTable);
     }, 15000); // 15 seconds (15000 milliseconds)
 
-    
+    });
 </script>
 
 <style>
