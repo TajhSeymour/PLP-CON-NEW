@@ -624,6 +624,10 @@ App js -->
 
 <!-- Your HTML code for the DataTables goes here -->
 <script>
+            function reloadData(table) {
+        table.ajax.reload(null, false); // Reload the data without resetting the current page
+    }
+    
     $(document).ready(function () {
         // Function to add the badge and gender icon based on the "Priority" and "Gender" column values
         function addBadge(row, data) {
@@ -637,9 +641,7 @@ App js -->
                 badgeClass = "badge text-bg-info";
             }
 
-            function reloadData(table) {
-        table.ajax.reload(null, false); // Reload the data without resetting the current page
-    }
+    
 
             if (badgeClass !== "") {
                 var priorityColumnIndex = $("#all-registrants thead th").filter(function () {
