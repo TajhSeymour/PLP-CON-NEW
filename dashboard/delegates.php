@@ -342,7 +342,7 @@
             },
             "ajax": {
                 "url": "/api/dashboard/fetch_data/get_all_registrants_tb_not_checked_in.php",
-                "type": "POST",
+                "type": "GET",
                 "dataType": 'json',
                 "error": function(jqXHR, textStatus, errorThrown) {
                     console.error('Ajax request failed:', textStatus, errorThrown);
@@ -584,7 +584,7 @@
             },
             "ajax": {
                 "url": "/api/dashboard/fetch_data/get_all_registrants_tb_checked_in.php",
-                "type": "POST",
+                "type": "GET",
                 "dataType": 'json',
                 "error": function(jqXHR, textStatus, errorThrown) {
                     console.error('Ajax request failed:', textStatus, errorThrown);
