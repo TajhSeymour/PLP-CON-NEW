@@ -15,7 +15,7 @@
   <div class="img-container-photo">
     <!-- The image will be inserted here by the JavaScript code -->
   </div>
-  <form id="update-staff-info-form" action="/api/dashboard/update/update_delegate_info.php" enctype="multipart/form-data"  class="tablelist-form" autocomplete="off">
+  <form id="update-staff-info-form"  enctype="multipart/form-data"  class="tablelist-form" autocomplete="off">
     <div class="modal-body">
       <div class="row g-3">
        
@@ -274,7 +274,7 @@
           <button name="view-notes-btn" id="view-notes-btn" class="btn btn-dark waves-effect waves-light"
             data-bs-toggle="modal" data-bs-target="#notesModel" type="button">VIEW NOTES</button> -->
           <button name="approve-btn" id="approve-btn" class="btn btn-success waves-effect waves-light"
-            type="button">CHECKED-IN / UPDATE RECORD</button>
+            type="submit">CHECKED-IN / UPDATE RECORD</button>
           <button name="deny-btn" id="deny-btn" class="btn btn-danger waves-effect waves-light" type="button">MARKED AS DUPLICATE</button>
         </div>
       </div>
