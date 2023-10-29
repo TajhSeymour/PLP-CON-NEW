@@ -651,7 +651,7 @@ App js -->
 
         }
         // Initialize DataTable for "all-registrants"
-         $('#all-registrants').DataTable({
+        var allRegistrantsTable = $('#all-registrants').DataTable({
             "processing": false,
             "serverSide": false,
             "ajax": {
@@ -726,7 +726,7 @@ App js -->
 
 
         // Initialize DataTable for "all-registrants"
-        $('#pending-payment').DataTable({
+        var pendingPaymentTable = $('#pending-payment').DataTable({
             "processing": false,
             "serverSide": false,
             "ajax": {
@@ -807,7 +807,7 @@ App js -->
         });
 
 // Initialize DataTable for "all-registrants"
-$('#printed-badges').DataTable({
+var printedBadgesTable = $('#printed-badges').DataTable({
             "processing": false,
             "serverSide": false,
             "ajax": {
@@ -864,7 +864,7 @@ $('#printed-badges').DataTable({
         });
 
 // Initialize DataTable for "all-registrants"
-$('#pending-print').DataTable({
+var pendingPrintTable = $('#pending-print').DataTable({
             "processing": false,
             "serverSide": false,
             "ajax": {
@@ -919,6 +919,14 @@ $('#pending-print').DataTable({
             "scrollX": false,
             "searchDelay": 550,
         });
+
+         // Reload data for all DataTables every 15 seconds
+    setInterval(function () {
+        reloadData(allRegistrantsTable);
+        reloadData(pendingPaymentTable);
+        reloadData(printedBadgesTable);
+        reloadData(pendingPrintTable);
+    }, 35000); // 15 seconds (15000 milliseconds)
 
     });
 </script>
