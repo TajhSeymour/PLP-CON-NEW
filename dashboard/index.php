@@ -829,12 +829,18 @@ const displayedHouseNumberElement = document.getElementById("oc_house_number");
    displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
 
    
+   offcanvas.show(); // Show the offcanvas
 
 
-
-    offcanvas.show(); // Show the offcanvas
 });
-
+        // Reload data for the DataTable every 15 seconds
+        setInterval(function () {
+            reloadData(allRegistrantsTable); // Replace 'table' with your DataTable variable
+        }, 7000); // 15 seconds (7000 milliseconds)
+    });
+  
+</script>
+<script>
         // Initialize DataTable for "all-registrants"
         var pendingPaymentTable = $('#pending-payment').DataTable({
             "processing": false,
@@ -1032,13 +1038,13 @@ var pendingPrintTable = $('#pending-print').DataTable({
 
          // Reload data for all DataTables every 15 seconds
     setInterval(function () {
-        reloadData(allRegistrantsTable);
+       // reloadData(allRegistrantsTable);
         reloadData(pendingPaymentTable);
         reloadData(printedBadgesTable);
         reloadData(pendingPrintTable);
     }, 15000); // 15 seconds (15000 milliseconds)
 
-    });
+    
 </script>
 
 <style>
