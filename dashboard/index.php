@@ -651,7 +651,7 @@ App js -->
 
         }
         // Initialize DataTable for "all-registrants"
-        var allRegistrants = $('#all-registrants').DataTable({
+         $('#all-registrants').DataTable({
             "processing": false,
             "serverSide": false,
             "ajax": {
@@ -723,10 +723,6 @@ App js -->
             "searchDelay": 550,
         });
 
-         // Poll for new data every 5 seconds
-    setInterval(function () {
-        allRegistrants.ajax.reload(null, false); // null means reload all data, false means no reset of sorting/paging
-    }, 35000); // Refresh every 5 seconds
 
 
         // Initialize DataTable for "all-registrants"
