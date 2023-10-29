@@ -4,7 +4,7 @@
 
 <head>
 
-    <title>DTU - System Administration| Securiy Checks</title>
+<title>PLP Convention Administration Panel</title>
     <?php include 'layouts/title-meta.php'; ?>
     <?php include 'layouts/head-css.php'; ?>
 
