@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     // Prepare and execute the stored procedure
-    $query = "CALL UPDATE_PROFILE_CONFIRM_PAYMENT_V1(?,?,?,?,?,?,?,?,?,?,?)";
+    $query = "CALL UPDATE_PROFILE_CONFIRM_PAYMENT_RECORD(?,?,?,?,?,?,?,?,?,?,?)";
     $stmt = mysqli_prepare($connection, $query);
     mysqli_stmt_bind_param($stmt, "issssssssss", 
    
