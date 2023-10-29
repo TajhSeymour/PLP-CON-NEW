@@ -504,7 +504,7 @@ function callUpdateUserAPI(formData) {
         text: "The delegate's information has been successfully updated!",
       }).then(() => {
         // Reload the page after the success message is closed
-        window.location.reload();
+        //window.location.reload();
       });
     })
     .catch((error) => {
@@ -566,7 +566,7 @@ function callUpdateUserAPI(formData) {
             text: "This duplicate registrant has been successfully deleted!",
           }).then(() => {
             // Reload the page after the success message is closed
-            window.location.reload();
+            //window.location.reload();
           });
         } else {
           // If the response is not successful, handle the error
