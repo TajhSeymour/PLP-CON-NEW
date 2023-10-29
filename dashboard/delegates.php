@@ -474,7 +474,7 @@
         // Reload data for the DataTable every 15 seconds
         setInterval(function () {
             reloadData(alldelegats); // Replace 'table' with your DataTable variable
-        }, 15000); // 15 seconds (15000 milliseconds)
+        }, 7000); // 15 seconds (7000 milliseconds)
     });
   
 </script>
@@ -718,7 +718,7 @@
         // Reload data for the DataTable every 15 seconds
         setInterval(function () {
             reloadData(checkedin); // Replace 'table' with your DataTable variable
-        }, 15000); // 15 seconds (15000 milliseconds)
+        }, 7000); // 15 seconds (7000 milliseconds)
     
     });
 
