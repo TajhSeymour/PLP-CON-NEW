@@ -637,6 +637,10 @@ App js -->
                 badgeClass = "badge text-bg-info";
             }
 
+            function reloadData(table) {
+        table.ajax.reload(null, false); // Reload the data without resetting the current page
+    }
+
             if (badgeClass !== "") {
                 var priorityColumnIndex = $("#all-registrants thead th").filter(function () {
                     return $(this).text() === "PRIORITY";
