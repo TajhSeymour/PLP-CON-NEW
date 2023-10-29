@@ -652,8 +652,8 @@ App js -->
         }
         // Initialize DataTable for "all-registrants"
         var allRegistrants = $('#all-registrants').DataTable({
-            "processing": true,
-            "serverSide": true,
+            "processing": false,
+            "serverSide": false,
             "ajax": {
                 "url": "/api/dashboard/fetch_data/get_registrants_tb_all.php",
                 "type": "POST",
