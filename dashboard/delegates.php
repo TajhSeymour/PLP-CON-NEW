@@ -342,13 +342,13 @@
             },
             "ajax": {
                 "url": "/api/dashboard/fetch_data/get_all_registrants_tb_not_checked_in.php",
-                "type": "GET",
+                "type": "POST",
                 "dataType": 'json',
                 "error": function(jqXHR, textStatus, errorThrown) {
                     console.error('Ajax request failed:', textStatus, errorThrown);
                 },
             },
-            "dom": 'lBfrtip',
+            "dom": 'lfrtip',//'lBfrtip',
             "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
             "pageLength": 50,
             "lengthMenu": [
@@ -584,13 +584,13 @@
             },
             "ajax": {
                 "url": "/api/dashboard/fetch_data/get_all_registrants_tb_checked_in.php",
-                "type": "GET",
+                "type": "POST",
                 "dataType": 'json',
                 "error": function(jqXHR, textStatus, errorThrown) {
                     console.error('Ajax request failed:', textStatus, errorThrown);
                 },
             },
-            "dom": 'lBfrtip',
+            "dom": 'lfrtip',//'lBfrtip',
             "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
             "pageLength": 50,
             "lengthMenu": [

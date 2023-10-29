@@ -500,8 +500,8 @@ function callUpdateUserAPI(formData) {
       // For example, show a success message using SweetAlert
       Swal.fire({
         icon: "success",
-        title: "User Updated",
-        text: "User information has been successfully updated!",
+        title: "Delegate's Profile Updated",
+        text: "The delegate's information has been successfully updated!",
       }).then(() => {
         // Reload the page after the success message is closed
         window.location.reload();
