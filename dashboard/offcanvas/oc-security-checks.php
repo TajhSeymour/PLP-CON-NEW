@@ -457,7 +457,7 @@
   event.preventDefault();
 
   const dobFeild = document.getElementById("oc_dob").value;
-    const nibNumber = document.getElementById("oc_nib_number").value;
+    const nibNumber = document.getElementById("oc_up_nib_number").value;
     const membershipType = document.getElementById("oc_membership_type").value;
     const affiliateBranch = document.getElementById("oc_affiliated_branch").value;
     //const receiptNumber = document.getElementById("oc_receipt_number").value;
