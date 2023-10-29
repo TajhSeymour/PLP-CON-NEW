@@ -841,6 +841,38 @@ const displayedHouseNumberElement = document.getElementById("oc_house_number");
   
 </script>
 <script>
+        function reloadData(table) {
+        table.ajax.reload(null, false); // Reload the data without resetting the current page
+    }
+
+    $(document).ready(function () {
+        // Function to add the badge and gender icon based on the "Priority" and "Gender" column values
+        function addBadge(row, data) {
+            var priority = data.priority.toLowerCase(); // Assuming "priority" is the property representing the "Priority" column in the dataset
+            var badgeClass = "";
+            if (priority === 'high') {
+                badgeClass = "badge text-bg-danger";
+            } else if (priority === 'medium') {
+                badgeClass = "badge text-bg-warning";
+            } else if (priority === 'normal') {
+                badgeClass = "badge text-bg-info";
+            }
+
+    
+
+            if (badgeClass !== "") {
+                var priorityColumnIndex = $("#all-registrants thead th").filter(function () {
+                    return $(this).text() === "PRIORITY";
+                }).index();
+
+                $('td:eq(' + priorityColumnIndex + ')', row).html('<span class="' + badgeClass + '">' + priority + '</span>');
+            }
+
+            var gender = data.gender.toLowerCase();
+            var iconClass = "mdi mdi-22px " + (gender === 'female' ? 'mdi-human-female' : 'mdi-human-male');
+            $('td:eq(2)', row).html('<i class="' + iconClass + '"></i> ' + data.first_name);
+
+        }
         // Initialize DataTable for "all-registrants"
         var pendingPaymentTable = $('#pending-payment').DataTable({
             "processing": false,
