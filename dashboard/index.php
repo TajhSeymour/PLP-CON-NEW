@@ -627,7 +627,7 @@ App js -->
             function reloadData(table) {
         table.ajax.reload(null, false); // Reload the data without resetting the current page
     }
-    
+
     $(document).ready(function () {
         // Function to add the badge and gender icon based on the "Priority" and "Gender" column values
         function addBadge(row, data) {
@@ -932,7 +932,7 @@ var pendingPrintTable = $('#pending-print').DataTable({
         reloadData(pendingPaymentTable);
         reloadData(printedBadgesTable);
         reloadData(pendingPrintTable);
-    }, 1000); // 15 seconds (15000 milliseconds)
+    }, 15000); // 15 seconds (15000 milliseconds)
 
     });
 </script>
