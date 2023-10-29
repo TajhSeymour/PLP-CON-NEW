@@ -94,10 +94,9 @@
         <div class="mb-3">
           <label for="membership_type" class="form-label">Delegate Type: *</label>
           <select class="form-control" data-plugin="choices" name="oc_delegate_type" id="oc_delegate_type" required>
-          <option select value="Observer Delegate">Observer Delegate (Non-Voting)</option>
+          <option selected value="Observer Delegate">Observer Delegate (Non-Voting)</option>
           <option value="Voting Delegate">Voting Delegate</option>
           <option value="Stalwart Councillor">Stalwart Councillor</option>
-          
           </select>
         </div>
        
