@@ -399,8 +399,8 @@
             const displayedIdElement = document.getElementById("displayedId");
             displayedIdElement.textContent = id
 
-            const displayedIdElement2 = document.getElementById("input_user_id");
-            displayedIdElement.value = id;
+            //const displayedIdElement2 = document.getElementById("input_user_id");
+           // displayedIdElement.value = id;
 
 
             const displayedNameElement = document.getElementById("offcanvasSecurityLabel");
@@ -641,8 +641,8 @@
             const displayedIdElement = document.getElementById("displayedId");
             displayedIdElement.textContent = id
 
-            const displayedIdElement2 = document.getElementById("input_user_id");
-            displayedIdElement.value = id;
+            //const displayedIdElement2 = document.getElementById("input_user_id");
+            //displayedIdElement.value = id;
 
 
             const displayedNameElement = document.getElementById("offcanvasSecurityLabel");
