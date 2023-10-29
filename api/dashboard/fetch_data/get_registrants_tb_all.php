@@ -1,4 +1,4 @@
-//<?php
+<?php
 require_once(dirname(__DIR__, 3) . '/database/dbconnection.php');
 
 $query = 'CALL GET_ALL_DELEGATE_REGISTRANTS()';
