@@ -25,7 +25,7 @@
           <h4>General Information</h4>
         </center>
         <div>
-          <input name="input_userid" id="input_userid" />
+          <input type="text" class="form-control" name="input_userid" id="input_userid" />
         </div>
 
         <div class="mb-3">
