@@ -149,10 +149,10 @@
         </div>
 
         <div class="mb-3">
-          <label for="membership_type" class="form-label">Affiliated Branch: *</label>
+          <label for="membership_type" class="form-label">Affiliated Branch:</label>
           <select class="form-control" data-plugin="choices" name="oc_affiliated_branch" id="oc_affiliated_branch"
-            required>
-            <option value="" disabled selected>Select Branch</option>
+            >
+            <option value="N/A" selected>Select Branch</option>
             <option value="PYL">PYL</option>
                                 <option value="PYL-GB">PYL-GB</option>
                                 <option value="NPI">NPI</option>
@@ -199,6 +199,7 @@
                                 <option value="WEST GB & BIMINI">West GB & Bimini</option>
                                 <option value="YAMACRAW">Yamacraw</option>
           </select>
+          <label for="membership_type" class="form-label">Delegate apart of any other branches?</label>
         </div>
 
 
