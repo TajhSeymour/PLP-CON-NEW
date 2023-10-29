@@ -238,6 +238,9 @@
 <script src="assets/js/app.js"></script>
 
 <script>
+     function reloadData(table) {
+    table.ajax.reload(null, false); // Reload the data without resetting the current page
+}
     $(document).ready(function() {
         // Function to add the badge and gender icon based on the "Priority" and "Gender" column values
         function addBadge(row, data) {
@@ -268,7 +271,7 @@
         The columns are defined using the "columns" option, and each column is specified with its
         corresponding data property. Some columns are set to be visible or hidden using the "visible"
         option. */
-        var table = $('#all-delegates').DataTable({
+        var alldelegats = $('#all-delegates').DataTable({
             "columns": [{
                 "data": "plp_id"
             },
@@ -468,10 +471,17 @@
 
             offcanvas.show(); // Show the offcanvas
         });
+        // Reload data for the DataTable every 15 seconds
+        setInterval(function () {
+            reloadData(alldelegats); // Replace 'table' with your DataTable variable
+        }, 15000); // 15 seconds (15000 milliseconds)
     });
 </script>
 
 <script>
+    function reloadData(table) {
+    table.ajax.reload(null, false); // Reload the data without resetting the current page
+}
     $(document).ready(function() {
         // Function to add the badge and gender icon based on the "Priority" and "Gender" column values
         function addBadge(row, data) {
@@ -502,7 +512,7 @@
         The columns are defined using the "columns" option, and each column is specified with its
         corresponding data property. Some columns are set to be visible or hidden using the "visible"
         option. */
-        var table = $('#checked-in-delegates').DataTable({
+        var checkedin = $('#checked-in-delegates').DataTable({
             "columns": [{
                 "data": "plp_id"
             },
@@ -701,77 +711,24 @@
 
 
             offcanvas.show(); // Show the offcanvas
+
+            
         });
+        // Reload data for the DataTable every 15 seconds
+        setInterval(function () {
+            reloadData(checkedin); // Replace 'table' with your DataTable variable
+        }, 15000); // 15 seconds (15000 milliseconds)
+    
     });
+
+
 </script>
 
 
 
 
 
-<script>
-    // Function to populate DataTable with the provided user ID
- // Function to populate DataTable with the provided user ID
-function populateDataTableWithUserID(userID) {
 
-// Check if DataTable is already initialized
-if ($.fn.DataTable.isDataTable('#view-notes')) {
-    $('#view-notes').DataTable().destroy(); // Destroy existing DataTable
-}
-
-$('#view-notes').DataTable({
-    autoWidth: false,
-    "processing": false,
-    "serverSide": false,
-    "ajax": {
-        "url": "/api/dashboard/fetch_data/get_registrant_notes.php",
-        "type": "post",
-        "data": {
-            "userID": userID
-        }
-    },
-    "columns": [
-        {
-            "data": "id", visible: false
-        },
-        {
-            "data": "note"
-        },
-        {
-            "data": "staff_name"
-        },
-        {
-            "data": "date_created"
-        }
-    ],
-    "dom": 'Bfrtip',
-    "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
-    "pageLength": 5,
-    "lengthMenu": [
-        [25, 50, 75, 100, -1],
-        [25, 50, 75, 100, "All"]
-    ],
-    "order": [
-        [0, 'asc']
-    ],
-    "searching": true,
-    "paging": true,
-    "info": true,
-    "scrollX": false,
-    "searchDelay": 550,
-});
-}
-
-// When the modal is shown, get the userID from the displayed element and populate the DataTable
-$('#notesModel').on('shown.bs.modal', function () {
-// Get the userID from the displayed element
-var userID = document.getElementById("displayedId").innerText.trim();
-
-// Call the function to populate the DataTable with the userID
-populateDataTableWithUserID(userID);
-});
-
-</script>
 
 <style>
     #all-delegates thead th,
