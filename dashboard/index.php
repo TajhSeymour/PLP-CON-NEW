@@ -932,7 +932,7 @@ var pendingPrintTable = $('#pending-print').DataTable({
         reloadData(pendingPaymentTable);
         reloadData(printedBadgesTable);
         reloadData(pendingPrintTable);
-    }, 25000); // 15 seconds (15000 milliseconds)
+    }, 15000); // 15 seconds (15000 milliseconds)
 
     });
 </script>
