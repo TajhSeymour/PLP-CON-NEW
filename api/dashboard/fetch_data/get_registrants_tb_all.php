@@ -46,7 +46,7 @@ WHERE
 ";
 
 // Get the total number of records
-$totalRecords = $db->query("SELECT COUNT(*) FROM ($sql) as subquery")->fetch_row()[0];
+$totalRecords = $connection->query("SELECT COUNT(*) FROM ($sql) as subquery")->fetch_row()[0];
 
 // Apply ordering if specified
 if (!empty($order)) {
@@ -60,7 +60,7 @@ if (!empty($order)) {
 $sql .= " LIMIT $start, $length";
 
 // Execute the SQL query
-$result = $db->query($sql);
+$result = $connection->query($sql);
 
 // Prepare the data
 $data = array();
