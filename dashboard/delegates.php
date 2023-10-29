@@ -429,7 +429,7 @@
            const displayedGenderElement = document.getElementById("oc_gender");
             displayedGenderElement.value = gender;
 
-             const displayedNIBElement = document.getElementById("oc_nib_number");
+             const displayedNIBElement = document.getElementById("oc_up_nib_number");
              displayedNIBElement.value = nib_number;
 
            const displayedConstituencyElement = document.getElementById("oc_constituency");
@@ -671,7 +671,7 @@
            const displayedGenderElement = document.getElementById("oc_gender");
             displayedGenderElement.value = gender;
 
-             const displayedNIBElement = document.getElementById("oc_nib_number");
+             const displayedNIBElement = document.getElementById("oc_up_nib_number");
              displayedNIBElement.value = nib_number;
 
            const displayedConstituencyElement = document.getElementById("oc_constituency");
