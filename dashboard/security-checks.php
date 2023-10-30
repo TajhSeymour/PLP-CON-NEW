@@ -162,6 +162,7 @@
                                                     <th>BADGE REPRINT</th>
                                                     <th>PRICE</th>
                                                     <th>NOTES</th>
+                                                    <th>BADGE</th>
                                                     <th>REGISTRATION DATE</th>
 
                                                 </tr>
@@ -184,6 +185,7 @@
                                                     <th>BADGE REPRINT</th>
                                                     <th>PRICE</th>
                                                     <th>NOTES</th>
+                                                    <th>BADGE</th>
                                                     <th>REGISTRATION DATE</th>
                                                 </tr>
                                             </tfoot>
