@@ -414,9 +414,9 @@
   formData.append("input_userid", userID); // Add the user ID to the form data
 
   // Make the API call to update the user information
-  callUpdateUserAPI(formData);
+  callUpdateUserAPI2(formData);
 });
-function callUpdateUserAPI(formData) {
+function callUpdateUserAPI2(formData) {
   // Make the API call to update_user.php with the provided data
   // Implement your API call here, using fetch, Axios, or any other method you prefer
   // Example using fetch:
@@ -430,7 +430,7 @@ function callUpdateUserAPI(formData) {
       // For example, show a success message using SweetAlert
       Swal.fire({
         icon: "success",
-        title: "Delegate's Profile Updated",
+        title: "Delegate's Profile Updated (ONLY)",
         text: "The delegate's information has been successfully updated!",
       }).then(() => {
         // Reload the page after the success message is closed
