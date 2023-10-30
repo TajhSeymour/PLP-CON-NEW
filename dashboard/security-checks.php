@@ -271,7 +271,7 @@
         The columns are defined using the "columns" option, and each column is specified with its
         corresponding data property. Some columns are set to be visible or hidden using the "visible"
         option. */
-        var table = $('#all-delegates').DataTable({
+        var alldelegats =  $('#all-delegates').DataTable({
 
             "columns": [{
                 "data": "plp_id"
@@ -362,7 +362,7 @@
 
         $('#all-delegates tbody').on('click', 'tr', function () {
             console.log("Row Clicked!"); // Add this line for testing
-            const rowData = table.row(this).data();
+            const rowData = alldelegats.row(this).data();
 
             /* The above code is declaring and assigning values to several constants in PHP. The constants are
             named id, first_name, middle_name, last_name, email, nib, assignment, and priority. The values
@@ -493,7 +493,7 @@
         The columns are defined using the "columns" option, and each column is specified with its
         corresponding data property. Some columns are set to be visible or hidden using the "visible"
         option. */
-        var table = $('#checked-in-delegates').DataTable({
+        var checkin = $('#checked-in-delegates').DataTable({
             "columns": [{
                 "data": "plp_id"
             },
@@ -583,7 +583,7 @@
 
         $('#checked-in-delegates tbody').on('click', 'tr', function () {
             console.log("Row Clicked!"); // Add this line for testing
-            const rowData = table.row(this).data();
+            const rowData = checkin.row(this).data();
 
             /* The above code is declaring and assigning values to several constants in PHP. The constants are
             named id, first_name, middle_name, last_name, email, nib, assignment, and priority. The values
