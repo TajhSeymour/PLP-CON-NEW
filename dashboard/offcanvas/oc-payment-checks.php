@@ -105,7 +105,7 @@
           <label for="membership_type" class="form-label">Representing Branch: *</label>
           <select class="form-control" data-plugin="choices" name="oc_affiliated_branch" id="oc_affiliated_branch"
             >
-            <option value="">Select Branch</option>
+            <option value="">Select Rep. Branch</option>
 
                                 <option value="PYL">PYL</option>
                                 <option value="PYL-GB">PYL-GB</option>
@@ -226,8 +226,11 @@ delegateDropdown.addEventListener("change", function() {
     const selection = this.value;
     if (selection === "Observer Delegate" || selection === "Voting Delegate") {
         ocAffiliatedBranch.disabled = false;
+
     } else {
         ocAffiliatedBranch.disabled = true;
+       
+
 
     }
 });
