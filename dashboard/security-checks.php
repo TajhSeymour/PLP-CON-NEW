@@ -318,9 +318,6 @@
             {
                 "data": "membership_type", visible: false
             },
-            {
-                "data": "new_badge_print", visible: false
-            },
             
             {
                 "data": "date"
@@ -384,7 +381,7 @@
             const date = rowData.date;
             const receipt = rowData.receipt_number;
             const notes = rowData.notes;
-            const badge = rowData.new_badge_print;
+            const badge = rowData.badge_reprint_status;
 
             // const mobile_number = rowData.mobile_number;
             // const telephone_number = rowData.telephone_number;
@@ -446,7 +443,7 @@
             displayDelegateTypeElement.value = delegate_type;
 
             const displayBadgeTypeElement = document.getElementById("oc_new_badge");
-            displayBadgeTypeElement.value = new_badge_print;
+            displayBadgeTypeElement.value = badge;
 
             offcanvas.show(); // Show the offcanvas
         });
@@ -533,9 +530,7 @@
             {
                 "data": "membership_type", visible: false
             },
-            {
-                "data": "new_badge_print", visible: false
-            },
+        
             
             {
                 "data": "date"
@@ -598,7 +593,7 @@
             const date = rowData.date;
             const receipt = rowData.receipt_number;
             const notes = rowData.notes;
-            const badge = rowData.new_badge_print;
+            const badge = rowData.badge_reprint_status;
 
             // const mobile_number = rowData.mobile_number;
             // const telephone_number = rowData.telephone_number;
@@ -660,7 +655,7 @@
             displayDelegateTypeElement.value = delegate_type;
 
             const displayBadgeTypeElement = document.getElementById("oc_new_badge");
-            displayBadgeTypeElement.value = new_badge_print;
+            displayBadgeTypeElement.value = badge;
 
             offcanvas.show(); // Show the offcanvas
         });
