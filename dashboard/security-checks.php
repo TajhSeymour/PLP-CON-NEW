@@ -162,7 +162,7 @@
                                                     <th>BADGE REPRINT</th>
                                                     <th>PRICE</th>
                                                     <th>NOTES</th>
-                                                    <th>BADGE</th>
+                                                   
                                                     <th>REGISTRATION DATE</th>
 
                                                 </tr>
@@ -185,7 +185,7 @@
                                                     <th>BADGE REPRINT</th>
                                                     <th>PRICE</th>
                                                     <th>NOTES</th>
-                                                    <th>BADGE</th>
+                                                    
                                                     <th>REGISTRATION DATE</th>
                                                 </tr>
                                             </tfoot>
@@ -665,70 +665,6 @@
 
 
 
-
-<script>
-    // Function to populate DataTable with the provided user ID
-    // Function to populate DataTable with the provided user ID
-    function populateDataTableWithUserID(userID) {
-
-        // Check if DataTable is already initialized
-        if ($.fn.DataTable.isDataTable('#view-notes')) {
-            $('#view-notes').DataTable().destroy(); // Destroy existing DataTable
-        }
-
-        $('#view-notes').DataTable({
-            autoWidth: false,
-            "processing": false,
-            "serverSide": false,
-            "ajax": {
-                "url": "/api/dashboard/fetch_data/get_registrant_notes.php",
-                "type": "post",
-                "data": {
-                    "userID": userID
-                }
-            },
-            "columns": [
-                {
-                    "data": "id", visible: false
-                },
-                {
-                    "data": "note"
-                },
-                {
-                    "data": "staff_name"
-                },
-                {
-                    "data": "date_created"
-                }
-            ],
-            "dom": 'Bfrtip',
-            "buttons": ['copy', 'csv', 'excel', 'pdf', 'print'],
-            "pageLength": 5,
-            "lengthMenu": [
-                [25, 50, 75, 100, -1],
-                [25, 50, 75, 100, "All"]
-            ],
-            "order": [
-                [0, 'asc']
-            ],
-            "searching": true,
-            "paging": true,
-            "info": true,
-            "scrollX": false,
-            "searchDelay": 550,
-        });
-    }
-
-    // When the modal is shown, get the userID from the displayed element and populate the DataTable
-    $('#notesModel').on('shown.bs.modal', function () {
-        // Get the userID from the displayed element
-        var userID = document.getElementById("displayedId").innerText.trim();
-
-        // Call the function to populate the DataTable with the userID
-        populateDataTableWithUserID(userID);
-    });
-
-</script>
 
 <style>
     #all-delegates thead th,
