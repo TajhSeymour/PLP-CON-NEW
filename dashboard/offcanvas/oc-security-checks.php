@@ -270,6 +270,8 @@
         </div>
 
         <div class="d-grid gap-2">
+        <button name="update-btn" id="update-btn" class="btn btn-dark waves-effect waves-light"
+            type="button"> UPDATE RECORD</button>
          <!-- <button name="add-notes-btn" id="add-notes-btn" class="btn btn-dark waves-effect waves-light"
             type="button">ADD NOTES</button>
           <button name="view-notes-btn" id="view-notes-btn" class="btn btn-dark waves-effect waves-light"
@@ -446,7 +448,77 @@
 </script>
 
 
+<script>
 
+  //APPROVE APPLICANT'S REGISTRATION
+  document.getElementById("update-btn").addEventListener("click", function () {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  const dobFeild = document.getElementById("oc_dob").value;
+    const nibNumber = document.getElementById("oc_up_nib_number").value;
+   const membershipType = document.getElementById("oc_membership_type").value;
+    //const affiliateBranch = document.getElementById("oc_affiliated_branch").value;
+    const receiptNumber = document.getElementById("oc_receipt_number").value;
+   const constituency = document.getElementById("oc_constituency").value;
+    const streetAddress = document.getElementById("oc_street_address").value;
+     
+    
+    if (!dobFeild || !nibNumber  || !membershipType  || !oc_constituency || !streetAddress ) {
+       //  Display an error message and exit
+       Swal.fire({
+           icon: "error",
+          title: "Error",
+          text: "Please fill out all required fields.",
+      });
+       return; // Stop the execution of the function
+   }
+
+
+  // Get the user ID from the displayedId element
+  const userID = document.getElementById("displayedId").innerText;
+
+  // Get the form data
+  const formData = new FormData(document.getElementById("update-staff-info-form"));
+  formData.append("input_userid", userID); // Add the user ID to the form data
+
+  // Make the API call to update the user information
+  callUpdateUserAPI(formData);
+});
+function callUpdateUserAPI(formData) {
+  // Make the API call to update_user.php with the provided data
+  // Implement your API call here, using fetch, Axios, or any other method you prefer
+  // Example using fetch:
+  fetch("/api/dashboard/update/update_delegate_record_only.php", {
+    method: "POST", // Use the appropriate method for your API
+    body: formData, // Send the form data in the request body
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // Handle the response from the API if necessary
+      // For example, show a success message using SweetAlert
+      Swal.fire({
+        icon: "success",
+        title: "Delegate's Profile Updated",
+        text: "The delegate's information has been successfully updated!",
+      }).then(() => {
+        // Reload the page after the success message is closed
+        //window.location.reload();
+      });
+    })
+    .catch((error) => {
+      // Handle any errors that occur during the API call
+      console.error("Error updating user:", error);
+      // Show an error message using SweetAlert
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "An error occurred while updating the user information. Please try again later.",
+      });
+    });
+}
+
+</script>
 
 
 <!-- Reset Password Script -->

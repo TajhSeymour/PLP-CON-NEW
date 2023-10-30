@@ -186,7 +186,7 @@
             type="button"> UPDATE RECORD</button>
           <button name="approve-pay-btn" id="approve-pay-btn" class="btn btn-success waves-effect waves-light"
             type="button"> ACTIVATE CARD / APPROVE PAYMENT</button>
-         <button name="deny-btn" id="deny-btn" class="btn btn-danger waves-effect waves-light" type="button">VOID PAYMENT</button>
+         <button name="deny-btn" id="deny-btn" class="btn btn-danger waves-effect waves-light" type="button">VOID PAYMENT / DENY CARD ACCESS</button>
         </div>
       </div>
     </div>
