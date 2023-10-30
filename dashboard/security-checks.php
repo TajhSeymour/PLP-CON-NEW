@@ -349,7 +349,7 @@
                 [25, 50, 75, 100, "All"]
             ],
             "order": [
-                [0,4,7,8, 'asc']
+                [1, 'asc']
             ],
             "searching": true,
             "paging": true,
@@ -570,7 +570,7 @@
                 [25, 50, 75, 100, "All"]
             ],
             "order": [
-                [1, 'desc']
+                [1, 'asc']
             ],
             "searching": true,
             "paging": true,
