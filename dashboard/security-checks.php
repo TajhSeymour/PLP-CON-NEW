@@ -238,6 +238,9 @@
 <script src="assets/js/app.js"></script>
 
 <script>
+    function reloadData(table) {
+    table.ajax.reload(null, false); // Reload the data without resetting the current page
+}
     $(document).ready(function () {
         // Function to add the badge and gender icon based on the "Priority" and "Gender" column values
         function addBadge(row, data) {
@@ -445,12 +448,21 @@
             const displayBadgeTypeElement = document.getElementById("oc_new_badge");
             displayBadgeTypeElement.value = badge;
 
+           
             offcanvas.show(); // Show the offcanvas
         });
+        // Reload data for the DataTable every 15 seconds
+        setInterval(function () {
+            reloadData(alldelegats); // Replace 'table' with your DataTable variable
+        }, 7000); // 15 seconds (7000 milliseconds)
     });
+  
 </script>
 
 <script>
+        function reloadData(table) {
+    table.ajax.reload(null, false); // Reload the data without resetting the current page
+}
     $(document).ready(function () {
         // Function to add the badge and gender icon based on the "Priority" and "Gender" column values
         function addBadge(row, data) {
@@ -659,7 +671,12 @@
 
             offcanvas.show(); // Show the offcanvas
         });
+        // Reload data for the DataTable every 15 seconds
+        setInterval(function () {
+            reloadData(alldelegats); // Replace 'table' with your DataTable variable
+        }, 7000); // 15 seconds (7000 milliseconds)
     });
+  
 </script>
 
 
