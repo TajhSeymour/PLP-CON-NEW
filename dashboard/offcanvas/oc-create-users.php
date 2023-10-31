@@ -151,7 +151,7 @@ function callUpdateUserAPI(formData) {
     // Make the API call to resetpw.php passing the userID
     // Implement your API call here, using fetch, Axios, or any other method you prefer
     // Example using fetch:
-    fetch("https://oasministersregister.gov.bs/api/dashboard/update/update_sys_usr_password.php", {
+    fetch("/api/dashboard/update/update_sys_usr_password.php", {
         method: "POST", // Use the appropriate method for your API
         body: JSON.stringify({
           userID
@@ -216,7 +216,7 @@ function callUpdateUserAPI(formData) {
     // Make the API call to delete the officer's account using DELETE method
     // Implement your API call here, using fetch, Axios, or any other method you prefer
     // Example using fetch:
-    fetch("https://oasministersregister.gov.bs/api/dashboard/delete/delete_system_user.php", {
+    fetch("/api/dashboard/delete/delete_system_user.php", {
       method: "POST", // Use the appropriate method for your API
         body: JSON.stringify({
           userID
