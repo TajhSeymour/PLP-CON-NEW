@@ -310,7 +310,7 @@
                 "data": "branch", visible: true
             },
             {
-                "data": "badge_reprint_status", visible: false
+                "data": "badge_reprint_status", visible: true
             },
             {
                 "data": "price", visible: false
@@ -531,7 +531,7 @@
                 "data": "branch", visible: true
             },
             {
-                "data": "badge_reprint_status", visible: false
+                "data": "badge_reprint_status", visible: true
             },
             {
                 "data": "price", visible: false
