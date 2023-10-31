@@ -158,8 +158,9 @@
                                                     <th>METHOD</th>
                                                     <th>DELEGATE TYPE</th>
                                                     <th>REP. BRANCH</th>
-                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>BADGE REPRINT</th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                 
                                                     <th>PRICE</th>
                                                     <th>NOTES</th>
                                                    
@@ -181,8 +182,9 @@
                                                     <th>METHOD</th>
                                                     <th>DELEGATE TYPE</th>
                                                     <th>REP. BRANCH</th>
-                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>BADGE REPRINT</th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                    
                                                     <th>PRICE</th>
                                                     <th>NOTES</th>
                                                     
