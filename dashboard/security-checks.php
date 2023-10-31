@@ -133,8 +133,9 @@
                                                     <th>REP. BRANCH</th>
                                                     <th>BADGE REPRINT</th>
                                                     <th>PRICE</th>
-                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>NOTES</th>
+                                                    <th>MEMBERSHIP TYPE</th>
+                                                   
                                                     <th>REGISTRATION DATE</th>
                                                 </tr>
                                             </tfoot>
@@ -160,8 +161,8 @@
                                                     <th>REP. BRANCH</th>
                                                     <th>BADGE REPRINT</th>
                                                    <th>PRICE</th>
+                                                   <th>NOTES</th>
                                                     <th>MEMBERSHIP TYPE</th>
-                                                    <th>NOTES</th>
                                                    
                                                     <th>REGISTRATION DATE</th>
 
@@ -185,8 +186,8 @@
                                                    
                                                     
                                                     <th>PRICE</th>
-                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>NOTES</th>
+                                                    <th>MEMBERSHIP TYPE</th>
                                                     
                                                     <th>REGISTRATION DATE</th>
                                                 </tr>
