@@ -334,7 +334,7 @@
                 "data": "emergency_contact_telephone_number", visible: false
             },
             {
-                "data": "badge_reprint"
+                "data": "badge_reprint", visible: false
             },
             {
                 "data": "date"
@@ -403,7 +403,7 @@
             const emergency_contact_relationship = rowData.emergency_contact_relationship;
         const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
         const badge = rowData.badge_reprint;
-        
+
             const displayedIdElement = document.getElementById("displayedId");
             displayedIdElement.textContent = id
 
@@ -583,7 +583,7 @@
                 "data": "emergency_contact_telephone_number", visible: false
             },
             {
-                "data": "badge_reprint"
+                "data": "badge_reprint", visible: false
             },
             {
                 "data": "date"
