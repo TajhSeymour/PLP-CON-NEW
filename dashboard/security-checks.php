@@ -321,7 +321,7 @@
                 "data": "notes", visible: false
             },
             {
-                "data": "membership_type", visible: false
+                "data": "membership_type", visible: true
             },
             
             {
@@ -542,7 +542,7 @@
                 "data": "notes", visible: false
             },
             {
-                "data": "membership_type", visible: false
+                "data": "membership_type", visible: true
             },
         
             
