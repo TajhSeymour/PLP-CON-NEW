@@ -108,6 +108,7 @@
                                                     <th>EMERGENCY CONTACT NAME</th>
                                                     <th>EMERGENCY RELATIONSHIP </th>
                                                     <th>EMERGENCY TELEPHONE</th>
+                                                    <th>BADGE REPRINT</th>
                                                     <th>REGISTRATION DATE</th>
 
                                                     </tr>
@@ -133,6 +134,7 @@
                                                     <th>EMERGENCY CONTACT NAME</th>
                                                     <th>EMERGENCY RELATIONSHIP </th>
                                                     <th>EMERGENCY TELEPHONE</th>
+                                                    <th>BADGE REPRINT</th>
                                                     <th>REGISTRATION DATE</th>
                                                     </tr>
                                                 </tfoot>
@@ -162,6 +164,7 @@
                                                     <th>EMERGENCY CONTACT NAME</th>
                                                     <th>EMERGENCY RELATIONSHIP </th>
                                                     <th>EMERGENCY TELEPHONE</th>
+                                                    <th>BADGE REPRINT</th>
                                                     <th>REGISTRATION DATE</th>
 
                                                     </tr>
@@ -187,6 +190,7 @@
                                                     <th>EMERGENCY CONTACT NAME</th>
                                                     <th>EMERGENCY RELATIONSHIP </th>
                                                     <th>EMERGENCY TELEPHONE</th>
+                                                    <th>BADGE REPRINT</th>
                                                     <th>REGISTRATION DATE</th>
                                                     </tr>
                                                 </tfoot>
@@ -330,6 +334,9 @@
                 "data": "emergency_contact_telephone_number", visible: false
             },
             {
+                "data": "badge_reprint"
+            },
+            {
                 "data": "date"
             }
       
@@ -395,6 +402,7 @@
             const emergency_contact_name = rowData.emergency_contact_name;
             const emergency_contact_relationship = rowData.emergency_contact_relationship;
         const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
+        const badge = rowData.badge_reprint;
         
             const displayedIdElement = document.getElementById("displayedId");
             displayedIdElement.textContent = id
@@ -466,6 +474,9 @@
            displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
 
            
+           const displayedBadgeRequestElement = document.getElementById("oc_new_badge");
+           displayedBadgeRequestElement.value = badge;
+
 
 
 
@@ -572,8 +583,12 @@
                 "data": "emergency_contact_telephone_number", visible: false
             },
             {
+                "data": "badge_reprint"
+            },
+            {
                 "data": "date"
             }
+            
       
 
             ],
@@ -637,6 +652,7 @@
             const emergency_contact_name = rowData.emergency_contact_name;
             const emergency_contact_relationship = rowData.emergency_contact_relationship;
         const emergency_contact_telephone_number = rowData.emergency_contact_telephone_number;
+        const badge = rowData.badge_reprint;
         
             const displayedIdElement = document.getElementById("displayedId");
             displayedIdElement.textContent = id
@@ -707,7 +723,9 @@
             const displayedEmergencyContactTelephoneNumberElement = document.getElementById("oc_emergency_contact_telephone_number");
            displayedEmergencyContactTelephoneNumberElement.value = emergency_contact_telephone_number;
 
-           
+           const displayedBadgeRequestElement = document.getElementById("oc_new_badge");
+           displayedBadgeRequestElement.value = badge;
+
 
 
 
