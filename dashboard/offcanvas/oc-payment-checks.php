@@ -208,13 +208,15 @@
 // Get the dropdown and the oc_affiliated_branch element
 const MemberShipDropdown = document.getElementById("oc_membership_type");
 const ocDelegateType = document.getElementById("oc_delegate_type");
+const ocAffiliatedBranch2 = document.getElementById("oc_affiliated_branch");
 
 // Add a 'change' event listener to the dropdown
 MemberShipDropdown.addEventListener("change", function() {
     const selection = this.value;
     if (selection === "STALWART COUNCILLOR") {
       ocDelegateType.value = "Stalwart Councillor";
-  
+    // ocAffiliatedBranch2.disabled = true;
+        ocAffiliatedBranch2.value = "NGC";
         
     }
 });
@@ -231,7 +233,7 @@ delegateDropdown.addEventListener("change", function() {
         ocAffiliatedBranch.disabled = false;
 
     } else {
-        ocAffiliatedBranch.disabled = true;
+      //  ocAffiliatedBranch.disabled = true;
         ocAffiliatedBranch.value = "NGC";
 
 
