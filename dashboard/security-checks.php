@@ -112,7 +112,7 @@
                                                     <th>BADGE REPRINT</th>
                                                     <th>PRICE</th>
                                                     <th>MEMBERSHIP TYPE</th>
-                                                    <th>NOTES</th>
+                                                    <th>MEMBERSHIP TYPE</th>
                                                     <th>REGISTRATION DATE</th>
 
                                                 </tr>
@@ -134,7 +134,7 @@
                                                     <th>BADGE REPRINT</th>
                                                     <th>PRICE</th>
                                                     <th>MEMBERSHIP TYPE</th>
-                                                    <th>NOTES</th>
+                                                    <th>MEMBERSHIP TYPE</th>
                                                    
                                                    
                                                     <th>REGISTRATION DATE</th>
