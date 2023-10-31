@@ -212,7 +212,7 @@ const ocDelegateType = document.getElementById("oc_delegate_type");
 // Add a 'change' event listener to the dropdown
 MemberShipDropdown.addEventListener("change", function() {
     const selection = this.value;
-    if (selection === "Stalwart Councillor") {
+    if (selection === "STALWART COUNCILLOR") {
       ocDelegateType.value = "Stalwart Councillor";
   
         
