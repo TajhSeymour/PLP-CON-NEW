@@ -14,6 +14,7 @@ if ($result && $result->num_rows > 0) {
     $total_stalwart_councillor = $row['total_stalwart_councillor'];
     $total_voting_delegates = $row['total_voting_delegates'];
     $total_observer_delegates = $row['total_observer_delegates'];
+    $total_unknown_delegates = $row['total_unknown_delegates'];
     $total_stalwart_councillor_paid = $row['total_stalwart_councillor_paid'];
     $total_voting_delegates_paid = $row['total_voting_delegates_paid'];
     $total_observer_delegates_paid = $row['total_observer_delegates_paid'];
@@ -24,6 +25,7 @@ if ($result && $result->num_rows > 0) {
     $female_users_count = $row['female_users_count'];
     $badge_printed = $row['badge_printed'];
     $badge_printed_pending = $row['badge_printed_pending'];
+
 
 } else {
     echo "No data found.";

@@ -130,7 +130,29 @@
                     </div>
 
                     <!--end col-->
+                    <div class="col-xxl-3 col-sm-6">
+                        <div class="card card-animate">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="fw-medium text-muted mb-0">TOTAL UNKNOWN DELEGATES</p>
+                                        <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
+                                                data-target="<?php echo $total_unknown_delegates; ?>">0</span> </h2>
 
+                                    </div>
+                                    <div>
+                                        <div class="avatar-sm flex-shrink-0">
+                                            <span class="avatar-title bg-soft-info text-info rounded-circle fs-4">
+                                                <i class=" ri-team-fill"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end card body -->
+                        </div> <!-- end card-->
+                    </div>
+
+                    <!--end col-->
                     <div class="col-xxl-3 col-sm-6">
                         <div class="card card-animate">
                             <div class="card-body">
