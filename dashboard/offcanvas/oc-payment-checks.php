@@ -159,14 +159,7 @@
         </div>
 
       
-
-        <div class="mb-3">
-        <label for="imageUpload" class="form-label">Badge ID Photo:</label>
-                        <input type="file" class="form-control" id="oc_badge_photo" disabled
-                            name="oc_badge_photo" accept="image/jpg"  />
-                        <small id="fileHelp" class="form-text text-muted">Please upload a .jpg file.</small>
-
-        </div>
+        
 
         <div class="mb-3">
           <label for="nib_number" class="form-label">Receipt Number: *</label>
@@ -242,18 +235,6 @@ delegateDropdown.addEventListener("change", function() {
 
 </script>
 
-<script>
-    document.getElementById('oc_new_badge').addEventListener('input', function() {
-        var newBadgeValue = this.value;
-        var badgePhotoInput = document.getElementById('oc_badge_photo');
-        
-        if (newBadgeValue === '1') {
-            badgePhotoInput.removeAttribute('disabled');
-        } else {
-            badgePhotoInput.setAttribute('disabled', 'true');
-        }
-    });
-</script>
 
 <script>
     function formatPhoneNumber(inputId) {
