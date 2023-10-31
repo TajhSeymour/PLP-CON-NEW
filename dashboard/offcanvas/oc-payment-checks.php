@@ -112,6 +112,9 @@
                                 <option value="NPI">NPI</option>
                                 <option value="NPI-GB">NPI-GB</option>
                                 <option value="MEN'S BRANCH">Men's Branch</option>
+                                <option value="NGC">National General Council</option>
+                                <option value="PARTY LEADERSHIP">Party Leadership</option>
+                                <option value="FRM. PARTY LEADERSHIP">Frm. Party Leadership</option>
                                 <option value="WOMEN'S BRANCH">Women's Branch</option>
                                 <option value="BAINS & GRANTS TOWN">Bains & Grants Town</option>
                                 <option value="BAMBOO TOWN">Bamboo Town</option>
@@ -229,7 +232,7 @@ delegateDropdown.addEventListener("change", function() {
 
     } else {
         ocAffiliatedBranch.disabled = true;
-       
+        ocAffiliatedBranch.value = "NGC";
 
 
     }
