@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Get the form data
     $user_id = $_POST["input_userid"];
     $priority = isset($_POST['oc_priority']) ? strtoupper($_POST['oc_priority']) : null;
-    $badge = isset($_POST['oc_new_badge']) ? strtoupper($_POST['oc_new_badge']) : null;
+    $badge = $_POST["oc_new_badge"];
     //$first_name = isset($_POST['oc_first_name']) ? strtoupper($_POST['oc_first_name']) : null;
     //$middle_name = isset($_POST['oc_middle_name']) ? strtoupper($_POST['oc_middle_name']) : null;
     //$last_name = isset($_POST['oc_last_name']) ? strtoupper($_POST['oc_last_name']) : null;
