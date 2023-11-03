@@ -552,7 +552,7 @@ function callUpdateUserAPI(formData) {
     // Make the API call to delete the officer's account using DELETE method
     // Implement your API call here, using fetch, Axios, or any other method you prefer
     // Example using fetch:
-    fetch("/api/dashboard/update/update_delegate_info_duplicate.php", {
+    fetch("/api/dashboard/delete/delete_duplicate_delegate.php", {
       method: "POST", // Use the appropriate method for your API
       body: JSON.stringify({
         userID
