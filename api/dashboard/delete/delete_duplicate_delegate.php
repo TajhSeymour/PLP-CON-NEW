@@ -6,7 +6,7 @@ require_once(dirname(__DIR__, 3) . '/database/dbconnection.php');
 function deleteSystemUser($userId, $connection)
 {
     // Prepare the SQL query with the stored procedure
-    $stmt = $connection->prepare("CALL DELETE_SYSTEM_USER(?)");
+    $stmt = $connection->prepare("CALL DELETE_MARK_DUPLICATE(?)");
     $stmt->bind_param("s", $userId);
 
     // Execute the stored procedure
