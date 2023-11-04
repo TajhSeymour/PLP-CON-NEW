@@ -306,7 +306,7 @@
                                     <div>
                                         <p class="fw-medium text-muted mb-0">BADGES PRINTED</p>
                                         <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value"
-                                                data-target="<?php echo $badge_printed; ?>">0</span></h2>
+                                                data-target="<?php echo $total_badge_printed; ?>">0</span></h2>
 
                                     </div>
                                     <div>

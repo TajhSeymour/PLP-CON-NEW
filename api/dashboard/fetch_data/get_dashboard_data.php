@@ -23,7 +23,7 @@ if ($result && $result->num_rows > 0) {
     $total_delegates_requesting_transportation_assistance = $row['total_delegates_requesting_transportation_assistance'];
     $male_users_count = $row['male_users_count'];
     $female_users_count = $row['female_users_count'];
-    $badge_printed = $row['badge_printed'];
+    $total_badge_printed = $row['total_badge_printed'];
     $badge_printed_pending = $row['badge_printed_pending'];
 
 
