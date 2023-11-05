@@ -246,7 +246,7 @@
                             <select class="form-control" id="input_del_constituency" name="input_del_constituency"
                                 required>
                                 <option value="" disabled selected>Select your constituency</option>
-                                <option value="BAINS & GRANTS TOWN">Bains & Grants Town</option>
+                                <option value="BAIN & GRANTS TOWN">Bain & Grants Town</option>
                                 <option value="BAMBOO TOWN">Bamboo Town</option>
                                 <option value="CARMICHAEL">Carmichael</option>
                                 <option value="CAT ISL, R.CAY & SAN SAL">Cat Isl, R.Cay & San Sal</option>
@@ -300,7 +300,7 @@
                                 <option value="NPI-GB">NPI-GB</option>
                                 <option value="MEN'S BRANCH">Men's Branch</option>
                                 <option value="WOMEN'S BRANCH">Women's Branch</option>
-                                <option value="BAINS & GRANTS TOWN">Bains & Grants Town</option>
+                                <option value="BAIN & GRANTS TOWN">Bain & Grants Town</option>
                                 <option value="BAMBOO TOWN">Bamboo Town</option>
                                 <option value="CARMICHAEL">Carmichael</option>
                                 <option value="CAT ISL, R.CAY & SAN SAL">Cat Isl, R.Cay & San Sal</option>
